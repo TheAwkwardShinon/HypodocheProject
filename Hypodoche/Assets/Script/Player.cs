@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     public float speed;
     Rigidbody2D rigidBody;
+    public float health;
 
     // Start is called before the first frame update
     void Start()
