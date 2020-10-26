@@ -2,82 +2,92 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+namespace Hypodoche
 {
-    public Rigidbody2D rigidBodyBoss { get; private set; }
-    public Animator animator { get; private set; }
-    public GameObject boss { get; private set; }
-    public FiniteStateMachine stateMachine;
-    public int facingDirection;
-    private Vector2 velocityWorkspace;
-    public D_Entity entityData;
-    [SerializeField]
-    private Transform wallCheck;
-
-    public virtual void Start()
+    public class Entity : MonoBehaviour
     {
-        
-        //facingDirection = 1;
-        boss = gameObject;
-        rigidBodyBoss = boss.GetComponent<Rigidbody2D>();
-        animator = boss.GetComponent<Animator>();
-        stateMachine = new FiniteStateMachine();
-    }
+        #region Variables
+        public Rigidbody _rigidBodyBoss { get; private set; }
+        public Animator _animator { get; private set; }
+        public GameObject _boss { get; private set; }
+        public FiniteStateMachine _stateMachine;
+        public int _facingDirection;
+        private Vector3 _direction;
+        public D_Entity _entityData;
+        [SerializeField] private float _wallCheckRadius = 1f;
+        [SerializeField] private LayerMask _isPerimeter;
+        #endregion
 
-    public virtual void Update()
-    {
-        stateMachine.currentState.Update();
-    }
+        #region
+        public virtual void Start()
+        {
 
-    public virtual void setVelocity(float velocity)
-    {
-        velocityWorkspace.Set(UnityEngine.Random.Range(-2f,2f) * velocity, UnityEngine.Random.Range(-2f, 2f) * velocity);
-        rigidBodyBoss.velocity = velocityWorkspace;
-    }
+            //facingDirection = 1;
+            _boss = gameObject;
+            _rigidBodyBoss = _boss.GetComponent<Rigidbody>();
+            _animator = _boss.GetComponent<Animator>();
+            _stateMachine = new FiniteStateMachine();
+        }
 
-    //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
-    public virtual void Flip()
-    {
-        boss.transform.Rotate(0f, 180f, 0f);
-    }
+        public virtual void Update()
+        {
+            _stateMachine._currentState.Update();
+        }
 
-    public virtual bool checkWall()
-    {
-        return Physics2D.Raycast(wallCheck.position, boss.transform.right, entityData.wallCheckRange,entityData.whatIsPerimeter);
-    }
+        public virtual void setDirection()
+        {
+            _direction = new Vector3(UnityEngine.Random.Range(-2f, 2f), 0,  UnityEngine.Random.Range(-2f, 2f));
+        }
 
-    /*
-    public virtual void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.left * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.up * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.down * facingDirection * entityData.wallCheckRange));
-    }*/
+        public virtual void Move(float speed)
+        {
+            _rigidBodyBoss.position += _direction * speed * Time.fixedDeltaTime;
+        }
 
-    /* Functions to be done later */
-    public virtual bool checkFire()
-    {
-        return true;
-    }
+        //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
+        public virtual void Flip()
+        {
+            _boss.transform.Rotate(0f, 180f, 0f);
+        }
 
-    public virtual bool checkWater()
-    {
-        return true;
-    }
+        public virtual bool checkWall()
+        {
+            Debug.Log(Physics.OverlapSphere(_boss.transform.position, _wallCheckRadius, _isPerimeter).Length);
+            return Physics.OverlapSphere(_boss.transform.position, _wallCheckRadius, _isPerimeter).Length != 0;
+        }
 
-    public virtual bool checkWind()
-    {
-        return true;
-    }
+        public virtual void OnDrawGizmos()
+        {
+            if (!Application.isPlaying)
+                return;
+            Gizmos.DrawWireSphere(_boss.GetComponent<Collider>().bounds.center, _wallCheckRadius);
+        }
 
-    public virtual bool checkEarth()
-    {
-        return true;
-    }
+        /* Functions to be done later */
+        public virtual bool checkFire()
+        {
+            return true;
+        }
 
-    public virtual bool stepOnTrap()
-    {
-        return true;
+        public virtual bool checkWater()
+        {
+            return true;
+        }
+
+        public virtual bool checkWind()
+        {
+            return true;
+        }
+
+        public virtual bool checkEarth()
+        {
+            return true;
+        }
+
+        public virtual bool stepOnTrap()
+        {
+            return true;
+        }
+        #endregion
     }
 }

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
-  m_Name: B1_BasicData
+  m_Name: B1_BaseData
   m_EditorClassIdentifier: 
-  wallCheckRange: 0.4
+  wallCheckRange: 1
   waterCheckRange: 0
   windCheckRange: 0
   earthCheckRange: 0
   fireCheckRange: 0
-  whatIsGround:
+  whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256

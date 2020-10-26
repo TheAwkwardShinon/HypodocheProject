@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss1 : Entity
+namespace Hypodoche
 {
-    public B1_IdleState idleState { get; private set; }
-    public B1_MoveState moveState { get; private set; }
-    [SerializeField]
-    private D_Idle idleData;
-    [SerializeField]
-    private D_Move moveData;
-
-    public override void Start()
+    public class Boss1 : Entity
     {
-        base.Start();
+        #region Variables
+        public B1_IdleState _idleState { get; private set; }
+        public B1_MoveState _moveState { get; private set; }
+        [SerializeField]
+        private D_IdleState _idleData;
+        [SerializeField]
+        private D_MoveState _moveData;
+        #endregion
 
-        moveState = new B1_MoveState(this, stateMachine, "move", moveData, this);
-        idleState = new B1_IdleState(this, stateMachine, "idle", idleData, this);
+        #region Methods
+        public override void Start()
+        {
+            base.Start();
 
-        stateMachine.InitializeState(moveState);
+            _moveState = new B1_MoveState(this, _stateMachine, "move", _moveData, this);
+            _idleState = new B1_IdleState(this, _stateMachine, "idle", _idleData, this);
+
+            _stateMachine.InitializeState(_moveState);
+        }
+        #endregion
     }
 }

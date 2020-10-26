@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newIdleData", menuName = "Data/State Data/Idle State")]
-
-public class D_Idle : ScriptableObject
+namespace Hypodoche
 {
-    public float minIdleTime = 1f;
-    public float maxIdleTime = 2f;
+    [CreateAssetMenu(fileName = "newIdleData", menuName = "Data/State Data/Idle State")]
+
+    public class D_IdleState: ScriptableObject
+    {
+        #region Variables
+        public float minIdleTime = 1f;
+        public float maxIdleTime = 2f;
+        #endregion
+    }
 }

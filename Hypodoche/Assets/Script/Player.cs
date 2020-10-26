@@ -1,24 +1,43 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Hypodoche
 {
-    public float speed;
-    Rigidbody2D rigidBody;
-    public float health;
+    #region Required Components
+    [RequireComponent(typeof(Rigidbody))]
+    #endregion
 
-    // Start is called before the first frame update
-    void Start()
+    public class Player : MonoBehaviour
     {
-        rigidBody = GetComponent<Rigidbody2D>();
-    }
+        #region Variables
+        [SerializeField] [Range(0f, 10f)] private float _speed = 3f;
+        private Rigidbody _rigidBody;
+        private float _health;
+        private float _horizontal;
+        private float _vertical;
+        #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        #region Methods
+        // Start is called before the first frame update
+        void Start()
+        {
+            _rigidBody = GetComponent<Rigidbody>();
+        }
 
-        rigidBody.velocity = new Vector3(horizontal * speed, vertical * speed, 0);
+        // Update is called once per frame
+        void Update()
+        {
+            _horizontal = Input.GetAxis("Horizontal");
+            _vertical = Input.GetAxis("Vertical");
+        }
 
+        private void FixedUpdate()
+        {
+            Vector3 movement = Vector3.zero;
+            movement.x += _horizontal * _speed * Time.fixedDeltaTime;
+            movement.y = 0;
+            movement.z += _vertical * _speed * Time.fixedDeltaTime;
+            _rigidBody.position += movement;
+        }
+        #endregion
     }
 }
