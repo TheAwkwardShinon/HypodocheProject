@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -43,17 +44,18 @@ public class Entity : MonoBehaviour
 
     public virtual bool checkWall()
     {
-        return Physics2D.Raycast(wallCheck.position, boss.transform.right, entityData.wallCheckRange,entityData.whatIsPerimeter);
+        return Physics2D.Raycast(boss.transform.position, velocityWorkspace, entityData.wallCheckRange, entityData.whatIsPerimeter);
+
+        /*
+         * 
+        if (Physics.OverlapSphere(boss.transform.position, entityData.wallCheckRange, entityData.whatIsPerimeter).Length == 0)
+            return false;
+        return true; 
+        
+         */
     }
 
-    /*
-    public virtual void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.left * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.up * facingDirection * entityData.wallCheckRange));
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.down * facingDirection * entityData.wallCheckRange));
-    }*/
+
 
     /* Functions to be done later */
     public virtual bool checkFire()

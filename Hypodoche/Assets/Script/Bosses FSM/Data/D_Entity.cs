@@ -12,6 +12,9 @@ public class D_Entity : ScriptableObject
     public float windCheckRange;
     public float earthCheckRange;
     public float fireCheckRange;
+    public float pursueRange = 30f;
+    public float rangedRange = 20f;
+    public float meleeRanged = 5f;
 
     public LayerMask whatIsPerimeter
         ;

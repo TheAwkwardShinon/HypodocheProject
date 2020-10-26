@@ -49,6 +49,7 @@ public class MoveState : State
     public override void Update()
     {
         base.Update();
+        isDetectingWall = entity.checkWall();
     }
 
     public override void PhysicsUpdate()
@@ -56,7 +57,7 @@ public class MoveState : State
         base.PhysicsUpdate();
 
 
-        isDetectingWall = entity.checkWall();
+        //isDetectingWall = entity.checkWall();
 
         /* TO BE DONE LATER
          * 
