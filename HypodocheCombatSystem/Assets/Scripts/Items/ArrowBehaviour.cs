@@ -1,0 +1,63 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Hypodoche
+{
+    #region Required Components
+    [RequireComponent(typeof(Rigidbody))]
+    #endregion
+
+    public class ArrowBehaviour : MonoBehaviour
+    {
+        #region Variables
+        [SerializeField] private float _speed = 3f;
+        [SerializeField] private float _damage = 10;
+        [SerializeField] private float _maxDistance = 20f;
+        private Rigidbody _rigidbody;
+        private Vector3 _startingPosition;
+        #endregion
+
+        #region Getter and Setter
+        public void SetDamage(float damage)
+        {
+            _damage = damage;
+        }
+        #endregion
+
+        #region Methods
+        private void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                Vector3 target = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+                transform.LookAt(target);
+            }
+
+            _rigidbody.velocity = transform.forward * _speed;
+            _startingPosition = transform.position;
+        }
+
+        private void Update()
+        {
+            if ((transform.position - _startingPosition).magnitude > _maxDistance)
+                Destroy(gameObject);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(_damage);
+            }
+            Destroy(gameObject);
+        }
+        #endregion
+    }
+}
