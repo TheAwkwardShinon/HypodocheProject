@@ -6,6 +6,8 @@ namespace Hypodoche
 {
     #region Required Components
     [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerCombat))]
+    [RequireComponent(typeof(PlayerStatus))]
     #endregion
 
     public class InputHandler : MonoBehaviour
@@ -22,11 +24,13 @@ namespace Hypodoche
         private int _resetAnimatorHash;
         private int _isAimingHash;
         private PlayerMovement _playerMovement;
-        [HideInInspector] private AnimatorHandler _animatorHandler;
-        [HideInInspector] private PlayerCombat _playerCombat;
+        private PlayerStatus _playerStatus;
+        private AnimatorHandler _animatorHandler;
+        private PlayerCombat _playerCombat;
         private float _sprintInputTimer = 0f;
-        //private float _mouseX;
-        //private float _mouseY;
+        private float _dashStaminaCost = 30f;
+        private float _sprintStaminaCost = 5f;
+        private float _heavyAttackStaminaCost = 10f;
         #endregion
 
         #region Getter and Setter
@@ -38,6 +42,7 @@ namespace Hypodoche
         {
             _playerMovement = GetComponent<PlayerMovement>();
             _playerCombat = GetComponent<PlayerCombat>();
+            _playerStatus = GetComponent<PlayerStatus>();
             _animatorHandler = GetComponentInChildren<AnimatorHandler>();
             _animatorHandler.Initialize();
             _resetAnimatorHash = Animator.StringToHash("resetAnimator");
@@ -87,18 +92,22 @@ namespace Hypodoche
 
         private void HandleMovementActions(float delta)
         {
-            if (Input.GetKey(KeyCode.Space))
+            #region Sprint
+            if (Input.GetKey(KeyCode.Space) && _playerStatus.HasStamina(0f))
             {
                 _sprintInputTimer += delta;
                 _isSprinting = true;
             }
+            #endregion
+
+            #region Dash and Backstep
             else
             {
                 if (_sprintInputTimer > 0 && _sprintInputTimer < 0.5f)
                 {
                     _isSprinting = false;
 
-                    if (Time.time > _playerMovement.GetNextDashTime())
+                    if (Time.time > _playerMovement.GetNextDashTime() && _playerStatus.HasStamina(_dashStaminaCost))
                     {
                         if (_movement.magnitude > 0)
                         {
@@ -112,29 +121,40 @@ namespace Hypodoche
                         }
 
                         _playerMovement.UpdateDashTime();
+                        _playerStatus.SpendStamina(_dashStaminaCost);
                     }
                 }
 
                 _sprintInputTimer = 0;
             }
+            #endregion
+
+            if (_isSprinting)
+                _playerStatus.SpendStamina(_dashStaminaCost * Time.deltaTime);
 
             _playerMovement.SetIsSprinting(_isSprinting);
         }
 
         private void HandleAttacks(float delta)
         {
+            #region Light Attack
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _playerCombat.InvokeLightAttack();
                 _movement = Vector3.zero;
                 _playerMovement.SetMovement(_movement);
             }
-            else if (Input.GetKeyDown(KeyCode.Mouse1))
+            #endregion
+
+            #region Heavy Attack
+            else if (Input.GetKeyDown(KeyCode.Mouse1) && _playerStatus.HasStamina(_heavyAttackStaminaCost))
             {
                 _playerCombat.InvokeHeavyAttack();
                 _movement = Vector3.zero;
                 _playerMovement.SetMovement(_movement);
+                _playerStatus.SpendStamina(_heavyAttackStaminaCost);
             }
+            #endregion
         }
 
         private void HandleAiming(float delta)

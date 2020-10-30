@@ -108,13 +108,6 @@ namespace Hypodoche
             _rigidbody.MovePosition(_rigidbody.position + movement * delta);
         }
 
-        private void UpdateSpriteDirection(Vector3 movement)
-        {
-            if (movement.x > 0 && _facesLeft ||
-                movement.x < 0 && !_facesLeft)
-                Flip();
-        }
-
         public void UpdateDashTime()
         {
             _nextDashTime = Time.time + 1f / _dashRate;
@@ -130,6 +123,13 @@ namespace Hypodoche
                     hit.point.x < transform.position.x && !_facesLeft)
                     Flip();
             }
+        }
+
+        private void UpdateSpriteDirection(Vector3 movement)
+        {
+            if (movement.x > 0 && _facesLeft ||
+                movement.x < 0 && !_facesLeft)
+                Flip();
         }
 
         private void Flip()

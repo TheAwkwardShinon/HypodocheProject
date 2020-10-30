@@ -19,10 +19,10 @@ MonoBehaviour:
   - LightAttack
   _heavyAttacks:
   - HeavyAttack
-  _lightDamage: 10
-  _heavyDamage: 20
+  _lightDamage: 20
+  _heavyDamage: 50
   _lightAttackRate: 2
   _heavyAttackRate: 1
-  _lightAttackRadius: 0.05
-  _heavyAttackRadius: 0.1
+  _lightAttackRadius: 0.2
+  _heavyAttackRadius: 0.4
   _isRanged: 1

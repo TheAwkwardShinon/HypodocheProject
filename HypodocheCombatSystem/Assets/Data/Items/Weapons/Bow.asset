@@ -18,7 +18,7 @@ MonoBehaviour:
   _lightAttacks:
   - LightAttack
   _heavyAttacks: []
-  _lightDamage: 5
+  _lightDamage: 10
   _heavyDamage: 0
   _lightAttackRate: 3
   _heavyAttackRate: 0
