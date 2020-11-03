@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\matte\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\matte\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Hypodoche.855404185.00" t="ExcludeRecursive" />
+    <e p="C:\Users\matte\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\matte\OneDrive\Desktop\Hypodoche_Updated\MyBranch\HypodocheProject\Hypodoche" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="EnvironmentAssets" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="BuildingArea.cs" t="Include" />
+            <e p="BuildingManager.cs" t="Include" />
+            <e p="BuildingTypeSelectUI.cs" t="Include" />
+            <e p="BuildingTypeSO.cs" t="Include" />
+            <e p="ButtonTypeSO.cs" t="Include" />
+            <e p="Grid.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemDatabase.cs" t="Include" />
+            <e p="SlotScript.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Free asset downloaded" t="Include">
+          <e p="Bandits - Pixel Art" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Bandit.cs" t="Include" />
+              <e p="Sensor_Bandit.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Script" t="Include">
+          <e p="Bosses FSM" t="Include">
+            <e p="Data" t="Include">
+              <e p="D_Entity.cs" t="Include" />
+              <e p="D_IdleState.cs" t="Include" />
+              <e p="D_MoveState.cs" t="Include" />
+            </e>
+            <e p="EnemySpecification" t="Include">
+              <e p="Boss1 (test)" t="Include">
+                <e p="B1_IdleState.cs" t="Include" />
+                <e p="B1_MoveState.cs" t="Include" />
+                <e p="Boss1.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Entity.cs" t="Include" />
+            <e p="FiniteStateMachine.cs" t="Include" />
+            <e p="IdleState.cs" t="Include" />
+            <e p="MoveState.cs" t="Include" />
+            <e p="State.cs" t="Include" />
+          </e>
+          <e p="Player.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Hypodoche.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
