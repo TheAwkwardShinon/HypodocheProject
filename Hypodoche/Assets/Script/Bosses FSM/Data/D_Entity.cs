@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu(fileName = "newEntityData", menuName= "Data/Entity Data/Base Data")]
-
-public class D_Entity : ScriptableObject
+namespace Hypodoche
 {
-    public float wallCheckRange = 0.2f;
-    public float waterCheckRange;
-    public float windCheckRange;
-    public float earthCheckRange;
-    public float fireCheckRange;
-    public float pursueRange = 30f;
-    public float rangedRange = 20f;
-    public float meleeRanged = 5f;
+    [CreateAssetMenu(fileName = "newEntityData", menuName = "Data/Entity Data/Base Data")]
 
-    public LayerMask whatIsPerimeter
-        ;
+    public class D_Entity : ScriptableObject
+    {
+        #region Variables
+        public float wallCheckRange = 0.2f;
+        public float waterCheckRange;
+        public float windCheckRange;
+        public float earthCheckRange;
+        public float fireCheckRange;
+        public float aggroRange;
+        public LayerMask whatIsPerimeter;
+        public LayerMask whatIsPlayer;
+        #endregion
+    }
 }

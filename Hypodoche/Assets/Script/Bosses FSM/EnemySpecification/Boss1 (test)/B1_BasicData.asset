@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: B1_BasicData
   m_EditorClassIdentifier: 
-  wallCheckRange: 15
+  wallCheckRange: 10
   waterCheckRange: 0
   windCheckRange: 0
   earthCheckRange: 0
   fireCheckRange: 0
-  pursueRange: 30
-  rangedRange: 20
-  meleeRanged: 5
+  aggroRange: 30
   whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 512

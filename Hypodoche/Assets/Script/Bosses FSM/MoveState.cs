@@ -2,73 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveState : State
+namespace Hypodoche
 {
-    protected D_Move moveData;
-
-    protected bool isDetectingWall;
-    protected bool isDetectingWind;
-    protected bool isDetectingFire;
-    protected bool isDetectingWater;
-    protected bool isDetectingEarth;
-    protected bool isSteppedOnTrap;
-
-
-    public MoveState(Entity entity, FiniteStateMachine stateMachine, string animationName,D_Move moveData)
-        : base(entity, stateMachine, animationName)
+    public class MoveState : State
     {
-        this.moveData = moveData;
+        #region Variables
+        protected D_MoveState _moveData;
+        protected bool _isDetectingWall;
+        protected bool _isDetectingPlayer;
+        #endregion
+
+        #region Methods
+        public MoveState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_MoveState moveData)
+            : base(entity, stateMachine, animationName)
+        {
+            _moveData = moveData;
+        }
+
+        public override void Enter()
+        {
+            base.Enter();
+
+            _isDetectingWall = _entity.checkWall();
+            _isDetectingPlayer = _entity.isPlayerInAggroRange();
+            _entity.setDirection();
+     
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+        }
+
+        public override void Update()
+        {
+            base.Update();
+            _isDetectingWall = _entity.checkWall();
+            _isDetectingPlayer = _entity.isPlayerInAggroRange();
+        }
     }
-
-    public override void Enter()
-    {
-        base.Enter();
-        entity.setVelocity(moveData.movementSpeed);
-
-        isDetectingWall = entity.checkWall();
-
-        /* TO BE DONE LATER
-         * 
-         * isDetectingWind =
-         * isDetectingFire = 
-         * isDetectingWater =
-         * isDetectingEarth =
-         * isDetectingWind =
-         * isSteppedOnTrap =
-         * 
-         */ 
-
-
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void Update()
-    {
-        base.Update();
-        isDetectingWall = entity.checkWall();
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-
-
-        //isDetectingWall = entity.checkWall();
-
-        /* TO BE DONE LATER
-         * 
-         * isDetectingWind =
-         * isDetectingFire = 
-         * isDetectingWater =
-         * isDetectingEarth =
-         * isDetectingWind =
-         * isSteppedOnTrap =
-         * 
-         */
-    }
-
+    #endregion
 }

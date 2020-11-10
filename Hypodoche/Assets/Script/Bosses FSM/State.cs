@@ -2,39 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class State 
+namespace Hypodoche
 {
-    protected FiniteStateMachine stateMachine;
-    protected Entity entity;
-    protected float startTime;
-    protected string animationName;
-
-    public State(Entity entity, FiniteStateMachine stateMachine, string animationName)
+    public class State
     {
-        this.entity = entity;
-        this.stateMachine = stateMachine;
-        this.animationName = animationName;
-    }
+        #region Variables
+        protected FiniteStateMachine _stateMachine;
+        protected Entity _entity;
+        protected float _startTime;
+        protected string _animationName;
+        #endregion
+
+        #region Methods
+        public State(Entity entity, FiniteStateMachine stateMachine, string animationName)
+        {
+            _entity = entity;
+            _stateMachine = stateMachine;
+            _animationName = animationName;
+        }
 
 
-    public virtual void Enter()
-    {
-        startTime = Time.time;
-        entity.animator.SetBool(animationName, true);
-    }
+        public virtual void Enter()
+        {
+            _startTime = Time.time;
+            _entity._animator.SetBool(_animationName, true);
+        }
 
-    public virtual void Exit()
-    {
-        entity.animator.SetBool(animationName, false);
-    }
+        public virtual void Exit()
+        {
+            _entity._animator.SetBool(_animationName, false);
+        }
 
-    public virtual void Update()
-    {
+        public virtual void Update()
+        {
 
-    }
+        }
 
-    public virtual void PhysicsUpdate()
-    {
+        public virtual void PhysicsUpdate()
+        {
 
+        }
+        #endregion
     }
 }

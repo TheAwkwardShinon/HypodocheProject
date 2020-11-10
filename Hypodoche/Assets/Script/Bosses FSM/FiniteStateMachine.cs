@@ -2,25 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FiniteStateMachine
+namespace Hypodoche
 {
-    public State currentState { get; private set; }
-
-    public void InitializeState(State initialState)
+    public class FiniteStateMachine
     {
-        setState(initialState);
-        currentState.Enter();
-    }
+        #region Variables
+        public State _currentState { get; private set; }
+        #endregion
 
-    public void ChangeState(State newState)
-    {
-        currentState.Exit();
-        setState(newState);
-        currentState.Enter();
-    }
+        #region Getter and Setter
+        public void setState(State state)
+        {
+            _currentState = state;
+        }
+        #endregion
 
-    public void setState(State state)
-    {
-        currentState = state;
+        #region Methods
+        public void InitializeState(State initialState)
+        {
+            setState(initialState);
+            _currentState.Enter();
+        }
+
+        public void ChangeState(State newState)
+        {
+            _currentState.Exit();
+            setState(newState);
+            _currentState.Enter();
+        }
+        #endregion
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arena
   - boss
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - 
   - 
   - Perimeter
-  - 
-  - 
+  - Player
+  - Enemies
   - 
   - 
   - 
@@ -40,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: player
+    uniqueID: 1143657361
+    locked: 0
+  - name: boss
+    uniqueID: 343504289
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

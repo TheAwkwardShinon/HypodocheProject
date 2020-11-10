@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newMoveData", menuName = "Data/State Data/Move State")]
-
-
-public class D_Move : ScriptableObject
+namespace Hypodoche
 {
-    public float movementSpeed = 3f;
+    [CreateAssetMenu(fileName = "newMoveData", menuName = "Data/State Data/Move State")]
+
+    public class D_MoveState : ScriptableObject
+    {
+        #region Variables
+        public float movementSpeed = 20f;
+        #endregion
+    }
 }
