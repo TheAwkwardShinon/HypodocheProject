@@ -13,6 +13,8 @@ namespace Hypodoche
         protected string _animationName;
         #endregion
 
+
+
         #region Methods
         public State(Entity entity, FiniteStateMachine stateMachine, string animationName)
         {

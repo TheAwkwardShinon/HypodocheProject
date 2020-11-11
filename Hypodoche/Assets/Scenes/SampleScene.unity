@@ -699,6 +699,10 @@ MonoBehaviour:
   _idleData: {fileID: 11400000, guid: dd9fb924f6b22404aa7a3a590a1b2a1f, type: 2}
   _moveData: {fileID: 11400000, guid: 88b170eed61ef2b4c9a405d6b9136899, type: 2}
   _playerDetectData: {fileID: 11400000, guid: 097e84910713fb0459d14e2abdbbd62a, type: 2}
+  _playerAttackFireData: {fileID: 11400000, guid: 081a4606ad78467429a5a91c2cf514a0,
+    type: 2}
+  _playerAttackFistData: {fileID: 11400000, guid: fc0558ea6c912ae4c8516008925cd240,
+    type: 2}
 --- !u!65 &497575526
 BoxCollider:
   m_ObjectHideFlags: 0

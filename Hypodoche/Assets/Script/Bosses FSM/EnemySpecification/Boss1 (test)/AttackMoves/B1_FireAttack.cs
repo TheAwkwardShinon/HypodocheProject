@@ -12,6 +12,10 @@ namespace Hypodoche
         private Boss1 _boss1;
         #endregion
 
+
+
+
+
         #region Methods
         public B1_FireAttack(Entity entity, FiniteStateMachine stateMachine, string animationName, B1_D_Fire playerFireData, Boss1 boss)
             : base(entity, stateMachine, animationName)
@@ -22,9 +26,18 @@ namespace Hypodoche
         }
 
 
+        public bool isHittable()
+        {
+            return _boss1.hittable(_playerFireData.angleRange, _playerFireData.radius, _playerFireData.fromRange,
+                           _playerFireData.toRange, _boss1._entityData.whatIsPlayer);
+        }
+
         public override void Enter()
         {
             base.Enter();
+            Debug.Log("FIREEEEEEEEEEEE");
+            //TODO vfx + danno.
+            Exit();
         }
 
         public override void Exit()

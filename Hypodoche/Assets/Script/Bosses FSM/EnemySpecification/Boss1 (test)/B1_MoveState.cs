@@ -35,6 +35,8 @@ namespace Hypodoche
                 _boss1._idleState.setFlipAfterIdle(true);
                 _stateMachine.ChangeState(_boss1._idleState);
             }
+            else if(_isDetectingPlayer)
+                _stateMachine.ChangeState(_boss1._playerDetectState);
             else _boss1.Move(_moveData.movementSpeed);
 
         }

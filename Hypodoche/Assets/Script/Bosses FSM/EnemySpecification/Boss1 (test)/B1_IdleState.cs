@@ -33,6 +33,9 @@ namespace Hypodoche
 
             if (_isIdleTimeElapsed)
                 _stateMachine.ChangeState(_boss1._moveState);
+            if(_isDetectingPlayer)
+                _stateMachine.ChangeState(_boss1._playerDetectState);
+
         }
 
         #endregion

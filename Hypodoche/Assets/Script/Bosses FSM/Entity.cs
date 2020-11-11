@@ -64,9 +64,29 @@ namespace Hypodoche
         }
 
 
-  
 
-        
+        // non ho la minima idea di come farlo vedere in gizmos, ma dovrebbe essere giusto.
+        public virtual bool hittable(float viewAngle, float radius, float from, float to, LayerMask targetMask) //radius < viewRadius
+        {
+            Debug.Log("sono qui");
+            radius = radius <= _entityData.aggroRange ? radius : _entityData.aggroRange;
+            Collider[] targetsInViewRadius = Physics.OverlapSphere(_boss.transform.position, radius, targetMask);
+            if (targetsInViewRadius.Length == 0)
+                return false;
+            Transform target = targetsInViewRadius[0].transform;
+            Vector3 dirToTarget = (target.position - _boss.transform.position).normalized;
+            if (Vector3.Angle(_boss.transform.forward * from, dirToTarget) < viewAngle)
+            {
+                float dstToTarget = Vector3.Distance(_boss.transform.position, target.position);
+                if (dstToTarget <= to)
+                    return true;
+            }
+            return false;
+        }
+
+
+
+
         public virtual void OnDrawGizmos() { 
             if (!Application.isPlaying)
                 return;

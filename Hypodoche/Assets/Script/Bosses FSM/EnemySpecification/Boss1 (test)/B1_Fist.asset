@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a18f04ff36260c4db07a8c47cfb95ee, type: 3}
-  m_Name: B1_PlayerDetectData
+  m_Script: {fileID: 11500000, guid: 642c7427d8547b14cbd02947c33f3815, type: 3}
+  m_Name: B1_Fist
   m_EditorClassIdentifier: 
-  aggressivity: 100
+  angleRange: 360
+  radius: 5
+  fromRange: 0
+  toRange: 5
+  damage: 0
+  chargeTime: 0

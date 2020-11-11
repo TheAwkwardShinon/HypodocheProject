@@ -9,10 +9,12 @@ namespace Hypodoche
     public class B1_D_Fire : ScriptableObject
     {
         #region Variables
-        public float fromRange;
+        public float angleRange = 180f;
+        public float radius = 15f;
+        public float fromRange = 6f;
         public float toRange;
         public float damage; //How can i check if the player is hit
-        //public float chargeTime; //???? yep or no?
+        public float chargeTime; //???? yep or no?
         #endregion
     }
 }

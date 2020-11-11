@@ -13,6 +13,8 @@ namespace Hypodoche
         private Boss1 _boss1;
         #endregion
 
+
+
         #region Methods
         public B1_FistAttack(Entity entity, FiniteStateMachine stateMachine, string animationName, B1_D_Fist playerFistData, Boss1 boss)
             : base(entity, stateMachine, animationName)
@@ -23,9 +25,18 @@ namespace Hypodoche
         }
 
 
+        public bool isHittable()
+        {
+            return _boss1.hittable(_playerFistData.angleRange, _playerFistData.radius, _playerFistData.fromRange,
+                           _playerFistData.toRange, _boss1._entityData.whatIsPlayer);
+        }
+
         public override void Enter()
         {
-            //base.Enter(); //in sto caso, voglio controllare l'animazione : i.e. indirizzarla verso un punto specifico.
+            base.Enter();
+            Debug.Log("FISTTTT");
+            //TODO vfx + danno.
+            Exit();
 
         }
 

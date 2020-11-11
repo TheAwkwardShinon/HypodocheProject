@@ -14,7 +14,6 @@ namespace Hypodoche
         public B1_FistAttack _playerAttackFist { get; private set; }
         public B1_FireAttack _playerAttackFire { get; private set; }
 
-
         [SerializeField]
         private D_IdleState _idleData;
         [SerializeField]
@@ -37,21 +36,12 @@ namespace Hypodoche
             _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _playerDetectData, this); //same animation
 
             // boss move set zone
-            _playerAttackFist = new B1_FistAttack(this, _stateMachine, "idle", _playerAttackFistData, this);
-            _playerAttackFire = new B1_FireAttack(this, _stateMachine, "idle", _playerAttackFireData, this);
+            _playerAttackFist = new B1_FistAttack(this, _stateMachine, "Fist", _playerAttackFistData, this);
+            _playerAttackFire = new B1_FireAttack(this, _stateMachine, "Fire", _playerAttackFireData, this);
 
             _stateMachine.InitializeState(_moveState);
         }
 
-
-        public Dictionary<State,ScriptableObject> GetMoveSet()
-        {
-            return new Dictionary<State, ScriptableObject>() {
-                {_playerAttackFist, _playerAttackFistData},
-                {_playerAttackFire, _playerAttackFireData}
-            };
-        
-        }
         #endregion
     }
 }
