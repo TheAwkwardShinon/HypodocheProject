@@ -58,9 +58,12 @@ namespace Hypodoche
         }
 
 
-        public virtual bool isPlayerInAggroRange()
+        public virtual Transform isPlayerInAggroRange()
         {
-            return Physics.OverlapSphere(_boss.transform.position, _entityData.aggroRange, _entityData.whatIsPlayer).Length != 0;
+            Collider[] player = Physics.OverlapSphere(_boss.transform.position, _entityData.aggroRange, _entityData.whatIsPlayer);
+            if (player.Length == 0)
+                return null;
+            else return player[0].transform;
         }
 
 

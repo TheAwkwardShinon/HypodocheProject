@@ -39,7 +39,7 @@ namespace Hypodoche
             _playerAttackFist = new B1_FistAttack(this, _stateMachine, "Fist", _playerAttackFistData, this);
             _playerAttackFire = new B1_FireAttack(this, _stateMachine, "Fire", _playerAttackFireData, this);
 
-            _stateMachine.InitializeState(_moveState);
+            _stateMachine.InitializeState(_idleState);
         }
 
         #endregion

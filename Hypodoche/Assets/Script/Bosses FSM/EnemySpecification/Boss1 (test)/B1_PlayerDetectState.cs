@@ -69,8 +69,8 @@ namespace Hypodoche
                     if (usableMoveSet.Count == 0) //TODO in realtà devo farlo avvicinare al player
                     {
                         Debug.Log("player out of any range");
-                        _stateMachine.ChangeState(_boss1._moveState);
-                        
+                        float step = _playerDetectData.speedWhenDetect * Time.deltaTime; 
+                        _boss1.transform.position = Vector3.MoveTowards(_boss1.transform.position, _playerPosition.position, step);
                     }
                     else
                     {

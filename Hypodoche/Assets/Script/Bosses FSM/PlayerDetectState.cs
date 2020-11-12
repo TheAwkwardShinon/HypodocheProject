@@ -11,6 +11,7 @@ namespace Hypodoche
         #region Variables
         protected D_PlayerDetectState _playerDetectData;
         protected bool _isDetectingPlayer;
+        protected Transform _playerPosition;
         #endregion
 
         #region Methods
@@ -24,7 +25,8 @@ namespace Hypodoche
         public override void Enter()
         {
             base.Enter();
-            _isDetectingPlayer = _entity.isPlayerInAggroRange();
+            _playerPosition = _entity.isPlayerInAggroRange();
+            _isDetectingPlayer = _playerPosition == null ? false : true;
         }
 
         public override void Exit()
@@ -35,7 +37,8 @@ namespace Hypodoche
         public override void Update()
         {
             base.Update();
-            _isDetectingPlayer = _entity.isPlayerInAggroRange();
+            _playerPosition = _entity.isPlayerInAggroRange();
+            _isDetectingPlayer = _playerPosition == null ? false : true;
         }
         #endregion
     }

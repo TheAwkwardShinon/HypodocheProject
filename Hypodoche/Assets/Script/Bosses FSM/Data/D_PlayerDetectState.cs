@@ -9,6 +9,7 @@ namespace Hypodoche {
     {
         #region Variables
         public float aggressivity; //from 0 to 100
+        public float speedWhenDetect;
         #endregion
     }
 }
