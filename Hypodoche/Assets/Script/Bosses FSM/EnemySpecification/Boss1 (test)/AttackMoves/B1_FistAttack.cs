@@ -35,8 +35,9 @@ namespace Hypodoche
         {
             base.Enter();
             Debug.Log("FISTTTT");
+            _stateMachine.ChangeState(_boss1._playerDetectState);
             //TODO vfx + danno.
-            Exit();
+            //Exit();
 
         }
 
@@ -48,6 +49,10 @@ namespace Hypodoche
         public override void Update()
         {
             base.Update();
+            /*
+            if (isHittable())
+                Debug.Log("FISTTTT");
+            else _stateMachine.ChangeState(_boss1._playerDetectState);*/
         }
         #endregion
     }

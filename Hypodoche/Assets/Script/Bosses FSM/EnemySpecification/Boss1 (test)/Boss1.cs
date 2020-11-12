@@ -36,8 +36,8 @@ namespace Hypodoche
             _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _playerDetectData, this); //same animation
 
             // boss move set zone
-            _playerAttackFist = new B1_FistAttack(this, _stateMachine, "Fist", _playerAttackFistData, this);
-            _playerAttackFire = new B1_FireAttack(this, _stateMachine, "Fire", _playerAttackFireData, this);
+            _playerAttackFist = new B1_FistAttack(this, _stateMachine, "fist", _playerAttackFistData, this);
+            _playerAttackFire = new B1_FireAttack(this, _stateMachine, "fire", _playerAttackFireData, this);
 
             _stateMachine.InitializeState(_idleState);
         }

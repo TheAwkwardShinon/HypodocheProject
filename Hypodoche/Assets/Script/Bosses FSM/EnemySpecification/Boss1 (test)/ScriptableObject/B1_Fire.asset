@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleRange: 180
   radius: 30
-  fromRange: 6
+  fromRange: 20
   toRange: 30
   damage: 0
   chargeTime: 0

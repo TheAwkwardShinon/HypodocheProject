@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: B1_PlayerDetectData
   m_EditorClassIdentifier: 
   aggressivity: 100
-  speedWhenDetect: 0
+  speedWhenDetect: 5

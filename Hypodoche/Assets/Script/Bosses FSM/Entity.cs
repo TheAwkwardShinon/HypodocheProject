@@ -71,7 +71,7 @@ namespace Hypodoche
         // non ho la minima idea di come farlo vedere in gizmos, ma dovrebbe essere giusto.
         public virtual bool hittable(float viewAngle, float radius, float from, float to, LayerMask targetMask) //radius < viewRadius
         {
-            Debug.Log("sono qui");
+            Debug.Log("Checking attack range...");
             radius = radius <= _entityData.aggroRange ? radius : _entityData.aggroRange;
             Collider[] targetsInViewRadius = Physics.OverlapSphere(_boss.transform.position, radius, targetMask);
             if (targetsInViewRadius.Length == 0)

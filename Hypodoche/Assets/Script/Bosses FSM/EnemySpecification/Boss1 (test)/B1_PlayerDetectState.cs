@@ -27,6 +27,7 @@ namespace Hypodoche
         public override void Enter()
         {
             base.Enter();
+            usableMoveSet.Clear();
         }
 
         public override void Exit()
@@ -46,14 +47,6 @@ namespace Hypodoche
                     return; //_stateMachine.ChangeState(_boss1._scaredState);
                 else
                 {
-                    /*
-                    foreach (State move in moveSet)
-                    {
-                        if (_boss1.hittable(move.getData().angleRange, move.getData().radius, move.getData().fromRange,
-                            move.getData().toRange, _playerDetectData.whatIsPlayer))
-                            usableMoveSet.Add(move.Key);
-                    }
-                    */
                     if (_boss1._playerAttackFist.isHittable())
                     {
                         usableMoveSet.Add(_boss1._playerAttackFist);
@@ -69,8 +62,8 @@ namespace Hypodoche
                     if (usableMoveSet.Count == 0) //TODO in realtà devo farlo avvicinare al player
                     {
                         Debug.Log("player out of any range");
-                        float step = _playerDetectData.speedWhenDetect * Time.deltaTime; 
-                        _boss1.transform.position = Vector3.MoveTowards(_boss1.transform.position, _playerPosition.position, step);
+                        _stateMachine.ChangeState(new B1_ChaseState(_boss1, _stateMachine, "move",_playerPosition,
+                            (float)UnityEngine.Random.Range(0.2f, _entity._entityData.aggroRange), _playerDetectData.speedWhenDetect, _boss1));
                     }
                     else
                     {
