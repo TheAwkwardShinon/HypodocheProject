@@ -9,16 +9,20 @@
       <e p="Assets" t="Include">
         <e p="EnvironmentAssets" t="Include">
           <e p="Scripts" t="Include">
-            <e p="BuildingArea.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
-            <e p="BuildingTypeSelectUI.cs" t="Include" />
-            <e p="BuildingTypeSO.cs" t="Include" />
-            <e p="ButtonTypeSO.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
-            <e p="ItemDatabase.cs" t="Include" />
-            <e p="SlotScript.cs" t="Include" />
+            <e p="Slot.cs" t="Include" />
+            <e p="StillUnused" t="Include">
+              <e p="BuildingArea.cs" t="Include" />
+            </e>
+            <e p="TypeSelectUI.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="Jupiter" t="Include">
+            <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
         <e p="Free asset downloaded" t="Include">
@@ -28,6 +32,9 @@
               <e p="Sensor_Bandit.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Materials" t="Include">
+          <e p="UI-Default-No-Alpha.shader" t="Include" />
         </e>
         <e p="Script" t="Include">
           <e p="Bosses FSM" t="Include">
@@ -50,6 +57,26 @@
             <e p="State.cs" t="Include" />
           </e>
           <e p="Player.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ActiveStateToggler.cs" t="Include" />
+          <e p="ApplicationManager.cs" t="Include" />
+          <e p="ChangeColor.cs" t="Include" />
+          <e p="DragMe.cs" t="Include" />
+          <e p="DragPanel.cs" t="Include" />
+          <e p="DropMe.cs" t="Include" />
+          <e p="PanelManager.cs" t="Include" />
+          <e p="ResizePanel.cs" t="Include" />
+          <e p="ScrollDetailTexture.cs" t="Include" />
+          <e p="ShowSliderValue.cs" t="Include" />
+          <e p="TiltWindow.cs" t="Include" />
+        </e>
+        <e p="Textures and Sprites" t="Include">
+          <e p="SF UI" t="Include">
+            <e p="Background" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="Hypodoche.sln" t="IncludeFlat" />

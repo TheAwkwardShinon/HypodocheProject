@@ -3,44 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
-{
-    public int id;
-    public string title;
-    public string description;
-    public Sprite icon;
 
-    public ItemType itemType;
+namespace Hypodoche{
 
-    public enum ItemType
-    {
+    public class Item {
+        
+        #region Variables
+        public int _id; 
+        public string _title;
+        public string _description;
+        public Sprite _icon;
+        public ItemType _itemType;
+        
+        //public Dictionary<string, int> stats = new Dictionary<string, int>();
+        public enum ItemType {
         ElementalZone,
         Trap
-    }
-    //public Dictionary<string, int> stats = new Dictionary<string, int>();
+        }
+        #endregion
 
-    public Item(int id, string title, string description,string ItemType)
-    {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.icon = Resources.Load<Sprite>("Sprites/Items/" + title );
-        this.itemType=(ItemType)Enum.Parse(typeof(ItemType),ItemType,false);
-        //Debug.Log(this.icon);
-    }
+        #region Methods
+        public Item(int id, string title, string description,string ItemType){ 
+            _id = id;
+            _title = title;
+            _description = description;
+            _icon = Resources.Load<Sprite>("Sprites/Items/" + title );
+            _itemType=(ItemType)Enum.Parse(typeof(ItemType),ItemType,false);
+        }
+        public Item() {
+            
+        }
 
-    public Item()
-    {
-        
-    }
+        public Item(Item item)
+        {
+            _id = item._id;
+            _title = item._title;
+            _description = item._description;
+            _icon = item._icon;
+            _itemType = item._itemType;
+        }
 
-    public Item(Item item)
-    {
-        this.id = item.id;
-        this.title = item.title;
-        this.description = item.description;
-        this.icon = item.icon;
-        this.itemType = item.itemType;
+        #endregion
     }
-    
 }
