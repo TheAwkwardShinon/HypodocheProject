@@ -10,6 +10,9 @@
         <e p="EnvironmentAssets" t="Include">
           <e p="Scripts" t="Include">
             <e p="BuildingManager.cs" t="Include" />
+            <e p="BuildingTypeSO.cs" t="Include" />
+            <e p="ButtonTypeSO.cs" t="Include" />
+            <e p="ButtonUI.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />

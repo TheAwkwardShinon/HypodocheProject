@@ -42,7 +42,8 @@ namespace Hypodoche
                 _backgroundImage.sprite = _deselected;
             }
             
-            if (_buildingManager._inventory.GetItem(_itemId) != null) {
+            if (_buildingManager._inventory.GetItem(_itemId) != null)
+            {
                 _itemImage.enabled = true;
                 _itemImage.sprite = _buildingManager._inventory.GetItem(_itemId)._icon;
 

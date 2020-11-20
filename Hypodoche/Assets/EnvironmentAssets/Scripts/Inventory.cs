@@ -2,29 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using Hypodoche;
 
 namespace Hypodoche{
     public class Inventory : MonoBehaviour
     {
 
         #region Variables
+        [SerializeField] public List<BuildingTypeSO> _buildingTypeSOList;
         public List<Item> _items = new List<Item>();
         #endregion
 
         #region Methods
-        void Start()
-        {
+        void Start() {
             BuildInventory();
         }
         public void BuildInventory()
         {
-            _items = new List<Item>()
-            {
-                new Item(0, "fire", "A zone of fire", "ElementalZone"),
-                new Item(1, "wind", "A zone of wind", "ElementalZone"),
-                new Item(2, "water", "A zone of water", "ElementalZone"),
-                new Item(3, "earth", "A zone of earth", "ElementalZone")
-            };
+            int id = 0;
+            foreach (BuildingTypeSO buildingTypeSO in _buildingTypeSOList){ 
+                Item item = new Item(id, _buildingTypeSOList[id]._title, _buildingTypeSOList[id]._description,
+                    _buildingTypeSOList[id]._itemType, _buildingTypeSOList[id]._sprite, _buildingTypeSOList[id]._prefab);
+                _items.Add(item);
+                id++;
+            }
         }
         public Item GetItem(int id)
         {

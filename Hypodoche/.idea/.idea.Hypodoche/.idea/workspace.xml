@@ -21,645 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b1561e63-8e15-4507-9212-25f77ae9bb06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Flower.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Flower.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Rock.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Rock.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Spring.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/BuildingTypeS/Spring.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/Delete.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/Delete.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/Move.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/Move.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/TurnBack.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/ButtonType/TurnBack.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Backward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Backward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Cancel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Dollar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Dollar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/DownArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/DownArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Email.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Facebook.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Forward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Forward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Gamecenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Gamecenter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/GooglePlus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/GooglePlus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Home.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Info.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/LeftArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/LeftArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/LeftArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/LeftArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Menu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Minus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Pause.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Play.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Plus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/QuestionMark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/QuestionMark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Restart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Restart.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/RightArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/RightArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/RightArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/RightArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Settings.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Shop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/SoundOFF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/SoundOFF.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/SoundON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/SoundON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Star.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Trophy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/Twitter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/UpArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/PNG/UpArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Sprites/LazyDayBG-resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Sprites/LazyDayBG-resized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Vector.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Vector/LazyDay.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/LazyDay/Vector/LazyDay.ai.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Backward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Backward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Cancel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Dollar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Dollar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/DownArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/DownArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Email.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Facebook.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Forward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Forward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/GameCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/GameCenter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/GooglePlus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/GooglePlus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Home.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Info.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/LeftArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/LeftArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/LeftArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/LeftArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Menu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Minus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Pause.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Play.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Plus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/QuestionMark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/QuestionMark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Restart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Restart.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/RightArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/RightArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/RightArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/RightArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Setting.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Shop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/SoundOFF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/SoundOFF.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/SoundON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/SoundON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Star.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Trophy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Twitter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/UpArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/UpArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Yes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/PNG/Yes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Sprites/PlayfulBG-resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Sprites/PlayfulBG-resized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Vector.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Vector/Playful.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Playful/Vector/Playful.ai.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/LazyDayPreview.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/LazyDayPreview.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/PlayfulPreview.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/PlayfulPreview.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/PurpleRockPreview.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/PurpleRockPreview.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/WoodenBlocksPreview.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PreviewScenes/WoodenBlocksPreview.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Backward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Backward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Cancel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Dollar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Dollar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/DownArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/DownArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Email.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Facebook.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Forward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Forward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Gamecenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Gamecenter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/GooglePlus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/GooglePlus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Home.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Info.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/LeftArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/LeftArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/LeftArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/LeftArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Menu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Minus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Pause.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Play.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Plus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/QuestionMark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/QuestionMark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Restart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Restart.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/RightArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/RightArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/RightArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/RightArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Settings.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Shop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/SoundOFF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/SoundOFF.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/SoundON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/SoundON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Star.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Trophy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Twitter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/UpArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/UpArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Yes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/PNG/Yes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Sprites/PurpleRockBG-resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Sprites/PurpleRockBG-resized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Vector.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Vector/PurpleRock.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/PurpleRock/Vector/PurpleRock.ai.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Readme.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Readme/Readme.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/Readme/Readme.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Backward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Backward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Cancel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Dollar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Dollar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/DownArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/DownArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Email.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Facebook.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Forward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Forward.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/GameCenter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/GameCenter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/GooglePlus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/GooglePlus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Home.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Info.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Menu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Minus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Pause.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Play.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Plus.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/QuestionMark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/QuestionMark.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Restart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Restart.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Settings.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Shop.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/SoundOFF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/SoundOFF.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/SoundON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/SoundON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Star.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Trophy.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Twitter.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/UpArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/UpArrow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Yes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/PNG/Yes.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Sprites/WoodenBG-resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Sprites/WoodenBG-resized.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Vector.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files/WoodenBlocks.ai" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files/WoodenBlocks.ai.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_cloud_a.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_cloud_a.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_sky_a.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Materials/rpgpp_lt_sky_a.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_bush_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_bush_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_bush_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_bush_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_cloud_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_cloud_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_cloud_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_cloud_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_03.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_flower_03.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_grass_small_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_grass_small_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_grass_small_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_grass_small_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_hill_small_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_hill_small_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_hill_small_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_hill_small_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_mountain_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_mountain_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_plant_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_plant_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_plant_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_plant_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_03.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_03.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_small_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_small_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_small_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rock_small_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rocks_tiny_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_rocks_tiny_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_sky_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_sky_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_grass_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_grass_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_grass_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_grass_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_path_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_path_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_path_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_path_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_sand_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_terrain_sand_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_pine_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Nature/rpgpp_lt_tree_pine_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_banner_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_banner_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_banner_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_banner_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_barrel_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_barrel_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bathtub_wood_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bathtub_wood_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bench_wood_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bench_wood_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bird_house_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bird_house_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bowl_metal_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bowl_metal_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_box_wood_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_box_wood_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_broom_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_broom_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bucket_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_bucket_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_chair_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_chair_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_chair_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_chair_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_hanger_clothes_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_hanger_clothes_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_hanger_wood_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_hanger_wood_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_jug_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_jug_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_ladder_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_ladder_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_log_wood_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_log_wood_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_package_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_package_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_rake_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_rake_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_sack_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_sack_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_sack_open_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_sack_open_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_shield_wall_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_shield_wall_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_shield_wall_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_shield_wall_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_table_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_table_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_trough_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_trough_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_vase_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_vase_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_vase_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_vase_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wagon_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wagon_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_well_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_well_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wood_path_01a.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wood_path_01a.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wood_path_01b.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Props/rpgpp_lt_wood_path_01b.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_01.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_01.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_03.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_03.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_04.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_04.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_05.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Models/Structures/rpgpp_lt_building_05.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_small_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rock_small_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rocks_tiny_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Rocks/rpgpp_lt_rocks_tiny_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_cloud_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_cloud_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_cloud_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_cloud_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_sky_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Sky/rpgpp_lt_sky_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_hill_small_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_hill_small_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_hill_small_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_hill_small_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_mountain_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_mountain_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_grass_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_grass_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_grass_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_grass_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_path_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_path_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_path_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_path_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_sand_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Terrain/rpgpp_lt_terrain_sand_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Bushes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Bushes/rpgpp_lt_bush_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Bushes/rpgpp_lt_bush_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Bushes/rpgpp_lt_bush_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Bushes/rpgpp_lt_bush_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Flowers/rpgpp_lt_flower_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Grass.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Grass/rpgpp_lt_grass_small_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Grass/rpgpp_lt_grass_small_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Grass/rpgpp_lt_grass_small_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Grass/rpgpp_lt_grass_small_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Plants.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Plants/rpgpp_lt_plant_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Plants/rpgpp_lt_plant_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Plants/rpgpp_lt_plant_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Plants/rpgpp_lt_plant_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_pine_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Nature/Vegetation/Trees/rpgpp_lt_tree_pine_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_barrel_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_barrel_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bathtub_wood_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bathtub_wood_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bowl_metal_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bowl_metal_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_box_wood_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_box_wood_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bucket_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_bucket_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_jug_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_jug_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_package_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_package_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_sack_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_sack_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_sack_open_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_sack_open_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_trough_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_trough_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_vase_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_vase_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_vase_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Containers/rpgpp_lt_vase_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Benches.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Benches/rpgpp_lt_bench_wood_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Benches/rpgpp_lt_bench_wood_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Chairs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Chairs/rpgpp_lt_chair_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Chairs/rpgpp_lt_chair_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Chairs/rpgpp_lt_chair_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Chairs/rpgpp_lt_chair_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Hangers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Hangers/rpgpp_lt_hanger_clothes_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Hangers/rpgpp_lt_hanger_clothes_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Hangers/rpgpp_lt_hanger_wood_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Hangers/rpgpp_lt_hanger_wood_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Tables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Tables/rpgpp_lt_table_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Furniture/Tables/rpgpp_lt_table_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_broom_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_broom_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_ladder_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_ladder_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_rake_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Items/rpgpp_lt_rake_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_bird_house_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_bird_house_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_wagon_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_wagon_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_well_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Misc/rpgpp_lt_well_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Banners.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Banners/rpgpp_lt_banner_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Banners/rpgpp_lt_banner_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Banners/rpgpp_lt_banner_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Banners/rpgpp_lt_banner_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Shields.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Shields/rpgpp_lt_shield_wall_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Shields/rpgpp_lt_shield_wall_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Shields/rpgpp_lt_shield_wall_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wall_decor/Shields/rpgpp_lt_shield_wall_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wood.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wood/rpgpp_lt_log_wood_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Props/Wood/rpgpp_lt_log_wood_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_02.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_02.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_03.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_03.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_04.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_04.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_05.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Buildings/Bld_closed/rpgpp_lt_building_05.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts/Wood_path.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts/Wood_path/rpgpp_lt_wood_path_01a.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts/Wood_path/rpgpp_lt_wood_path_01a.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts/Wood_path/rpgpp_lt_wood_path_01b.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Prefabs/Structures/Parts/Wood_path/rpgpp_lt_wood_path_01b.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Scene/rpgpp_lt_scene_1.0.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Scene/rpgpp_lt_scene_1.0.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Textures/rpgpp_lt_sky_a.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Textures/rpgpp_lt_sky_a.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Textures/rpgpp_lt_tex_a.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/RPGPP_LT/Textures/rpgpp_lt_tex_a.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Resources/Sprites/A_Armor05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Resources/Sprites/A_Armor05.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingArea.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingArea.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonTypeSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonTypeSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ItemDatabase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ItemDatabase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/SlotScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/SlotScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -671,6 +38,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PanelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -679,14 +48,18 @@
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Arena.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ItemDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/SlotScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/TypeSelectUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI1.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager_old.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/TypeSelectUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" />
       </list>
     </option>
   </component>
@@ -738,6 +111,10 @@
       <workItem from="1605083022275" duration="14373000" />
       <workItem from="1605264699936" duration="6099000" />
       <workItem from="1605289756886" duration="5653000" />
+      <workItem from="1605709372310" duration="6821000" />
+      <workItem from="1605716367714" duration="1909000" />
+      <workItem from="1605719880948" duration="101000" />
+      <workItem from="1605720191019" duration="5855000" />
     </task>
     <servers />
   </component>
@@ -766,9 +143,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1605085174974" />
-    <state x="90" y="216" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605293528329">
+    <state x="90" y="216" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605710983344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="90" y="216" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605293528329" />
+    <state x="90" y="216" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605710983344" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs</url>
+          <line>45</line>
+          <properties documentPath="C:\Users\matte\OneDrive\Desktop\Hypodoche_Updated\MyBranch\HypodocheProject\Hypodoche\Assets\EnvironmentAssets\Scripts\Slot.cs" initialLine="45">
+            <startOffsets>
+              <option value="1453" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1454" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

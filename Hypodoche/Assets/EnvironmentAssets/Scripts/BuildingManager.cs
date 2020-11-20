@@ -14,10 +14,11 @@ namespace Hypodoche {
         private TypeSelectUI _typeSelectUI;
         public Inventory _inventory;
         public GameObject _slots;
+        public GameObject _emptyZone;
         private Grid _arenaGrid;
         private Grid _inventoryGrid;
         public GameObject _toolTip;
-        private bool _isArenaOn;
+        public bool _isArenaOn;
         public int _xselected;
         public int _yselected;
         private bool _move;
@@ -38,6 +39,7 @@ namespace Hypodoche {
             _move = false;
             CloseToolTip();
             _temp = -1;
+            //BuildArena();
         }
 
         private void Update() {
@@ -102,14 +104,14 @@ namespace Hypodoche {
 
         }
         
-        private void SelectArena() {
+        public void SelectArena() {
             DeselectInventory();
             _arenaGrid.Activate();
             _typeSelectUI._grid.Activate();
             _isArenaOn = true;
         }
 
-        private void DeselectArena() {
+        public void DeselectArena() {
             _arenaGrid.Deactivate();
             _typeSelectUI._grid.Deactivate();
             _isArenaOn = false;
@@ -120,7 +122,7 @@ namespace Hypodoche {
             _inventoryGrid.Activate();
         }
 
-        private void DeselectInventory() {
+        public void DeselectInventory() {
             _inventoryGrid.Deactivate();
         }
         
@@ -218,7 +220,39 @@ namespace Hypodoche {
             }
             return false;
         }
-        
+
+        public void LoadArena()
+        {
+            int x = -200;
+            int y = 125;
+            int cellSize = 55;
+            Transform arena = transform.Find("Arena");
+            for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
+                for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
+                {   x = x + cellSize;
+                    if (j == _arenaGrid._gridArray.GetLength(1) - 1)
+                    {
+                        x = -200;
+                        y = y - cellSize;
+                    }
+                    GameObject obj;
+                    int id = _arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId;
+                    if (id != -1) {
+                        obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab);
+                        obj.transform.SetParent(arena);
+                        obj.name = "Slot(" + i + "," + j + "):" + _inventory.GetItem(id)._title;
+                    }
+                    else {
+                        obj = (GameObject) Instantiate(_emptyZone);
+                        obj.transform.SetParent(arena);
+                        obj.name = "Slot(" + i + "," + j + "):" + "empty";
+                        Instantiate(_emptyZone);
+                    }
+                    obj.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
+                }
+            }
+        }
+
         #endregion
     }
 }
