@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: B1_BasicData
   m_EditorClassIdentifier: 
+  health: 100
+  damageTakenOverTime: 0
   wallCheckRange: 10
-  waterCheckRange: 0
-  windCheckRange: 0
-  earthCheckRange: 0
-  fireCheckRange: 0
+  movementSpeed: 8
+  speedWhenDetect: 10
+  speedWhenSlowed: 5
   aggroRange: 30
   whatIsPerimeter:
     serializedVersion: 2
@@ -24,3 +25,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
+  isSlowed: 0
+  gotDamageOverTime: 0
+  isStun: 0
+  timeOfStun: 0
+  timeOfSlow: 0
+  timeOfDamage: 0

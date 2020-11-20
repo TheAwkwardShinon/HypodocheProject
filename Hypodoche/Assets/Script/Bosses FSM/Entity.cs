@@ -20,8 +20,7 @@ namespace Hypodoche
         #region
         public virtual void Start()
         {
-
-            //facingDirection = 1;
+            resetStates();
             _boss = gameObject;
             _rigidBodyBoss = _boss.GetComponent<Rigidbody>();
             _animator = _boss.transform.GetChild(0).GetComponent<Animator>();
@@ -88,13 +87,22 @@ namespace Hypodoche
         }
 
 
-
-
         public virtual void OnDrawGizmos() { 
             if (!Application.isPlaying)
                 return;
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(_boss.GetComponent<Collider>().bounds.center, _entityData.aggroRange);
+        }
+
+
+        public void resetStates()
+        {
+            _entityData.isStun = false;
+            _entityData.timeOfStun = 0f;
+            _entityData.isSlowed = false;
+            _entityData.timeOfSlow = 0f;
+            _entityData.gotDamageOverTime = false;
+            _entityData.timeOfDamage = 0f;
         }
 
             /* Functions to be done later */
@@ -118,10 +126,7 @@ namespace Hypodoche
             return true;
         }
 
-        public virtual bool stepOnTrap()
-        {
-            return true;
-        }
+       
         #endregion
     }
 }

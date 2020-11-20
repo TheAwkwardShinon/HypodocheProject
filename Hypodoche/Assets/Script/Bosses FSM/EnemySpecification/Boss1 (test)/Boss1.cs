@@ -31,7 +31,7 @@ namespace Hypodoche
         {
             base.Start();
 
-            _moveState = new B1_MoveState(this, _stateMachine, "move", _moveData, this);
+            _moveState = new B1_MoveState(this, _stateMachine, "move", _entityData, this);
             _idleState = new B1_IdleState(this, _stateMachine, "idle", _idleData, this);
             _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _playerDetectData, this); //same animation
 
@@ -40,6 +40,21 @@ namespace Hypodoche
             _playerAttackFire = new B1_FireAttack(this, _stateMachine, "fire", _playerAttackFireData, this);
 
             _stateMachine.InitializeState(_idleState);
+        }
+
+
+        public virtual void OnTriggerEnter(Collider col)
+        {
+            Debug.Log("trigger");
+            if (col.gameObject.CompareTag("trap"))
+                stepOnTrap(col);
+        }
+
+
+        public virtual void stepOnTrap(Collider col)
+        {
+            Debug.Log("tag is right");
+            _stateMachine.ChangeState(new SufferTheEffectState(this, _stateMachine, "idle", _entityData, col,this));
         }
 
         #endregion

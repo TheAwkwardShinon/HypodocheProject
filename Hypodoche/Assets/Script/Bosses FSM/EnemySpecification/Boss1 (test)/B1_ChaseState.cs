@@ -11,17 +11,18 @@ namespace Hypodoche
         protected Transform _playerTransform;
         protected Vector3 _playerPosition;
         protected float _minDistanceFromPlayer;
-        protected float _speedWhenDetect;
+        protected D_Entity _entityData;
         protected Boss1 _boss;
         #endregion
 
         #region Methods
-        public B1_ChaseState(Entity entity, FiniteStateMachine stateMachine, string animationName, Transform playerPosition, float distanceIwantToBE,float speed, Boss1 boss)
+        public B1_ChaseState(Entity entity, FiniteStateMachine stateMachine, string animationName, Transform playerPosition, float distanceIwantToBE, D_Entity entityData, Boss1 boss)
             : base(entity, stateMachine, animationName)
         {
             _playerTransform = playerPosition;
             _minDistanceFromPlayer = distanceIwantToBE;
-            _speedWhenDetect = speed;
+            //_speedWhenDetect = speed;
+            _entityData = entityData;
             _boss = boss;
         }
 
@@ -40,6 +41,9 @@ namespace Hypodoche
         public override void Update()
         {
             base.Update();
+            if (_entityData.isStun)
+                return;
+            float _speedWhenDetect = _entityData.isSlowed ? _entityData.speedWhenSlowed : _entityData.speedWhenDetect;
             _playerPosition = _playerTransform.position;
             float dstToTarget = Vector3.Distance(_boss.transform.position, _playerPosition);
             if (_minDistanceFromPlayer < dstToTarget)

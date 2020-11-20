@@ -35,11 +35,32 @@ namespace Hypodoche
             base.Exit();
         }
 
-        
+
+
+        public virtual void OntriggerEnter(Collider col)
+        {
+            Debug.Log("trigger");
+            if (col.gameObject.CompareTag("trap"))
+                stepOnTrap(col);
+        }
+
+
+        public virtual void stepOnTrap(Collider col)
+        {
+            //col.gameObject.GetComponent<objectsScriptNameHere>().variableNameHere;
+            //TODO change state here
+            _stateMachine.ChangeState(new SufferTheEffectState(_entity, _stateMachine, "idle", _entity._entityData, col, _boss1));
+        }
+
+
+
+
 
         public override void Update()
         {
             base.Update();
+            if (_entity._entityData.isStun)
+                return;
             if (_isDetectingPlayer)
             {
                 Debug.Log("player detected");
@@ -63,7 +84,7 @@ namespace Hypodoche
                     {
                         Debug.Log("player out of any range");
                         _stateMachine.ChangeState(new B1_ChaseState(_boss1, _stateMachine, "move",_playerPosition,
-                            (float)UnityEngine.Random.Range(0.2f, _entity._entityData.aggroRange), _playerDetectData.speedWhenDetect, _boss1));
+                            (float)UnityEngine.Random.Range(0.2f, _entity._entityData.aggroRange), _entity._entityData, _boss1));
                     }
                     else
                     {

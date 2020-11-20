@@ -7,16 +7,16 @@ namespace Hypodoche
     public class MoveState : State
     {
         #region Variables
-        protected D_MoveState _moveData;
+        protected D_Entity _entityData;
         protected bool _isDetectingWall;
         protected bool _isDetectingPlayer;
         #endregion
 
         #region Methods
-        public MoveState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_MoveState moveData)
+        public MoveState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData)
             : base(entity, stateMachine, animationName)
         {
-            _moveData = moveData;
+            _entityData = entityData;
         }
 
         public override void Enter()
