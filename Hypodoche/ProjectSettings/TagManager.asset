@@ -10,6 +10,7 @@ TagManager:
   - ItemDatabase
   - TypeSelectUI
   - BuildingManager
+  - Oracle
   layers:
   - Default
   - TransparentFX

@@ -24,6 +24,7 @@ namespace Hypodoche {
         private bool _move;
         private Vector2 _mouseWorldPosition;
         private int _temp;
+        public GameObject _arena;
         
         #endregion
 
@@ -129,6 +130,7 @@ namespace Hypodoche {
         public GameObject CreateSlot(int x, int y, int itemId) {
             GameObject slot = (GameObject) Instantiate(_slots);
             slot.transform.SetParent(_inventory.gameObject.transform);
+            slot.name = "Hi";
             slot.AddComponent<Slot>();
             slot.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
             slot.GetComponent<Slot>()._itemId = itemId; // empty slot
@@ -223,32 +225,35 @@ namespace Hypodoche {
 
         public void LoadArena()
         {
-            int x = -200;
-            int y = 125;
+            int x = 112;
+            int y = 261;
             int cellSize = 55;
-            Transform arena = transform.Find("Arena");
+            
+            print(_arena);
+            
             for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
                 for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
-                {   x = x + cellSize;
-                    if (j == _arenaGrid._gridArray.GetLength(1) - 1)
-                    {
-                        x = -200;
-                        y = y - cellSize;
-                    }
+                {
                     GameObject obj;
                     int id = _arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId;
                     if (id != -1) {
-                        obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab);
-                        obj.transform.SetParent(arena);
+                        obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab); //trap is attached as a script to the prefab
+                        obj.transform.SetParent(_arena.gameObject.transform);
                         obj.name = "Slot(" + i + "," + j + "):" + _inventory.GetItem(id)._title;
                     }
                     else {
                         obj = (GameObject) Instantiate(_emptyZone);
-                        obj.transform.SetParent(arena);
+                        obj.transform.SetParent(_arena.gameObject.transform);
                         obj.name = "Slot(" + i + "," + j + "):" + "empty";
-                        Instantiate(_emptyZone);
                     }
+                    Debug.Log("Slot(" + i + "," + j + "):"+x+","+y);
                     obj.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
+                    x = x + cellSize;
+                    if (j == _arenaGrid._gridArray.GetLength(1) - 1)
+                    {
+                        x = 112;
+                        y = y - cellSize;
+                    }
                 }
             }
         }

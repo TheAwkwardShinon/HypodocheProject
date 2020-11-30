@@ -24,9 +24,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PanelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Oracle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -49,16 +50,20 @@
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ItemDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/SlotScript.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI1.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager_old.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSelectUI.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/TypeSelectUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonUI.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingTypeSO.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BossInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BossTemperament.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/TemperamanetStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/ButtonUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Oracle.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/EnvironmentAssets/Scripts/BuildingManager.cs" />
       </list>
     </option>
@@ -115,6 +120,8 @@
       <workItem from="1605716367714" duration="1909000" />
       <workItem from="1605719880948" duration="101000" />
       <workItem from="1605720191019" duration="5855000" />
+      <workItem from="1606293116105" duration="2003000" />
+      <workItem from="1606416814355" duration="6698000" />
     </task>
     <servers />
   </component>
@@ -139,10 +146,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1605085174974">
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1606417409653">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1605085174974" />
+    <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1606417409653" />
     <state x="90" y="216" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1605710983344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

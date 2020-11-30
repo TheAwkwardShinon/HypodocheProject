@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="EnvironmentAssets" t="Include">
           <e p="Scripts" t="Include">
+            <e p="BossTemperament.cs" t="Include" />
             <e p="BuildingManager.cs" t="Include" />
             <e p="BuildingTypeSO.cs" t="Include" />
             <e p="ButtonTypeSO.cs" t="Include" />
@@ -16,10 +17,12 @@
             <e p="Grid.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
             <e p="Item.cs" t="Include" />
+            <e p="Oracle.cs" t="Include" />
             <e p="Slot.cs" t="Include" />
             <e p="StillUnused" t="Include">
               <e p="BuildingArea.cs" t="Include" />
             </e>
+            <e p="TemperamentStats.cs" t="Include" />
             <e p="TypeSelectUI.cs" t="Include" />
           </e>
         </e>

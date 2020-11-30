@@ -36,9 +36,7 @@ namespace Hypodoche
             _gridArray = new GameObject[width, height];
             for (int i = 0; i < _gridArray.GetLength(0); i++)
             {
-                for (int j = 0; j < _gridArray.GetLength(1); j++)
-                {
-                    _gridArray[i, j] = new GameObject();
+                for (int j = 0; j < _gridArray.GetLength(1); j++) {
                     _gridArray[i, j] = buildingManager.CreateSlot(x, y, slotAmount);
                     _gridArray[i, j].GetComponent<Slot>()._x = i;
                     _gridArray[i, j].GetComponent<Slot>()._y= j;
