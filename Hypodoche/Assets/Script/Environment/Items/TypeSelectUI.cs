@@ -19,10 +19,8 @@ namespace Hypodoche
 
         #region Methods
 
-        private void Start()
-        {
-            int slotAmount = 0;
-            _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        private void Start(){
+        _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
             _grid = new Grid(-145, -143, 1, 3, 55, 0,false);
         }
 

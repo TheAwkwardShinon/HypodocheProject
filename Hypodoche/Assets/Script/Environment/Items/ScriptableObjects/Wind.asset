@@ -17,3 +17,7 @@ MonoBehaviour:
   _itemType: ElementalZone
   _prefab: {fileID: 5628681406927520300, guid: b0ac4505f10d992478094b141c5a4564, type: 3}
   _sprite: {fileID: 21300000, guid: 2c938d0341193a640a2120b12294587a, type: 3}
+  _spriteParam1: {fileID: 21300000, guid: c75d73617aaa5044daa01cf075b6a373, type: 3}
+  _spriteParam2: {fileID: 21300000, guid: 43252b2c6240495419319f2966337554, type: 3}
+  _valueParam1: Damage 10
+  _valueParam2: Damage 10

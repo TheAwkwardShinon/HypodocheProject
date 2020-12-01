@@ -67,23 +67,19 @@ namespace Hypodoche {
 
             if (Input.GetKeyDown(KeyCode.Y)) {
                 Build();
-                Debug.Log("Build");
             }
 
             if (Input.GetKeyDown(KeyCode.U)) {
                 Delete();
-                Debug.Log("Delete");
             }
 
             if (Input.GetKeyDown(KeyCode.O) &&
                 _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId != -1) {
                 if (_move) {
                     _move = false;
-                    Debug.Log("No Move");
                 }
                 else {
                     _move = true;
-                    Debug.Log("Move");
                 }
             }
 
@@ -130,7 +126,7 @@ namespace Hypodoche {
         public GameObject CreateSlot(int x, int y, int itemId) {
             GameObject slot = (GameObject) Instantiate(_slots);
             slot.transform.SetParent(_inventory.gameObject.transform);
-            slot.name = "Hi";
+            //slot.name = "Hi";
             slot.AddComponent<Slot>();
             slot.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
             slot.GetComponent<Slot>()._itemId = itemId; // empty slot
@@ -139,8 +135,23 @@ namespace Hypodoche {
 
         public void ShowToolTip(Item item) {
             _toolTip.SetActive(true);
-            _toolTip.transform.GetChild(0).GetComponent<Text>().text = item._title;
-            _toolTip.transform.GetChild(1).GetComponent<Text>().text = item._description;
+            _toolTip.transform.GetChild(8).GetComponent<Text>().text = item._title;
+            _toolTip.transform.GetChild(5).GetComponent<Text>().text = item._description;
+            _toolTip.transform.GetChild(0).GetComponent<Text>().text = item._valueParam1;
+            _toolTip.transform.GetChild(4).GetComponent<Image>().sprite = item._spriteParam1;
+            _toolTip.transform.GetChild(2).GetComponent<Image>().sprite = item._icon;
+            if (item._numParams == 2)
+            {
+                _toolTip.transform.GetChild(1).gameObject.SetActive(true);   
+                _toolTip.transform.GetChild(1).GetComponent<Text>().text = item._valueParam2;
+                _toolTip.transform.GetChild(3).gameObject.SetActive(true);   
+                _toolTip.transform.GetChild(3).GetComponent<Image>().sprite = item._spriteParam2; 
+            }
+            else
+            {
+                _toolTip.transform.GetChild(1).gameObject.SetActive(false); 
+                _toolTip.transform.GetChild(3).gameObject.SetActive(false);  
+            }
         }
 
         public void CloseToolTip() {
@@ -151,7 +162,6 @@ namespace Hypodoche {
             _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId = _typeSelectUI.GetActiveType();
             if (_move) {
                 _move = false;
-                Debug.Log("No Move");
             }
         }
 
