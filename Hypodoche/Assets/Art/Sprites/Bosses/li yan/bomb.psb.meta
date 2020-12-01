@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 781439c3a35388d4fb156b701eeb5ec6
+ScriptedImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2613247888821195678
+    second: bomb_0
+  - first:
+      213: -8469204400738329757
+    second: bomb_1
+  - first:
+      213: 8114985772114671235
+    second: bomb_2
+  - first:
+      213: -4975520578640395922
+    second: bomb_3
+  - first:
+      213: 1843372830317561357
+    second: bomb_4
+  - first:
+      213: 7594749636238397995
+    second: bomb_5
+  - first:
+      213: -4445273513090880203
+    second: bomb_6
+  - first:
+      213: 5843203954472481272
+    second: bomb_7
+  - first:
+      213: 5630174416108504515
+    second: bomb_8
+  - first:
+      213: 9122046925949792602
+    second: bomb_9
+  - first:
+      213: -4191928946932959189
+    second: bomb_10
+  - first:
+      213: 2452967996027893067
+    second: bomb_11
+  - first:
+      213: 4322808042649782079
+    second: bomb_12
+  - first:
+      213: 5914919406105201254
+    second: bomb_13
+  - first:
+      213: 7912863031937308577
+    second: bomb_14
+  - first:
+      213: -2308128518965656563
+    second: bomb_15
+  - first:
+      213: 3611482353774846873
+    second: bomb_16
+  - first:
+      213: -490514562289730302
+    second: bomb_17
+  - first:
+      213: -6761093989985350181
+    second: bomb_18
+  - first:
+      213: -3135622926114094945
+    second: bomb_19
+  - first:
+      213: -4036590240499970155
+    second: bomb_20
+  - first:
+      213: 1895035430892042932
+    second: bomb_21
+  - first:
+      213: -4483506434065805676
+    second: bomb_22
+  - first:
+      213: -1607985483195111103
+    second: bomb_23
+  - first:
+      213: 3970622184519503998
+    second: bomb_24
+  - first:
+      213: -7735019211746510579
+    second: bomb_25
+  - first:
+      213: -6364355586293610661
+    second: bomb_26
+  - first:
+      213: -1111251554004775838
+    second: bomb_27
+  - first:
+      213: -2135152325049461875
+    second: bomb_28
+  - first:
+      213: -2308900631448679908
+    second: bomb_29
+  - first:
+      213: -4729535236244661222
+    second: bomb_30
+  - first:
+      213: -7700857288111456489
+    second: bomb_31
+  - first:
+      213: -8533779094394014554
+    second: bomb_32
+  - first:
+      213: 6861590207050513087
+    second: bomb_33
+  - first:
+      213: -146637111480836357
+    second: bomb_34
+  - first:
+      213: -5175244006018031168
+    second: bomb_35
+  - first:
+      213: 8038810383681747735
+    second: bomb_36
+  - first:
+      213: -8738060933396378531
+    second: bomb_37
+  - first:
+      213: 3666123428967389420
+    second: bomb_38
+  - first:
+      213: 7612548563690751467
+    second: bomb_39
+  - first:
+      213: -305768254406279157
+    second: bomb_40
+  - first:
+      213: -5737406065042706314
+    second: bomb_41
+  - first:
+      213: 5399853158184175696
+    second: bomb_42
+  - first:
+      213: -321802413482894294
+    second: bomb_43
+  - first:
+      213: -8248398946436574073
+    second: bomb_44
+  - first:
+      213: 1421777303238599058
+    second: bomb_45
+  - first:
+      213: 5751759578912100241
+    second: bomb_46
+  - first:
+      213: 2301765138715404098
+    second: bomb_47
+  - first:
+      213: -528460887655767478
+    second: bomb_48
+  - first:
+      213: -4463092501428811484
+    second: bomb_49
+  - first:
+      213: -3728216212221870653
+    second: bomb_50
+  - first:
+      213: 5187936184741192726
+    second: bomb_51
+  - first:
+      213: -4489755366713976338
+    second: bomb_52
+  - first:
+      213: 8093892858184993698
+    second: bomb_53
+  - first:
+      213: 7692410534643902339
+    second: bomb_54
+  - first:
+      213: -30796647470240890
+    second: bomb_55
+  - first:
+      213: -7490512068924892494
+    second: bomb_56
+  - first:
+      213: -4379952786151989718
+    second: bomb_57
+  - first:
+      213: -8027270538417124843
+    second: bomb_58
+  - first:
+      213: 2446707697212632717
+    second: bomb_59
+  - first:
+      213: 8586002993343789211
+    second: bomb_60
+  - first:
+      213: 5708650022256904508
+    second: bomb_61
+  - first:
+      213: -6106199924706767348
+    second: bomb_62
+  - first:
+      213: -680815256452511255
+    second: bomb_63
+  - first:
+      213: 188091761630930382
+    second: bomb_64
+  - first:
+      213: 15209762234772126
+    second: bomb_65
+  - first:
+      213: 3298462936421024753
+    second: bomb_66
+  - first:
+      213: 8697031626279689797
+    second: bomb_67
+  - first:
+      213: -23307450829115792
+    second: bomb_68
+  - first:
+      213: -1663648753057722860
+    second: bomb_69
+  - first:
+      213: 657084879136292827
+    second: bomb_70
+  - first:
+      213: -6720572810319965262
+    second: bomb_71
+  - first:
+      213: 7982906324481321698
+    second: bomb_72
+  - first:
+      213: -4309696202083244669
+    second: bomb_73
+  - first:
+      213: 3740635889156743442
+    second: bomb_74
+  - first:
+      213: -9098740714066972906
+    second: bomb_75
+  - first:
+      213: -4657255760937278292
+    second: bomb_76
+  - first:
+      213: -5900112521351052670
+    second: bomb_77
+  - first:
+      213: 6033942705365332592
+    second: bomb_78
+  - first:
+      213: -6631423788203762760
+    second: bomb_79
+  - first:
+      213: -1308615515727038241
+    second: bomb_80
+  - first:
+      213: 2345371220812899947
+    second: bomb_81
+  - first:
+      213: -8553835430272145279
+    second: bomb_82
+  - first:
+      213: 7577825732995343338
+    second: bomb_83
+  - first:
+      213: 2837379582527930011
+    second: bomb_84
+  - first:
+      213: 8072504487648309651
+    second: bomb_85
+  - first:
+      213: 6816647257206595381
+    second: bomb_86
+  - first:
+      213: -1737912038350954123
+    second: bomb_87
+  - first:
+      213: -2463777170850414834
+    second: bomb_88
+  - first:
+      213: -4221604197600323071
+    second: bomb_89
+  - first:
+      213: 4022730810744492128
+    second: bomb_90
+  - first:
+      213: -6531260886228442010
+    second: bomb_91
+  - first:
+      213: -5979678460763654410
+    second: bomb_92
+  - first:
+      213: 4505850004767790831
+    second: bomb_93
+  - first:
+      213: 2521658636477591348
+    second: bomb_94
+  - first:
+      213: 4657847846921440676
+    second: bomb_95
+  - first:
+      213: -3798459526381349313
+    second: bomb_96
+  - first:
+      213: -2240317730735698878
+    second: bomb_97
+  - first:
+      213: 2853819840908564974
+    second: bomb_98
+  - first:
+      213: -8682408663710157570
+    second: bomb_99
+  - first:
+      213: -4042341546103942781
+    second: bomb_100
+  - first:
+      213: 4967531824591314850
+    second: bomb_101
+  - first:
+      213: 3942212695683927305
+    second: bomb_102
+  - first:
+      213: -5200050659207841767
+    second: bomb_103
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: "\u56FE\u5C421(3)"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1165
+      width: 1803
+      height: 620
+    spriteID: a69cfb8fca2579b4c9b6020b59bdffe7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -141, y: 845}
+  - name: Bomb
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1985
+      width: 120
+      height: 253
+    spriteID: f40cabc11d6958b4b907350de40359e9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -141, y: 1473}
+  - name: "\u80CC\u666F"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2031
+      height: 1153
+    spriteID: edc5dab4230fab34e8a587e156586c44
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 2031, y: 1153}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: "\u56FE\u5C421(3)"
+    spriteName: "\u56FE\u5C421(3)"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a69cfb8fca2579b4c9b6020b59bdffe7
+    layerID: 5
+    mosaicPosition: {x: 4, y: 1165}
+  - name: "\u56FE\u5C421(2)"
+    spriteName: "\u56FE\u5C421(2)"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f40cabc11d6958b4b907350de40359e9
+    layerID: 3
+    mosaicPosition: {x: 4, y: 1793}
+  - name: "\u80CC\u666F"
+    spriteName: "\u80CC\u666F"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: edc5dab4230fab34e8a587e156586c44
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: bomb Texture
+  prefabAssetName: bomb Prefab
+  spriteLibAssetName: bomb Sprite Lib
+  secondarySpriteTextures: []

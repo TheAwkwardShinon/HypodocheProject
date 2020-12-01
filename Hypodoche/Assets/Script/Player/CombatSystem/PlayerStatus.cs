@@ -10,7 +10,7 @@ namespace Hypodoche
         #region Variables
         private float _playerHealth;
         private float _playerStamina;
-        [SerializeField]private float _staminaRegenRate = 15f;
+        [SerializeField] private float _staminaRegenRate = 15f;
         private float _staminaRegenDelay = 0.5f;
         private float _maxHealth = 100f;
         private float _maxStamina = 100f;
@@ -19,14 +19,19 @@ namespace Hypodoche
         private bool _isExhausted = false;
         #endregion
 
-        /*TODO Exchange with proper UI*/
-        public Text _staminaText;
+        [SerializeField] private Slider _staminaSlider;
+        [SerializeField] private Slider _healthSlider;
+        [SerializeField] private Image _staminaColor;
 
         #region Methods
+        
         private void Start()
         {
             _playerHealth = _maxHealth;
             _playerStamina = _maxStamina;
+            _healthSlider.maxValue = _maxHealth;
+            _staminaSlider.maxValue = _maxStamina;
+            _staminaColor.color = Color.green;
         }
 
         private void Update()
@@ -42,6 +47,8 @@ namespace Hypodoche
 
             UpdateStaminaUIValue();
         }
+
+        #region Stamina
 
         public bool HasStamina(float cost)
         {
@@ -62,20 +69,42 @@ namespace Hypodoche
 
         }
 
-        public void UpdateStaminaUIValue()
+        private void UpdateStaminaUIValue()
         {
-            _staminaText.text = ("Stamina: " + (int) _playerStamina);
+            _staminaSlider.value = _playerStamina;
             if (_playerStamina < _exhaustionPoint)
             {
-                _staminaText.color = Color.red;
+                _staminaColor.color = Color.red;
             }
             else if (_playerStamina < 50f)
-                _staminaText.color = Color.yellow;
+                _staminaColor.color = Color.yellow;
             else
             {
-                _staminaText.color = Color.white;
+                _staminaColor.color = Color.green;
             }
         }
+
+        #endregion
+
+        #region Health
+
+        public void TakeDamage(int damage)
+        {
+            _playerHealth -= damage;
+
+            UpdateHealthUIValue();
+
+            if (_playerHealth <= 0)
+            {
+                //Die
+            }
+        }
+
+        private void UpdateHealthUIValue()
+        {
+            _healthSlider.value = _playerHealth;
+        }
+        #endregion
         #endregion
     }
 }

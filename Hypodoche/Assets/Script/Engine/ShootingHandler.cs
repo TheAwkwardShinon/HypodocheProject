@@ -20,6 +20,12 @@ namespace Hypodoche
         #endregion
 
         #region Method
+        private void Start()
+        {
+            if (_arrowPrefab != null)
+                _arrowBehaviour = _arrowPrefab.GetComponent<ArrowBehaviour>();
+        }
+
         public void SetArrowStats(Weapon weapon)
         {
             _arrowBehaviour.SetDamage(weapon.GetLightDamage());

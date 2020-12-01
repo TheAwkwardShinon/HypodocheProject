@@ -12,7 +12,7 @@ namespace Hypodoche
     public class PlayerMovement : MonoBehaviour
     {
         #region Variables
-        [SerializeField] [Range(1f, 3f)] private float _playerSpeed = 1f;
+        [SerializeField] [Range(1f, 10f)] private float _playerSpeed = 1f;
         [SerializeField] [Range(1.5f, 10f)] private float _dashMultiplier = 5f;
         [SerializeField] [Range(1.5f, 2f)] private float _backstepMultiplier = 1.5f;
         [SerializeField] [Range(1.5f, 10f)] private float _sprintMultiplier = 10f;
@@ -81,25 +81,23 @@ namespace Hypodoche
 
         private void FixedUpdate()
         {
-            _movement *= _playerSpeed;
-            _backMovement *= _playerSpeed;
 
             if (_isDashing)
             {
                 UpdateSpriteDirection(_movement);
-                UpdatePosition(_movement * _dashMultiplier, Time.fixedDeltaTime);
+                UpdatePosition(_movement * _playerSpeed * _dashMultiplier, Time.fixedDeltaTime);
             }
             else if (_isBackstepping)
-                UpdatePosition(_backMovement * _backstepMultiplier, Time.fixedDeltaTime);
+                UpdatePosition(_backMovement * _playerSpeed * _backstepMultiplier, Time.fixedDeltaTime);
             else if (_isSprinting)
             {
                 UpdateSpriteDirection(_movement);
-                UpdatePosition(_movement * _sprintMultiplier, Time.fixedDeltaTime);
+                UpdatePosition(_movement * _playerSpeed * _sprintMultiplier, Time.fixedDeltaTime);
             }
             else
             {
                 UpdateSpriteDirection(_movement);
-                UpdatePosition(_movement, Time.fixedDeltaTime);
+                UpdatePosition(_movement * _playerSpeed, Time.fixedDeltaTime);
             }
         }
 

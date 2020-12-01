@@ -11,7 +11,7 @@ namespace Hypodoche
     public class ArrowBehaviour : MonoBehaviour
     {
         #region Variables
-        [SerializeField] private float _speed = 3f;
+        [SerializeField] private float _speed = 10f;
         [SerializeField] private float _damage = 10;
         [SerializeField] private float _maxDistance = 20f;
         private Rigidbody _rigidbody;
@@ -51,12 +51,17 @@ namespace Hypodoche
 
         private void OnTriggerEnter(Collider other)
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
+            print(other.gameObject.tag);
+
+            if (!other.gameObject.CompareTag("Player"))
             {
-                enemy.TakeDamage(_damage);
+                Enemy enemy = other.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(_damage);
+                }
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
         #endregion
     }

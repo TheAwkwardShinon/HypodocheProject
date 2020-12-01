@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Hypodoche
 {
     [CreateAssetMenu(menuName ="Items/Weapon Item")]
-    public class Weapon : Item
+    public class Weapon : MonoBehaviour
     {
         #region Variables
         [SerializeField] private Sprite _weaponSprite;
