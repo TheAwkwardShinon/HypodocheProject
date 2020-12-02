@@ -17,7 +17,7 @@ namespace Hypodoche
         public void Start()
         {
             StunData s = new StunData();
-            s.isEmpty = false;
+            s.isEmpty = true;
             s.time = 20;
             DamageOverTimeData d = new DamageOverTimeData();
             d.isEmpty = false;
@@ -27,7 +27,12 @@ namespace Hypodoche
             sl.isEmpty = true;
             DamageData dm = new DamageData();
             dm.isEmpty = true;
-            myEffect = new Effects(sl, s, d, dm);
+            FearData sc = new FearData();
+            sc.isEmpty = false;
+            sc.whatScareMe = LayerMask.GetMask("player");
+            sc.timeOfFear = 15;
+
+            myEffect = new Effects(sl, s, d, dm,sc);
         }
         
 
@@ -46,6 +51,7 @@ namespace Hypodoche
             Destroy(gameObject);
             return JsonUtility.ToJson(myEffect, true);
         }
+
         #endregion
     }
 }

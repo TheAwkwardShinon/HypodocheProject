@@ -13,7 +13,8 @@ namespace Hypodoche
         public B1_PlayerDetectState _playerDetectState { get; private set; }
         public B1_FistAttack _playerAttackFist { get; private set; }
         public B1_FireAttack _playerAttackFire { get; private set; }
-
+        public B1_SufferTheEffectState _sufferEffectState { get; private set; }
+        public B1_ScaredState _scareState { get; private set; }
         [SerializeField]
         private D_IdleState _idleData;
         [SerializeField]
@@ -34,7 +35,7 @@ namespace Hypodoche
             _moveState = new B1_MoveState(this, _stateMachine, "move", _entityData, this);
             _idleState = new B1_IdleState(this, _stateMachine, "idle", _idleData, this);
             _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _playerDetectData, this); //same animation
-
+            _scareState = new B1_ScaredState(this, _stateMachine, "move", _entityData, this);
             // boss move set zone
             _playerAttackFist = new B1_FistAttack(this, _stateMachine, "fist", _playerAttackFistData, this);
             _playerAttackFire = new B1_FireAttack(this, _stateMachine, "fire", _playerAttackFireData, this);
@@ -51,10 +52,22 @@ namespace Hypodoche
         }
 
 
+        public virtual void OnTriggerExit(Collider col)
+        {
+            Debug.Log("trigger");
+            if (col.gameObject.CompareTag("trap"))
+            {
+               _entityData.slowOverArea = false;
+               _entityData.damageOverArea = false;
+            }        
+        }
+
+
+
         public virtual void stepOnTrap(Collider col)
         {
             Debug.Log("tag is right");
-            _stateMachine.ChangeState(new SufferTheEffectState(this, _stateMachine, "idle", _entityData, col,this));
+            _stateMachine.ChangeState(new B1_SufferTheEffectState(this, _stateMachine, "idle", _entityData, col, "trap",this));
         }
 
         #endregion

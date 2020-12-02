@@ -37,6 +37,16 @@ namespace Hypodoche
         public bool isEmpty;
         public float damage;
     }
+
+    [Serializable]
+    public struct FearData
+    {
+        public bool isEmpty;
+        public LayerMask whatScareMe;
+        public float timeOfFear;
+    }
+
+
     #endregion
 
     [Serializable]
@@ -47,16 +57,20 @@ namespace Hypodoche
         [SerializeField] public SlowData _slow;
         [SerializeField] public DamageOverTimeData _damageOverTime;
         [SerializeField] public DamageData _damage;
+        [SerializeField] public FearData _fear;
+
+
         #endregion
 
         #region methods
         public Effects(SlowData slow, StunData stun,
-            DamageOverTimeData dmgT, DamageData dmg)
+            DamageOverTimeData dmgT, DamageData dmg,FearData fear)
         {
             _stun = stun;
             _slow = slow;
             _damageOverTime = dmgT;
             _damage = dmg;
+            _fear = fear;
         }
         #endregion
     }

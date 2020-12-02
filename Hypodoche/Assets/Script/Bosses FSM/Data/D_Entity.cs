@@ -11,10 +11,12 @@ namespace Hypodoche
         #region Variables
         public float health = 100f;
         public float damageTakenOverTime = 0f;
+        public float damageTakenOverTimeArea = 0f;
         public float wallCheckRange = 0.2f;
         public float movementSpeed = 20f;
         public float speedWhenDetect = 30f;
         public float speedWhenSlowed = 5f;
+        public float speedWhenSlowedArea = 5f;
         public float aggroRange;
         public LayerMask whatIsPerimeter;
         public LayerMask whatIsPlayer;
@@ -24,6 +26,12 @@ namespace Hypodoche
         public float timeOfStun = 0f;
         public float timeOfSlow = 0f;
         public float timeOfDamage = 0f; //for damage over time;
+        public LayerMask whatIsScaringMe;
+        public LayerMask whatIsAttractingMe;
+        public float timeOfCharm = 0f;
+        public float timeOfFear = 0f;
+        public bool slowOverArea = false;
+        public bool damageOverArea = false;
         #endregion
     }
 }

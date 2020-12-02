@@ -19,6 +19,7 @@ namespace Hypodoche
         #region Methods
         public override void Enter()
         {
+            Debug.Log("i am moving");
             base.Enter();
         }
 
@@ -26,24 +27,6 @@ namespace Hypodoche
         {
             base.Exit();
         }
-
-
-        public virtual void OntriggerEnter(Collider col)
-        {
-            Debug.Log("trigger");
-            if (col.gameObject.CompareTag("trap"))
-                stepOnTrap(col);
-        }
-
-
-        public virtual void stepOnTrap(Collider col)
-        {
-            //col.gameObject.GetComponent<objectsScriptNameHere>().variableNameHere;
-            //TODO change state here
-            _stateMachine.ChangeState(new SufferTheEffectState(_entity, _stateMachine, "idle", _entity._entityData, col, _boss1));
-        }
-
-
     
 
         public override void Update()
@@ -60,11 +43,18 @@ namespace Hypodoche
                 _stateMachine.ChangeState(_boss1._playerDetectState);
             else
             {
-                if (_entityData.isSlowed)
-                    _boss1.Move(_entityData.speedWhenSlowed);
-                else if (_entityData.isStun)
-                    return;
-                else _boss1.Move(_entityData.movementSpeed);
+                if (_entityData.slowOverArea)
+                {
+                    _boss1.Move(_entityData.speedWhenSlowedArea);
+                }
+                else
+                {
+                    if (_entityData.isSlowed)
+                        _boss1.Move(_entityData.speedWhenSlowed);
+                    else if (_entityData.isStun)
+                        return;
+                    else _boss1.Move(_entityData.movementSpeed);
+                }
             }
         }
 

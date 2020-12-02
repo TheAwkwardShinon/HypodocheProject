@@ -44,6 +44,8 @@ namespace Hypodoche
             if (_entityData.isStun)
                 return;
             float _speedWhenDetect = _entityData.isSlowed ? _entityData.speedWhenSlowed : _entityData.speedWhenDetect;
+            if (_entityData.slowOverArea)
+                _speedWhenDetect = _entityData.speedWhenSlowedArea;
             _playerPosition = _playerTransform.position;
             float dstToTarget = Vector3.Distance(_boss.transform.position, _playerPosition);
             if (_minDistanceFromPlayer < dstToTarget)

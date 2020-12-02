@@ -37,20 +37,6 @@ namespace Hypodoche
 
 
 
-        public virtual void OntriggerEnter(Collider col)
-        {
-            Debug.Log("trigger");
-            if (col.gameObject.CompareTag("trap"))
-                stepOnTrap(col);
-        }
-
-
-        public virtual void stepOnTrap(Collider col)
-        {
-            //col.gameObject.GetComponent<objectsScriptNameHere>().variableNameHere;
-            //TODO change state here
-            _stateMachine.ChangeState(new SufferTheEffectState(_entity, _stateMachine, "idle", _entity._entityData, col, _boss1));
-        }
 
 
 

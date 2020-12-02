@@ -63,13 +63,19 @@ namespace Hypodoche
 
         public virtual void Update()
         {
-/*
-            elapsed += Time.deltaTime;
-            if (elapsed >= 1f)
+            /*
+                        elapsed += Time.deltaTime;
+                        if (elapsed >= 1f)
+                        {
+                            elapsed = elapsed % 1f;
+                            OutputTime();
+                        }*/
+            if (_entity._entityData.damageOverArea)
             {
-                elapsed = elapsed % 1f;
-                OutputTime();
-            }*/
+                _entity._entityData.health -= _entity._entityData.damageTakenOverTimeArea; //todo check death
+                //_stateMachine.ChangeState(deathState) toBEimplemented
+                //_entity._boss.Destroy(); //per ora
+            }
 
             if (_entity._entityData.isStun)
             {
