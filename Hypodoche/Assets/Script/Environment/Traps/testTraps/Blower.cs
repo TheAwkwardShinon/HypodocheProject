@@ -8,6 +8,10 @@ namespace Hypodoche
     public class Blower : MonoBehaviour,Traps
     {
         #region variables
+
+        [SerializeField]public float Strength;
+        [SerializeField] public Vector3 WindDirection;
+        
         Effects myEffect;
         //public string direction;
         #endregion
@@ -17,6 +21,7 @@ namespace Hypodoche
 
         public void Start()
         {
+            // all this stuff is not necessary
             StunData s = new StunData();
             s.isEmpty = true;
             DamageOverTimeData d = new DamageOverTimeData();
@@ -34,6 +39,7 @@ namespace Hypodoche
             dma.isEmpty = true;
             BlowerData bd = new BlowerData();
             bd.isEmpty = true;
+            
             myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,true,true,bd);
         }
         
@@ -42,12 +48,16 @@ namespace Hypodoche
         {
             //if you want the trap to do something special
         }
-
-        /*  public void OnTriggerEnter()
-          {
-  
-          }*/
-
+        
+        void OnTriggerEnter(Collider col)  // gives the bouncing effect
+        {
+            Rigidbody colRigidbody = col.GetComponent<Rigidbody>();
+            if (colRigidbody != null)
+            {
+                colRigidbody.AddForce(WindDirection * Strength);
+            }
+        }
+        
         public string SendDataTrap()
         {
             //Destroy(gameObject);

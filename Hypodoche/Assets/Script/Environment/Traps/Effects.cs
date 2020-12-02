@@ -64,8 +64,8 @@ namespace Hypodoche
     public struct BlowerData
     {
         public bool isEmpty;
-        public float quantity;
-        public string direction;
+        public float strength;
+        public Vector3 direction;
     }
     
 

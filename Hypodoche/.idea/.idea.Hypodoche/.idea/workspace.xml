@@ -22,12 +22,11 @@
     <list default="true" id="424b3779-bd41-4b29-be19-ae6e890a6cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bosses FSM/Data/D_Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bosses FSM/Data/D_Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bosses FSM/SufferTheEffectState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Bosses FSM/SufferTheEffectState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArenaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArenaScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TestTrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TestTrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -54,9 +54,10 @@
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TestTrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Bosses FSM/Data/D_Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" />
       </list>
     </option>
   </component>
@@ -103,7 +104,8 @@
       <workItem from="1606841217668" duration="5587000" />
       <workItem from="1606911827964" duration="20000" />
       <workItem from="1606917406214" duration="5949000" />
-      <workItem from="1606929110125" duration="794000" />
+      <workItem from="1606929110125" duration="4775000" />
+      <workItem from="1606943085240" duration="17000" />
     </task>
     <servers />
   </component>

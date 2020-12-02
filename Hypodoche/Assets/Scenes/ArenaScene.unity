@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isMeleeSlot: 1
-  _currentWeaponSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _currentWeaponSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 3}
 --- !u!1 &101743210
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497575524}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -24.6, y: 1, z: 0}
+  m_LocalPosition: {x: -24.6, y: 1, z: -2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1514392949}
@@ -1246,6 +1246,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5363659776143510393, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.33595997
+      objectReference: {fileID: 0}
     - target: {fileID: 6588421605705044749, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: _healthSlider
@@ -1310,6 +1315,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Li Yan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606995079698, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000032393842
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606995079698, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000004871405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606995079698, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000001132488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421607176081548, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000027795892
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421607176081548, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000013113018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481686075951015503, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000061300254
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481686075951015503, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000042280142
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481686075951015503, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15234333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481686075951015503, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9883277
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764777525217523496, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.15217009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764777525217523496, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9883543
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe05fa6ebfc02143a26d5f50ba65b33, type: 3}
@@ -2282,7 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isMeleeSlot: 0
-  _currentWeaponSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _currentWeaponSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 3}
 --- !u!1 &1952184098
 GameObject:
   m_ObjectHideFlags: 0

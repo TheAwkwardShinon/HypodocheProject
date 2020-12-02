@@ -82,8 +82,8 @@
             <e p="Traps" t="Include">
               <e p="Effects.cs" t="Include" />
               <e p="testTraps" t="Include">
+                <e p="AnisKite.cs" t="Include" />
                 <e p="Blower.cs" t="Include" />
-                <e p="NewBehaviourScript.cs" t="Include" />
                 <e p="TarPit.cs" t="Include" />
                 <e p="TestTrap.cs" t="Include" />
               </e>
