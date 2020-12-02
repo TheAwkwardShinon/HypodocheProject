@@ -30,8 +30,11 @@ namespace Hypodoche
         public LayerMask whatIsAttractingMe;
         public float timeOfCharm = 0f;
         public float timeOfFear = 0f;
-        public bool slowOverArea = false;
-        public bool damageOverArea = false;
+        public bool damageOverArea;
+        public bool slowOverArea;
+        public bool enhanceDamage;
+        public bool noDodge;
+
         #endregion
     }
 }

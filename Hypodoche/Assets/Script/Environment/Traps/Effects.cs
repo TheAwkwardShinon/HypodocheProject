@@ -45,7 +45,29 @@ namespace Hypodoche
         public LayerMask whatScareMe;
         public float timeOfFear;
     }
+    
+    [Serializable]
+    public struct SlowOverAreaData
+    {
+        public bool isEmpty;
+        public float speed;
+    }
 
+    [Serializable]
+    public struct DamageOverAreaData
+    {
+        public bool isEmpty;
+        public float damage;
+    }
+    
+    [Serializable]
+    public struct BlowerData
+    {
+        public bool isEmpty;
+        public float quantity;
+        public string direction;
+    }
+    
 
     #endregion
 
@@ -58,19 +80,30 @@ namespace Hypodoche
         [SerializeField] public DamageOverTimeData _damageOverTime;
         [SerializeField] public DamageData _damage;
         [SerializeField] public FearData _fear;
-
-
+        [SerializeField] public bool _isZone;
+        [SerializeField] public SlowOverAreaData _slowOverArea;
+        [SerializeField] public DamageOverAreaData _damageOverArea;
+        [SerializeField] public bool _noDodge;
+        [SerializeField] public bool _enhanceDamage;
+        [SerializeField] public BlowerData _blower;
         #endregion
 
         #region methods
         public Effects(SlowData slow, StunData stun,
-            DamageOverTimeData dmgT, DamageData dmg,FearData fear)
+            DamageOverTimeData dmgT, DamageData dmg,FearData fear,bool isZone,SlowOverAreaData slowArea,
+            DamageOverAreaData dmgArea,bool noDodge, bool enDmg,BlowerData blower)
         {
             _stun = stun;
             _slow = slow;
             _damageOverTime = dmgT;
             _damage = dmg;
             _fear = fear;
+            _isZone = isZone;
+            _slowOverArea = slowArea;
+            _damageOverArea = dmgArea;
+            _noDodge = noDodge;
+            _enhanceDamage = enDmg;
+            _blower = blower;
         }
         #endregion
     }

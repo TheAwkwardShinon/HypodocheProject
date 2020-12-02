@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\matte\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\matte\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Hypodoche.-166678142.00" t="ExcludeRecursive" />
+    <e p="C:\Users\matte\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Hypodoche.-1716808391.00" t="ExcludeRecursive" />
     <e p="C:\Users\matte\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\matte\OneDrive\Desktop\hypodoche_proto\HypodocheProject\Hypodoche" t="IncludeRecursive">
+    <e p="C:\Users\matte\OneDrive\Desktop\Nuova cartella\HypodocheProject\Hypodoche" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Free asset downloaded" t="Include">
@@ -36,6 +36,8 @@
                 <e p="B1_IdleState.cs" t="Include" />
                 <e p="B1_MoveState.cs" t="Include" />
                 <e p="B1_PlayerDetectState.cs" t="Include" />
+                <e p="B1_ScaredState.cs" t="Include" />
+                <e p="B1_SufferTheEffectState.cs" t="Include" />
                 <e p="Boss1.cs" t="Include" />
                 <e p="SpecificData" t="Include">
                   <e p="B1_D_Fire.cs" t="Include" />
@@ -80,6 +82,9 @@
             <e p="Traps" t="Include">
               <e p="Effects.cs" t="Include" />
               <e p="testTraps" t="Include">
+                <e p="Blower.cs" t="Include" />
+                <e p="NewBehaviourScript.cs" t="Include" />
+                <e p="TarPit.cs" t="Include" />
                 <e p="TestTrap.cs" t="Include" />
               </e>
               <e p="Traps.cs" t="Include" />

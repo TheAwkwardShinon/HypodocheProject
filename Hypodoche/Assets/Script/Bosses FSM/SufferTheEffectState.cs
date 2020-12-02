@@ -34,7 +34,7 @@ namespace Hypodoche
                 Effects trapEffect = JsonUtility.FromJson<Effects>(_effects);
                 if (trapEffect._isZone)
                     handleZone(trapEffect);
-                else handleEffects(trapEffect);
+                else handleEffect(trapEffect);
             }
         }
 
