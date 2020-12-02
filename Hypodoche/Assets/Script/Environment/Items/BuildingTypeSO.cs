@@ -12,5 +12,9 @@ using UnityEngine;
         public string _itemType;
         public GameObject _prefab;
         public Sprite _sprite;
+        public Sprite _spriteParam1;
+        public Sprite _spriteParam2;
+        public string _valueParam1;
+        public string _valueParam2;
     }
 

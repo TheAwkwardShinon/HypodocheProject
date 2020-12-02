@@ -20,9 +20,21 @@ namespace Hypodoche{
         public void BuildInventory()
         {
             int id = 0;
-            foreach (BuildingTypeSO buildingTypeSO in _buildingTypeSOList){ 
-                Item item = new Item(id, _buildingTypeSOList[id]._title, _buildingTypeSOList[id]._description,
-                    _buildingTypeSOList[id]._itemType, _buildingTypeSOList[id]._sprite, _buildingTypeSOList[id]._prefab);
+            foreach (BuildingTypeSO buildingTypeSO in _buildingTypeSOList) {
+                int numParams = 2;
+                Item item = null;
+                if (_buildingTypeSOList[id]._valueParam2 == "None") {
+                    numParams = 1;
+                    item = new Item(id, _buildingTypeSOList[id]._title, _buildingTypeSOList[id]._description,
+                        _buildingTypeSOList[id]._itemType, _buildingTypeSOList[id]._sprite, _buildingTypeSOList[id]._prefab,
+                        numParams,_buildingTypeSOList[id]._spriteParam1,_buildingTypeSOList[id]._valueParam1);
+                }
+                else {
+                    item = new Item(id, _buildingTypeSOList[id]._title, _buildingTypeSOList[id]._description,
+                        _buildingTypeSOList[id]._itemType, _buildingTypeSOList[id]._sprite,
+                        _buildingTypeSOList[id]._prefab,numParams,_buildingTypeSOList[id]._spriteParam1,_buildingTypeSOList[id]._valueParam1,
+                        _buildingTypeSOList[id]._spriteParam2,_buildingTypeSOList[id]._valueParam2);
+                }
                 _items.Add(item);
                 id++;
             }

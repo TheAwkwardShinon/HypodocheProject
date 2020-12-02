@@ -29,7 +29,7 @@ namespace Hypodoche
             _buildingManager = GameObject.FindGameObjectWithTag("BuildingManager").GetComponent<BuildingManager>();
             _itemImage = gameObject.transform.GetChild(0).GetComponent<Image>();
             _backgroundImage = gameObject.GetComponent<Image>();
-            _selected = Resources.Load<Sprite>("Sprites/Items/Selected");
+            _selected = Resources.Load<Sprite>("Sprites/Selected");
             _deselected = _backgroundImage.sprite;
         }
 
