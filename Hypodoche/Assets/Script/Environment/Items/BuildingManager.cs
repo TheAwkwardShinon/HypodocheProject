@@ -24,6 +24,7 @@ namespace Hypodoche {
         private bool _move;
         private Vector2 _mouseWorldPosition;
         private int _temp;
+        private int _maxtrap;
         public GameObject _arena;
         
         #endregion
@@ -37,6 +38,7 @@ namespace Hypodoche {
             _typeSelectUI = GameObject.FindGameObjectWithTag("TypeSelectUI").GetComponent<TypeSelectUI>();
             _xselected = 2;
             _yselected = 2;
+            _maxtrap = 5;
             _move = false;
             CloseToolTip();
             _temp = -1;
@@ -66,7 +68,8 @@ namespace Hypodoche {
             }
 
             if (Input.GetKeyDown(KeyCode.Y)) {
-                Build();
+                if (CanBuild())  
+                    Build();
             }
 
             if (Input.GetKeyDown(KeyCode.U)) {
@@ -165,6 +168,30 @@ namespace Hypodoche {
             }
         }
 
+        private bool CanBuild()
+        {
+            int built = 0;
+            for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
+                for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
+                {
+                    if (_arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId != -1)
+                        built = built + 1;
+                }
+            }
+
+            if ((built < _maxtrap) || ((built == _maxtrap) && (_move || IsOccupied(_xselected,_yselected))))
+                return true;
+            else
+                return false;
+            /*
+               You can place a trap if :
+               -number of traps is less than max number
+               -number of traps is equal to max number and you are placing something which you are simply moving
+               -number of traps is equal to max number and the place selected is already occupied so you can overwrite it without 
+                exceeding the max number
+            */
+        }
+
         private void Delete() {
             _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId = -1;
         }
@@ -227,7 +254,7 @@ namespace Hypodoche {
         }
 
         private bool IsOccupied(int x,int y) {
-            if (_arenaGrid._gridArray[x, y]) {
+            if (_arenaGrid._gridArray[x, y].GetComponent<Slot>()._itemId!=-1) {
                 return true;
             }
             return false;
