@@ -17,6 +17,7 @@
         </e>
         <e p="Script" t="Include">
           <e p="Bosses FSM" t="Include">
+            <e p="Boss.cs" t="Include" />
             <e p="CharmedState.cs" t="Include" />
             <e p="Data" t="Include">
               <e p="D_CharmedState.cs" t="Include" />
@@ -26,6 +27,7 @@
               <e p="D_PlayerDetectState.cs" t="Include" />
               <e p="D_ScaredState.cs" t="Include" />
             </e>
+            <e p="Enemy.cs" t="Include" />
             <e p="EnemySpecification" t="Include">
               <e p="Boss1 (test)" t="Include">
                 <e p="AttackMoves" t="Include">
@@ -107,7 +109,6 @@
           </e>
           <e p="Player" t="Include">
             <e p="CombatSystem" t="Include">
-              <e p="Enemy.cs" t="Include" />
               <e p="PlayerCombat.cs" t="Include" />
               <e p="PlayerInventory.cs" t="Include" />
               <e p="PlayerMovement.cs" t="Include" />

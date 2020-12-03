@@ -22,11 +22,8 @@
     <list default="true" id="424b3779-bd41-4b29-be19-ae6e890a6cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Bosses FSM/EnemySpecification/Li Yan/ScriptableObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Player/CombatSystem/PlayerStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Player/CombatSystem/PlayerStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/trap.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/trap.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,6 @@
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingTypeSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Bosses FSM/SufferTheEffectState.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TestTrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs" />
@@ -70,6 +66,7 @@
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" />
       </list>
     </option>
   </component>
@@ -120,6 +117,7 @@
       <workItem from="1606943085240" duration="17000" />
       <workItem from="1606987049250" duration="5817000" />
       <workItem from="1607002501664" duration="8098000" />
+      <workItem from="1607012922212" duration="3516000" />
     </task>
     <servers />
   </component>
