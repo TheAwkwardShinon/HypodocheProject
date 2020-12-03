@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Hypodoche
 {
-    public class LiYan : Entity
+    public class LiYan : Entity,Boss
     {
         #region Variables
         public LiYan_IdleState _idleState { get; private set; }
@@ -45,14 +45,14 @@ namespace Hypodoche
             Destroy(gameObject);
         }
 
-        public virtual void OnTriggerEnter(Collider col)
+        public  void OnTriggerEnter(Collider col)
         {
             if (col.gameObject.CompareTag("trap"))
                 stepOnTrap(col);
         }
 
 
-        public virtual void OnTriggerExit(Collider col)
+        public  void OnTriggerExit(Collider col)
         {
             if (col.gameObject.CompareTag("trap"))
             {
@@ -63,9 +63,15 @@ namespace Hypodoche
 
 
 
-        public virtual void stepOnTrap(Collider col)
+        public void stepOnTrap(Collider col)
         {
             _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeEffect", _entityData, col, "trap", this));
+        }
+
+
+        public float getHealth()
+        {
+            return _entityData.health;
         }
 
         #endregion

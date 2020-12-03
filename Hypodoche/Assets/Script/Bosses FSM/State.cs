@@ -39,40 +39,16 @@ namespace Hypodoche
 
 
 
-        /*
-        public virtual void OutputTime()
-        {
-            if (_entity._entityData.isStun)
-            {
-                _entity._entityData.timeOfStun -= 1;
-                Debug.Log("stun, time left: " + _entity._entityData.timeOfStun);
-            }
-            if (_entity._entityData.isSlowed)
-            {
-                _entity._entityData.timeOfSlow -= 1;
-                Debug.Log("Slowed, time left: " + _entity._entityData.timeOfSlow);
-            }
-            if (_entity._entityData.gotDamageOverTime)
-            {
-                _entity._entityData.timeOfDamage -= 1;
-                Debug.Log("-" + _entity._entityData.damageTakenOverTime + " hp, time left: " + _entity._entityData.timeOfDamage);
-            }
-        }
-        */
 
 
         public virtual void Update()
         {
-            /*
-                        elapsed += Time.deltaTime;
-                        if (elapsed >= 1f)
-                        {
-                            elapsed = elapsed % 1f;
-                            OutputTime();
-                        }*/
+
             if (_entity._entityData.damageOverArea)
             {
-                _entity._entityData.health -= _entity._entityData.damageTakenOverTimeArea; //todo check death
+                _entity._entityData.health -= _entity._entityData.damageTakenOverTimeArea;
+                Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
+                enemy.TakeDamage(_entity._entityData.damageTakenOverTimeArea);
             }
 
             if (_entity._entityData.isStun)
@@ -103,6 +79,8 @@ namespace Hypodoche
                 else
                 {
                     _entity._entityData.health -= _entity._entityData.damageTakenOverTime;
+                    Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
+                    enemy.TakeDamage(_entity._entityData.damageTakenOverTime);
                 }
             }
         }

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface Traps
-{
-    string SendDataTrap();
+namespace Hypodoche { 
+    public interface Traps
+    {
+        string SendDataTrap();
+    }
 }

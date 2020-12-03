@@ -28,7 +28,7 @@ namespace Hypodoche
         public override void Enter()
         {
             base.Enter();
-            Debug.Log("suffer the effect state");
+
             if (_typeOfCollission.Equals("trap")) {
                 _effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
                 Effects trapEffect = JsonUtility.FromJson<Effects>(_effects);
@@ -93,23 +93,24 @@ namespace Hypodoche
         }
 
         public void gotStun(float time){
-            Debug.Log("called stun");
+
             _entityData.isStun = true;
             _entityData.timeOfStun = time;
         }
 
         public void gotDamage(float dmg)
         {
-            Debug.Log("called damage");
+
             _entityData.health -= dmg;
-            if (_entityData.health <= 0) return;
-                //_stateMachine.ChangeState(deathState) toBEimplemented
-                //_entity._boss.Destroy(); //per ora
+            Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
+            enemy.TakeDamage(dmg);
+           /* if (_entityData.health <= 0) return;
+                _stateMachine.ChangeState(_deathState)*/
         }
 
         public void gotDamageOverTime(float dmg, float time)
         {
-            Debug.Log("called damageOverTime");
+
             _entityData.gotDamageOverTime = true;
             _entityData.timeOfDamage = time;
             _entityData.damageTakenOverTime = dmg;
@@ -117,7 +118,7 @@ namespace Hypodoche
 
         public void gotSlow(float speed, float time)
         {
-            Debug.Log("called slow");
+   
             _entityData.isSlowed = true;
             _entityData.timeOfSlow = time;
             _entityData.speedWhenSlowed = speed;
