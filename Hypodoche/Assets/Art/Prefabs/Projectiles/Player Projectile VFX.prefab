@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546667945919573161}
   serializedVersion: 6
-  lengthInSec: 0.5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -9658,7 +9658,7 @@ GameObject:
   - component: {fileID: 622147782254251585}
   - component: {fileID: 8650058950136697823}
   m_Layer: 0
-  m_Name: Projectile VFX
+  m_Name: Player Projectile VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9695,7 +9695,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 36
   m_CollisionDetection: 0
 --- !u!136 &622147782254251585
 CapsuleCollider:
@@ -9725,4 +9725,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _damage: 10
-  _maxDistance: 20
+  _maxDistance: 200

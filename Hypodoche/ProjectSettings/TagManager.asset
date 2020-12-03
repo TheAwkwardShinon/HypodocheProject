@@ -8,6 +8,7 @@ TagManager:
   - boss
   - Ground
   - trap
+  - Bomb
   layers:
   - Default
   - TransparentFX

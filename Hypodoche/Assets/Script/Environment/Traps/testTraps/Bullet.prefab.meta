@@ -1,6 +1,12 @@
 fileFormatVersion: 2
-guid: db61b3d46be6a6a4eabaa3026e0db161
+<<<<<<< Updated upstream:Hypodoche/Assets/Script/Environment/Traps/testTraps/Bullet.prefab.meta
+guid: 63649fd7eae821b459ccadb5a60d023c
 PrefabImporter:
+=======
+guid: 8df56812e30399d439cae7203e4e1d6b
+folderAsset: yes
+DefaultImporter:
+>>>>>>> Stashed changes:Hypodoche/Assets/Art/Sprites/Bosses/li yan/Bombs.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
