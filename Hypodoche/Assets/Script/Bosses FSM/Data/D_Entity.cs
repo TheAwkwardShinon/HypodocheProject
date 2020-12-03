@@ -32,7 +32,7 @@ namespace Hypodoche
         public float timeOfFear = 0f;
         public bool damageOverArea;
         public bool slowOverArea;
-        public float enhanceMultiplier = 1f;
+        public float enhanceMultiplier = 0f;
 
 
         #endregion

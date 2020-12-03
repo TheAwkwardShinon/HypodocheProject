@@ -46,9 +46,9 @@ namespace Hypodoche
 
             if (_entity._entityData.damageOverArea)
             {
-                _entity._entityData.health -= (_entity._entityData.damageTakenOverTimeArea * _entity._entityData.enhanceMultiplier);
+                _entity._entityData.health -= (_entity._entityData.damageTakenOverTimeArea +(_entity._entityData.damageTakenOverTimeArea * _entity._entityData.enhanceMultiplier));
                 Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
-                enemy.TakeDamage(_entity._entityData.damageTakenOverTimeArea * _entity._entityData.enhanceMultiplier);
+                enemy.TakeDamage(_entity._entityData.damageTakenOverTimeArea + (_entity._entityData.damageTakenOverTimeArea * _entity._entityData.enhanceMultiplier));
             }
 
             if (_entity._entityData.isStun)
@@ -78,9 +78,9 @@ namespace Hypodoche
                 }
                 else
                 {
-                    _entity._entityData.health -= (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier);
+                    _entity._entityData.health -= (_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
                     Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
-                    enemy.TakeDamage(_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier);
+                    enemy.TakeDamage(_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
                 }
             }
         }

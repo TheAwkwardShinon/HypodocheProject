@@ -109,9 +109,9 @@ namespace Hypodoche
         public void gotDamage(float dmg)
         {
 
-            _entityData.health -= dmg;
+            _entityData.health -= dmg + (dmg * _entityData.enhanceMultiplier);
             Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(dmg * _entityData.enhanceMultiplier);
+            enemy.TakeDamage(dmg + (dmg * _entityData.enhanceMultiplier));
            /* if (_entityData.health <= 0) return;
                 _stateMachine.ChangeState(_deathState)*/
         }
