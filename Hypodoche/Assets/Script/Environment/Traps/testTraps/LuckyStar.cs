@@ -7,7 +7,6 @@ namespace Hypodoche
     public class LuckyStar : MonoBehaviour,Traps
     {
         #region variables
-
         public float countdown = 50;
         public bool timeIsRunning;
         public bool idle;
@@ -41,13 +40,11 @@ namespace Hypodoche
         
         void OnTriggerEnter(Collider  col)
         {
-            Debug.Log("Detected sth");
-            if(col.gameObject.tag == "projectile" && !idle)
+            if(col.gameObject.CompareTag("projectile") && !idle)
             {
                 Destroy(col.gameObject);
                 timeIsRunning = true;
                 idle = true;
-                Debug.Log("Detected");
             }
         }
 
