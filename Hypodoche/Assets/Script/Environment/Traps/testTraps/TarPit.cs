@@ -30,9 +30,9 @@ namespace Hypodoche
             sla.speed = 5;
             DamageOverAreaData dma = new DamageOverAreaData();
             dma.isEmpty = true;
-            BlowerData bd = new BlowerData();
-            bd.isEmpty = true;
-            myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,true,true,bd);
+            EnhanceData en = new EnhanceData();
+            en.isEmpty = true;
+            myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,en);
         }
         
 

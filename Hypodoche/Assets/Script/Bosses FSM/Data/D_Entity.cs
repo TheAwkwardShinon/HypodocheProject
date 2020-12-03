@@ -32,8 +32,6 @@ namespace Hypodoche
         public float timeOfFear = 0f;
         public bool damageOverArea;
         public bool slowOverArea;
-        public bool enhanceDamage;
-        public bool noDodge;
 
         #endregion
     }

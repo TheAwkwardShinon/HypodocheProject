@@ -61,12 +61,11 @@ namespace Hypodoche
     }
     
     [Serializable]
-    public struct BlowerData
+    public struct EnhanceData
     {
         public bool isEmpty;
-        public float strength;
-        public Vector3 direction;
     }
+    
     
 
     #endregion
@@ -83,15 +82,13 @@ namespace Hypodoche
         [SerializeField] public bool _isZone;
         [SerializeField] public SlowOverAreaData _slowOverArea;
         [SerializeField] public DamageOverAreaData _damageOverArea;
-        [SerializeField] public bool _noDodge;
-        [SerializeField] public bool _enhanceDamage;
-        [SerializeField] public BlowerData _blower;
+        [SerializeField] public EnhanceData _enhance;
         #endregion
 
         #region methods
         public Effects(SlowData slow, StunData stun,
             DamageOverTimeData dmgT, DamageData dmg,FearData fear,bool isZone,SlowOverAreaData slowArea,
-            DamageOverAreaData dmgArea,bool noDodge, bool enDmg,BlowerData blower)
+            DamageOverAreaData dmgArea,EnhanceData en)
         {
             _stun = stun;
             _slow = slow;
@@ -101,9 +98,7 @@ namespace Hypodoche
             _isZone = isZone;
             _slowOverArea = slowArea;
             _damageOverArea = dmgArea;
-            _noDodge = noDodge;
-            _enhanceDamage = enDmg;
-            _blower = blower;
+            _enhance = en;
         }
         #endregion
     }
