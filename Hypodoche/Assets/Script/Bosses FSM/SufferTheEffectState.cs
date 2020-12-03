@@ -70,7 +70,7 @@ namespace Hypodoche
                 slowOverArea(trapEffect._slowOverArea.speed);
             if (trapEffect._damageOverArea.isEmpty == false)
                 DamageOverArea(trapEffect._damageOverArea.damage);
-            if (trapEffect._enanche.isEmpty == false)
+            if (trapEffect._enhance.isEmpty == false)
                 EnancheOverArea(trapEffect._enhance.value);
         }
 
