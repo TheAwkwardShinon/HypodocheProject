@@ -165,7 +165,8 @@ MonoBehaviour:
   _bombDamage: 0
   _chargeTime: 2
   _explosionDelay: 0.1
-  _projectilePrefab: {fileID: 0}
+  _projectilePrefab: {fileID: 4269573159081168778, guid: 96030c793d8f9a44890d001c9356acc4,
+    type: 3}
   _spawnRocketPosition: {fileID: 4999351486958132260}
 --- !u!1 &5989144106090741641
 GameObject:
