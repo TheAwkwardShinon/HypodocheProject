@@ -34,6 +34,7 @@ namespace Hypodoche
         public bool slowOverArea;
         public bool enhanceDamage; //Should it be a float %?
 
+
         #endregion
     }
 }

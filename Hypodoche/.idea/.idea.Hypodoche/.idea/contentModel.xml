@@ -84,6 +84,9 @@
               <e p="testTraps" t="Include">
                 <e p="AnisKite.cs" t="Include" />
                 <e p="Blower.cs" t="Include" />
+                <e p="Bullet.cs" t="Include" />
+                <e p="LuckyStar.cs" t="Include" />
+                <e p="SubZeroRay.cs" t="Include" />
                 <e p="TarPit.cs" t="Include" />
                 <e p="TestTrap.cs" t="Include" />
               </e>

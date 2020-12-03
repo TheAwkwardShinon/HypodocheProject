@@ -22,11 +22,10 @@
     <list default="true" id="424b3779-bd41-4b29-be19-ae6e890a6cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ArenaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ArenaScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +36,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/SubZeroRay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -54,10 +56,13 @@
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TestTrap.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Bosses FSM/Data/D_Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/SubZeroRay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" />
       </list>
     </option>
   </component>
@@ -106,6 +111,8 @@
       <workItem from="1606917406214" duration="5949000" />
       <workItem from="1606929110125" duration="4775000" />
       <workItem from="1606943085240" duration="17000" />
+      <workItem from="1606987049250" duration="5817000" />
+      <workItem from="1607002501664" duration="343000" />
     </task>
     <servers />
   </component>

@@ -43,20 +43,13 @@ namespace Hypodoche
             sla.isEmpty = true;
             DamageOverAreaData dma = new DamageOverAreaData();
             dma.isEmpty = true;
-            BlowerData bd = new BlowerData();
-            bd.isEmpty = true;
+            EnhanceData en = new EnhanceData();
+            en.isEmpty = true;
             direction = new Vector3(0, 0, 0);
-            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, false, false, bd);
-
+            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);
             //Simplified AI
-            InvokeRepeating("Move", 0.0f, 0.01f);
             InvokeRepeating("ChangeDirection", 5.0f, 15.0f);
 
-        }
-
-        public void Update()
-        {
-            // moves randomly
         }
 
         public void ChangeDirection()
@@ -69,12 +62,10 @@ namespace Hypodoche
         public void OnTriggerEnter()
         {
             direction = -1 * direction;
-            ////how it rotates should be fixed
-            float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
             transform.Rotate(0, 0, 180f, Space.Self);
         }
 
-        public void Move()
+        public void Update()
         {
             transform.position = transform.position + direction * speed;
         }
