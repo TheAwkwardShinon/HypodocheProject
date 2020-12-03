@@ -5,14 +5,14 @@ using System;
 
 namespace Hypodoche
 {
-    public class TarPit : MonoBehaviour,Traps
+    public class TheHorrorBelow : MonoBehaviour,Traps
     {
         #region variables
         Effects myEffect;
         #endregion
 
         #region methods
-        public TarPit() {}
+        public TheHorrorBelow() {}
 
         public void Start(){
             StunData s = new StunData();
@@ -26,13 +26,12 @@ namespace Hypodoche
             FearData sc = new FearData();
             sc.isEmpty = true;
             SlowOverAreaData sla = new SlowOverAreaData();
-            sla.isEmpty = false;
-            sla.speed = 5;
+            sla.isEmpty = true;
             DamageOverAreaData dma = new DamageOverAreaData();
-            dma.isEmpty = true;
+            dma.isEmpty = false;
+            dma.damage = 10;
             EnhanceData en = new EnhanceData();
-            en.isEmpty = false;
-            en.value = 0.15f;
+            en.isEmpty = true;
             myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,en);
         }
         
@@ -56,3 +55,4 @@ namespace Hypodoche
         #endregion
     }
 }
+

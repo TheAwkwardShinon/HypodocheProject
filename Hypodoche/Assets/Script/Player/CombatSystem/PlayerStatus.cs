@@ -8,11 +8,11 @@ namespace Hypodoche
     public class PlayerStatus : MonoBehaviour
     {
         #region Variables
-        private float _playerHealth;
+        public float _playerHealth;
         private float _playerStamina;
         [SerializeField] private float _staminaRegenRate = 15f;
         private float _staminaRegenDelay = 0.5f;
-        private float _maxHealth = 100f;
+        public float _maxHealth = 100f;
         private float _maxStamina = 100f;
         private float _staminaRegenStartTime = 0f;
         private float _exhaustionPoint = 30f;
@@ -100,7 +100,7 @@ namespace Hypodoche
             }
         }
 
-        private void UpdateHealthUIValue()
+        public void UpdateHealthUIValue()
         {
             _healthSlider.value = _playerHealth;
         }

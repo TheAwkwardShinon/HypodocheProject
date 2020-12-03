@@ -64,6 +64,7 @@ namespace Hypodoche
     public struct EnhanceData
     {
         public bool isEmpty;
+        public float value;
     }
     
     

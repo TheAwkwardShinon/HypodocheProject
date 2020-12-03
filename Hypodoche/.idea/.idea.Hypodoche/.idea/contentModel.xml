@@ -44,6 +44,15 @@
                   <e p="B1_D_Fist.cs" t="Include" />
                 </e>
               </e>
+              <e p="Li Yan" t="Include">
+                <e p="LiYan.cs" t="Include" />
+                <e p="LiYan_DeathState.cs" t="Include" />
+                <e p="LiYan_DropBombState.cs" t="Include" />
+                <e p="LiYan_IdleState.cs" t="Include" />
+                <e p="LiYan_MoveState.cs" t="Include" />
+                <e p="LiYan_ScaredState.cs" t="Include" />
+                <e p="LiYan_SufferTheEffectState.cs" t="Include" />
+              </e>
             </e>
             <e p="Entity.cs" t="Include" />
             <e p="FiniteStateMachine.cs" t="Include" />
@@ -83,12 +92,15 @@
               <e p="Effects.cs" t="Include" />
               <e p="testTraps" t="Include">
                 <e p="AnisKite.cs" t="Include" />
+                <e p="Banshee.cs" t="Include" />
                 <e p="Blower.cs" t="Include" />
                 <e p="Bullet.cs" t="Include" />
                 <e p="LuckyStar.cs" t="Include" />
+                <e p="PowerSurge.cs" t="Include" />
                 <e p="SubZeroRay.cs" t="Include" />
                 <e p="TarPit.cs" t="Include" />
                 <e p="TestTrap.cs" t="Include" />
+                <e p="TheHorrorBelow.cs" t="Include" />
               </e>
               <e p="Traps.cs" t="Include" />
             </e>
