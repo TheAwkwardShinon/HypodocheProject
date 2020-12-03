@@ -70,6 +70,8 @@ namespace Hypodoche
                 slowOverArea(trapEffect._slowOverArea.speed);
             if (trapEffect._damageOverArea.isEmpty == false)
                 DamageOverArea(trapEffect._damageOverArea.damage);
+            if (trapEffect._enhance.isEmpty == false)
+                EnancheOverArea(trapEffect._enhance.value);
         }
 
 
@@ -92,6 +94,12 @@ namespace Hypodoche
             _entityData.damageTakenOverTimeArea = damage;
         }
 
+
+        public void EnancheOverArea(float multiplier)
+        {
+            _entityData.enhanceMultiplier = multiplier;
+        }
+
         public void gotStun(float time){
 
             _entityData.isStun = true;
@@ -103,7 +111,7 @@ namespace Hypodoche
 
             _entityData.health -= dmg;
             Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(dmg);
+            enemy.TakeDamage(dmg * _entityData.enhanceMultiplier);
            /* if (_entityData.health <= 0) return;
                 _stateMachine.ChangeState(_deathState)*/
         }
