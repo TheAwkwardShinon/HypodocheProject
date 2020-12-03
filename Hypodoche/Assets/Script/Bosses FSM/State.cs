@@ -73,8 +73,6 @@ namespace Hypodoche
             if (_entity._entityData.damageOverArea)
             {
                 _entity._entityData.health -= _entity._entityData.damageTakenOverTimeArea; //todo check death
-                //_stateMachine.ChangeState(deathState) toBEimplemented
-                //_entity._boss.Destroy(); //per ora
             }
 
             if (_entity._entityData.isStun)
@@ -105,8 +103,6 @@ namespace Hypodoche
                 else
                 {
                     _entity._entityData.health -= _entity._entityData.damageTakenOverTime;
-                    //_stateMachine.ChangeState(deathState) toBEimplemented
-                    //_entity._boss.Destroy(); //per ora
                 }
             }
         }
