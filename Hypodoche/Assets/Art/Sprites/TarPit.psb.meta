@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 7a21e29ab549d094db0ba51b4a06c846
 ScriptedImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4269442721651951999
+    second: TarPit_0
   externalObjects: {}
   serializedVersion: 2
   userData: 
@@ -241,10 +244,10 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 922, y: 4873}
-  - name: power suger
+  - name: Power Surge
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -835,10 +838,10 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 2819, y: -1554}
-  - name: "\u56FE\u5C421_3"
+  - name: Blower
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -879,10 +882,10 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 936, y: 1142}
-  - name: "\u56FE\u5C421_4"
+  - name: Subzero
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -901,10 +904,10 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -804, y: 3977}
-  - name: "\u56FE\u5C4212"
+  - name: Lucky Star
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -945,7 +948,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 3197}
-  - name: 'Tar pist '
+  - name: Tar Pit
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -967,7 +970,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 821, y: 6422}
-  - name: "\u56FE\u5C421_5"
+  - name: "\u56FE\u5C421_3"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1324,7 +1327,7 @@ ScriptedImporter:
     layerID: 53
     mosaicPosition: {x: 3555, y: 3321}
   - name: "\u56FE\u5C421"
-    spriteName: "\u56FE\u5C421_4"
+    spriteName: "\u56FE\u5C421_3"
     isGroup: 0
     parentIndex: 43
     spriteID: bca070c80b888184f87d38900fda853a
@@ -1352,7 +1355,7 @@ ScriptedImporter:
     layerID: 3
     mosaicPosition: {x: 1201, y: 7951}
   - name: "\u56FE\u5C421"
-    spriteName: "\u56FE\u5C421_5"
+    spriteName: "\u56FE\u5C421_3"
     isGroup: 0
     parentIndex: -1
     spriteID: 82066754aa229d0439dff3469d6c3f4e

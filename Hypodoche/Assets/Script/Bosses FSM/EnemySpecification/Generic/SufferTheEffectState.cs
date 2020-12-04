@@ -12,7 +12,7 @@ namespace Hypodoche
         protected Collider _col;
         protected D_Entity _entityData;
         protected string _effects;
-        protected string _typeOfCollission; //trap or player attacks or my own attacks
+        protected string _typeOfCollision; //trap or player attacks or my own attacks
         #endregion
 
         //boss1 added only for testing
@@ -22,22 +22,22 @@ namespace Hypodoche
         {
             _entityData = entityData;
             _col = col;
-            _typeOfCollission = type;
+            _typeOfCollision = type;
         }
 
         public override void Enter()
         {
             base.Enter();
-
-            if (_typeOfCollission.Equals("trap")) {
+            //TODO Controlla
+            /*
+            if (_typeOfCollision.Equals("trap")) {
                 Debug.Log("col con : " + _col.gameObject);
-                return;
                 _effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
                 Effects trapEffect = JsonUtility.FromJson<Effects>(_effects);
                 if (trapEffect._isZone)
                     handleZone(trapEffect);
                 else handleEffect(trapEffect);
-            }
+            }*/
         }
 
         public override void Exit()

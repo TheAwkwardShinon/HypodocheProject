@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Hypodoche
 {
-    [CreateAssetMenu(menuName ="Weapon Item")]
+    [CreateAssetMenu(menuName ="Data/Weapon Item")]
     public class Weapon : ScriptableObject
     {
         #region Variables

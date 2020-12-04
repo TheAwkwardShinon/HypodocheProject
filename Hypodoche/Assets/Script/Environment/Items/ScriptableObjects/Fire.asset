@@ -15,7 +15,8 @@ MonoBehaviour:
   _title: fire
   _description: a zone of fire
   _itemType: ElementalZone
-  _prefab: {fileID: 5628681406927520300, guid: b0ac4505f10d992478094b141c5a4564, type: 3}
+  _prefab: {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478,
+    type: 3}
   _sprite: {fileID: 21300000, guid: a17dbd9faca7dca4ea1f57916a88037a, type: 3}
   _spriteParam1: {fileID: 21300000, guid: 4212be8f1a897f4419b32e5c22c5fbe4, type: 3}
   _spriteParam2: {fileID: 21300000, guid: 3c880c04b9ab0b34482402b282a0192b, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Object = UnityEngine.Object;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Hypodoche;
 
 namespace Hypodoche {
@@ -27,6 +28,7 @@ namespace Hypodoche {
         private int _maxtrap;
         public GameObject _arena;
         
+        [SerializeField] private ArenaTransferSO _arenaTransfer;
         #endregion
 
         #region Methods
@@ -266,33 +268,37 @@ namespace Hypodoche {
             int y = 261;
             int cellSize = 55;
             
-            print(_arena);
-            
             for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
                 for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
                 {
                     GameObject obj;
                     int id = _arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId;
                     if (id != -1) {
-                        obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab); //trap is attached as a script to the prefab
+                        /*obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab); //trap is attached as a script to the prefab
                         obj.transform.SetParent(_arena.gameObject.transform);
-                        obj.name = "Slot(" + i + "," + j + "):" + _inventory.GetItem(id)._title;
+                        obj.name = "Slot(" + i + "," + j + "):" + _inventory.GetItem(id)._title;*/
+
+                        _arenaTransfer.SetSlot(i,j, _inventory.GetItem(id)._prefab);
                     }
                     else {
-                        obj = (GameObject) Instantiate(_emptyZone);
+                        /*obj = (GameObject) Instantiate(_emptyZone);
                         obj.transform.SetParent(_arena.gameObject.transform);
-                        obj.name = "Slot(" + i + "," + j + "):" + "empty";
+                        obj.name = "Slot(" + i + "," + j + "):" + "empty";*/
+
+                        _arenaTransfer.SetSlot(i,j,null);
                     }
-                    Debug.Log("Slot(" + i + "," + j + "):"+x+","+y);
+                    /*Debug.Log("Slot(" + i + "," + j + "):"+x+","+y);
                     obj.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
                     x = x + cellSize;
                     if (j == _arenaGrid._gridArray.GetLength(1) - 1)
                     {
                         x = 112;
                         y = y - cellSize;
-                    }
+                    }*/
                 }
             }
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         #endregion

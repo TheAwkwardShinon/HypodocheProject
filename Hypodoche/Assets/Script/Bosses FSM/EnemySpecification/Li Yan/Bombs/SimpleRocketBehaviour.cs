@@ -12,6 +12,7 @@ namespace Hypodoche{
         [SerializeField] private float _speed = 5f;
         [SerializeField] private float _damage = 30f;
         [SerializeField] private float _maxDistance = 20f;
+        [SerializeField] private LayerMask _hitMask;
         private Rigidbody _rigidbody;
         private Vector3 _startingPosition;
 
@@ -29,7 +30,7 @@ namespace Hypodoche{
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.gameObject.CompareTag("Bomb"))
+            if (_hitMask == (_hitMask | (1 << other.gameObject.layer)))
             {
                 PlayerStatus status = other.GetComponent<PlayerStatus>();
                 if (status != null)

@@ -4972,6 +4972,9 @@ MonoBehaviour:
   _speed: 5
   _damage: 30
   _maxDistance: 20
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!1 &9099167411186359596
 GameObject:
   m_ObjectHideFlags: 0
