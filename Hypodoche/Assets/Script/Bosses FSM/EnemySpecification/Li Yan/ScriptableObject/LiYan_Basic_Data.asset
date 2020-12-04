@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 250
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
-  wallCheckRange: 0.2
+  wallCheckRange: 1.2
   movementSpeed: 10
   speedWhenDetect: 0
   speedWhenSlowed: 0

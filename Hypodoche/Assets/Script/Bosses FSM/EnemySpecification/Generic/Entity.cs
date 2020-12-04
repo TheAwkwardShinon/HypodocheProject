@@ -49,10 +49,10 @@ namespace Hypodoche
         }
 
         //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
-        public virtual void Flip()
+       /* public virtual void Flip()
         {
             _boss.transform.Rotate(0f, 0f, 180f);
-        }
+        }*/
 
         public virtual bool checkWall()
         {
