@@ -81,7 +81,7 @@ namespace Hypodoche
 
         private void FixedUpdate()
         {
-            _rigidbody.velocity = Vector3.zero;
+            //
 
             if (_isDashing)
             {
@@ -104,6 +104,8 @@ namespace Hypodoche
 
         private void UpdatePosition(Vector3 movement, float delta)
         { 
+            if (movement.magnitude != 0)
+                _rigidbody.velocity = Vector3.zero; 
             _rigidbody.MovePosition(_rigidbody.position + movement * delta);
         }
 

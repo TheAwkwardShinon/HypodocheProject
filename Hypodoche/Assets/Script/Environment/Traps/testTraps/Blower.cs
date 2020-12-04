@@ -34,6 +34,7 @@ namespace Hypodoche
             Rigidbody colRigidbody = col.GetComponent<Rigidbody>();
             if (colRigidbody != null)
             {
+                Debug.Log("Fiuuuuuu");
                 colRigidbody.AddForce(WindDirection * Strength);
             }
         }

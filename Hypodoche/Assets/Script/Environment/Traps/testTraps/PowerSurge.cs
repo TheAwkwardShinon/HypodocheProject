@@ -6,8 +6,8 @@ using UnityEngine;
 public class PowerSurge : MonoBehaviour
 {
     #region Variables
-    public float recover = 50;
-    public float max_time = 50;
+    public float recover = 50f;
+    public float max_time = 50f;
     public float countdown;
     public bool timeIsRunning;
     public bool idle;
@@ -28,13 +28,7 @@ public class PowerSurge : MonoBehaviour
     {
         if (timeIsRunning)
         {
-            countdown = countdown - 1;
-            if (countdown == 0)
-            {
-                countdown = max_time;
-                timeIsRunning = false;
-                idle = false;
-            }
+            CooldownTimer(Time.deltaTime);
         }
     }
         
@@ -52,6 +46,15 @@ public class PowerSurge : MonoBehaviour
             else
                 col.gameObject.GetComponent<PlayerStatus>()._playerHealth += recover;
             col.gameObject.GetComponent<PlayerStatus>().UpdateHealthUIValue();
+        }
+    }
+
+    private void CooldownTimer(float delta){
+        countdown += delta;
+        if(countdown % 60 > max_time){
+            timeIsRunning = false;
+            idle = false;
+            countdown = 0f;
         }
     }
 

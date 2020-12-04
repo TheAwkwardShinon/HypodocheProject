@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Object = UnityEngine.Object;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Hypodoche;
 
 namespace Hypodoche {
@@ -26,12 +27,18 @@ namespace Hypodoche {
         private int _temp;
         private int _maxtrap;
         public GameObject _arena;
+
+        public GameObject _arenaBG;
         
+        [SerializeField] private ArenaTransferSO _arenaTransfer;
         #endregion
 
         #region Methods
-        private void Start() {
+        private void Start()
+        {
+   
             _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+            _arenaBG = GameObject.FindGameObjectWithTag("ArenaBG");
             _inventoryGrid = new Grid(-200, 125, 5, 5, 55, 0,false);
             DeselectInventory();
             _arenaGrid = new Grid(-200, 125, 5, 5, 55, -1,true);
@@ -104,14 +111,18 @@ namespace Hypodoche {
 
         }
         
-        public void SelectArena() {
+        public void SelectArena()
+        {
+            _arenaBG.SetActive(true);
             DeselectInventory();
             _arenaGrid.Activate();
             _typeSelectUI._grid.Activate();
             _isArenaOn = true;
         }
 
-        public void DeselectArena() {
+        public void DeselectArena()
+        {
+            _arenaBG.SetActive(false);
             _arenaGrid.Deactivate();
             _typeSelectUI._grid.Deactivate();
             _isArenaOn = false;
@@ -262,37 +273,22 @@ namespace Hypodoche {
 
         public void LoadArena()
         {
-            int x = 112;
-            int y = 261;
-            int cellSize = 55;
-            
-            print(_arena);
-            
+
             for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
                 for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
                 {
                     GameObject obj;
                     int id = _arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId;
                     if (id != -1) {
-                        obj= (GameObject) Instantiate(_inventory.GetItem(id)._prefab); //trap is attached as a script to the prefab
-                        obj.transform.SetParent(_arena.gameObject.transform);
-                        obj.name = "Slot(" + i + "," + j + "):" + _inventory.GetItem(id)._title;
+                        _arenaTransfer.SetSlot(i,j, _inventory.GetItem(id)._prefab);
                     }
                     else {
-                        obj = (GameObject) Instantiate(_emptyZone);
-                        obj.transform.SetParent(_arena.gameObject.transform);
-                        obj.name = "Slot(" + i + "," + j + "):" + "empty";
-                    }
-                    Debug.Log("Slot(" + i + "," + j + "):"+x+","+y);
-                    obj.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
-                    x = x + cellSize;
-                    if (j == _arenaGrid._gridArray.GetLength(1) - 1)
-                    {
-                        x = 112;
-                        y = y - cellSize;
+                        _arenaTransfer.SetSlot(i,j,null);
                     }
                 }
             }
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         #endregion

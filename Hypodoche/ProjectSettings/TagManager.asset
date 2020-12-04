@@ -9,6 +9,11 @@ TagManager:
   - Ground
   - trap
   - Bomb
+  - Inventory
+  - BuildingManager
+  - Oracle
+  - TypeSelectUI
+  - ArenaBG
   layers:
   - Default
   - TransparentFX
@@ -51,4 +56,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 3340473967
     locked: 0
