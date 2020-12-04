@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Hypodoche
 {
-    [CreateAssetMenu(menuName ="Items/Weapon Item")]
-    public class Weapon : MonoBehaviour
+    [CreateAssetMenu(menuName ="Weapon Item")]
+    public class Weapon : ScriptableObject
     {
         #region Variables
         [SerializeField] private Sprite _weaponSprite;

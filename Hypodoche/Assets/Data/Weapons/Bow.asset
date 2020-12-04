@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2d6eb8da06b1a479b21d43821febb9, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  _itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  _itemName: Bow
   _weaponSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   _lightAttacks:
   - LightAttack
