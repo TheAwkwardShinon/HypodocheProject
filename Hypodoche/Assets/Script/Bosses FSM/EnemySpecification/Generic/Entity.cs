@@ -37,10 +37,15 @@ namespace Hypodoche
             _direction = new Vector3(UnityEngine.Random.Range(-1.0f,1.0f),0,UnityEngine.Random.Range(-1.0f, 1.0f));    
         }
 
+        public virtual void FixedUpdate()
+        {
+            _rigidBodyBoss.velocity = Vector3.zero;
+        }
         
         public virtual void Move(float speed)
         {
-            _boss.transform.position += _direction * speed * Time.fixedDeltaTime;
+            _rigidBodyBoss.MovePosition(_rigidBodyBoss.position + _direction * speed * Time.fixedDeltaTime);
+            //_boss.transform.position += _direction * speed * Time.fixedDeltaTime;
         }
 
         //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto

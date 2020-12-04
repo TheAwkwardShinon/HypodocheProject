@@ -12,17 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2d6eb8da06b1a479b21d43821febb9, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  _itemIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  _itemName: Sword
   _weaponSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   _lightAttacks:
   - LightAttack
   _heavyAttacks:
   - HeavyAttack
   _lightDamage: 20
-  _heavyDamage: 50
+  _heavyDamage: 40
   _lightAttackRate: 2
   _heavyAttackRate: 1
-  _lightAttackRadius: 0.2
-  _heavyAttackRadius: 0.4
+  _lightAttackRadius: 0.5
+  _heavyAttackRadius: 1
   _isRanged: 0

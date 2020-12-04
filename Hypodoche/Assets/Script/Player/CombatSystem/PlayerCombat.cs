@@ -84,6 +84,11 @@ namespace Hypodoche
             _animatorHandler.ActivateTargetTrigger(weapon.GetLightAttacks()[Random.Range(0, weapon.GetLightAttacks().Length - 1)]);
         }
 
+        //TODO Remove
+        public void OnDrawGizmos(){
+            if(_activeMeleePoint != null) Gizmos.DrawSphere(_activeMeleePoint.transform.position, _attackRadius);
+        }
+
         public void HandleHeavyAttack(Weapon weapon)
         {
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);

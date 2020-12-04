@@ -81,6 +81,7 @@ namespace Hypodoche
 
         private void FixedUpdate()
         {
+            _rigidbody.velocity = Vector3.zero;
 
             if (_isDashing)
             {

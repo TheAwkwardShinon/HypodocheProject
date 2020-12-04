@@ -9,7 +9,7 @@ namespace Hypodoche
     {
         #region Variables
         private float _health;
-        private float _maxHealth;
+        [SerializeField] private float _maxHealth = 100f;
         [SerializeField] private Slider _healthSlider;
         #endregion
 
