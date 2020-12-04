@@ -27,7 +27,7 @@ namespace Hypodoche
             sc.isEmpty = true;
             SlowOverAreaData sla = new SlowOverAreaData();
             sla.isEmpty = false;
-            sla.speed = 5;
+            sla.speed =1;
             DamageOverAreaData dma = new DamageOverAreaData();
             dma.isEmpty = true;
             EnhanceData en = new EnhanceData();

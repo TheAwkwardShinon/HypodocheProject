@@ -26,12 +26,14 @@ namespace Hypodoche
             if (_entityData.timeOfFear == 0f)
             {
                 Debug.Log("cambio stato : sufferEffect -> move " + Time.time);
+                _liYan._moveState.setFromSufferEffect(true);
                 _stateMachine.ChangeState(_liYan._moveState);
             }
             else
             {
                 Debug.Log("cambio stato : sufferEffect -> scare " + Time.time);
-                _stateMachine.ChangeState(_liYan._scareState);
+                _liYan._moveState.setFromSufferEffect(true);
+                _stateMachine.ChangeState(_liYan._scareState); //todo boolean for direction
             }
         }
 

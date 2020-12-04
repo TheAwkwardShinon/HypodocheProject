@@ -35,11 +35,11 @@ namespace Hypodoche
         public override void Exit()
         {
             base.Exit();
-/*
+
             if (_flipAfterIdle)
             {
                 _entity.Flip();
-            }*/
+            }
         }
 
         public override void Update()
@@ -48,6 +48,7 @@ namespace Hypodoche
             _isDetectingPlayer = _entity.isPlayerInAggroRange();
             if (Time.time >= _startTime + _idleTime)
             {
+                Debug.Log("idle time elapsed " + Time.time);
                 _isIdleTimeElapsed = true;
             }
         }

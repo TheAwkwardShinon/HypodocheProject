@@ -29,7 +29,7 @@ namespace Hypodoche
         {
             base.Enter();
             //TODO Controlla
-            /*
+            
             if (_typeOfCollision.Equals("trap")) {
                 Debug.Log("col con : " + _col.gameObject);
                 _effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
@@ -37,7 +37,7 @@ namespace Hypodoche
                 if (trapEffect._isZone)
                     handleZone(trapEffect);
                 else handleEffect(trapEffect);
-            }*/
+            }
         }
 
         public override void Exit()
@@ -85,6 +85,7 @@ namespace Hypodoche
 
         public void slowOverArea(float speed)
         {
+            Debug.Log("SlowedOverArea");
             _entityData.slowOverArea = true;
             _entityData.speedWhenSlowedArea = speed;
         }
@@ -92,6 +93,7 @@ namespace Hypodoche
 
         public void DamageOverArea(float damage)
         {
+            Debug.Log("DmgOverArea");
             _entityData.damageOverArea = true;
             _entityData.damageTakenOverTimeArea = damage;
         }
@@ -99,18 +101,19 @@ namespace Hypodoche
 
         public void EnancheOverArea(float multiplier)
         {
+            Debug.Log("EnhanceOverArea");
             _entityData.enhanceMultiplier = multiplier;
         }
 
         public void gotStun(float time){
-
+            Debug.Log("Stun");
             _entityData.isStun = true;
             _entityData.timeOfStun = time;
         }
 
         public void gotDamage(float dmg)
         {
-
+            Debug.Log("dmg");
             _entityData.health -= dmg + (dmg * _entityData.enhanceMultiplier);
             Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(dmg + (dmg * _entityData.enhanceMultiplier));
@@ -120,7 +123,7 @@ namespace Hypodoche
 
         public void gotDamageOverTime(float dmg, float time)
         {
-
+            Debug.Log("dmgOverTime");
             _entityData.gotDamageOverTime = true;
             _entityData.timeOfDamage = time;
             _entityData.damageTakenOverTime = dmg;
@@ -128,7 +131,7 @@ namespace Hypodoche
 
         public void gotSlow(float speed, float time)
         {
-   
+            Debug.Log("Slowed");
             _entityData.isSlowed = true;
             _entityData.timeOfSlow = time;
             _entityData.speedWhenSlowed = speed;

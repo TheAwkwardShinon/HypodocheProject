@@ -25,11 +25,22 @@ namespace Hypodoche
             _rigidBodyBoss = _boss.GetComponent<Rigidbody>();
             _animator = _boss.transform.GetChild(0).GetComponent<Animator>();
             _stateMachine = new FiniteStateMachine();
+            resetValues();
         }
 
         public virtual void Update()
         {
             _stateMachine._currentState.Update();
+        }
+
+
+
+        public void resetValues()
+        {
+            _entityData.slowOverArea = false;
+            _entityData.damageOverArea = false;
+            _entityData.enhanceMultiplier = 0f;
+            _entityData.health = 250f;
         }
 
         public virtual void setDirection()
@@ -49,10 +60,10 @@ namespace Hypodoche
         }
 
         //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
-       /* public virtual void Flip()
+        public virtual void Flip()
         {
             _boss.transform.Rotate(0f, 0f, 180f);
-        }*/
+        }
 
         public virtual bool checkWall()
         {

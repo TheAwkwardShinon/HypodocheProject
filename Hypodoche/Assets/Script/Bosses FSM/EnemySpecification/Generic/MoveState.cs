@@ -10,6 +10,7 @@ namespace Hypodoche
         protected D_Entity _entityData;
         protected bool _isDetectingWall;
         protected bool _isDetectingPlayer;
+        protected bool _fromSufferEffect = false;
         #endregion
 
         #region Methods
@@ -25,7 +26,7 @@ namespace Hypodoche
 
             _isDetectingWall = _entity.checkWall();
             _isDetectingPlayer = _entity.isPlayerInAggroRange();
-            _entity.setDirection();
+            if(!_fromSufferEffect) _entity.setDirection();
      
         }
 
@@ -39,6 +40,11 @@ namespace Hypodoche
             base.Update();
             _isDetectingWall = _entity.checkWall();
             _isDetectingPlayer = _entity.isPlayerInAggroRange();
+        }
+
+        public void setFromSufferEffect(bool value)
+        {
+            _fromSufferEffect = value;
         }
     }
     #endregion

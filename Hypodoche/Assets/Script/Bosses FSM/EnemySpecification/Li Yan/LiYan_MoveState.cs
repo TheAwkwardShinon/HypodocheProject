@@ -45,6 +45,7 @@ namespace Hypodoche
             if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
             {
                 Debug.Log("cambio stato : move -> dropBomb " + Time.time);
+                setFromSufferEffect(false);
                 _stateMachine.ChangeState(_liYan._DropBombState);
             }
             if (_isFast)
@@ -77,6 +78,7 @@ namespace Hypodoche
             {
                 Debug.Log("cambio stato : move -> idle " + Time.time);
                 _liYan._idleState.setFlipAfterIdle(true);
+                setFromSufferEffect(false);
                 _stateMachine.ChangeState(_liYan._idleState);
             }
             else

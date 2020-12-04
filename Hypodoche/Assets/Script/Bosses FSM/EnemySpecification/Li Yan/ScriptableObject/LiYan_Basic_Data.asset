@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 250
   damageTakenOverTime: 0
-  damageTakenOverTimeArea: 0
-  wallCheckRange: 1.2
-  movementSpeed: 10
+  damageTakenOverTimeArea: 0.2
+  wallCheckRange: 10
+  movementSpeed: 15
   speedWhenDetect: 0
   speedWhenSlowed: 0
-  speedWhenSlowedArea: 0
+  speedWhenSlowedArea: 1
   aggroRange: 5
   whatIsPerimeter:
     serializedVersion: 2

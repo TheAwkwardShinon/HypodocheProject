@@ -21,7 +21,10 @@ namespace Hypodoche
         {
             base.Enter();
             if (_entity._entityData.health <= 0)
+            {
+                Debug.Log("cambio stato : idle -> death " + Time.time);
                 _stateMachine.ChangeState(_liYan._deathState);
+            }
         }
 
         public override void Exit()
@@ -33,9 +36,15 @@ namespace Hypodoche
         {
             base.Update();
             if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
+            {
+                Debug.Log("cambio stato : idle -> dropBomb " + Time.time);
                 _stateMachine.ChangeState(_liYan._DropBombState);
+            }
             if (_isIdleTimeElapsed)
-                _stateMachine.ChangeState(_liYan._moveState);           
+            {
+                Debug.Log("cambio stato : idle -> move " + Time.time);
+                _stateMachine.ChangeState(_liYan._moveState);
+            }
         }
 
         #endregion
