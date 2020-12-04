@@ -28,11 +28,16 @@ namespace Hypodoche
         public override void Enter()
         {
             base.Enter();
-            if(_entity._entityData.health <= 0)
+            if (_entity._entityData.health <= 0)
+            {
+                Debug.Log("cambio stato : dropbomb -> death " + Time.time);
                 _stateMachine.ChangeState(_liYan._deathState);
+            }
             spawnRandomBomb();
             _liYan.timerBomb = Time.time; //restart timer
+            Debug.Log("cambio stato : dropBomb -> move " + Time.time);
             _stateMachine.ChangeState(_liYan._moveState);
+
         }
 
         public override void Exit()

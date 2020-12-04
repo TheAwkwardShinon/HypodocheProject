@@ -42,8 +42,11 @@ namespace Hypodoche
 
         public void checkTime()
         {
-            if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate) 
+            if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
+            {
+                Debug.Log("cambio stato : move -> dropBomb " + Time.time);
                 _stateMachine.ChangeState(_liYan._DropBombState);
+            }
             if (_isFast)
             {
                 if (Time.time >= _startTimeFast)
@@ -72,6 +75,7 @@ namespace Hypodoche
                 return;
             if (_isDetectingWall)
             {
+                Debug.Log("cambio stato : move -> idle " + Time.time);
                 _liYan._idleState.setFlipAfterIdle(true);
                 _stateMachine.ChangeState(_liYan._idleState);
             }

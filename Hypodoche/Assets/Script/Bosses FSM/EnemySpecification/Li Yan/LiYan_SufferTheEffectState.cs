@@ -24,8 +24,15 @@ namespace Hypodoche
             base.Enter();
 
             if (_entityData.timeOfFear == 0f)
+            {
+                Debug.Log("cambio stato : sufferEffect -> move " + Time.time);
                 _stateMachine.ChangeState(_liYan._moveState);
-            else _stateMachine.ChangeState(_liYan._scareState);
+            }
+            else
+            {
+                Debug.Log("cambio stato : sufferEffect -> scare " + Time.time);
+                _stateMachine.ChangeState(_liYan._scareState);
+            }
         }
 
         public override void Exit()
