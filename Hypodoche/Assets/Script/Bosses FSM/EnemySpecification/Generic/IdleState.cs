@@ -35,11 +35,11 @@ namespace Hypodoche
         public override void Exit()
         {
             base.Exit();
-
+/*
             if (_flipAfterIdle)
             {
                 _entity.Flip();
-            }
+            }*/
         }
 
         public override void Update()

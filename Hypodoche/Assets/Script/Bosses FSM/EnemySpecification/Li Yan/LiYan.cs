@@ -30,10 +30,10 @@ namespace Hypodoche
         {
             base.Start();
             timerBomb = Time.time;
-            _moveState = new LiYan_MoveState(this, _stateMachine, "move", _entityData, this);
+            _moveState = new LiYan_MoveState(this, _stateMachine, "run", _entityData, this);
             _idleState = new LiYan_IdleState(this, _stateMachine, "idle", _idleData, this);
-            _scareState = new LiYan_ScaredState(this, _stateMachine, "scared", _entityData, this);
-            _DropBombState = new LiYan_DropBombState(this, _stateMachine, "dropBomb", this);
+            _scareState = new LiYan_ScaredState(this, _stateMachine, "run", _entityData, this);
+            _DropBombState = new LiYan_DropBombState(this, _stateMachine, "placeBomb", this);
             _deathState = new LiYan_DeathState(this, _stateMachine, "death", this);
 
             _stateMachine.InitializeState(_idleState); //todo spawn state
@@ -66,7 +66,7 @@ namespace Hypodoche
 
         public void stepOnTrap(Collider col)
         {
-            _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeEffect", _entityData, col, "trap", this));
+            _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, col, "trap", this));
         }
 
 

@@ -15,7 +15,7 @@ MonoBehaviour:
   health: 20000
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
-  wallCheckRange: 0.2
+  wallCheckRange: 1.2
   movementSpeed: 10
   speedWhenDetect: 0
   speedWhenSlowed: 0
@@ -43,5 +43,4 @@ MonoBehaviour:
   timeOfFear: 0
   damageOverArea: 0
   slowOverArea: 0
-  enhanceDamage: 0
-  noDodge: 0
+  enhanceMultiplier: 0
