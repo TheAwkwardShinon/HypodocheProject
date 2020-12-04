@@ -9,13 +9,18 @@ namespace Hypodoche
     {
         #region Variables
         private LiYan _liYan;
-
-
+        protected List<GameObject> _listOfBombs;
+        protected BombSpawner _spawner;
 
         public LiYan_DropBombState(Entity entity, FiniteStateMachine stateMachine, string animationName, LiYan liYan)
             : base(entity, stateMachine, animationName)
         {
             _liYan = liYan;
+            _listOfBombs = new List<GameObject>();
+            _listOfBombs.Add(_liYan.woodBomb);
+            _listOfBombs.Add(_liYan.metalBomb);
+            _listOfBombs.Add(_liYan.fireBomb);
+            _spawner = new BombSpawner(_listOfBombs);
         }
         #endregion
 
@@ -25,7 +30,7 @@ namespace Hypodoche
             base.Enter();
             if(_entity._entityData.health <= 0)
                 _stateMachine.ChangeState(_liYan._deathState);
-            //fa spawnare la bomba;
+            spawnRandomBomb();
             _liYan.timerBomb = Time.time; //restart timer
             _stateMachine.ChangeState(_liYan._moveState);
         }
@@ -36,7 +41,10 @@ namespace Hypodoche
 
         }
 
-
+        public void spawnRandomBomb()
+        {
+           _spawner.spawn(_liYan.transform.position, Quaternion.identity);
+        }
 
 
         public override void Update()

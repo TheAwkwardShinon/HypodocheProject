@@ -15,6 +15,11 @@ namespace Hypodoche
         public LiYan_DropBombState _DropBombState { get; private set; }
         public LiYan_DeathState _deathState { get; private set; }
 
+        //bombs
+        [SerializeField] public GameObject metalBomb;
+        [SerializeField] public GameObject fireBomb;
+        [SerializeField] public GameObject woodBomb;
+
         [SerializeField]
         private D_IdleState _idleData;
 
