@@ -69,7 +69,6 @@ namespace Hypodoche
         public void HandleLightAttack(Weapon weapon)
         {
             _attackRadius = weapon.GetLightAttackRadius();
-            Debug.Log("Attack Damage: " + weapon.GetLightDamage());
 
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
             foreach (Collider hitObject in hitObjects)
@@ -92,7 +91,6 @@ namespace Hypodoche
 
         public void HandleHeavyAttack(Weapon weapon)
         {
-            Debug.Log("Attack Damage: " + weapon.GetHeavyDamage());
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
             foreach (Collider hitObject in hitObjects)
             {
