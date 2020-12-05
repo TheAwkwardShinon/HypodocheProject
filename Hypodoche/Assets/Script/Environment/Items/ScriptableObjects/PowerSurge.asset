@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2eb5d5b5ef5c848aacf377e383e3f7, type: 3}
   m_Name: PowerSurge
   m_EditorClassIdentifier: 
-  _title: 
-  _description: 
-  _itemType: 
-  _prefab: {fileID: 0}
-  _sprite: {fileID: 0}
-  _spriteParam1: {fileID: 0}
-  _spriteParam2: {fileID: 0}
-  _valueParam1: 
-  _valueParam2: 
+  _title: Power Surge
+  _description: 'Once every 50 seconds, it can heal the player.  I once found a lost
+    soul, a memory of dust in the warm universe, that was crawling towards a star.
+    They were lost, and I with them. I existed just as a thought: I was, and am,
+    just a soundless voice with no sight. But I saw the soul, and I played with them.
+    I noticed they were sad: their differences hurt; so I sliced them, and the sould
+    was thankfull.  Now they can be a soul and be two souls, and that is good.'
+  _itemType: Trap
+  _prefab: {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
+  _sprite: {fileID: 3530981377324265853, guid: 7a21e29ab549d094db0ba51b4a06c846, type: 3}
+  _spriteParam1: {fileID: 21300000, guid: 3c880c04b9ab0b34482402b282a0192b, type: 3}
+  _spriteParam2: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
+  _valueParam1: Heals the player
+  _valueParam2: Cooldown 50 sec

@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2eb5d5b5ef5c848aacf377e383e3f7, type: 3}
   m_Name: SubzeroRay
   m_EditorClassIdentifier: 
-  _title: 
-  _description: 
-  _itemType: 
-  _prefab: {fileID: 0}
-  _sprite: {fileID: 0}
-  _spriteParam1: {fileID: 0}
-  _spriteParam2: {fileID: 0}
-  _valueParam1: 
-  _valueParam2: 
+  _title: Subzero Ray
+  _description: 'Laser gun that shoots a projectile every 8 seconds that freezes
+    on place for 4 seconds.  Time is relative: sometimes I wonder if I even am under
+    his domain. Artifacts like this, that creates things from nothing, are really
+    comparable to the power of a God. Maybe, in the future, we will be able to achive
+    such a power under the Demiurge guidance. Or.. does it come from the future? 
+    Is the future now?'
+  _itemType: Trap
+  _prefab: {fileID: 246548727473088074, guid: 9970f84303c507748b22972c58415716, type: 3}
+  _sprite: {fileID: 21300000, guid: 6551d5e2f345e5c4bab35e3d2490fcd8, type: 3}
+  _spriteParam1: {fileID: 21300000, guid: c75d73617aaa5044daa01cf075b6a373, type: 3}
+  _spriteParam2: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
+  _valueParam1: Stuns for 4 sec
+  _valueParam2: Cooldown 8 sec

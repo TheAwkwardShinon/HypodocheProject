@@ -67,53 +67,58 @@ namespace Hypodoche {
             //int x;
             //int y;
             //_arenaGrid.GetXY(mouseWorldPosition,out x,out y);
-            if (Input.GetMouseButtonDown(0) /*&& !EventSystem.current.IsPointerOverGameObject()*/) {
-                _typeSelectUI.ScrollLeft();
-            }
+            if(_isArenaOn)
+            {
+                if (Input.GetMouseButtonDown(0) /*&& !EventSystem.current.IsPointerOverGameObject()*/) {
+                    _typeSelectUI.ScrollLeft();
+                }
 
-            if (Input.GetMouseButtonDown(1)) {
-                _typeSelectUI.ScrollRight();
+                if (Input.GetMouseButtonDown(1)) {
+                    _typeSelectUI.ScrollRight();
+                }
+
+                
+
+                if (Input.GetKeyDown(KeyCode.Y)) {
+                    if (CanBuild())  
+                        Build();
+                }
+
+                if (Input.GetKeyDown(KeyCode.U)) {
+                    Delete();
+                }
+
+                if (Input.GetKeyDown(KeyCode.O) &&
+                    _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId != -1) {
+                    if (_move) {
+                        _move = false;
+                    }
+                    else {
+                        _move = true;
+                    }
+                }
+
+                if (Input.GetKeyDown(KeyCode.UpArrow) && _xselected != 0) {
+                    MoveUp();
+                }
+
+                if (Input.GetKeyDown(KeyCode.DownArrow) && _xselected != _arenaGrid._width - 1) {
+                    MoveDown();
+                }
+
+                if (Input.GetKeyDown(KeyCode.RightArrow) && _yselected != _arenaGrid._height - 1) {
+                    MoveRight();
+                }
+
+                if (Input.GetKeyDown(KeyCode.LeftArrow) && _yselected != 0) {
+                    MoveLeft();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.I)) {
                 
                 Change();
                 //otherwise we are in oracle menu, not in building menu
-            }
-
-            if (Input.GetKeyDown(KeyCode.Y)) {
-                if (CanBuild())  
-                    Build();
-            }
-
-            if (Input.GetKeyDown(KeyCode.U)) {
-                Delete();
-            }
-
-            if (Input.GetKeyDown(KeyCode.O) &&
-                _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId != -1) {
-                if (_move) {
-                    _move = false;
-                }
-                else {
-                    _move = true;
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.UpArrow) && _xselected != 0) {
-                MoveUp();
-            }
-
-            if (Input.GetKeyDown(KeyCode.DownArrow) && _xselected != _arenaGrid._width - 1) {
-                MoveDown();
-            }
-
-            if (Input.GetKeyDown(KeyCode.RightArrow) && _yselected != _arenaGrid._height - 1) {
-                MoveRight();
-            }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && _yselected != 0) {
-                MoveLeft();
             }
 
         }
