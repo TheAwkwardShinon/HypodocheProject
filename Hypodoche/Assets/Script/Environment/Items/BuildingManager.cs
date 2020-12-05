@@ -46,7 +46,7 @@ namespace Hypodoche {
             _arenaBG = GameObject.FindGameObjectWithTag("ArenaBG");
             _inventoryBG = GameObject.FindGameObjectWithTag("InventoryBG");
             _buildingArena = false;
-            _inventoryGrid = new Grid(-97, 95, 5, 5, 50, 0,false);
+            _inventoryGrid = new Grid(-220, 220, 5, 5, 112, 0,false);
             DeselectInventory();
             _buildingArena = true;
             _arenaGrid = new Grid(-97, 95, 5, 5, 50, -1,true); //-200,125

@@ -24,9 +24,10 @@ namespace Hypodoche
         #region Methods
         public override void Enter()
         {
+            Debug.Log("She ded");
             base.Enter();
+            SceneManager.LoadScene(3);// Victory
             _liYan.DestroyBoss();
-            SceneManager.LoadScene("VictoryScene");
         }
 
         public override void Exit()

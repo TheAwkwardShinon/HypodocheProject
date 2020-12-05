@@ -17,7 +17,7 @@ namespace Hypodoche
 
         public void Start()
         {
-            InvokeRepeating("Shoot", 0.0f, 1.0f); // 8 sec cd
+            InvokeRepeating("Shoot", 0.0f, 8.0f); // 8 sec cd
         }
 
         void OnTriggerEnter(Collider col)

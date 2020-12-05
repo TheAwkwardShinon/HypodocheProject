@@ -26,7 +26,7 @@ namespace Hypodoche
             Debug.Log("esisto");
             StunData s = new StunData();
             s.isEmpty = false;
-            s.time = 4; // freezes on place for 4 sec
+            s.time = 1.5f; // freezes on place for 4 sec
             DamageOverTimeData d = new DamageOverTimeData();
             d.isEmpty = true;
             SlowData sl = new SlowData();

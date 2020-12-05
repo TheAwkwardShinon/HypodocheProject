@@ -19,18 +19,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6588421606890890728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4134047396689777333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33dd84147aa7bf4293e9cb4521eedc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6588421606890890730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff5fa1e913dcb24687b92dba8cda91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 100
   _healthSlider: {fileID: 0}
 --- !u!1 &6588421605792699343
 GameObject:

@@ -19,7 +19,7 @@ MonoBehaviour:
     and talents, each one of them in their unique way... but the horror was still
     present, just elsewere. Someone, somewhere, was fighting it."'
   _itemType: Trap
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 8612713378086013335, guid: bd8983fe389909e4097c8726ac74f8fd, type: 3}
   _sprite: {fileID: -4791922459018314206, guid: 7a21e29ab549d094db0ba51b4a06c846,
     type: 3}
   _spriteParam1: {fileID: 21300000, guid: 368f6c53a727d70439ccc77af8538b67, type: 3}

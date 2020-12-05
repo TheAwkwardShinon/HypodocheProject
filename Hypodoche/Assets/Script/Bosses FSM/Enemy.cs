@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Hypodoche
 {
@@ -25,8 +26,10 @@ namespace Hypodoche
         {
             _health -= damage;
             UpdateHealthUI();
-            if (_health <= 0)
+            if (_health <= 0){
+                SceneManager.LoadScene(3);//Victory
                 Destroy(gameObject);
+            }
         }
 
         private void UpdateHealthUI()

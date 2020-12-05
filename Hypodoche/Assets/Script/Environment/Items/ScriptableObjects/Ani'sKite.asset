@@ -24,7 +24,7 @@ MonoBehaviour:
     never forget:  Li Yan smiles back, and deep down knows that this is what she,
     from now on, will do for the rest of her life." - Li Yan'
   _itemType: Trap
-  _prefab: {fileID: 0}
+  _prefab: {fileID: 1432340292751251984, guid: 695f685958bef2d46a722926025167ee, type: 3}
   _sprite: {fileID: -7400945933052267120, guid: 7a21e29ab549d094db0ba51b4a06c846,
     type: 3}
   _spriteParam1: {fileID: 21300000, guid: c12712d7c71a23a418648fade9c75f08, type: 3}

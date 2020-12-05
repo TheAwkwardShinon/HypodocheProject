@@ -48,7 +48,7 @@ namespace Hypodoche
             direction = new Vector3(0, 0, 0);
             myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);
             //Simplified AI
-            InvokeRepeating("ChangeDirection", 5.0f, 15.0f);
+            InvokeRepeating("ChangeDirection", 0f, 3f);
 
         }
 
@@ -62,7 +62,7 @@ namespace Hypodoche
         public void OnTriggerEnter()
         {
             direction = -1 * direction;
-            transform.Rotate(0, 0, 180f, Space.Self);
+            transform.Rotate(0, 180f, 0, Space.Self);
         }
 
         public void Update()

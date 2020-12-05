@@ -9,7 +9,7 @@ namespace Hypodoche
     {
         public void playGame()
         {
-            SceneManager.LoadScene("ArenaScene");
+            SceneManager.LoadScene(1);
         }
 
         public void QuitGame()
