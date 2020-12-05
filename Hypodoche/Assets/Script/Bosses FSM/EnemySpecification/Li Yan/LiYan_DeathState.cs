@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace Hypodoche
 {
@@ -25,6 +26,7 @@ namespace Hypodoche
         {
             base.Enter();
             _liYan.DestroyBoss();
+            SceneManager.LoadScene("VictoryScene");
         }
 
         public override void Exit()

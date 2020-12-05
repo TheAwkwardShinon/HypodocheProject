@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Hypodoche
 {
@@ -96,7 +97,7 @@ namespace Hypodoche
 
             if (_playerHealth <= 0)
             {
-                //Die
+                SceneManager.LoadScene("DefeatScene");
             }
         }
 
