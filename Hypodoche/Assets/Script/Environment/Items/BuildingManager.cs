@@ -29,6 +29,9 @@ namespace Hypodoche {
         public GameObject _arena;
 
         public GameObject _arenaBG;
+        public GameObject _inventoryBG;
+
+        public bool _buildingArena;
         
         [SerializeField] private ArenaTransferSO _arenaTransfer;
         #endregion
@@ -39,9 +42,12 @@ namespace Hypodoche {
    
             _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
             _arenaBG = GameObject.FindGameObjectWithTag("ArenaBG");
-            _inventoryGrid = new Grid(-200, 125, 5, 5, 55, 0,false);
+            _inventoryBG = GameObject.FindGameObjectWithTag("InventoryBG");
+            _buildingArena = false;
+            _inventoryGrid = new Grid(-97, 95, 5, 5, 50, 0,false);
             DeselectInventory();
-            _arenaGrid = new Grid(-200, 125, 5, 5, 55, -1,true);
+            _buildingArena = true;
+            _arenaGrid = new Grid(-97, 95, 5, 5, 50, -1,true); //-200,125
             _typeSelectUI = GameObject.FindGameObjectWithTag("TypeSelectUI").GetComponent<TypeSelectUI>();
             _xselected = 2;
             _yselected = 2;
@@ -129,18 +135,22 @@ namespace Hypodoche {
         }
 
         private void SelectInventory() {
+            _inventoryBG.SetActive(true);
             DeselectArena();
             _inventoryGrid.Activate();
         }
 
         public void DeselectInventory() {
+            _inventoryBG.SetActive(false);
             _inventoryGrid.Deactivate();
         }
         
         public GameObject CreateSlot(int x, int y, int itemId) {
             GameObject slot = (GameObject) Instantiate(_slots);
-            slot.transform.SetParent(_inventory.gameObject.transform);
-            //slot.name = "Hi";
+            if (_buildingArena)
+               slot.transform.SetParent(_arenaBG.gameObject.transform);
+            else
+                slot.transform.SetParent(_inventoryBG.gameObject.transform);
             slot.AddComponent<Slot>();
             slot.GetComponent<RectTransform>().localPosition = new Vector2(x, y);
             slot.GetComponent<Slot>()._itemId = itemId; // empty slot
@@ -149,22 +159,22 @@ namespace Hypodoche {
 
         public void ShowToolTip(Item item) {
             _toolTip.SetActive(true);
-            _toolTip.transform.GetChild(8).GetComponent<Text>().text = item._title;
-            _toolTip.transform.GetChild(5).GetComponent<Text>().text = item._description;
-            _toolTip.transform.GetChild(0).GetComponent<Text>().text = item._valueParam1;
-            _toolTip.transform.GetChild(4).GetComponent<Image>().sprite = item._spriteParam1;
-            _toolTip.transform.GetChild(2).GetComponent<Image>().sprite = item._icon;
+            _toolTip.transform.GetChild(0).GetComponent<Image>().sprite = item._icon;
+            _toolTip.transform.GetChild(1).GetComponent<Text>().text = item._title;
+            _toolTip.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = item._description;
+            _toolTip.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = item._valueParam1;
+            _toolTip.transform.GetChild(2).GetChild(3).GetComponent<Image>().sprite = item._spriteParam1;
             if (item._numParams == 2)
             {
-                _toolTip.transform.GetChild(1).gameObject.SetActive(true);   
-                _toolTip.transform.GetChild(1).GetComponent<Text>().text = item._valueParam2;
-                _toolTip.transform.GetChild(3).gameObject.SetActive(true);   
-                _toolTip.transform.GetChild(3).GetComponent<Image>().sprite = item._spriteParam2; 
+                _toolTip.transform.GetChild(2).GetChild(1).gameObject.SetActive(true);   
+                _toolTip.transform.GetChild(2).GetChild(1).GetComponent<Text>().text = item._valueParam2;
+                _toolTip.transform.GetChild(2).GetChild(2).gameObject.SetActive(true);   
+                _toolTip.transform.GetChild(2).GetChild(2).GetComponent<Image>().sprite = item._spriteParam2; 
             }
             else
             {
-                _toolTip.transform.GetChild(1).gameObject.SetActive(false); 
-                _toolTip.transform.GetChild(3).gameObject.SetActive(false);  
+                _toolTip.transform.GetChild(2).GetChild(1).gameObject.SetActive(false); 
+                _toolTip.transform.GetChild(2).GetChild(2).gameObject.SetActive(false);  
             }
         }
 

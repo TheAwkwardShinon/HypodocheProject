@@ -7,6 +7,23 @@ namespace Hypodoche {
     public class ButtonUI : MonoBehaviour {
         private BuildingManager _buildingManager;
         private GameObject _oracle;
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E)) {
+                BuildArena();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.R)) {
+                LoadArena();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.T)) {
+                Oracle();
+            }
+        }
+        
+
         private void Start()
         {
             _buildingManager = GameObject.FindGameObjectWithTag("BuildingManager").GetComponent<BuildingManager>();
@@ -46,6 +63,40 @@ namespace Hypodoche {
                 }
                 _oracle.SetActive(true);
             });
+        }
+
+
+        private void BuildArena()
+        {
+            _buildingManager.SelectArena();
+            _oracle.SetActive(false);
+        }
+
+        private void LoadArena()
+        {
+            _buildingManager.LoadArena();
+            if (_buildingManager._isArenaOn)
+            {
+                _buildingManager.DeselectArena();
+            }
+            else
+            {
+                _buildingManager.DeselectInventory();
+            }
+        }
+
+        private void Oracle()
+        {
+            if (_buildingManager._isArenaOn)
+            {
+                _buildingManager.DeselectArena();
+            }
+            else
+            {
+                _buildingManager.DeselectInventory();
+            }
+            _buildingManager.CloseToolTip();
+            _oracle.SetActive(true);
         }
         
     }
