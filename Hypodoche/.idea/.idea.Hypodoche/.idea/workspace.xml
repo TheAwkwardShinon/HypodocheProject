@@ -21,9 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="424b3779-bd41-4b29-be19-ae6e890a6cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hypodoche/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/trap.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/trap.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BuildArenaScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BuildArenaScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Items/ButtonUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Items/ButtonUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Environment/Items/TypeSelectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Environment/Items/TypeSelectUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,19 +39,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/SubZeroRay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/PowerSurge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TheHorrorBelow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/SubZeroRay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/AnisKite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/PowerSurge.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Blower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/TypeSelectUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/Slot.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingTypeSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/Item.cs" />
@@ -66,7 +70,9 @@
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/LuckyStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Traps/testTraps/TarPit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/TypeSelectUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/BuildingManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Environment/Items/ButtonUI.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +124,7 @@
       <workItem from="1606987049250" duration="5817000" />
       <workItem from="1607002501664" duration="8098000" />
       <workItem from="1607012922212" duration="3516000" />
+      <workItem from="1607159617812" duration="8208000" />
     </task>
     <servers />
   </component>

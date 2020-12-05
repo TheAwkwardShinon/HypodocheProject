@@ -21,7 +21,7 @@ namespace Hypodoche
 
         private void Start(){
         _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-            _grid = new Grid(-145, -143, 1, 3, 55, 0,false);
+            _grid = new Grid(-47, -180, 1, 3, 50, 0,false);
         }
 
         public void ScrollRight()
