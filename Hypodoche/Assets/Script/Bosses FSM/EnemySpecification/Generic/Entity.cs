@@ -15,6 +15,7 @@ namespace Hypodoche
         public FiniteStateMachine _stateMachine;
         private Vector3 _direction;
         public D_Entity _entityData;
+        [SerializeField] public GameObject _ui;
         #endregion
 
         #region

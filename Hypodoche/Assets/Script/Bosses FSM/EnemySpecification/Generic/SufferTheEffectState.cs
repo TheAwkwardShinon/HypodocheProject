@@ -109,6 +109,7 @@ namespace Hypodoche
 
         public void gotStun(float time){
             Debug.Log("Stun");
+            _icons.AddStun();
             _entityData.isStun = true;
             _entityData.timeOfStun = time;
         }
@@ -126,6 +127,7 @@ namespace Hypodoche
         public void gotDamageOverTime(float dmg, float time)
         {
             Debug.Log("dmgOverTime");
+            _icons.AddDmgOverTime();
             _entityData.gotDamageOverTime = true;
             _entityData.timeOfDamage = time;
             _entityData.damageTakenOverTime = dmg;
@@ -134,6 +136,7 @@ namespace Hypodoche
         public void gotSlow(float speed, float time)
         {
             Debug.Log("Slowed");
+            _icons.AddSlow();
             _entityData.isSlowed = true;
             _entityData.timeOfSlow = time;
             _entityData.speedWhenSlowed = speed;

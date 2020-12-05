@@ -13,6 +13,7 @@ namespace Hypodoche
         protected float _startTime;
         protected string _animationName;
         public float elapsed = 0f;
+        protected UI_AppearStatusIcon _icons;
         #endregion
 
 
@@ -23,6 +24,7 @@ namespace Hypodoche
             _entity = entity;
             _stateMachine = stateMachine;
             _animationName = animationName;
+            _icons = _entity._ui.GetComponent<UI_AppearStatusIcon>();
         }
 
 
@@ -57,6 +59,7 @@ namespace Hypodoche
                 {
                     _entity._entityData.isStun = false;
                     _entity._entityData.timeOfStun = 0;
+                    _icons.RemoveStun();
                 }
                    
             }
@@ -67,6 +70,7 @@ namespace Hypodoche
                 {
                     _entity._entityData.isSlowed = false;
                     _entity._entityData.timeOfSlow = 0;
+                    _icons.RemoveSlow();
                 }
             }
             if (_entity._entityData.gotDamageOverTime)
@@ -75,6 +79,7 @@ namespace Hypodoche
                 {
                     _entity._entityData.gotDamageOverTime = false;
                     _entity._entityData.timeOfDamage = 0;
+                    _icons.RemoveDmgOverTime();
                 }
                 else
                 {

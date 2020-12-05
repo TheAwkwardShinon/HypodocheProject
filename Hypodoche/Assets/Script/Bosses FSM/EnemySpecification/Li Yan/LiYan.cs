@@ -19,7 +19,6 @@ namespace Hypodoche
         [SerializeField] public GameObject metalBomb;
         [SerializeField] public GameObject fireBomb;
         [SerializeField] public GameObject woodBomb;
-
         [SerializeField]
         private D_IdleState _idleData;
 
