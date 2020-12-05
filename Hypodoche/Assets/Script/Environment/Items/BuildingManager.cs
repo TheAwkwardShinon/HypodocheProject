@@ -20,6 +20,7 @@ namespace Hypodoche {
         private Grid _inventoryGrid;
         public GameObject _toolTip;
         public bool _isArenaOn;
+        public bool _isInventoryOn;
         public int _xselected;
         public int _yselected;
         private bool _move;
@@ -32,6 +33,7 @@ namespace Hypodoche {
         public GameObject _inventoryBG;
 
         public bool _buildingArena;
+        
         
         [SerializeField] private ArenaTransferSO _arenaTransfer;
         #endregion
@@ -55,6 +57,8 @@ namespace Hypodoche {
             _move = false;
             CloseToolTip();
             _temp = -1;
+            _isArenaOn = false;
+            _isInventoryOn = false;
             //BuildArena();
         }
 
@@ -72,12 +76,9 @@ namespace Hypodoche {
             }
 
             if (Input.GetKeyDown(KeyCode.I)) {
-                if (_isArenaOn) {
-                    SelectInventory();
-                }
-                else {
-                    SelectArena();
-                }
+                
+                Change();
+                //otherwise we are in oracle menu, not in building menu
             }
 
             if (Input.GetKeyDown(KeyCode.Y)) {
@@ -116,6 +117,19 @@ namespace Hypodoche {
             }
 
         }
+
+
+        private void Change()
+        {
+            if (_isArenaOn) {
+                SelectInventory();
+                return;
+            }
+                
+            if (_isInventoryOn){
+                SelectArena();
+            }
+        }
         
         public void SelectArena()
         {
@@ -138,11 +152,13 @@ namespace Hypodoche {
             _inventoryBG.SetActive(true);
             DeselectArena();
             _inventoryGrid.Activate();
+            _isInventoryOn = true;
         }
 
         public void DeselectInventory() {
             _inventoryBG.SetActive(false);
             _inventoryGrid.Deactivate();
+            _isInventoryOn = false;
         }
         
         public GameObject CreateSlot(int x, int y, int itemId) {

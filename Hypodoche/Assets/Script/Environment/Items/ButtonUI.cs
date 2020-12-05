@@ -69,6 +69,7 @@ namespace Hypodoche {
         private void BuildArena()
         {
             _buildingManager.SelectArena();
+            _buildingManager._isArenaOn = true;
             _oracle.SetActive(false);
         }
 
@@ -79,7 +80,7 @@ namespace Hypodoche {
             {
                 _buildingManager.DeselectArena();
             }
-            else
+            if (_buildingManager._isInventoryOn)
             {
                 _buildingManager.DeselectInventory();
             }
@@ -91,7 +92,7 @@ namespace Hypodoche {
             {
                 _buildingManager.DeselectArena();
             }
-            else
+            if (_buildingManager._isInventoryOn)
             {
                 _buildingManager.DeselectInventory();
             }
