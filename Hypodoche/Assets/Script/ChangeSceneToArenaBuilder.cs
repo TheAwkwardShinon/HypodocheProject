@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace Hypodoche
 {
-    public class ChangeSceneToArena : MonoBehaviour
+    public class ChangeSceneToArenaBuilder : MonoBehaviour
     {
         public void playGame()
         {
-            SceneManager.LoadScene("ArenaScene");
+            SceneManager.LoadScene(1);
         }
 
         public void QuitGame()
