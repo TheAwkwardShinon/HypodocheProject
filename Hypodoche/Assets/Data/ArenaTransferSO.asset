@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ArenaTransferSO
   m_EditorClassIdentifier: 
   _slotArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478, type: 3}
+  - {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478, type: 3}
+  - {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478, type: 3}
+  - {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478, type: 3}
+  - {fileID: -4509052758391981924, guid: 36a4b0af913786745bf1f9b358377478, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

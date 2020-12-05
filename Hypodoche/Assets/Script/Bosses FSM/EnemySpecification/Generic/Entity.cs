@@ -27,7 +27,6 @@ namespace Hypodoche
             _animator = _boss.transform.GetChild(0).GetComponent<Animator>();
             _stateMachine = new FiniteStateMachine();
             resetValues();
-            Flip();
         }
 
         public virtual void Update()
@@ -61,10 +60,10 @@ namespace Hypodoche
             //_boss.transform.position += _direction * speed * Time.fixedDeltaTime;
         }
 
+        //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
         public virtual void Flip()
         {
-            /*_boss.transform.Rotate(0f, 180f, 0f);
-            _boss.transform.rotation = new Quaternion(-_boss.transform.rotation.x, _boss.transform.rotation.y, _boss.transform.rotation.z, _boss.transform.rotation.w);*/
+            _boss.transform.Rotate(0f, 0f, 180f);
         }
 
         public virtual bool checkWall()

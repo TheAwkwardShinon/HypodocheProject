@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed2eb5d5b5ef5c848aacf377e383e3f7, type: 3}
-  m_Name: TheHorrorFromBelow
+  m_Name: New Building Type SO
   m_EditorClassIdentifier: 
   _title: 
   _description: 

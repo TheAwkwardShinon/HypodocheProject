@@ -19,7 +19,7 @@ namespace Hypodoche
             foreach (GameObject prefab in _arenaTransfer._slotArray){       
                 if (prefab != null){
                     Debug.Log(prefab.name);
-                    Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, _basePoint.position.y, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
+                    Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, 0, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
                 }
                 i++;
                 if(i == 5) {
