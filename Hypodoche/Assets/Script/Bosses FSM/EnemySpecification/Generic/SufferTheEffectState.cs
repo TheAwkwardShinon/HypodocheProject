@@ -88,6 +88,8 @@ namespace Hypodoche
         public void slowOverArea(float speed)
         {
             Debug.Log("SlowedOverArea");
+            if (_entityData.isSlowed == true || _entityData.slowOverArea == true) return;
+            _icons.AddSlow();
             _entityData.slowOverArea = true;
             _entityData.speedWhenSlowedArea = speed;
         }
@@ -96,6 +98,8 @@ namespace Hypodoche
         public void DamageOverArea(float damage)
         {
             Debug.Log("DmgOverArea");
+            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
+            if (_entityData.damageOverArea = true) return;
             _entityData.damageOverArea = true;
             _entityData.damageTakenOverTimeArea = damage;
         }
@@ -109,6 +113,7 @@ namespace Hypodoche
 
         public void gotStun(float time){
             Debug.Log("Stun");
+            if (_entityData.isStun == true) return;
             _icons.AddStun();
             _entityData.isStun = true;
             _entityData.timeOfStun = time;
@@ -127,7 +132,7 @@ namespace Hypodoche
         public void gotDamageOverTime(float dmg, float time)
         {
             Debug.Log("dmgOverTime");
-            _icons.AddDmgOverTime();
+            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             _entityData.gotDamageOverTime = true;
             _entityData.timeOfDamage = time;
             _entityData.damageTakenOverTime = dmg;
@@ -136,6 +141,7 @@ namespace Hypodoche
         public void gotSlow(float speed, float time)
         {
             Debug.Log("Slowed");
+            if (_entityData.isSlowed == true || _entityData.slowOverArea == true) return;
             _icons.AddSlow();
             _entityData.isSlowed = true;
             _entityData.timeOfSlow = time;
