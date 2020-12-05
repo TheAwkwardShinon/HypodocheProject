@@ -18,6 +18,12 @@ namespace Hypodoche
 
         public void Start()
         {
+           
+        }
+
+        public void Awake()
+        {
+            Debug.Log("esisto");
             StunData s = new StunData();
             s.isEmpty = false;
             s.time = 4; // freezes on place for 4 sec
@@ -27,13 +33,17 @@ namespace Hypodoche
             sl.isEmpty = true;
             DamageData dm = new DamageData();
             dm.isEmpty = true;
-            //myEffect = new Effects(sl, s, d, dm);
+            FearData fear = new FearData();
+            fear.isEmpty = true;
+            SlowOverAreaData slowArea = new SlowOverAreaData();
+            slowArea.isEmpty = true;
+            DamageOverAreaData dmgArea = new DamageOverAreaData();
+            dmgArea.isEmpty = true;
+            EnhanceData enhance = new EnhanceData();
+            enhance.isEmpty = true;
+            myEffect = new Effects(sl, s, d, dm, fear, false, slowArea, dmgArea, enhance);
         }
-
-        void OnTriggerEnter(Collider col)
-        {
-            
-        }
+     
 
         public void Update()
         {
@@ -42,6 +52,7 @@ namespace Hypodoche
 
         public string SendDataTrap()
         {
+            Debug.Log("sono qui");
             Destroy(gameObject);
             return JsonUtility.ToJson(myEffect, true);
         }

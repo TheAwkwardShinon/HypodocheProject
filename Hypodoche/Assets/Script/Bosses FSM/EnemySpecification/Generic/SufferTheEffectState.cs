@@ -33,7 +33,9 @@ namespace Hypodoche
             if (_typeOfCollision.Equals("trap")) {
                 Debug.Log("col con : " + _col.gameObject);
                 _effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
+                //Debug.Log(_col.gameObject.GetComponent<Traps>().ToString());
                 Effects trapEffect = JsonUtility.FromJson<Effects>(_effects);
+                Debug.Log(trapEffect);
                 if (trapEffect._isZone)
                     handleZone(trapEffect);
                 else handleEffect(trapEffect);
