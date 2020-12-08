@@ -15,6 +15,7 @@ TagManager:
   - TypeSelectUI
   - ArenaBG
   - InventoryBG
+  - Perimeter
   layers:
   - Default
   - TransparentFX

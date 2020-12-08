@@ -29,7 +29,7 @@ namespace Hypodoche
             sla.isEmpty = true;
             DamageOverAreaData dma = new DamageOverAreaData();
             dma.isEmpty = false;
-            dma.damage = 0.2f;
+            dma.damage = 0.08f;
             EnhanceData en = new EnhanceData();
             en.isEmpty = true;
             myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,en);

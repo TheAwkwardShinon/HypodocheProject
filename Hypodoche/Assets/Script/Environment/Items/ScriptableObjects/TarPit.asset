@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: TarPit
   m_EditorClassIdentifier: 
   _title: Tar Pit
-  _description: "Pool of tar that heavily slows who\u2019s inside, but heavily enhances
-    damages. The player can\u2019t dodge while inside."
+  _description: " Pool of tar that heavily slows who\u2019s inside, and heavily enhances
+    damages.This liquid brings you back to a point in your life were you were lost,
+    and you were found. Bitter taste in your mouth, unable to move. The lingering
+    fear of the unknown. You lied there, lying to yourself, pretending it was just
+    a bad dream,  even if know you know that it was the beginning of your new reality.
+    Or maybe this is all a dream, you can tell for certain."
   _itemType: Trap
   _prefab: {fileID: 3744276004993207260, guid: 621c13bd86f108b45830398ca34a5f3f, type: 3}
   _sprite: {fileID: 3552065967507261152, guid: 7a21e29ab549d094db0ba51b4a06c846, type: 3}

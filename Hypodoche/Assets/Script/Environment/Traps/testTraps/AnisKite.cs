@@ -17,7 +17,7 @@ namespace Hypodoche
         Effects myEffect;
         [SerializeField] public float speed;
         private Vector3 direction;
-
+        protected Rigidbody _rigidbody;
         #endregion
 
         #region methods
@@ -49,7 +49,7 @@ namespace Hypodoche
             myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);
             //Simplified AI
             InvokeRepeating("ChangeDirection", 0f, 3f);
-
+            _rigidbody = gameObject.GetComponent<Rigidbody>();
         }
 
         public void ChangeDirection()
@@ -59,15 +59,18 @@ namespace Hypodoche
             direction = new Vector3(rx, 0, rz);
         }
 
-        public void OnTriggerEnter()
+        public void OnTriggerEnter(Collider col)
         {
-            direction = -1 * direction;
-            transform.Rotate(0, 180f, 0, Space.Self);
+            if (col.gameObject.CompareTag("Perimeter"))
+            {
+                direction = -1 * direction;
+                transform.Rotate(0, 180f, 0, Space.Self);
+            }
         }
 
-        public void Update()
+        public void FixedUpdate() //direction, velocità
         {
-            transform.position = transform.position + direction * speed;
+            _rigidbody.MovePosition(_rigidbody.position + direction * speed * Time.fixedDeltaTime);
         }
 
         public string SendDataTrap()
