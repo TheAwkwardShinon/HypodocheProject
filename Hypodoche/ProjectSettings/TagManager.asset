@@ -50,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ground
+    uniqueID: 3340473967
+    locked: 0
   - name: player
     uniqueID: 1143657361
     locked: 0
@@ -58,7 +61,4 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: ground
-    uniqueID: 3340473967
     locked: 0
