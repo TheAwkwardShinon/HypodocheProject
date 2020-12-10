@@ -24,6 +24,7 @@ namespace Hypodoche
         private float _nextAttackTime = 0f;
         private float _attackRate;
         private bool _isAiming = false;
+        private List<GameObject> alreadyHit = new List<GameObject>();
         #endregion
 
         #region Getter and Setter
@@ -69,15 +70,21 @@ namespace Hypodoche
         public void HandleLightAttack(Weapon weapon)
         {
             _attackRadius = weapon.GetLightAttackRadius();
+            List<GameObject> alreadyHit = new List<GameObject>();
 
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
             foreach (Collider hitObject in hitObjects)
             {
-                Enemy enemy = hitObject.GetComponent<Enemy>();
+                GameObject hitParent = hitObject.transform.root.gameObject;
+                Enemy enemy = hitParent.GetComponent<Enemy>();
 
-                if (enemy != null)
+                if (enemy != null && !alreadyHit.Contains(hitParent)){
                     enemy.TakeDamage(weapon.GetLightDamage());
+                    alreadyHit.Add(hitParent);
+                }
             }
+
+            alreadyHit.Clear();
 
             _attackRate = weapon.GetLightAttackRate();
 
@@ -91,13 +98,18 @@ namespace Hypodoche
 
         public void HandleHeavyAttack(Weapon weapon)
         {
+            alreadyHit = new List<GameObject>();
+
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
             foreach (Collider hitObject in hitObjects)
             {
-                Enemy enemy = hitObject.GetComponent<Enemy>();
+                GameObject hitParent = hitObject.transform.root.gameObject;
+                Enemy enemy = hitParent.GetComponent<Enemy>();
 
-                if (enemy != null)
+                if (enemy != null && !alreadyHit.Contains(hitParent)){
                     enemy.TakeDamage(weapon.GetHeavyDamage());
+                    alreadyHit.Add(hitParent);
+                }
             }
 
             _attackRate = weapon.GetHeavyAttackRate();

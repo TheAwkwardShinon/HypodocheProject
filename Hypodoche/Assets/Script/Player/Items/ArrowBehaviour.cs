@@ -51,9 +51,11 @@ namespace Hypodoche
 
         private void OnTriggerEnter(Collider other)
         {
+            GameObject hitParent = other.transform.root.gameObject;
+            Enemy enemy = hitParent.GetComponent<Enemy>();
+            
             if (!other.gameObject.CompareTag("Player"))
             {
-                Enemy enemy = other.GetComponent<Enemy>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(_damage);

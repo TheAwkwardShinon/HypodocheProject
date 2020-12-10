@@ -15,6 +15,7 @@ namespace Hypodoche
         public FiniteStateMachine _stateMachine;
         private Vector3 _direction;
         public D_Entity _entityData;
+        private bool _flipped = true;
         [SerializeField] public GameObject _ui;
         #endregion
 
@@ -59,19 +60,20 @@ namespace Hypodoche
         public virtual void Move(float speed)
         {
             _rigidBodyBoss.MovePosition(_rigidBodyBoss.position + _direction * speed * Time.fixedDeltaTime);
-            //_boss.transform.position += _direction * speed * Time.fixedDeltaTime;
         }
 
         //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto
         public virtual void Flip()
         {
-            /*
+            Vector3 flippedRotation = new Vector3(-45,180,0);
+            Vector3 rotation = new Vector3(45,0,0);
             Transform child =  _boss.transform.GetChild(0).transform;
-            _boss.transform.Rotate(0f, 180f, 0f);
-            if (_boss.transform.rotation.y % 360 == 0)
-                child.rotation = new Quaternion(45, child.rotation.y, child.rotation.z, child.rotation.w);
+            if(!_flipped)
+                child.rotation = Quaternion.Euler(flippedRotation);
             else
-                child.rotation = new Quaternion(-45, child.rotation.y, child.rotation.z, child.rotation.w);*/
+                child.rotation = Quaternion.Euler(rotation);
+            
+            _flipped = !_flipped;
         }
 
         public virtual bool checkWall()
