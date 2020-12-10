@@ -9,19 +9,21 @@ namespace Hypodoche
     public class SufferTheEffectState : State
     {
         #region Variables
-        protected Collider _col;
+        //protected Collider _col;
         protected D_Entity _entityData;
-        protected string _effects;
+        protected Effects trapEffect;
+        protected string _json;
         protected string _typeOfCollision; //trap or player attacks or my own attacks
         #endregion
 
         //boss1 added only for testing
         #region Methods
-        public SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Collider col,string type)
+        public SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Effects effect ,string type)
             : base(entity, stateMachine, animationName)
         {
             _entityData = entityData;
-            _col = col;
+            //_col = col;
+            trapEffect = effect;
             _typeOfCollision = type;
         }
 
@@ -31,10 +33,10 @@ namespace Hypodoche
             //TODO Controlla
             
             if (_typeOfCollision.Equals("trap")) {
-                Debug.Log("col con : " + _col.gameObject);
-                _effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
+               
+                //_effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
                 //Debug.Log(_col.gameObject.GetComponent<Traps>().ToString());
-                Effects trapEffect = JsonUtility.FromJson<Effects>(_effects);
+                //Effects trapEffect = JsonUtility.FromJson<Effects>(_json); //todo change json to effect
                 Debug.Log(trapEffect);
                 if (trapEffect._isZone)
                     handleZone(trapEffect);

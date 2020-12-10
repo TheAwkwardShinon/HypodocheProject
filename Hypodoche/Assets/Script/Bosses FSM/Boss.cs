@@ -8,7 +8,7 @@ namespace Hypodoche
     public interface Boss
     {
         void DestroyBoss();
-        void stepOnTrap(Collider col);
+        void stepOnTrap(Effects effect);
         float getHealth();
     }
 }

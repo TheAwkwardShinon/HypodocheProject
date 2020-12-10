@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace Hypodoche
 {
+    
     public class B1_SufferTheEffectState : SufferTheEffectState
     {
         #region Variables
         private Boss1 _boss1;
 
-        public B1_SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Collider col,string type, Boss1 boss)
-            : base(entity, stateMachine, animationName, entityData,col,type)
+        public B1_SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Effects effect,string type, Boss1 boss)
+            : base(entity, stateMachine, animationName, entityData,effect,type)
         {
             _boss1 = boss;
         }

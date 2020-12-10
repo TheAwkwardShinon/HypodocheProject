@@ -52,6 +52,22 @@ namespace Hypodoche
             return JsonUtility.ToJson(myEffect, true);
         }
 
+
+        public void OnTriggerEnter(Collider col)
+        {
+            if (col.gameObject.CompareTag("boss"))
+            {
+                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+            }
+        }
+
+        public void OnTriggerExit(Collider col)
+        {
+            if (col.gameObject.CompareTag("boss"))
+            {
+                col.transform.root.GetComponent<LiYan>().exitFromTrap();
+            }
+        }
         #endregion
     }
 }

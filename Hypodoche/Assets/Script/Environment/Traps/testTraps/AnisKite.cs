@@ -66,6 +66,18 @@ namespace Hypodoche
                 direction = -1 * direction;
                 transform.Rotate(0, 180f, 0, Space.Self);
             }
+            else if(col.gameObject.CompareTag("boss"))
+            {
+                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+            }
+        }
+
+        public void OnTriggerExit(Collider col)
+        {
+            if (col.gameObject.CompareTag("boss"))
+            {
+                col.transform.root.GetComponent<LiYan>().exitFromTrap();
+            }
         }
 
         public void FixedUpdate() //direction, velocità

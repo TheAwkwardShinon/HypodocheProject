@@ -9,8 +9,8 @@ namespace Hypodoche
         #region Variables
         private LiYan _liYan;
 
-        public LiYan_SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Collider col, string type, LiYan liYan)
-            : base(entity, stateMachine, animationName, entityData, col, type)
+        public LiYan_SufferTheEffectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Effects effect, string type, LiYan liYan)
+            : base(entity, stateMachine, animationName, entityData, effect, type)
         {
             _liYan = liYan;
         }

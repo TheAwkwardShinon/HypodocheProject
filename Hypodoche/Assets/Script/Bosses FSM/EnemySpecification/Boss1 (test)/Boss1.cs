@@ -43,7 +43,7 @@ namespace Hypodoche
             _stateMachine.InitializeState(_idleState);
         }
 
-
+/*
         public virtual void OnTriggerEnter(Collider col)
         {
             Debug.Log("trigger");
@@ -61,13 +61,13 @@ namespace Hypodoche
                _entityData.damageOverArea = false;
             }        
         }
+*/
 
 
-
-        public virtual void stepOnTrap(Collider col)
+        public virtual void stepOnTrap(Effects effect)
         {
             Debug.Log("tag is right");
-            _stateMachine.ChangeState(new B1_SufferTheEffectState(this, _stateMachine, "idle", _entityData, col, "trap",this));
+            _stateMachine.ChangeState(new B1_SufferTheEffectState(this, _stateMachine, "idle", _entityData, effect, "trap",this));
         }
 
         #endregion

@@ -48,29 +48,26 @@ namespace Hypodoche
         {
             Destroy(gameObject);
         }
-
+        /*
         public  void OnTriggerEnter(Collider col)
         {
             if (col.gameObject.CompareTag("trap"))
                 stepOnTrap(col);
-        }
+        }*/
 
 
-        public  void OnTriggerExit(Collider col)
+        public  void exitFromTrap()
         {
-            if (col.gameObject.CompareTag("trap"))
-            {
                 _entityData.slowOverArea = false;
                 _entityData.damageOverArea = false;
                 _entityData.enhanceMultiplier = 0f;
-            }
         }
 
 
 
-        public void stepOnTrap(Collider col)
+        public void stepOnTrap(Effects effect)
         {
-            _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, col, "trap", this));
+            _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, effect, "trap", this));
         }
 
 
