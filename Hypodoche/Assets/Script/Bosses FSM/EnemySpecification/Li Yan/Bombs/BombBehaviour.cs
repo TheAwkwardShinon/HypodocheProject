@@ -12,7 +12,7 @@ public class BombBehaviour : MonoBehaviour
     protected float _timeToAccelerate;
     protected float _timeToDestroy;
     [SerializeField] protected float _chargeTime = 4f;
-    [SerializeField] protected float _explosionDelay = 2f;
+    [SerializeField] protected float _explosionDelay = 1.25f;
     protected int _accelerateTriggerHash;
     protected bool _exploded = false;
 

@@ -45,8 +45,9 @@ namespace Hypodoche
 
         public virtual void Update()
         {
-
-            if(!_entity._entityData.slowOverArea)
+            if (Time.timeScale == 0f)
+                return;
+            if (!_entity._entityData.slowOverArea)
                 _icons.RemoveSlow();
 
             if (_entity._entityData.damageOverArea)
