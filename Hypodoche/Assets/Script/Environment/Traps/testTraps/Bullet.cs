@@ -23,7 +23,6 @@ namespace Hypodoche
 
         public void Awake()
         {
-            Debug.Log("esisto");
             StunData s = new StunData();
             s.isEmpty = false;
             s.time = 1.5f; // freezes on place for 4 sec
@@ -52,7 +51,6 @@ namespace Hypodoche
 
         public string SendDataTrap()
         {
-            Debug.Log("sono qui");
             Destroy(gameObject);
             return JsonUtility.ToJson(myEffect, true);
         }
@@ -60,10 +58,10 @@ namespace Hypodoche
 
         public void OnTriggerEnter(Collider col)
         {
-  
             if (col.gameObject.CompareTag("boss"))
             {
                 col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                GameObject.Destroy(gameObject);
             }
         }
 

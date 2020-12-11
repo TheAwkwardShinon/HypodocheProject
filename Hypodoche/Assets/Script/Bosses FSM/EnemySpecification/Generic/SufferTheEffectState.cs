@@ -99,9 +99,9 @@ namespace Hypodoche
 
         public void DamageOverArea(float damage)
         {
+            if (_entityData.damageOverArea == true) return;
             Debug.Log("DmgOverArea");
-            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
-            if (_entityData.damageOverArea = true) return;
+            if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             _entityData.damageOverArea = true;
             _entityData.damageTakenOverTimeArea = damage;
         }

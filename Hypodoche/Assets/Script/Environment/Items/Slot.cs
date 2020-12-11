@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Hypodoche
 {
-    public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+    public class Slot : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler
     {
 
         #region Variables
@@ -63,14 +63,6 @@ namespace Hypodoche
             if (_buildingManager._inventory.GetItem(_itemId) != null)
             {
                 _buildingManager.ShowToolTip(_buildingManager._inventory.GetItem(_itemId));
-            }
-        }
-
-        public void OnPointerExit(PointerEventData data)
-        {
-            if (_buildingManager._inventory.GetItem(_itemId) != null)
-            {
-                _buildingManager.CloseToolTip();
             }
         }
 

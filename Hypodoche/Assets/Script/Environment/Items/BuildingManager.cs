@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 using Object = UnityEngine.Object;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Hypodoche;
 
 namespace Hypodoche {
     public class BuildingManager : MonoBehaviour {
@@ -39,78 +38,77 @@ namespace Hypodoche {
         #endregion
 
         #region Methods
-        private void Start()
+        private void Awake()
         {
    
             _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
             _arenaBG = GameObject.FindGameObjectWithTag("ArenaBG");
             _inventoryBG = GameObject.FindGameObjectWithTag("InventoryBG");
-            _buildingArena = false;
+            _isArenaOn = false;
             _inventoryGrid = new Grid(-220, 220, 5, 5, 112, 0,false);
-            DeselectInventory();
-            _buildingArena = true;
+            _isArenaOn = true;
             _arenaGrid = new Grid(-97, 95, 5, 5, 50, -1,true); //-200,125
             _typeSelectUI = GameObject.FindGameObjectWithTag("TypeSelectUI").GetComponent<TypeSelectUI>();
             _xselected = 2;
             _yselected = 2;
             _maxtrap = 5;
             _move = false;
-            CloseToolTip();
             _temp = -1;
-            _isArenaOn = false;
             _isInventoryOn = false;
             //BuildArena();
         }
 
+        private void Start()
+        {
+            DeselectInventory();
+            SelectArena();
+        }
+
         private void Update() {
-            //mouseWorldPosition = _arenaGrid.GetMouseWorldPosition();
-            //int x;
-            //int y;
-            //_arenaGrid.GetXY(mouseWorldPosition,out x,out y);
             if(_isArenaOn)
             {
-                if (Input.GetMouseButtonDown(0) /*&& !EventSystem.current.IsPointerOverGameObject()*/) {
+                if (Input.GetKeyDown(KeyCode.E)) /*&& !EventSystem.current.IsPointerOverGameObject()*/{
                     _typeSelectUI.ScrollLeft();
                 }
 
-                if (Input.GetMouseButtonDown(1)) {
+                if (Input.GetKeyDown(KeyCode.Q)) {
                     _typeSelectUI.ScrollRight();
                 }
-
                 
-
-                if (Input.GetKeyDown(KeyCode.Y)) {
-                    if (CanBuild())  
+                if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                    if(_arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId == 
+                        _typeSelectUI._grid._gridArray[0,1].GetComponent<Slot>()._itemId)
+                    {
+                        if (_move) {
+                            _move = false;
+                        }
+                        else {
+                            _move = true;
+                        }
+                    }
+                    else if (CanBuild())
+                    {
                         Build();
+                    }
                 }
 
-                if (Input.GetKeyDown(KeyCode.U)) {
+                if (Input.GetKeyDown(KeyCode.Alpha2)) {
                     Delete();
                 }
 
-                if (Input.GetKeyDown(KeyCode.O) &&
-                    _arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId != -1) {
-                    if (_move) {
-                        _move = false;
-                    }
-                    else {
-                        _move = true;
-                    }
-                }
-
-                if (Input.GetKeyDown(KeyCode.UpArrow) && _xselected != 0) {
+                if (Input.GetKeyDown(KeyCode.W) && _xselected != 0) {
                     MoveUp();
                 }
 
-                if (Input.GetKeyDown(KeyCode.DownArrow) && _xselected != _arenaGrid._width - 1) {
+                if (Input.GetKeyDown(KeyCode.S) && _xselected != _arenaGrid._width - 1) {
                     MoveDown();
                 }
 
-                if (Input.GetKeyDown(KeyCode.RightArrow) && _yselected != _arenaGrid._height - 1) {
+                if (Input.GetKeyDown(KeyCode.D) && _yselected != _arenaGrid._height - 1) {
                     MoveRight();
                 }
 
-                if (Input.GetKeyDown(KeyCode.LeftArrow) && _yselected != 0) {
+                if (Input.GetKeyDown(KeyCode.A) && _yselected != 0) {
                     MoveLeft();
                 }
             }
@@ -121,6 +119,15 @@ namespace Hypodoche {
                 //otherwise we are in oracle menu, not in building menu
             }
 
+            if (Input.GetKeyDown(KeyCode.R))
+                LoadArena();
+
+            Item item;
+
+            if(_isArenaOn){
+                item = _inventory.GetItem(_typeSelectUI._grid._gridArray[0,1].GetComponent<Slot>()._itemId);
+                ShowToolTip(item);
+            }
         }
 
 
@@ -143,6 +150,9 @@ namespace Hypodoche {
             _arenaGrid.Activate();
             _typeSelectUI._grid.Activate();
             _isArenaOn = true;
+            foreach (Transform child in _arenaBG.transform){
+                child.gameObject.SetActive(true);
+            }
         }
 
         public void DeselectArena()
@@ -150,6 +160,9 @@ namespace Hypodoche {
             _arenaBG.SetActive(false);
             _arenaGrid.Deactivate();
             _typeSelectUI._grid.Deactivate();
+            foreach (Transform child in _arenaBG.transform){
+                child.gameObject.SetActive(false);
+            }
             _isArenaOn = false;
         }
 
@@ -158,6 +171,7 @@ namespace Hypodoche {
             DeselectArena();
             _inventoryGrid.Activate();
             _isInventoryOn = true;
+            ShowToolTip(_inventory.GetItem(_inventoryGrid._gridArray[0,0].GetComponent<Slot>()._itemId));
         }
 
         public void DeselectInventory() {
@@ -168,7 +182,7 @@ namespace Hypodoche {
         
         public GameObject CreateSlot(int x, int y, int itemId) {
             GameObject slot = (GameObject) Instantiate(_slots);
-            if (_buildingArena)
+            if (_isArenaOn)
                slot.transform.SetParent(_arenaBG.gameObject.transform);
             else
                 slot.transform.SetParent(_inventoryBG.gameObject.transform);
@@ -304,11 +318,9 @@ namespace Hypodoche {
 
         public void LoadArena()
         {
-
             for (int i = 0; i < _arenaGrid._gridArray.GetLength(0); i++) {
                 for (int j = 0; j < _arenaGrid._gridArray.GetLength(1); j++)
                 {
-                    GameObject obj;
                     int id = _arenaGrid._gridArray[i, j].GetComponent<Slot>()._itemId;
                     if (id != -1) {
                         _arenaTransfer.SetSlot(i,j, _inventory.GetItem(id)._prefab);
