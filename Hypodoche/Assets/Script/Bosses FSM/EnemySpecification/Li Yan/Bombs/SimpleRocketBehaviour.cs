@@ -38,7 +38,10 @@ namespace Hypodoche{
                     status.TakeDamage(_damage);
                 }
                 Destroy(gameObject);
+                return;
             }
+            if(other.GetComponent<LuckyStar>() != null)
+                Destroy(gameObject);
         }
     }
 }

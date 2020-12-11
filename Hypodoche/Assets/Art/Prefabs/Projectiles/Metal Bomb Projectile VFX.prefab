@@ -4837,6 +4837,9 @@ MonoBehaviour:
   _maxDistance: 20
   _sideRocket: {fileID: 528366946326304354, guid: 37085328516ac9a4fa61cd9faaa2baeb,
     type: 3}
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!1 &5972505308016658707
 GameObject:
   m_ObjectHideFlags: 0
