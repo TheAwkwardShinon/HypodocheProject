@@ -19,7 +19,7 @@ namespace Hypodoche
 
         #region Methods
 
-        private void Start(){
+        private void Awake(){
         _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
             _grid = new Grid(-47, -180, 1, 3, 50, 0,false);
         }

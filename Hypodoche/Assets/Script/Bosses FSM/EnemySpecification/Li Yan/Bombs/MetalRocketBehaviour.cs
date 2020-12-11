@@ -15,6 +15,7 @@ namespace Hypodoche{
         [SerializeField] private float _damage = 30f;
         [SerializeField] private float _maxDistance = 20f;
         [SerializeField] private GameObject _sideRocket;
+        [SerializeField] private LayerMask _hitMask;
         private float _spawnSideRocketsTime;
         private Rigidbody _rigidbody;
         private Vector3 _startingPosition;
@@ -51,7 +52,7 @@ namespace Hypodoche{
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.gameObject.CompareTag("Bomb"))
+            if (_hitMask == (_hitMask | (1 << other.gameObject.layer)))
             {
                 PlayerStatus status = other.GetComponent<PlayerStatus>();
                 if (status != null)
@@ -59,7 +60,10 @@ namespace Hypodoche{
                     status.TakeDamage(_damage);
                 }
                 Destroy(gameObject);
+                return;
             }
+            if(other.GetComponent<LuckyStar>() != null)
+                Destroy(gameObject);
         }
     }
 }

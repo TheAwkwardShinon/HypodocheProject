@@ -100,8 +100,18 @@ namespace Hypodoche
         public void DamageOverArea(float damage)
         {
             Debug.Log("DmgOverArea");
+<<<<<<< HEAD
+<<<<<<< HEAD
+            if (_entityData.damageOverArea == true) return;
+            if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
+=======
             if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             if (_entityData.damageOverArea = true) return;
+>>>>>>> parent of 7b1a97f... fixed major bugs
+=======
+            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
+            if (_entityData.damageOverArea = true) return;
+>>>>>>> parent of 7b1a97f... fixed major bugs
             _entityData.damageOverArea = true;
             _entityData.damageTakenOverTimeArea = damage;
         }
@@ -133,10 +143,18 @@ namespace Hypodoche
 
         public void gotDamageOverTime(float dmg, float time)
         {
-            Debug.Log("dmgOverTime");
-            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             _entityData.gotDamageOverTime = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            Debug.Log("dmgOverTime");
+            if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
+            _entityData.timeOfDamage = time + Time.time;
+=======
             _entityData.timeOfDamage = time;
+>>>>>>> parent of 7b1a97f... fixed major bugs
+=======
+            _entityData.timeOfDamage = time;
+>>>>>>> parent of 7b1a97f... fixed major bugs
             _entityData.damageTakenOverTime = dmg;
         }
 
