@@ -100,18 +100,8 @@ namespace Hypodoche
         public void DamageOverArea(float damage)
         {
             Debug.Log("DmgOverArea");
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (_entityData.damageOverArea == true) return;
             if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
-=======
-            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
-            if (_entityData.damageOverArea = true) return;
->>>>>>> parent of 7b1a97f... fixed major bugs
-=======
-            if (_entityData.gotDamageOverTime == false || _entityData.damageOverArea == false) _icons.AddDmgOverTime();
-            if (_entityData.damageOverArea = true) return;
->>>>>>> parent of 7b1a97f... fixed major bugs
             _entityData.damageOverArea = true;
             _entityData.damageTakenOverTimeArea = damage;
         }
@@ -128,7 +118,7 @@ namespace Hypodoche
             if (_entityData.isStun == true) return;
             _icons.AddStun();
             _entityData.isStun = true;
-            _entityData.timeOfStun = time;
+            _entityData.timeOfStun = time + Time.time;
         }
 
         public void gotDamage(float dmg)
@@ -144,17 +134,9 @@ namespace Hypodoche
         public void gotDamageOverTime(float dmg, float time)
         {
             _entityData.gotDamageOverTime = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
             Debug.Log("dmgOverTime");
             if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             _entityData.timeOfDamage = time + Time.time;
-=======
-            _entityData.timeOfDamage = time;
->>>>>>> parent of 7b1a97f... fixed major bugs
-=======
-            _entityData.timeOfDamage = time;
->>>>>>> parent of 7b1a97f... fixed major bugs
             _entityData.damageTakenOverTime = dmg;
         }
 
@@ -164,7 +146,7 @@ namespace Hypodoche
             if (_entityData.isSlowed == true || _entityData.slowOverArea == true) return;
             _icons.AddSlow();
             _entityData.isSlowed = true;
-            _entityData.timeOfSlow = time;
+            _entityData.timeOfSlow = time + Time.time;
             _entityData.speedWhenSlowed = speed;
         }
 

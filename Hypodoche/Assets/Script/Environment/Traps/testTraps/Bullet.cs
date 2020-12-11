@@ -46,18 +46,11 @@ namespace Hypodoche
 
         public void Update()
         {
-            transform.position = transform.position + direction * speed;
+            transform.position = transform.position + direction * speed * Time.deltaTime;
         }
 
         public string SendDataTrap()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 7b1a97f... fixed major bugs
-            Debug.Log("sono qui");
->>>>>>> parent of 7b1a97f... fixed major bugs
             Destroy(gameObject);
             return JsonUtility.ToJson(myEffect, true);
         }
