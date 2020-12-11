@@ -63,7 +63,7 @@ namespace Hypodoche
 
             if (_entity._entityData.isStun)
             {
-                if (Time.time >= _startTime + _entity._entityData.timeOfStun)
+                if (Time.time >= _entity._entityData.timeOfStun)
                 {
                     _entity._entityData.isStun = false;
                     _entity._entityData.timeOfStun = 0;
@@ -74,7 +74,7 @@ namespace Hypodoche
             if (_entity._entityData.isSlowed)
             {
                 
-                if (Time.time >= _startTime + _entity._entityData.timeOfSlow)
+                if (Time.time >= _entity._entityData.timeOfSlow)
                 {
                     _entity._entityData.isSlowed = false;
                     _entity._entityData.timeOfSlow = 0;
@@ -83,7 +83,7 @@ namespace Hypodoche
             }
             if (_entity._entityData.gotDamageOverTime)
             {
-                if (Time.time >= _startTime + _entity._entityData.timeOfDamage)
+                if (Time.time >=  _entity._entityData.timeOfDamage)
                 {
                     _entity._entityData.gotDamageOverTime = false;
                     _entity._entityData.timeOfDamage = 0;
