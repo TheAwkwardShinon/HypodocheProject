@@ -75,7 +75,7 @@ namespace Hypodoche {
                     _typeSelectUI.ScrollRight();
                 }
                 
-                if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                if (Input.GetMouseButtonDown(0)) {
                     if(_arenaGrid._gridArray[_xselected,_yselected].GetComponent<Slot>()._itemId == 
                         _typeSelectUI._grid._gridArray[0,1].GetComponent<Slot>()._itemId)
                     {
@@ -92,7 +92,7 @@ namespace Hypodoche {
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Alpha2)) {
+                if (Input.GetMouseButtonDown(1)) {
                     Delete();
                 }
 
