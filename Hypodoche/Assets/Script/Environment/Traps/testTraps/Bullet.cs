@@ -67,13 +67,7 @@ namespace Hypodoche
             }
         }
 
-        public void OnTriggerExit(Collider col)
-        {
-            if (col.gameObject.CompareTag("boss"))
-            {
-                col.transform.root.GetComponent<LiYan>().exitFromTrap();
-            }
-        }
+       
 
         #endregion
     }

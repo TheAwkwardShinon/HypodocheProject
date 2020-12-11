@@ -5827,6 +5827,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 44
       objectReference: {fileID: 0}
+    - target: {fileID: 153720314258209533, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 162772897877365959, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -5851,6 +5856,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 58.271004
+      objectReference: {fileID: 0}
+    - target: {fileID: 290209555390600687, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 372776997705034880, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 497383923858404586, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 655611191429241240, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 731552385717612719, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 747908796940363314, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -5927,10 +5957,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb2
       objectReference: {fileID: 0}
+    - target: {fileID: 1552820408848032394, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 1625994196322268148, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
       value: DragonLeg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625994196322268148, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 1693274618839072642, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -5942,6 +5982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragonLeg3
       objectReference: {fileID: 0}
+    - target: {fileID: 1736577100374140431, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 1748995835081681164, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.z
@@ -5951,6 +5996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.26577446
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933848933623086795, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 1970763427807773684, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -5991,6 +6041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bomb19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226616863257886469, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 2237441382513329294, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6037,6 +6092,31 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2336954520855546287, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741806162750961631, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771174049298260731, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831501732280731555, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832157933796331700, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 2906767227228147321, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
@@ -6046,6 +6126,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bomb17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061732507700872207, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130270609216056997, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 3167964624687394348, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6092,6 +6182,16 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 3233081675719086064, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596248273652285541, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 3602201977198977150, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
@@ -6116,6 +6216,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DragonSkirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339318382754186841, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352132907701178187, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721563762409409995, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753514032460349574, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825652602291872393, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 4839923202965543494, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6156,6 +6281,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DragonLeg4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988217273801835952, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132637535930657310, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 5165156019052178694, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6247,20 +6382,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb4
       objectReference: {fileID: 0}
+    - target: {fileID: 5764954488788894774, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 5781380983210782806, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
       value: DragonJaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781380983210782806, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048520173857286454, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 6063526396630315770, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
       value: DragonTail
       objectReference: {fileID: 0}
+    - target: {fileID: 6063526396630315770, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6136920340931052547, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
       value: DragonLeg1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136920340931052547, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 6168910655150231285, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6337,6 +6497,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.9510002
       objectReference: {fileID: 0}
+    - target: {fileID: 6588421605208013471, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421605457752413, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6588421605479911225, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6361,6 +6531,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421605479911226, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421605583917556, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 6588421605627832427, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6395,7 +6575,7 @@ PrefabInstance:
     - target: {fileID: 6588421605705044739, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6588421605705044739, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6512,6 +6692,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6588421605792699343, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6588421606076218115, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6536,6 +6721,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 108.33101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606076218124, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606245805114, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588421606748038024, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 6588421606930382442, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6632,6 +6832,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6588421607176081549, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6598475987470566898, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6651,6 +6856,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.91344297
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610171427181635879, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787261927569169143, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807766446688268528, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 7143352176082263328, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6737,6 +6957,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.526001
       objectReference: {fileID: 0}
+    - target: {fileID: 7555172912503812129, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 7590313228959282024, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6797,10 +7022,20 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 7833303480892381353, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 7978066008592930440, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_Name
       value: Bomb13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271314490359979542, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 8277551909837595940, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6832,6 +7067,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DragonSymbol
       objectReference: {fileID: 0}
+    - target: {fileID: 8379799217433781132, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
+      objectReference: {fileID: 0}
     - target: {fileID: 8389850568630410662, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -6861,6 +7101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bomb7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577141546688443942, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     - target: {fileID: 8764777525217523496, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
         type: 3}
@@ -6906,6 +7151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DragonHead
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930565003819739226, guid: cbe05fa6ebfc02143a26d5f50ba65b33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6588421605705044748, guid: cbe05fa6ebfc02143a26d5f50ba65b33, type: 3}

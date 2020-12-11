@@ -56,8 +56,11 @@ namespace Hypodoche
 
         public void OnTriggerEnter(Collider col)
         {
-           if (col.gameObject.CompareTag("boss"))
+            Debug.Log("yep");
+            Debug.Log(col.gameObject.tag);
+            if (col.gameObject.CompareTag("boss"))
             {
+                Debug.Log("superYep");
                 col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
             }
         }
