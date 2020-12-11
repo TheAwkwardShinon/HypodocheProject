@@ -6,11 +6,9 @@ using UnityEngine;
 public class PowerSurge : MonoBehaviour
 {
     #region Variables
-    public float recover = 50f;
-    public float max_time = 50f;
-    public float countdown;
-    public bool timeIsRunning;
-    public bool idle;
+    protected float _recover = 50f;
+    protected float _max_time = 50f;
+    protected  float _countdown;
     #endregion
 
     #region methods
@@ -18,43 +16,29 @@ public class PowerSurge : MonoBehaviour
 
     public void Start()
     {
-        countdown = max_time;
-        timeIsRunning = false;
-        idle = false;
+
     }
         
 
     public void Update()
     {
-        if (timeIsRunning)
-        {
-            CooldownTimer(Time.deltaTime);
-        }
+
     }
-        
-        
+           
     void OnTriggerEnter(Collider  col)
     {
-        if(col.gameObject.CompareTag("Player") && !idle)
+        if(col.gameObject.CompareTag("Player"))
         {
-            timeIsRunning = true;
-            idle = true;
+            if (Time.time <= _countdown)
+                return;
             float max_health = col.gameObject.GetComponent<PlayerStatus>()._maxHealth;
             float current_health = col.gameObject.GetComponent<PlayerStatus>()._playerHealth;
-            if ((max_health - current_health) < recover)
+            if (current_health + _recover >= max_health)
                 col.gameObject.GetComponent<PlayerStatus>()._playerHealth = max_health;
             else
-                col.gameObject.GetComponent<PlayerStatus>()._playerHealth += recover;
+                col.gameObject.GetComponent<PlayerStatus>()._playerHealth += _recover;
             col.gameObject.GetComponent<PlayerStatus>().UpdateHealthUIValue();
-        }
-    }
-
-    private void CooldownTimer(float delta){
-        countdown += delta;
-        if(countdown % 60 > max_time){
-            timeIsRunning = false;
-            idle = false;
-            countdown = 0f;
+            _countdown = Time.time + _max_time;
         }
     }
 
