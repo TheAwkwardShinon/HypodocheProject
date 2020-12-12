@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3547796740481538704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4851694564772584111}
+  - component: {fileID: 30153529342168766}
+  m_Layer: 0
+  m_Name: Subzero Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4851694564772584111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547796740481538704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30153529342168766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547796740481538704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 246548727473088074, guid: 9970f84303c507748b22972c58415716,
+    type: 3}
+  _itemSprite: {fileID: 21300000, guid: 6551d5e2f345e5c4bab35e3d2490fcd8, type: 3}
+  _itemName: Subzero Ray
+  _ownedAmount: 0
+  _description: 'Time is relative: sometimes I wonder if I even am under his domain.
+    Artifacts like this, that creates things from nothing, are really comparable
+    to the power of a God. Maybe, in the future, we will be able to achive such a
+    power under the Demiurge guidance. Or.. does it come from the future?  Is the
+    future now?'
+  _effectNum: 2
+  _effectOneSprite: {fileID: 21300000, guid: c75d73617aaa5044daa01cf075b6a373, type: 3}
+  _effectOneDescription: Stuns for 1.5 Sec
+  _effectTwoSprite: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
+  _effectTwoDescription: Cooldown 8 Sec
