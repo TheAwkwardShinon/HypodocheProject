@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cc4e62285de544a8dfbfae9660e700, type: 3}
+  m_Name: Trap Inventory
+  m_EditorClassIdentifier: 
+  _itemList:
+  - {fileID: 6149024284779722316, guid: e8c56d6ac6965964d955f9a9629fd5d8, type: 3}
+  - {fileID: 8171128715607359080, guid: d87c34dc85abf344a81f87d54f2f01a1, type: 3}
+  - {fileID: 4179212710618498061, guid: ce1afd3268da3944bbbc1740d201c743, type: 3}
+  - {fileID: 30153529342168766, guid: a3e82c92de369ff499cf7f8d13831fb6, type: 3}
+  - {fileID: 8393575377068156454, guid: 06963fe01e5bb8642927cbbdf5d2f4b4, type: 3}
+  - {fileID: 3562300312759534004, guid: 036d479a5e9a0c647be19f10bf0c44bb, type: 3}

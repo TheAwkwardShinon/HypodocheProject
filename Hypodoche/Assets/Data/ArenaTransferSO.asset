@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: ArenaTransferSO
   m_EditorClassIdentifier: 
   _slotArray:
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 6242139189534044489, guid: 65bd9024cbb750c439b6711d2cd120f9, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

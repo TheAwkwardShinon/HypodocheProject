@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LuckyStar
   m_EditorClassIdentifier: 
   _title: Lucky Star
-  _description: Once every 50 seconds, it can blocks a projectile.  Do you remember,
+  _description: Once every 3 seconds, it can blocks a projectile.  Do you remember,
     child, the lucky star who saved you? Do you remember my Call? Do you remember
     our vision of a world full of good? Do you remeber the pain of the old times?
     Do you remember how humanity was lost, and now it is no more? Do you remember?
@@ -22,5 +22,5 @@ MonoBehaviour:
   _sprite: {fileID: -43721548549047654, guid: 7a21e29ab549d094db0ba51b4a06c846, type: 3}
   _spriteParam1: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
   _spriteParam2: {fileID: 0}
-  _valueParam1: Cooldown 50 sec
+  _valueParam1: Cooldown 3 sec
   _valueParam2: None
