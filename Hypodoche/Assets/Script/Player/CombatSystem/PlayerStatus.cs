@@ -20,19 +20,22 @@ namespace Hypodoche
         private bool _isExhausted = false;
         #endregion
 
-        [SerializeField] private Slider _staminaSlider;
-        [SerializeField] private Slider _healthSlider;
-        [SerializeField] private Image _staminaColor;
+        //[SerializeField] private Slider _staminaSlider;
+        //[SerializeField] private Slider _healthSlider;
+        //[SerializeField] private Image _staminaColor;
+
+        [SerializeField] private Image _stamina;
+        [SerializeField] private Image _health;
 
         #region Methods
-        
+
         private void Start()
         {
             _playerHealth = _maxHealth;
             _playerStamina = _maxStamina;
-            _healthSlider.maxValue = _maxHealth;
-            _staminaSlider.maxValue = _maxStamina;
-            _staminaColor.color = Color.green;
+            _health.fillAmount = 1f; ;
+            _stamina.fillAmount = 1f;
+            //_stamina.color = Color.green;
         }
 
         private void Update()
@@ -72,7 +75,8 @@ namespace Hypodoche
 
         private void UpdateStaminaUIValue()
         {
-            _staminaSlider.value = _playerStamina;
+            _stamina.fillAmount = _playerStamina / _maxStamina;
+            /*
             if (_playerStamina < _exhaustionPoint)
             {
                 _staminaColor.color = Color.red;
@@ -83,6 +87,7 @@ namespace Hypodoche
             {
                 _staminaColor.color = Color.green;
             }
+            */
         }
 
         #endregion
@@ -103,7 +108,7 @@ namespace Hypodoche
 
         public void UpdateHealthUIValue()
         {
-            _healthSlider.value = _playerHealth;
+            _health.fillAmount = _playerHealth / _maxHealth;
         }
         #endregion
         #endregion

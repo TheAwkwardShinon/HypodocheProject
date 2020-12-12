@@ -11,7 +11,8 @@ namespace Hypodoche
         #region Variables
         private float _health;
         [SerializeField] private float _maxHealth = 100f;
-        [SerializeField] private Slider _healthSlider;
+        //[SerializeField] private Slider _healthSlider;
+        [SerializeField] private Image _healthFill;
         #endregion
 
         #region Methods
@@ -19,7 +20,7 @@ namespace Hypodoche
         {
             _maxHealth = gameObject.GetComponent<Boss>().getHealth();
             _health = _maxHealth;
-            _healthSlider.value = _maxHealth / _health;
+            _healthFill.fillAmount = 1f;
         }
 
         public void TakeDamage(float damage)
@@ -34,7 +35,7 @@ namespace Hypodoche
 
         private void UpdateHealthUI()
         {
-            _healthSlider.value = _health / _maxHealth;
+            _healthFill.fillAmount = _health / _maxHealth;
         }
         #endregion
     }
