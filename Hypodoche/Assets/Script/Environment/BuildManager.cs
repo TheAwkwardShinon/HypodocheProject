@@ -19,6 +19,19 @@ namespace Hypodoche{
         private TrapItem _trapBeingMovedOn = null;
         private ArenaSlot _selectedSlot;
         private int _builtCount = 0;
+        private bool _activeInput = true;
+
+        public void SetActiveInput(bool activeInput)
+        {
+            if (activeInput) StartCoroutine(activateInput());
+            _activeInput = activeInput;
+            if (activeInput) StopCoroutine(activateInput());
+        }
+
+        IEnumerator activateInput()
+        {
+            yield return new WaitForSeconds(0.1f); 
+        }
 
         private void Awake()
         {
@@ -27,11 +40,14 @@ namespace Hypodoche{
         }
 
         private void Update(){
-            if(_isPlayerLeftHanded)
-                LeftHPlayerInput();
-            else 
-                RightHPlayerInput();
-            CommonInput();
+            if(_activeInput)
+            {
+                if(_isPlayerLeftHanded)
+                    LeftHPlayerInput();
+                else 
+                    RightHPlayerInput();
+                CommonInput();
+            }
         }
 
         #region Input
@@ -148,16 +164,17 @@ namespace Hypodoche{
 
         private void BuildTrap()
         {
-            _selectedSlot.SetItem(_trapSelectionManager.GetSelectedItem());
             if(_isMovingTrap){
                 _isMovingTrap = false;
                 _movingTrap = null;
                 _trapBeingMovedOn = null;
             }
-            else{
+            else if (_selectedSlot.GetItem() == null) //Not Replacing an already existing trap
+            {
                 //Aggiorna inventory count
                 _builtCount++;
             }
+            _selectedSlot.SetItem(_trapSelectionManager.GetSelectedItem());
         }
 
         private void DestroyTrap()
@@ -171,7 +188,7 @@ namespace Hypodoche{
 
         private bool DoesNotExceedLimits()
         {   Debug.Log(_builtCount);
-            return _builtCount < 5;
+            return _builtCount < 5 || (_builtCount == 5 && _selectedSlot.GetItem() != null); //Allow replacing
         }
         #endregion
 

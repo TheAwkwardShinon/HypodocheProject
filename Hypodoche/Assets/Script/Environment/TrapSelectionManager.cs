@@ -14,6 +14,12 @@ namespace Hypodoche
         private List<TrapItem> _itemList;
         private int _currentIndex;
         private bool _isPlayerLeftHanded = false;
+        private bool _activeInput = true;
+
+        public void SetActiveInput(bool activeInput)
+        {
+            _activeInput = activeInput;
+        }
 
 
         public TrapItem GetSelectedItem()
@@ -33,7 +39,8 @@ namespace Hypodoche
 
         private void Update()
         {
-            ChangeSelection();
+            if(_activeInput)
+                ChangeSelection();
         }
 
         private void ChangeSelection()
