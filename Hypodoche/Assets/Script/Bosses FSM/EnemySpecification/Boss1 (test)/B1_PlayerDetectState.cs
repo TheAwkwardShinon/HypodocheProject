@@ -14,8 +14,8 @@ namespace Hypodoche
         //private List<State> moveSet;
         private List<State> usableMoveSet;
 
-        public B1_PlayerDetectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_PlayerDetectState playerDetectData, Boss1 boss)
-            : base(entity, stateMachine, animationName, playerDetectData)
+        public B1_PlayerDetectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData, Boss1 boss)
+            : base(entity, stateMachine, animationName, entityData)
         {
             _boss1 = boss;
             usableMoveSet = new List<State>();
@@ -50,10 +50,10 @@ namespace Hypodoche
             if (_isDetectingPlayer)
             {
                 Debug.Log("player detected");
-                if (_playerDetectData.aggressivity <= 20)
-                    return; //_stateMachine.ChangeState(_boss1._scaredState);
-                else
-                {
+                //if (_playerDetectData.aggressivity <= 20)
+                   // return; //_stateMachine.ChangeState(_boss1._scaredState);
+                //else
+                //{
                     if (_boss1._playerAttackFist.isHittable())
                     {
                         usableMoveSet.Add(_boss1._playerAttackFist);
@@ -76,7 +76,7 @@ namespace Hypodoche
                     {
                         _stateMachine.ChangeState(usableMoveSet[UnityEngine.Random.Range(0, usableMoveSet.Count)]); //choose a random attack
                     }
-                }
+               // }
             }
             else _stateMachine.ChangeState(_boss1._moveState);
         }

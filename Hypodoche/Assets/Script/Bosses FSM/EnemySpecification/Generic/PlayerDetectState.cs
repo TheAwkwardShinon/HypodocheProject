@@ -9,16 +9,16 @@ namespace Hypodoche
 
 
         #region Variables
-        protected D_PlayerDetectState _playerDetectData;
+        protected D_Entity _entityData;
         protected bool _isDetectingPlayer;
         protected Transform _playerPosition;
         #endregion
 
         #region Methods
-        public PlayerDetectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_PlayerDetectState playerDetectData)
+        public PlayerDetectState(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData)
             : base(entity, stateMachine, animationName)
         {
-            _playerDetectData = playerDetectData;
+            _entityData = entityData;
         }
 
 

@@ -17,6 +17,7 @@ namespace Hypodoche
         public D_Entity _entityData;
         private bool _flipped = true;
         [SerializeField] public GameObject _ui;
+        [SerializeField] public bool _minion;
         #endregion
 
         #region
@@ -34,6 +35,7 @@ namespace Hypodoche
         {
             if (Time.timeScale == 0f)
                 return;
+            Debug.Log("i am: "+ this);
             _stateMachine._currentState.Update();
         }
 
@@ -113,13 +115,16 @@ namespace Hypodoche
             return false;
         }
 
-
+        public Vector3 getDirection(){
+            return _direction;
+        }
+/*
         public virtual void OnDrawGizmos() { 
             if (!Application.isPlaying)
                 return;
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(_boss.GetComponent<Collider>().bounds.center, _entityData.aggroRange);
-        }
+        }*/
 
 
         public void resetStates()
@@ -130,27 +135,6 @@ namespace Hypodoche
             _entityData.timeOfSlow = 0f;
             _entityData.gotDamageOverTime = false;
             _entityData.timeOfDamage = 0f;
-        }
-
-            /* Functions to be done later */
-        public virtual bool checkFire()
-        {
-            return true;
-        }
-
-        public virtual bool checkWater()
-        {
-            return true;
-        }
-
-        public virtual bool checkWind()
-        {
-            return true;
-        }
-
-        public virtual bool checkEarth()
-        {
-            return true;
         }
 
        

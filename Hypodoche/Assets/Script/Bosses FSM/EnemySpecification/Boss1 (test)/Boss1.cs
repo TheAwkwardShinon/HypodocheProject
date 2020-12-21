@@ -34,7 +34,7 @@ namespace Hypodoche
 
             _moveState = new B1_MoveState(this, _stateMachine, "move", _entityData, this);
             _idleState = new B1_IdleState(this, _stateMachine, "idle", _idleData, this);
-            _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _playerDetectData, this); //same animation
+            _playerDetectState = new B1_PlayerDetectState(this, _stateMachine, "idle", _entityData, this); //same animation
             _scareState = new B1_ScaredState(this, _stateMachine, "move", _entityData, this);
             // boss move set zone
             _playerAttackFist = new B1_FistAttack(this, _stateMachine, "fist", _playerAttackFistData, this);
