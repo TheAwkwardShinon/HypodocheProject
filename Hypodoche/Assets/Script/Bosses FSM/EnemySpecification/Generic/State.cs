@@ -32,6 +32,7 @@ namespace Hypodoche
         {
             _startTime = Time.time;
             _entity._animator.SetBool(_animationName, true);
+            Debug.Log("ANIMATION: " + _animationName);
         }
 
         public virtual void Exit()

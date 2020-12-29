@@ -11,8 +11,8 @@ namespace Hypodoche
         [SerializeField] private Sprite _weaponSprite;
 
         [Header("Animations")]
-        [SerializeField] private string[] _lightAttacks;
-        [SerializeField] private string[] _heavyAttacks;
+        [SerializeField] private List<string> _lightAttacks;
+        [SerializeField] private List<string> _heavyAttacks;
 
         [Header("Stats")]
         [SerializeField] private float _lightDamage;
@@ -31,12 +31,12 @@ namespace Hypodoche
         }
 
         #region Moveset
-        public string[] GetLightAttacks()
+        public List<string> GetLightAttacks()
         {
             return _lightAttacks;
         }
 
-        public string[] GetHeavyAttacks()
+        public List<string> GetHeavyAttacks()
         {
             return _heavyAttacks;
         }

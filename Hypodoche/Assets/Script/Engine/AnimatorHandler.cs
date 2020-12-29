@@ -43,11 +43,18 @@ namespace Hypodoche
             //TODO Aggiungere supporto sensibilità Joystick//
             #endregion
 
-            if (isSprinting)
+            if (isSprinting & h != 0){
                 v = 2f;
+                h = 2f;
+            }
 
             _animator.SetFloat(_vertical, v, 0.1f, Time.deltaTime);
             _animator.SetFloat(_horizontal, h, 0.1f, Time.deltaTime);
+        }
+
+        public void UpdateParameter (string targetParameter, bool state)
+        {
+            _animator.SetBool(Animator.StringToHash(targetParameter), state);
         }
         
         public void ActivateTargetTrigger(string targetTrigger)

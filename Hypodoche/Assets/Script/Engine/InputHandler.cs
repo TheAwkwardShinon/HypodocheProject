@@ -31,10 +31,14 @@ namespace Hypodoche
         private float _dashStaminaCost = 30f;
         private float _sprintStaminaCost = 5f;
         private float _heavyAttackStaminaCost = 10f;
+        private bool _disableDash = false;
         #endregion
 
         #region Getter and Setter
-        //-EMPTY-//
+        public void SetDisableDash(bool state)
+        {
+            _disableDash = state;
+        }
         #endregion
 
         #region Methods
@@ -43,7 +47,7 @@ namespace Hypodoche
             _playerMovement = GetComponent<PlayerMovement>();
             _playerCombat = GetComponent<PlayerCombat>();
             _playerStatus = GetComponent<PlayerStatus>();
-            _animatorHandler = GetComponentInChildren<AnimatorHandler>();
+            _animatorHandler = GetComponent<AnimatorHandler>();
             _animatorHandler.Initialize();
             _resetAnimatorHash = Animator.StringToHash("resetAnimator");
             _isAimingHash = Animator.StringToHash("isAiming");
@@ -67,8 +71,6 @@ namespace Hypodoche
                 HandleAttacks(Time.deltaTime);
 
                 HandleAiming(Time.deltaTime);
-
-                _isSprinting = false;
             }
         }
 
@@ -86,8 +88,9 @@ namespace Hypodoche
             //We should handle things a bit differently if we want to have both walk and run
             _movement.Normalize();
 
-            _animatorHandler.UpdateAnimatorValues(_movement.magnitude, 0, _isSprinting);
+            _animatorHandler.UpdateAnimatorValues(_movement.magnitude, _movement.magnitude, _isSprinting);
             _playerMovement.SetMovement(_movement);
+            _isSprinting = false;
         }
 
         private void HandleMovementActions(float delta)
@@ -107,7 +110,7 @@ namespace Hypodoche
                 {
                     _isSprinting = false;
 
-                    if (Time.time > _playerMovement.GetNextDashTime() && _playerStatus.HasStamina(_dashStaminaCost))
+                    if (Time.time > _playerMovement.GetNextDashTime() && _playerStatus.HasStamina(_dashStaminaCost) && !_disableDash)
                     {
                         if (_movement.magnitude > 0)
                         {

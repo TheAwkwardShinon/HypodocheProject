@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AuroraPBR2
+  m_Shader: {fileID: -6465566751694194690, guid: 738ce6c828b6d774990c9b4ed0dc010d,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - BottomLine_Tex:
+        m_Texture: {fileID: 2800000, guid: a539d909151858742bcfc0e00b8f6137, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Line_Tex:
+        m_Texture: {fileID: 2800000, guid: a1d3222a6ac6ac5478c580c530713d16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Mask_Tex:
+        m_Texture: {fileID: 2800000, guid: af30bc1768a959f45a7ef67752758fd5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Pikes_Tex:
+        m_Texture: {fileID: 2800000, guid: 54058391296a3314db07105be24b3f2e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_5F484767:
+        m_Texture: {fileID: 2800000, guid: 01a35c3fd9930cf4da9bac68e29131ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - VO_Tex:
+        m_Texture: {fileID: 2800000, guid: 4388329e9ab258440a9b38f660b17865, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - VO_Strength: 53.89
+    - Vector1_90B614D2: 1.21
+    m_Colors:
+    - Color1: {r: 0.4022784, g: 0.7004956, b: 0.754717, a: 0}
+    - Color2: {r: 0.90868926, g: 7.788765, b: 8.264745, a: 0}
+    - Line_Speed: {r: 0.01, g: 0, b: 0, a: 0}
+    - Line_Tiling: {r: 190.9, g: 1, b: 0, a: 0}
+    - Mask_Speed: {r: 0.02, g: 0, b: 0, a: 0}
+    - Mask_Tiling: {r: 5.49, g: 1, b: 0, a: 0}
+    - Pikes_Speed: {r: 0.03, g: 0, b: 0, a: 0}
+    - Pikes_Tiling: {r: 57.45, g: 1, b: 0, a: 0}
+    - VO_Speed: {r: 0.01, g: 0, b: 0, a: 0}
+    - Vector2_EF954432: {r: 5.44, g: 1, b: 0, a: 0}
