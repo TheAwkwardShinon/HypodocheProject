@@ -35,7 +35,7 @@ namespace Hypodoche
         {
             if (Time.timeScale == 0f)
                 return;
-            Debug.Log("i am: "+ this);
+            //Debug.Log("i am: "+ this);
             _stateMachine._currentState.Update();
         }
 
@@ -61,7 +61,8 @@ namespace Hypodoche
         
         public virtual void Move(float speed)
         {
-            _rigidBodyBoss.MovePosition(_rigidBodyBoss.position + _direction * speed * Time.fixedDeltaTime);
+            //Debug.Log("wow i am right there bithc: "+ gameObject);
+            _rigidBodyBoss.MovePosition(_rigidBodyBoss.position + _direction * speed * Time.deltaTime);
         }
 
         //mi giro di 180 gradi dal lato opposto. però sull'asse delle ascisse. Non so come gestire le ordinate, sarebbe visivamente brutto

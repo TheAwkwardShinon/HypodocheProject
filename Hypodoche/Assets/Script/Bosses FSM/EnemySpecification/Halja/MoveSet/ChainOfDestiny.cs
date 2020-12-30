@@ -5,8 +5,10 @@ using UnityEngine;
 namespace Hypodoche{
     public class ChainOfDestiny : State
     {
-        public ChainOfDestiny(Entity entity, FiniteStateMachine stateMachine, string animationName) : base(entity, stateMachine, animationName)
+        private D_Entity _data;
+        public ChainOfDestiny(Entity entity, FiniteStateMachine stateMachine, string animationName, D_Entity entityData) : base(entity, stateMachine, animationName)
         {
+            _data = entityData;
         }
 
         public override void Enter()

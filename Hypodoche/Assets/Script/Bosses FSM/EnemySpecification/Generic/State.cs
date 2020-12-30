@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Hypodoche
 {
-    public class State : MonoBehaviour
+    public class State 
     {
         #region Variables
         protected FiniteStateMachine _stateMachine;

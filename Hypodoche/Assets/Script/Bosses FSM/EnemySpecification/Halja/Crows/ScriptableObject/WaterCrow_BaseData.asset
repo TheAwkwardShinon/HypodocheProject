@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: WaterCrow_BaseData
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
-  wallCheckRange: 0.2
-  movementSpeed: 10
+  wallCheckRange: 4
+  movementSpeed: 15
   speedWhenDetect: 12
   speedWhenSlowed: 5
   speedWhenSlowedArea: 5
-  aggroRange: 0
+  aggroRange: 2
   whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256

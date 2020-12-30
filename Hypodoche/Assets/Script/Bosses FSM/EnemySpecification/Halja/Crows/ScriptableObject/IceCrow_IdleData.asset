@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08324ad9b583d0941b99d09a3c4a5271, type: 3}
   m_Name: IceCrow_IdleData
   m_EditorClassIdentifier: 
-  minIdleTime: 0.2
-  maxIdleTime: 0.5
+  minIdleTime: 1
+  maxIdleTime: 2

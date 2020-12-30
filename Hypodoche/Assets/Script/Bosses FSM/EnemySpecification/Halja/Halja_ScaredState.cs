@@ -28,8 +28,6 @@ namespace Hypodoche{
         public override void Update()
         {
             base.Update();
-            if (Time.time >= _halja.timerUnbreakableBond + _halja.unbreakableBondCountdown)
-                _stateMachine.ChangeState(_halja._unbreakableBond);
             if (Time.time >= _startTime + _scaredTime)
             {
                 _isScaredTimeElapsed = true;

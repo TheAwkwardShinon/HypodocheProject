@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 namespace Hypodoche{
-    public class WaterCrow : Entity, Crows
+    public class WaterCrow : Entity
     {
 
         #region variables
@@ -10,66 +10,70 @@ namespace Hypodoche{
         [SerializeField]private IceCrow  _iceCrow;
         [SerializeField] D_IdleState _idleData;
         public Water_UnbreakableBond _unbreakableBond {get; private set;}
-        public Crows_idleState _IdleState {get; private set;}
-        public Crows_MoveState _MoveState {get; private set;}
+        public Water_idleState _IdleState {get; private set;}
+        public Water_MoveState _MoveState {get; private set;}
 
+        private Halja _halja;
     
-        private float _timer;
+        public float _timer;
+
+        public float unbreakableBond;
+
+        private Transform _playerPosition;
+
 
         #endregion
 
         #region methods
 
 
-
+        public WaterCrow(Halja halja){
+            _halja = halja;
+        }
 
         public override void Start()
         {
             base.Start();
-            _unbreakableBond = new Water_UnbreakableBond(this, _stateMachine, "unbreakableBond",this,_iceCrow);
-            _MoveState = new Crows_MoveState(this,_stateMachine,"run",_entityData,this);
-            _IdleState = new Crows_idleState(this,_stateMachine,"idle",_idleData,this);
             _timer = Time.time;
-            _stateMachine.setState(_MoveState);
+            unbreakableBond = 20f;
+           // _unbreakableBond = new Water_UnbreakableBond(this, _stateMachine, "unbreakableBond",this,_iceCrow);
+            _MoveState = new Water_MoveState(this,_stateMachine,"run",_entityData,this);
+            _IdleState = new Water_idleState(this,_stateMachine,"idle",_idleData,this);
+            _stateMachine.InitializeState(_MoveState);
 
         }
 
 
-        public void UnbreakableBond(){
-            _stateMachine.ChangeState(_unbreakableBond);
+          public override void Update()
+        {
+            base.Update();
         }
-
         #endregion
 
         #region getter
         public bool IsIneluttable(){
             return _isIneluttable;
         }
+
+        public Transform getPlayerPosition(){
+            return _playerPosition == null ? null : _playerPosition;
+        }
         #endregion
 
         #region setter
-        public void newIceCrow(IceCrow iceCrow){
-            _iceCrow = iceCrow;
-        }
 
         public void setVulnerability(bool vulnerable){
             _isIneluttable = vulnerable;
         }
 
-        public Crows_idleState GetIdleState()
-        {
-            return _IdleState;
+         public void setIceCrow(IceCrow iceCrow){
+            _iceCrow = iceCrow;
         }
 
-        public Crows_MoveState GetMoveState()
-        {
-            return _MoveState;
+        public void setPlayerPosition(Transform playerposition){
+            _playerPosition = playerposition == null ? null : playerposition;
         }
-
-        public void Movecrow()
-        {
-            Move(_entityData.movementSpeed);
-        }
+     
         #endregion
 
 

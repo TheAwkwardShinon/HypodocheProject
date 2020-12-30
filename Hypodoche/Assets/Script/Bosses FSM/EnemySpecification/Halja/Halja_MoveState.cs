@@ -32,13 +32,11 @@ namespace Hypodoche{
         public override void Update()
         {
             base.Update();
-            if (Time.time >= _halja.timerUnbreakableBond + _halja.unbreakableBondCountdown)
-                _stateMachine.ChangeState(_halja._unbreakableBond);
 
             if (_entityData.isStun)
                 return;
                 
-            else if (_isDetectingWall)
+            if (_isDetectingWall)
             {
                 _halja._idleState.setFlipAfterIdle(true);
                 setFromSufferEffect(false);
@@ -49,7 +47,15 @@ namespace Hypodoche{
             }
             else
             {
-                if (_entityData.slowOverArea)
+                Transform _playerPosition = _halja.GetIceCrow().getPlayerPosition();
+                if(_playerPosition != null){
+                    _stateMachine.ChangeState(new Halja_ChaseState(_entity, _stateMachine, "chase", _entityData, _halja,_playerPosition.position));
+                }
+                _playerPosition = _halja.GetIceCrow().getPlayerPosition();
+                if(_playerPosition != null){
+                     _stateMachine.ChangeState(new Halja_ChaseState(_entity, _stateMachine, "chase", _entityData, _halja,_playerPosition.position));
+                }
+                else if (_entityData.slowOverArea)
                 {
                     _halja.Move(_entityData.speedWhenSlowedArea);
                 }

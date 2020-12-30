@@ -15,12 +15,12 @@ MonoBehaviour:
   health: 1000
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
-  wallCheckRange: 0.5
+  wallCheckRange: 5
   movementSpeed: 6
-  speedWhenDetect: 12
+  speedWhenDetect: 8
   speedWhenSlowed: 5
   speedWhenSlowedArea: 5
-  aggroRange: 0
+  aggroRange: 6
   whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256
