@@ -13,16 +13,16 @@ namespace Hypodoche
     {
         #region Variables
         [SerializeField] [Range(1f, 10f)] private float _playerSpeed = 1f;
-        [SerializeField] [Range(1.5f, 10f)] private float _dashMultiplier = 5f;
-        [SerializeField] [Range(1.5f, 2f)] private float _backstepMultiplier = 1.5f;
+        [SerializeField] [Range(1.5f, 50f)] private float _dashMultiplier = 5f;
+        [SerializeField] [Range(1.5f, 50f)] private float _backstepMultiplier = 1.5f;
         [SerializeField] [Range(1.5f, 10f)] private float _sprintMultiplier = 10f;
+        [SerializeField] private GameObject _sprite;
 
         private Rigidbody _rigidbody;
-        private SpriteRenderer _spriteRenderer;
         private PlayerCombat _playerCombat;
         private Vector3 _movement;
         private Vector3 _backMovement = Vector3.right;
-        private bool _facesLeft = false;
+        private bool _facesLeft = true;
         private bool _isDashing = false;
         private bool _isBackstepping = false;
         private bool _isSprinting = false;
@@ -75,8 +75,6 @@ namespace Hypodoche
         {
             _rigidbody = GetComponent<Rigidbody>();
             _playerCombat = GetComponent<PlayerCombat>();
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            _playerCombat.FlipShootingSpawnPoint(_facesLeft);
         }
 
         private void FixedUpdate()
@@ -135,10 +133,13 @@ namespace Hypodoche
 
         private void Flip()
         {
-            _spriteRenderer.flipX = !_spriteRenderer.flipX;
+            if(_facesLeft){
+                _sprite.transform.rotation = Quaternion.Euler(-30,180,0);
+            }
+            else{
+                _sprite.transform.rotation = Quaternion.Euler(30,0,0);     
+            }
             _facesLeft = !_facesLeft;
-            _playerCombat.FlipShootingSpawnPoint(_facesLeft);
-            _playerCombat.FlipMeleePoint(_facesLeft);
         }
         #endregion
     }

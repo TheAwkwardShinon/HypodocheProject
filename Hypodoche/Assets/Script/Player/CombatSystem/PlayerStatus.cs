@@ -12,20 +12,19 @@ namespace Hypodoche
         public float _playerHealth;
         private float _playerStamina;
         [SerializeField] private float _staminaRegenRate = 15f;
+        [SerializeField] private AnimatorHandler _animatorHandler;
         private float _staminaRegenDelay = 0.5f;
         public float _maxHealth = 100f;
         private float _maxStamina = 100f;
         private float _staminaRegenStartTime = 0f;
         private float _exhaustionPoint = 30f;
         private bool _isExhausted = false;
-        #endregion
-
-        //[SerializeField] private Slider _staminaSlider;
-        //[SerializeField] private Slider _healthSlider;
-        //[SerializeField] private Image _staminaColor;
-
         [SerializeField] private Image _stamina;
         [SerializeField] private Image _health;
+        private Collider _collider;
+        private List<Effects> _status = new List<Effects>();
+        [SerializeField] private UI_AppearStatusIcon _icons;
+        #endregion
 
         #region Methods
 
@@ -35,7 +34,7 @@ namespace Hypodoche
             _playerStamina = _maxStamina;
             _health.fillAmount = 1f; ;
             _stamina.fillAmount = 1f;
-            //_stamina.color = Color.green;
+            _collider = GetComponent<Collider>();
         }
 
         private void Update()
@@ -76,18 +75,6 @@ namespace Hypodoche
         private void UpdateStaminaUIValue()
         {
             _stamina.fillAmount = _playerStamina / _maxStamina;
-            /*
-            if (_playerStamina < _exhaustionPoint)
-            {
-                _staminaColor.color = Color.red;
-            }
-            else if (_playerStamina < 50f)
-                _staminaColor.color = Color.yellow;
-            else
-            {
-                _staminaColor.color = Color.green;
-            }
-            */
         }
 
         #endregion
@@ -102,13 +89,29 @@ namespace Hypodoche
 
             if (_playerHealth <= 0)
             {
-                SceneManager.LoadScene("DefeatScene");
+                _animatorHandler.UpdateParameter("isDead", true);
+                _health.color = Color.black;
+                _stamina.color = Color.black;
+                _collider.enabled = false;
             }
+            _animatorHandler.ActivateTargetTrigger("isDamaged");
         }
 
         public void UpdateHealthUIValue()
         {
             _health.fillAmount = _playerHealth / _maxHealth;
+        }
+        #endregion
+
+        #region Statuses
+        public void AddStatus(Effects effect)
+        {
+            _status.Add(effect);
+        }
+
+        public void RemoveStatus(Effects effect)
+        {
+            _status.Remove(effect);
         }
         #endregion
         #endregion

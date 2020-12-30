@@ -36,8 +36,14 @@ namespace Hypodoche
             spawnRandomBomb();
             _liYan.timerBomb = Time.time; //restart timer
             Debug.Log("cambio stato : dropBomb -> move " + Time.time);
+            Invoke("WaitBomb", 0.1f);
             _stateMachine.ChangeState(_liYan._moveState);
+        }
 
+        void WaitBomb()
+        {
+            Debug.Log("^^");
+            return;
         }
 
         public override void Exit()

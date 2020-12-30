@@ -14,13 +14,10 @@ namespace Hypodoche
         private AnimatorHandler _animatorHandler;
         private PlayerInventory _playerInventory;
         private ShootingHandler _shootingHandler;
-        [SerializeField] private GameObject _leftShootingSpawnPoint;
-        [SerializeField] private GameObject _rightShootingSpawnPoint;
-        [SerializeField] private GameObject _leftMeleePoint;
-        [SerializeField] private GameObject _rightMeleePoint;
+        [SerializeField] private GameObject _shootingSpawnPoint;
+        [SerializeField] private GameObject _activeMeleePoint;
         [SerializeField] private LayerMask _hitLayer;
         private float _attackRadius = 0.5f;
-        private GameObject _activeMeleePoint;
         private float _nextAttackTime = 0f;
         private float _attackRate;
         private bool _isAiming = false;
@@ -40,7 +37,6 @@ namespace Hypodoche
             _animatorHandler = GetComponentInChildren<AnimatorHandler>();
             _playerInventory = GetComponent<PlayerInventory>();
             _shootingHandler = GetComponent<ShootingHandler>();
-            _activeMeleePoint = _rightMeleePoint;
         }
 
         public void InvokeLightAttack()
@@ -88,7 +84,7 @@ namespace Hypodoche
 
             _attackRate = weapon.GetLightAttackRate();
 
-            _animatorHandler.ActivateTargetTrigger(weapon.GetLightAttacks()[Random.Range(0, weapon.GetLightAttacks().Length - 1)]);
+            _animatorHandler.ActivateTargetTrigger("LightAttack");
         }
 
         //TODO Remove
@@ -112,9 +108,9 @@ namespace Hypodoche
                 }
             }
 
-            _attackRate = weapon.GetHeavyAttackRate();
+            alreadyHit.Clear();
 
-            _animatorHandler.ActivateTargetTrigger(weapon.GetHeavyAttacks()[Random.Range(0, weapon.GetHeavyAttacks().Length - 1)]);
+            _animatorHandler.ActivateTargetTrigger("HeavyAttack");
         }
 
         public void HandleShooting(Weapon weapon)
@@ -124,7 +120,7 @@ namespace Hypodoche
             _attackRate = weapon.GetLightAttackRate();
         }
 
-        public void FlipShootingSpawnPoint(bool facesLeft)
+        /*public void FlipShootingSpawnPoint(bool facesLeft)
         {
             if (facesLeft)
                 _shootingHandler.SetActiveShootingPoint(_leftShootingSpawnPoint.transform);
@@ -138,7 +134,7 @@ namespace Hypodoche
                 _activeMeleePoint = _leftMeleePoint;
             else
                 _activeMeleePoint = _rightMeleePoint;
-        }
+        }*/
         #endregion
     }
 }

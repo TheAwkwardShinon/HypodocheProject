@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 51a37e0cd3c480647b299e644639f8e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stun: {fileID: 21300000, guid: c75d73617aaa5044daa01cf075b6a373, type: 3}
+  - slow: {fileID: 21300000, guid: 4212be8f1a897f4419b32e5c22c5fbe4, type: 3}
+  - dmgOverTime: {fileID: 21300000, guid: 368f6c53a727d70439ccc77af8538b67, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
