@@ -48,7 +48,6 @@ namespace Hypodoche
             _isDetectingPlayer = _entity.isPlayerInAggroRange();
             if (Time.time >= _startTime + _idleTime)
             {
-                Debug.Log("idle time elapsed " + Time.time);
                 _isIdleTimeElapsed = true;
             }
         }

@@ -61,7 +61,7 @@ namespace Hypodoche
             if (col.gameObject.CompareTag("boss"))
             {
                 Debug.Log("superYep");
-                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
             }
         }
 
@@ -69,7 +69,7 @@ namespace Hypodoche
         {
             if (col.gameObject.CompareTag("boss"))
             {
-                col.transform.root.GetComponent<LiYan>().exitFromTrap();
+                col.transform.root.GetComponent<Boss>().exitFromTrap();
             }
         }
 

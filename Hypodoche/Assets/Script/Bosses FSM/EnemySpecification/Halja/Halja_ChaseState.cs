@@ -18,7 +18,6 @@ namespace Hypodoche{
 
         public override void Enter()
         {
-            Debug.Log("CHASEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
             if (_entityData.health <= 0)
                 _stateMachine.ChangeState(_halja._deathState);
             base.Enter();
@@ -48,12 +47,10 @@ namespace Hypodoche{
 
             if (_halja.isPlayerInAggroRange() == null)
             {
-                Debug.Log("yep i am movin towards");
                 _halja.transform.position = Vector3.MoveTowards(_halja.transform.position, _playerPosition, _speedWhenDetect * Time.fixedDeltaTime);
                 //_boss.transform.position += _playerPosition * _speedWhenDetect * Time.fixedDeltaTime;
             }
             else{
-                Debug.Log("I SEEEEEEEEEEEEEEEEEEE YOUUUUUUUUUUUUUUUUUUUUUU");
                  _stateMachine.ChangeState(_halja._playerDetectState);
             }
 

@@ -18,8 +18,6 @@ namespace Hypodoche{
 
         public override void Enter()
         {
-            if (_entityData.health <= 0)
-                _stateMachine.ChangeState(_halja._deathState);
             base.Enter();
             Debug.Log("in player detect state");
             usableMoveSet.Clear();
@@ -35,7 +33,11 @@ namespace Hypodoche{
         {
             if (_entityData.isStun)
                 return;
+            if (_entityData.health <= 0)
+                _stateMachine.ChangeState(_halja._deathState);
             base.Update();
+
+            Debug.Log("playerdetect "+ Time.time);
             //if(_entityData.health / 1000 <= 60){ //if has more than 60% of her life
                 //todo secondPhase
             //}
@@ -43,7 +45,7 @@ namespace Hypodoche{
                 if(_isDetectingPlayer){
                     
                     float dist = Vector3.Distance(_halja.transform.position,_playerPosition.position);
-                    Debug.Log("still detecting, DIST = "+ dist+ " and min = "+_halja.getPunishmentMinDistance()+" and max= "+_halja.getPunishmentMaxDistance() );
+                    //Debug.Log("still detecting, DIST = "+ dist+ " and min = "+_halja.getPunishmentMinDistance()+" and max= "+_halja.getPunishmentMaxDistance() );
                     if( _halja.getChainOfDestinyMinDistance() <= dist && dist <= _halja.getChainOfDestinyMaxDistance() && 
                             Time.time >= (_halja._chainOfDestinyClock + _halja.getChainOfDestinyCountdown()))
                     {
@@ -59,18 +61,17 @@ namespace Hypodoche{
                 else{
                     _playerPosition = _halja.GetIceCrow().getPlayerPosition();
                     if(_playerPosition != null){
-                        Debug.Log("papapappapapapappapapapappapap");
                         _stateMachine.ChangeState(new Halja_ChaseState(_entity, _stateMachine, "chase", _entityData, _halja,_playerPosition.position));
                     }
                     _playerPosition = _halja.GetWaterCrow().getPlayerPosition();
                     if(_playerPosition != null){
-                        Debug.Log("papapappapapapappapapapappapapaaa");
                         _stateMachine.ChangeState(new Halja_ChaseState(_entity, _stateMachine, "chase", _entityData, _halja,_playerPosition.position));
                     }
                     else{
                         _stateMachine.ChangeState(_halja._moveState);
                     }
                 }
+                //else _stateMachine.ChangeState(_halja._moveState);
             //}
             
         }

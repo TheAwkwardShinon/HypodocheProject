@@ -32,7 +32,7 @@ namespace Hypodoche
         {
             _playerHealth = _maxHealth;
             _playerStamina = _maxStamina;
-            _health.fillAmount = 1f; ;
+            _health.fillAmount = 1f;
             _stamina.fillAmount = 1f;
             _collider = GetComponent<Collider>();
         }

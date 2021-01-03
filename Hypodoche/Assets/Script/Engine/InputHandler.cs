@@ -55,7 +55,7 @@ namespace Hypodoche
 
         private void Update()
         {
-            _allowInput = !_animatorHandler.GetAnimator().GetBool(_resetAnimatorHash);
+            _allowInput = true;//!_animatorHandler.GetAnimator().GetBool(_resetAnimatorHash);
 
             if (_allowInput)
             {

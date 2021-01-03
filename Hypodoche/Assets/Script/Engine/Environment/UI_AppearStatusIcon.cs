@@ -28,7 +28,7 @@ namespace Hypodoche
 
         public void Update()
         {
-            int i = 0;
+            int i = 0;/*
             foreach (Sprite img in icons)
             {
                 _images[i].sprite = img;
@@ -38,7 +38,7 @@ namespace Hypodoche
             for (; i < 3; i++)
             {
                 _images[i].color = _color;
-            }
+            }*/
         }
 
         public void addIcon(Sprite icon)

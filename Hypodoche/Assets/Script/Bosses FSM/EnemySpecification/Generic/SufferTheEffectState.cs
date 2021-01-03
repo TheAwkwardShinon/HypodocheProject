@@ -27,11 +27,11 @@ namespace Hypodoche
             _typeOfCollision = type;
         }
 
-        public override void Enter()
+
+        public override void ExecuteAfterAnimation()
         {
-            base.Enter();
-            //TODO Controlla
-            
+            base.ExecuteAfterAnimation();
+            _startTime = Time.time;
             if (_typeOfCollision.Equals("trap")) {
                
                 //_effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();
@@ -42,6 +42,13 @@ namespace Hypodoche
                     handleZone(trapEffect);
                 else handleEffect(trapEffect);
             }
+        }
+
+        public override void Enter()
+        {
+            base.Enter();
+            //TODO Controlla
+            _animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
         }
 
         public override void Exit()

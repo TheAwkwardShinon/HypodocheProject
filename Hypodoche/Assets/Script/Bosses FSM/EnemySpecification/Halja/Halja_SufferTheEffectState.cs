@@ -12,12 +12,13 @@ namespace Hypodoche{
             _halja = halja;
         }
 
-        public override void Enter()
-        {
-            if (_entityData.health <= 0)
-                _stateMachine.ChangeState(_halja._deathState);
-            base.Enter();
 
+        public override void ExecuteAfterAnimation()
+        {
+            base.ExecuteAfterAnimation();
+                        if (_entityData.health <= 0){
+                _stateMachine.ChangeState(_halja._deathState);
+            }
             if (_entityData.timeOfFear == 0f)
             {
                 _halja._moveState.setFromSufferEffect(true);
@@ -27,7 +28,12 @@ namespace Hypodoche{
             {
                 _halja._moveState.setFromSufferEffect(true);
                 _stateMachine.ChangeState(_halja._scareState); //todo boolean for direction
-            }
+            }     
+        }
+        public override void Enter()
+        {
+            base.Enter();
+
         }
 
         public override void Exit()
@@ -39,6 +45,7 @@ namespace Hypodoche{
         public override void Update()
         {
             base.Update();
+
         }
     }
 }

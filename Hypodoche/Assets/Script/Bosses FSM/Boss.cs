@@ -10,5 +10,7 @@ namespace Hypodoche
         void DestroyBoss();
         void stepOnTrap(Effects effect);
         float getHealth();
+
+        void exitFromTrap();
     }
 }

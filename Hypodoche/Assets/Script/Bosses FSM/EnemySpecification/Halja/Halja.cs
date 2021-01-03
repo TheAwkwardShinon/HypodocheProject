@@ -45,11 +45,9 @@ namespace Hypodoche{
 
         public LineRenderer lr;
 
+        [SerializeField] protected Vector3 _throwChainPosition;
+
         public float timerUnbreakableBond;
-
-
-
-
 
         #endregion
 
@@ -64,7 +62,7 @@ namespace Hypodoche{
             _idleState = new Halja_IdleState(this, _stateMachine, "idle", _idleData, this);
             _scareState = new Halja_ScaredState(this, _stateMachine, "scared", _entityData, this);
             _deathState = new Halja_DeathState(this, _stateMachine, "death", this);
-            _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "PlayerDetect", _entityData, this);
+            _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
             _punishment = new Halja_Punishment(this,_stateMachine,"punishment",this);
             //_chainOfDestiny = new Halja_ChainOfDestiny(this, _stateMachine, "chainOfDestiny", _entityData, this);
 
@@ -91,8 +89,9 @@ namespace Hypodoche{
 
         public void stepOnTrap(Effects effect)
         {
-            _stateMachine.ChangeState(new Halja_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, effect, "trap", this));
+            _stateMachine.ChangeState(new Halja_SufferTheEffectState(this, _stateMachine, "sufferTheEffect", _entityData, effect, "trap", this));
         }
+
         #endregion
 
         #region getter  
@@ -131,6 +130,10 @@ namespace Hypodoche{
 
         public float getChainOfDestinyCountdown(){
             return _chainOfDestinyCountdown;
+        }
+
+        public Vector3 getThrowChainPosition(){
+            return _throwChainPosition;
         }
 
         #endregion
