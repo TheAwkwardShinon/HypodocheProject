@@ -154,6 +154,7 @@ namespace Hypodoche
             #region Heavy Attack
             else if (Input.GetKeyDown(KeyCode.Mouse1) && _playerStatus.HasStamina(_heavyAttackStaminaCost))
             {
+                Debug.Log("invokin light attack");
                 _playerCombat.InvokeHeavyAttack();
                 _movement = Vector3.zero;
                 _playerMovement.SetMovement(_movement);

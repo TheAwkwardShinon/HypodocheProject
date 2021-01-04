@@ -73,10 +73,11 @@ namespace Hypodoche
             {
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
-
+                ///Enemy enemy  = hitObject.GetComponent<Enemy>();
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
+
                     enemy.TakeDamage(weapon.GetLightDamage());
-                    alreadyHit.Add(hitParent);
+                    //alreadyHit.Add(hitParent);
                 }
             }
 

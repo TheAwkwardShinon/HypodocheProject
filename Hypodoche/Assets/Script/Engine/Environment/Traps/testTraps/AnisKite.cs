@@ -68,7 +68,7 @@ namespace Hypodoche
             }
             else if(col.gameObject.CompareTag("boss"))
             {
-                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
             }
         }
 

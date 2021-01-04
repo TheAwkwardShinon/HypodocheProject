@@ -22,12 +22,17 @@ namespace Hypodoche
         #endregion
 
         #region Methods
+
+         public override void ExecuteAfterAnimation()
+        {
+            base.ExecuteAfterAnimation();
+             SceneManager.LoadScene("victoryScene");
+            _liYan.DestroyBoss();
+        }
         public override void Enter()
         {
-            Debug.Log("She ded");
             base.Enter();
-            SceneManager.LoadScene(3);// Victory
-            _liYan.DestroyBoss();
+            _animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
         }
 
         public override void Exit()

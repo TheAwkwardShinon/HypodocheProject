@@ -25,31 +25,31 @@ namespace Hypodoche
         #endregion
 
         #region Methods
-        public override void Enter()
+
+
+
+        public override void ExecuteAfterAnimation()
         {
-            base.Enter();
+            base.ExecuteAfterAnimation();
             if (_entity._entityData.health <= 0)
             {
-                Debug.Log("cambio stato : dropbomb -> death " + Time.time);
                 _stateMachine.ChangeState(_liYan._deathState);
             }
             spawnRandomBomb();
             _liYan.timerBomb = Time.time; //restart timer
-            Debug.Log("cambio stato : dropBomb -> move " + Time.time);
-            //Invoke("WaitBomb", 0.1f);
             _stateMachine.ChangeState(_liYan._moveState);
         }
-
-        void WaitBomb()
+        public override void Enter()
         {
-            Debug.Log("^^");
-            return;
+            base.Enter();
+            _animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
+
         }
+
 
         public override void Exit()
         {
             base.Exit();
-
         }
 
         public void spawnRandomBomb()

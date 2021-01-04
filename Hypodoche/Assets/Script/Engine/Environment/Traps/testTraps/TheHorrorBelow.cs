@@ -61,7 +61,7 @@ namespace Hypodoche
             if (col.gameObject.CompareTag("boss"))
             {
                 _animator.SetBool("isActive", true);
-                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
             }
         }
 
@@ -70,7 +70,7 @@ namespace Hypodoche
             if (col.gameObject.CompareTag("boss"))
             {
                 _animator.SetBool("isActive", false);
-                col.transform.root.GetComponent<LiYan>().exitFromTrap();
+                col.transform.root.GetComponent<Boss>().exitFromTrap();
             }
         }
         #endregion
