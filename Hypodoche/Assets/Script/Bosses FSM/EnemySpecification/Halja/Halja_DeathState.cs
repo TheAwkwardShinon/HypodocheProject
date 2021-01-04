@@ -25,7 +25,7 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-             SceneManager.LoadScene("victoryScene");// Victory
+             SceneManager.LoadScene("victoryScene");
             _halja.DestroyBoss();
         }
         public override void Enter()

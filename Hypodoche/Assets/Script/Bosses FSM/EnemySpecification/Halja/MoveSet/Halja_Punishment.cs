@@ -34,9 +34,13 @@ namespace Hypodoche{
                _hit = true;  
             }
             if(_hit){ //colpisco a fine aniamzione obv
-                _player.GetComponent<Rigidbody>().AddForce(_halja.getDirection()*8f,ForceMode.Impulse);
+                //_player.GetComponent<Rigidbody>().AddForce(_halja.getDirection()*8f,ForceMode.Impulse);
+            
+                _player.GetComponent<Rigidbody>().AddExplosionForce(26f,_halja.transform.position,3f,0f,ForceMode.Impulse);
+
+
                 _player.GetComponent<PlayerStatus>().TakeDamage(2f);
-                _halja._punishmentClock = Time.time;
+                _halja.setPunishmentClock(Time.time);
             }
              _stateMachine.ChangeState(_halja._moveState);
         }

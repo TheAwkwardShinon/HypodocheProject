@@ -37,25 +37,26 @@ namespace Hypodoche{
                 _stateMachine.ChangeState(_halja._deathState);
             base.Update();
 
-            Debug.Log("playerdetect "+ Time.time);
-            //if(_entityData.health / 1000 <= 60){ //if has more than 60% of her life
-                //todo secondPhase
-            //}
-           // else{
                 if(_isDetectingPlayer){
                     
                     float dist = Vector3.Distance(_halja.transform.position,_playerPosition.position);
                     //Debug.Log("still detecting, DIST = "+ dist+ " and min = "+_halja.getPunishmentMinDistance()+" and max= "+_halja.getPunishmentMaxDistance() );
                     if( _halja.getChainOfDestinyMinDistance() <= dist && dist <= _halja.getChainOfDestinyMaxDistance() && 
-                            Time.time >= (_halja._chainOfDestinyClock + _halja.getChainOfDestinyCountdown()))
+                            Time.time >= (_halja.getChainOfDestinyClock() + _halja.getChainOfDestinyCountdown()))
                     {
                          usableMoveSet.Add(new Halja_ChainOfDestiny(_entity, _stateMachine, "chainOfDestiny", _entityData, _halja,_playerPosition.position));
                     }   
                     if(_halja.getPunishmentMinDistance() <= dist && dist <= _halja.getPunishmentMaxDistance() &&
-                            Time.time >= (_halja._punishmentClock + _halja.getPunishmentCountdown()))
+                            Time.time >= (_halja.getPunishmentClock()+ _halja.getPunishmentCountdown()))
                     {
                         usableMoveSet.Add(_halja._punishment);
                     }
+                    if(_halja.getWhipLashesMinDistance() <= dist && dist<= _halja.getWhiplashesMaxDistance() &&
+                            Time.time >= (_halja.getWhipLashesClock() + _halja.getWhiplashesCountdown()))
+                    {
+                        usableMoveSet.Add(_halja._whipLashes);
+                    }
+
                    if(usableMoveSet.Count > 0) _stateMachine.ChangeState(usableMoveSet[UnityEngine.Random.Range(0, usableMoveSet.Count)]);
                 }
                 else{

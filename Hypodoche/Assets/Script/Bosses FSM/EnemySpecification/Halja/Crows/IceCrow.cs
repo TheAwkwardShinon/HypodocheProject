@@ -39,8 +39,8 @@ namespace Hypodoche{
         {
             base.Start();
             _timer = Time.time;
-            unbreakableBond = 5f;
-            unbreakableBondDuration = 20f;
+            unbreakableBond = 15f;
+            unbreakableBondDuration = 6f;
             _unbreakableBond = new Ice_UnbreakableBond(this, _stateMachine, "unbreakableBond",_waterCrow,this);
             _MoveState = new Ice_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Ice_idleState(this,_stateMachine,"idle",_idleData,this);

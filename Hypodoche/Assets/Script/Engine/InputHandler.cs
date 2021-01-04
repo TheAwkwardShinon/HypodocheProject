@@ -55,6 +55,8 @@ namespace Hypodoche
 
         private void Update()
         {
+            if(_playerStatus.isStunned())
+                return;
             _allowInput = true;//!_animatorHandler.GetAnimator().GetBool(_resetAnimatorHash);
 
             if (_allowInput)

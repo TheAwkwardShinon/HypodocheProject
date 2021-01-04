@@ -7,6 +7,7 @@ namespace Hypodoche
     #region Required Components
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(PlayerCombat))]
+    [RequireComponent(typeof(PlayerStatus))]
     #endregion
 
     public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,8 @@ namespace Hypodoche
 
         private Rigidbody _rigidbody;
         private PlayerCombat _playerCombat;
+
+        private PlayerStatus _playerStatus;
         private Vector3 _movement;
         private Vector3 _backMovement = Vector3.right;
         private bool _facesLeft = true;
@@ -75,12 +78,15 @@ namespace Hypodoche
         {
             _rigidbody = GetComponent<Rigidbody>();
             _playerCombat = GetComponent<PlayerCombat>();
+            _playerStatus = GetComponent<PlayerStatus>();
         }
 
         private void FixedUpdate()
         {
             //
-
+            if(_playerStatus.isStunned())
+                return;
+                
             if (_isDashing)
             {
                 UpdateSpriteDirection(_movement);
