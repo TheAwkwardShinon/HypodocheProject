@@ -8,7 +8,7 @@ namespace Hypodoche{
     [RequireComponent(typeof(Rigidbody))]
     #endregion
     
-    public class MetalRocketBehaviour : MonoBehaviour
+    public class MetalRocketBehaviour : MonoBehaviour,RocketInterface
     {
         #region Variables
         [SerializeField] private float _speed = 5f;
@@ -64,6 +64,15 @@ namespace Hypodoche{
             }
             if(other.GetComponent<LuckyStar>() != null)
                 Destroy(gameObject);
+        }
+
+        public float getDamage()
+        {
+            return _damage;
+        }
+
+        public void DestroyRocket(){
+            Destroy(gameObject);
         }
     }
 }
