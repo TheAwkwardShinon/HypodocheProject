@@ -7,7 +7,9 @@ namespace Hypodoche
 {
     public class DisplayInformation : MonoBehaviour
     {
+        #region Variables
         [SerializeField] private TrapSelectionManager _trapSelectionManager;
+        [SerializeField] private ShopManager _shopManager;
         private TrapItem _selected;
         [SerializeField] private Text _trapName;
         [SerializeField] private Image _trapImage;
@@ -16,19 +18,38 @@ namespace Hypodoche
         [SerializeField] private Image _effectTwoImage;
         [SerializeField] private Text _effectOneDescription;
         [SerializeField] private Text _effectTwoDescription;
-        private int _effectNum;
 
+        private int _effectNum;
+        private bool _isShopOpen = false;
+        #endregion
+
+        #region Getters and Setters
+        public void SetIsShopOpen(bool isOpen)
+        {
+            _isShopOpen = isOpen;
+        }
+        #endregion
+
+        #region Methods
         private void Update()
         {
-            _selected = _trapSelectionManager.GetSelectedItem();
-            _trapName.text = _selected.GetItemName();
-            _trapImage.sprite = _selected.GetItemSprite();
-            _trapDescription.text = _selected.GetDescription();
-            _effectNum = _selected.GetEffectNum();
-            if(_effectNum == 1)
-                DisplayOneEffect();
-            else if(_effectNum == 2)
-                DisplayTwoEffects();
+            if(_isShopOpen){
+                _selected = _shopManager.GetSelectedItem();
+            }
+            else{
+                _selected = _trapSelectionManager.GetSelectedItem();
+            }
+            if(_selected != null)
+            {
+                _trapName.text = _selected.GetItemName();
+                _trapImage.sprite = _selected.GetItemSprite();
+                _trapDescription.text = _selected.GetDescription();
+                _effectNum = _selected.GetEffectNum();
+                if(_effectNum == 1)
+                    DisplayOneEffect();
+                else if(_effectNum == 2)
+                    DisplayTwoEffects();
+            }
         }
 
         private void DisplayOneEffect()
@@ -49,5 +70,6 @@ namespace Hypodoche
             _effectTwoDescription.text = _selected.GetEffectTwoDescription();
             _effectTwoImage.sprite = _selected.GetEffectTwoSprite();
         }
+        #endregion
     }
 }

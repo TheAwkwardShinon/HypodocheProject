@@ -24,9 +24,12 @@ namespace Hypodoche{
 
         public void SetActiveInput(bool activeInput)
         {
-            if (activeInput) StartCoroutine(activateInput());
-            _activeInput = activeInput;
-            if (activeInput) StopCoroutine(activateInput());
+            if(isActiveAndEnabled)
+            {
+                if (activeInput) StartCoroutine(activateInput());
+                _activeInput = activeInput;
+                if (activeInput) StopCoroutine(activateInput());
+            }
         }
 
         IEnumerator activateInput()

@@ -9,7 +9,7 @@ namespace Hypodoche
     public class PlayerStatus : MonoBehaviour
     {
         #region Variables
-        public float _playerHealth;
+        [SerializeField] private float _playerHealth;
         private float _playerStamina;
         [SerializeField] private float _staminaRegenRate = 15f;
         [SerializeField] private AnimatorHandler _animatorHandler;
@@ -26,8 +26,24 @@ namespace Hypodoche
         [SerializeField] private UI_AppearStatusIcon _icons;
         #endregion
 
-        #region Methods
+        #region Getters and Setters
+        public float GetPlayerHealth()
+        {
+            return _playerHealth;
+        }
 
+        public void SetPlayerHealth(float health)
+        {
+            _playerHealth = health;
+        }
+
+        public float GetMaxHealth()
+        {
+            return _maxHealth;
+        }
+        #endregion
+
+        #region Methods
         private void Start()
         {
             _playerHealth = _maxHealth;
@@ -36,7 +52,6 @@ namespace Hypodoche
             _stamina.fillAmount = 1f;
             _collider = GetComponent<Collider>();
         }
-
         private void Update()
         {
             if (_playerStamina < _maxStamina && Time.time > _staminaRegenStartTime)
@@ -97,7 +112,7 @@ namespace Hypodoche
             _animatorHandler.ActivateTargetTrigger("isDamaged");
         }
 
-        public void UpdateHealthUIValue()
+        private void UpdateHealthUIValue()
         {
             _health.fillAmount = _playerHealth / _maxHealth;
         }

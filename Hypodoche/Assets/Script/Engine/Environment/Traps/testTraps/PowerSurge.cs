@@ -35,14 +35,13 @@ public class PowerSurge : MonoBehaviour
     {
         if(_isActive && col.gameObject.CompareTag("Player"))
         {
-            float maxHealth = col.gameObject.GetComponent<PlayerStatus>()._maxHealth;
-            float currentHealth = col.gameObject.GetComponent<PlayerStatus>()._playerHealth;
+            float maxHealth = col.gameObject.GetComponent<PlayerStatus>().GetMaxHealth();
+            float currentHealth = col.gameObject.GetComponent<PlayerStatus>().GetPlayerHealth();
             if(currentHealth < maxHealth){
                 if (currentHealth + _recover >= maxHealth)
-                    col.gameObject.GetComponent<PlayerStatus>()._playerHealth = maxHealth;
+                    col.gameObject.GetComponent<PlayerStatus>().SetPlayerHealth(maxHealth);
                 else
-                    col.gameObject.GetComponent<PlayerStatus>()._playerHealth += _recover;
-                col.gameObject.GetComponent<PlayerStatus>().UpdateHealthUIValue();
+                    col.gameObject.GetComponent<PlayerStatus>().SetPlayerHealth(currentHealth + _recover);
                 _countdown = Time.time + _max_time;
                 _animator.SetBool("isActive", false);
             }
