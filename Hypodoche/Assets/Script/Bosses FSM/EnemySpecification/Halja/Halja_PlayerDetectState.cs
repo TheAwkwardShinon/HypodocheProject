@@ -19,7 +19,6 @@ namespace Hypodoche{
         public override void Enter()
         {
             base.Enter();
-            Debug.Log("in player detect state");
             usableMoveSet.Clear();
         }
 

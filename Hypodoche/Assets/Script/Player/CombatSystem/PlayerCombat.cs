@@ -14,6 +14,8 @@ namespace Hypodoche
         private AnimatorHandler _animatorHandler;
         private PlayerInventory _playerInventory;
         private ShootingHandler _shootingHandler;
+
+        private PlayerStatus _playerStatus;
         [SerializeField] private GameObject _shootingSpawnPoint;
         [SerializeField] private GameObject _activeMeleePoint;
         [SerializeField] private LayerMask _hitLayer;
@@ -37,8 +39,15 @@ namespace Hypodoche
             _animatorHandler = GetComponentInChildren<AnimatorHandler>();
             _playerInventory = GetComponent<PlayerInventory>();
             _shootingHandler = GetComponent<ShootingHandler>();
+            _playerStatus = GetComponent<PlayerStatus>();
         }
 
+        public float calculateDamage(float dmg){ //in percentuale
+            float multiplier = _playerStatus.getEnancheMultiplier();
+            if(multiplier == 0f) return dmg;
+            else return dmg + ((dmg * multiplier)/100);
+        }
+ 
         public void InvokeLightAttack()
         {
             if (Time.time > _nextAttackTime)
@@ -76,7 +85,7 @@ namespace Hypodoche
                 ///Enemy enemy  = hitObject.GetComponent<Enemy>();
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
 
-                    enemy.TakeDamage(weapon.GetLightDamage());
+                    enemy.TakeDamage(calculateDamage(weapon.GetLightDamage()));
                     //alreadyHit.Add(hitParent);
                 }
             }
@@ -104,7 +113,7 @@ namespace Hypodoche
                 Enemy enemy = hitParent.GetComponent<Enemy>();
 
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
-                    enemy.TakeDamage(weapon.GetHeavyDamage());
+                    enemy.TakeDamage(calculateDamage(weapon.GetHeavyDamage()));
                     alreadyHit.Add(hitParent);
                 }
             }
@@ -116,7 +125,10 @@ namespace Hypodoche
 
         public void HandleShooting(Weapon weapon)
         {
-            _shootingHandler.SetArrowStats(weapon);
+            Debug.Log("the dmag should be : "+ weapon.GetLightDamage()
+            + " the multiplier is : "+_playerStatus.getEnancheMultiplier()
+            +"%  so the dmg became : "+ calculateDamage(weapon.GetLightDamage()));
+            _shootingHandler.SetArrowStats(calculateDamage(weapon.GetLightDamage()));
             _shootingHandler.Shoot();
             _attackRate = weapon.GetLightAttackRate();
         }
