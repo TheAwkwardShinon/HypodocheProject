@@ -5,7 +5,9 @@ using UnityEngine;
 namespace Hypodoche{
     public class Halja : Entity, Boss
     {
-         #region Variables
+        #region Variables
+
+        #region boss-state
         public Halja_IdleState _idleState { get; private set; }
         public Halja_MoveState _moveState { get; private set; }
         public Halja_SufferTheEffectState _sufferEffectState { get; private set; }
@@ -17,37 +19,63 @@ namespace Hypodoche{
         public Halja_ChainOfDestiny _chainOfDestiny { get; private set; }
         public Halja_Punishment _punishment { get; private set; }
 
+        public Halja_WhipLashes _whipLashes { get; private set; }
+
+        #endregion
 
 
+        #region move-set ranges
         [SerializeField] private float _chainOfDestinyMaxDistance;
         [SerializeField] private float _chainOfDestinyMinDistance;
 
         [SerializeField] private float _punishmentMaxDistance;
         [SerializeField] private float _punishmentMinDistance;
 
+        [SerializeField] private float _whipLashestMaxDistance;
+
+        [SerializeField] private float _whipLashesMinDistance;
+
+        #endregion
+
+        #region attack-moves-countdown
         [SerializeField] private float _punishmentCountdown;
-        [SerializeField] public  float _chainOfDestinyCountdown;
+        [SerializeField] private  float _chainOfDestinyCountdown;
 
-        public float _punishmentClock;
-        public float _chainOfDestinyClock;
+        [SerializeField] private  float _whipLashesCountdown;
+
+        #endregion
 
 
 
-        //[SerializeField] private float _wiph;
+        #region clocks
+        private  float _punishmentClock;
+        private float _chainOfDestinyClock;
+        private float _wiphLashesClock;
+
+        #endregion
+
+
+
+        #region scriptableObject
 
         [SerializeField] private D_IdleState _idleData;
+
+        #endregion
+
+        #region crows
         [SerializeField] protected IceCrow _iceCrow;
         [SerializeField] protected WaterCrow _waterCrow;
 
-        [SerializeField] public  float unbreakableBondCountdown;
+        #endregion
+
 
         
-
+        #region drawline-variables
         public LineRenderer lr;
 
-        [SerializeField] protected Vector3 _throwChainPosition;
+        [SerializeField] protected Transform _throwChainPosition;
 
-        public float timerUnbreakableBond;
+        #endregion
 
         #endregion
 
@@ -64,12 +92,8 @@ namespace Hypodoche{
             _deathState = new Halja_DeathState(this, _stateMachine, "death", this);
             _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
             _punishment = new Halja_Punishment(this,_stateMachine,"punishment",this);
-            //_chainOfDestiny = new Halja_ChainOfDestiny(this, _stateMachine, "chainOfDestiny", _entityData, this);
+            _whipLashes = new Halja_WhipLashes(this,_stateMachine,"whiplashes",this);
 
-            //_chaseState = new Halja_ChaseState(this, _stateMachine, "run", _entityData, this);
-            timerUnbreakableBond = Time.time;
-            //Instantiate(_iceCrow, new Vector3(0,1,0),Quaternion.identity);
-            //Instantiate(_waterCrow, new Vector3(0,2,0),Quaternion.identity);
             _stateMachine.InitializeState(_idleState); //todo spawn state
         }
 
@@ -100,6 +124,7 @@ namespace Hypodoche{
             return _entityData.health;
         }
 
+        #region crows-getter
         public WaterCrow GetWaterCrow(){
             return _waterCrow;
         }
@@ -108,6 +133,9 @@ namespace Hypodoche{
             return _iceCrow;
         }
 
+        #endregion
+
+        #region attack-moves-ranges-getters
         public float getChainOfDestinyMaxDistance(){
             return _chainOfDestinyMaxDistance;
         }
@@ -124,6 +152,17 @@ namespace Hypodoche{
             return _punishmentMinDistance;
         }
 
+        public float getWhiplashesMaxDistance(){
+            return _whipLashestMaxDistance;
+        }
+
+        public float getWhipLashesMinDistance(){
+            return _whipLashesMinDistance;
+        }
+
+        #endregion
+
+        #region attacks-countdown-getters
         public float getPunishmentCountdown(){
             return _punishmentCountdown;
         }
@@ -132,12 +171,49 @@ namespace Hypodoche{
             return _chainOfDestinyCountdown;
         }
 
-        public Vector3 getThrowChainPosition(){
+
+        public float getWhiplashesCountdown(){
+            return _whipLashesCountdown;
+        }
+        #endregion
+
+
+        public Transform getThrowChainPosition(){
             return _throwChainPosition;
         }
 
+        #region clocks-getter
+        public float getChainOfDestinyClock(){
+            return _chainOfDestinyClock;
+        }
+
+        public float getPunishmentClock(){
+            return _punishmentClock;
+        }
+
+        public float getWhipLashesClock(){
+            return _wiphLashesClock;
+        }
         #endregion
 
+        #endregion
+
+        #region setter
+
+        public void setChainOfDestinyClock(float time){
+            _chainOfDestinyClock = time;
+        }
+
+        public void setPunishmentClock(float time){
+            _punishmentClock = time;
+        }
+
+        public void setWhipLashesClock(float time){
+            _wiphLashesClock = time;
+        }
+
+
+        #endregion
  
     }
 }

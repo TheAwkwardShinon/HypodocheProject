@@ -19,6 +19,13 @@ namespace Hypodoche
         private float _staminaRegenStartTime = 0f;
         private float _exhaustionPoint = 30f;
         private bool _isExhausted = false;
+
+        private bool _isStunned = false;
+
+        private float _stunTime;
+
+        private float _startStunClock;
+
         [SerializeField] private Image _stamina;
         [SerializeField] private Image _health;
         private Collider _collider;
@@ -54,6 +61,21 @@ namespace Hypodoche
         }
         private void Update()
         {
+            if(_isStunned){
+               
+                if(Time.time >= _startStunClock + _stunTime)
+                    _isStunned = false;
+            }
+            if(_status.Count > 0){
+                foreach(Effects e in _status){
+                    if(!e._stun.isEmpty){
+                        _isStunned = true;
+                        _stunTime = e._stun.time;
+                        _startStunClock = Time.time;
+                    }
+                }
+                _status.Clear();
+            }
             if (_playerStamina < _maxStamina && Time.time > _staminaRegenStartTime)
             {
                 _playerStamina += _staminaRegenRate * Time.deltaTime;
@@ -128,6 +150,26 @@ namespace Hypodoche
         {
             _status.Remove(effect);
         }
+        #endregion
+
+        #region getter
+        
+        public List<Effects> getDebuffList(){
+            return _status;
+        }
+
+        public float  getStunTime(){
+            return _stunTime;
+        }
+
+        public bool isStunned(){
+            return _isStunned;
+        }
+
+        public float getStartStunClock(){
+            return _startStunClock;
+        }
+
         #endregion
         #endregion
     }

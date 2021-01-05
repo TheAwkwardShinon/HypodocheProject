@@ -36,8 +36,6 @@ namespace Hypodoche{
             float _speedWhenDetect = _entityData.isSlowed ? _entityData.speedWhenSlowed : _entityData.speedWhenDetect;
             if (_entityData.slowOverArea)
                 _speedWhenDetect = _entityData.speedWhenSlowedArea;
-                
-            //float dstToTarget = Vector3.Distance(_halja.transform.position, _playerPosition);
     
             Transform tempPlayrPosition = _halja.GetIceCrow().getPlayerPosition() == null ? 
                 _halja.GetWaterCrow().getPlayerPosition() : _halja.GetIceCrow().getPlayerPosition();

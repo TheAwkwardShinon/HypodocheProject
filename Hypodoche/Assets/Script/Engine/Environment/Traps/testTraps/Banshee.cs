@@ -10,25 +10,30 @@ namespace Hypodoche
         #region variables
 
         Effects myEffect;
-        [SerializeField] public float health;
+        protected bool _active;
+        protected float _revenge = 0;
+        [SerializeField] private float _countdown;
+        [SerializeField] private float _startTime;
+
+        [SerializeField] private float _radius;
         #endregion
+
 
         #region methods
 
-        public Banshee()
-        {
-        }
 
         public void Start()
         {
-            StunData s = new StunData();
+            _revenge = 0;
+            /*StunData s = new StunData();
             s.isEmpty = true;
             DamageOverTimeData d = new DamageOverTimeData();
             d.isEmpty = true;
             SlowData sl = new SlowData();
             sl.isEmpty = true;
-            DamageData dm = new DamageData(); // deals dmg 
+            DamageData dm = new DamageData(); 
             dm.isEmpty = false;
+            dm.damage = 0;
             FearData sc = new FearData();
             sc.isEmpty = true;
             SlowOverAreaData sla = new SlowOverAreaData();
@@ -37,40 +42,71 @@ namespace Hypodoche
             dma.isEmpty = true;
             EnhanceData en = new EnhanceData();
             en.isEmpty = true;
-            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);
+            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);*/
         }
 
-        public void OnTriggerEnter()
+        public void OnTriggerEnter(Collider col)
         {
-      
-        }
+            Debug.Log("plifffploff");
+            if (Time.time >= _startTime + _countdown)
+            {
+                Debug.Log("due coccodrilli ed un orangotango");
+                if (col.gameObject.CompareTag("Bomb"))
+                {
 
+                    _revenge += col.gameObject.GetComponent<RocketInterface>().getDamage()/4;
+                    Debug.Log("REVENGE DMG = "+ _revenge);
+                    col.gameObject.GetComponent<RocketInterface>().DestroyRocket();
+
+                    //col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                    //_active = false;
+                    //_revenge = 0;
+                    //myEffect.dm.damage = _revenge;
+                }
+        /*
+                else if (col.gameObject.CompareTag("Player"))
+                {
+                    col.gameObject.GetComponent<PlayerStatus>().AddStatus(myEffect);
+                    _active = false;
+                    _revenge = 0;
+                    myEffect.dm.damage = _revenge;
+                }*/
+            }
+            
+        }
+/*
         public void TakeDamage(float dmg)
         {
-            health = health - dmg;
-            float revenge = dmg / 2;
-            myEffect._damage.damage = revenge;
-            //send damage
-            return ;
-        }
+            _revenge += dmg / 4;
+            _active = true;
+            myEffect.dm.damage = _revenge;
+        }*/
 
         public void Update()
         {
-            // if take damage
-
-            if (health == 0)
-            {
-                Destroy(gameObject);
-
-            }
+           if(Time.time >= _startTime + _countdown){
+                if(_revenge == 0) return;
+                Collider[] col = Physics.OverlapSphere(gameObject.transform.position,_radius,LayerMask.GetMask("Player","Enemies"));
+                if(col.Length > 0){
+                    foreach (Collider target in col)
+                    {
+                        if(target.gameObject.CompareTag("boss"))
+                                target.transform.root.GetComponent<Enemy>().TakeDamage(_revenge);
+                        else if(target.gameObject.CompareTag("Player"))
+                                target.GetComponent<PlayerStatus>().TakeDamage(_revenge);
+                            _revenge = 0;
+                            _startTime = Time.time;
+                    }
+                }
+           }
         }
 
+        
         public string SendDataTrap()
         {
-            //Destroy(gameObject); should not be destroyed 
-            return JsonUtility.ToJson(myEffect, true);
+            throw new NotImplementedException();
         }
-
         #endregion
+
     }
 }

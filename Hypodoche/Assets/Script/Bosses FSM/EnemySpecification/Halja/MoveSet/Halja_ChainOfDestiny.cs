@@ -42,12 +42,9 @@ namespace Hypodoche{
         public override void Enter()
         {
             base.Enter();
-            //_animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
-             //Transform temp = _halja.isPlayerInAggroRange();
-            //_playerPosition = temp == null ?  _playerPosition : temp.position;
             _throwChain = true;
             _halja.lr.enabled = true;
-            _halja.lr.SetPosition(0,_halja.getThrowChainPosition()); //TODO chainPosition
+            _halja.lr.SetPosition(0,_halja.getThrowChainPosition().position); //TODO chainPosition
             _halja.lr.startWidth = 1f;
             _halja.lr.endWidth = 1f;
         }
@@ -60,7 +57,7 @@ namespace Hypodoche{
         {
             base.Exit();
             _halja.lr.enabled = false;
-            _halja._chainOfDestinyClock = Time.time;
+            _halja.setChainOfDestinyClock(Time.time);
             _throwChain = false;
 
 
@@ -71,7 +68,6 @@ namespace Hypodoche{
             base.Update();
             if(_throwChain){ //turned true when we are into the state in the animator! (update starts before enter)
                 RaycastHit Hit;
-                //Debug.DrawRay(_halja.transform.position,(_playerPosition - _halja.transform.position).normalized,Color.red);
                 if(Physics.Raycast(_halja.transform.position,(_playerPosition - _halja.transform.position ).normalized, out Hit,
                         _dist,LayerMask.GetMask("Player"))){
 
@@ -84,7 +80,6 @@ namespace Hypodoche{
                         Vector3 pointAngleLine = x * Vector3.Normalize(pointB-pointA) + pointA;
                         _halja.lr.SetPosition(1,pointAngleLine);
                     }
-                    //Hit.collider.gameObject.GetComponent<PlayerStatus>().TakeDamage(5f); //per ora poi dovremmo freezare i movimenti;
                     Hit.collider.gameObject.transform.position = Vector3.MoveTowards(Hit.collider.gameObject.transform.position,_halja.transform.position,
                                 10f * Time.deltaTime);
                     if(Vector3.Distance(Hit.collider.gameObject.transform.position,_halja.transform.position) <=1f){
@@ -105,9 +100,6 @@ namespace Hypodoche{
                         _stateMachine.ChangeState(_halja._moveState);
                     }
                 }
-                /*else{
-                    _stateMachine.ChangeState(_halja._moveState);
-                }*/
             }
 
         }

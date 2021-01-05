@@ -8,7 +8,7 @@ namespace Hypodoche
     [RequireComponent(typeof(Rigidbody))]
     #endregion
 
-    public class ArrowBehaviour : MonoBehaviour
+    public class ArrowBehaviour : MonoBehaviour, RocketInterface
     {
         #region Variables
         [SerializeField] private float _speed = 10f;
@@ -56,12 +56,25 @@ namespace Hypodoche
             
             if (!other.gameObject.CompareTag("Player"))
             {
+                if(other.gameObject.CompareTag("trap")){
+                    return;
+                }
                 if (enemy != null)
                 {
                     enemy.TakeDamage(_damage);
                 }
                 Destroy(gameObject);
             }
+        }
+
+        public float getDamage()
+        {
+            return _damage;
+        }
+
+        public void DestroyRocket()
+        {
+            Destroy(gameObject);
         }
         #endregion
     }

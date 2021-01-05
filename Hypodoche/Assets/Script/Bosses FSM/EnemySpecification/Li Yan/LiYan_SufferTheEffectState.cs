@@ -17,24 +17,30 @@ namespace Hypodoche
         #endregion
 
         #region Methods
-        public override void Enter()
-        {
-            if (_entityData.health <= 0)
-                _stateMachine.ChangeState(_liYan._deathState);
-            base.Enter();
 
+        
+        public override void ExecuteAfterAnimation()
+        {
+            base.ExecuteAfterAnimation();
+              if (_entityData.health <= 0)
+                _stateMachine.ChangeState(_liYan._deathState);
+            
             if (_entityData.timeOfFear == 0f)
             {
-                Debug.Log("cambio stato : sufferEffect -> move " + Time.time);
                 _liYan._moveState.setFromSufferEffect(true);
                 _stateMachine.ChangeState(_liYan._moveState);
             }
             else
             {
-                Debug.Log("cambio stato : sufferEffect -> scare " + Time.time);
                 _liYan._moveState.setFromSufferEffect(true);
                 _stateMachine.ChangeState(_liYan._scareState); //todo boolean for direction
             }
+        }
+        public override void Enter()
+        {
+          
+            base.Enter();
+
         }
 
         public override void Exit()

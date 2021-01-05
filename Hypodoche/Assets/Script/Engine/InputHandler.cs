@@ -55,6 +55,8 @@ namespace Hypodoche
 
         private void Update()
         {
+            if(_playerStatus.isStunned())
+                return;
             _allowInput = true;//!_animatorHandler.GetAnimator().GetBool(_resetAnimatorHash);
 
             if (_allowInput)
@@ -152,6 +154,7 @@ namespace Hypodoche
             #region Heavy Attack
             else if (Input.GetKeyDown(KeyCode.Mouse1) && _playerStatus.HasStamina(_heavyAttackStaminaCost))
             {
+                Debug.Log("invokin light attack");
                 _playerCombat.InvokeHeavyAttack();
                 _movement = Vector3.zero;
                 _playerMovement.SetMovement(_movement);
