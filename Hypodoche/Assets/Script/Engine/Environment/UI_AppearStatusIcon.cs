@@ -28,7 +28,7 @@ namespace Hypodoche
 
         public void Update()
         {
-            int i = 0;/*
+            /*int i = 0;
             foreach (Sprite img in icons)
             {
                 _images[i].sprite = img;
@@ -48,7 +48,8 @@ namespace Hypodoche
 
         public void removeIcon(Sprite icon)
         {
-            icons.Remove(icon);
+            if(icons.Contains(icon))
+                icons.Remove(icon);
         }
 
         public void AddStun()

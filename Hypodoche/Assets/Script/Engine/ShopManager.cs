@@ -10,6 +10,7 @@ namespace Hypodoche
         #region Variables
         [SerializeField] private List<TrapSlot> _slots;
         [SerializeField] private TrapShop _trapShop;
+        [SerializeField] private InventoryManager _inventory;
         private SortedDictionary<string, TrapItem> _items;
         private int _x = 0;
         private int _y = 0;
@@ -26,6 +27,20 @@ namespace Hypodoche
             else
                 return null;
         }
+
+        public void SetActiveInput(bool activeInput)
+        {
+            if(isActiveAndEnabled)
+            {
+                if (activeInput) StartCoroutine(activateInput());
+                _activeInput = activeInput;
+                if (activeInput) StopCoroutine(activateInput());
+            }
+        }
+        IEnumerator activateInput()
+        {
+            yield return new WaitForSeconds(0.1f); 
+        }
         #endregion
 
         #region Methods
@@ -33,6 +48,8 @@ namespace Hypodoche
         {
             _trapShop.Setup();
             _slots = new List<TrapSlot>(GetComponentsInChildren<TrapSlot>());
+            foreach (TrapSlot s in _slots)
+                s.SetIsShopSlot(true);
             _items = _trapShop.GetItems();
             DisplayShop();
             _selectedSlot = _slots[0];
@@ -92,11 +109,21 @@ namespace Hypodoche
         {
             if(Input.GetMouseButtonDown(0))
             {
-                //BUY
+                BuyItem();
             }
             if(Input.GetMouseButtonDown(1))
             {
                 //SELL?
+            }
+        }
+
+        private void BuyItem()
+        {
+            TrapItem selected = _selectedSlot.GetItem();
+            if(_inventory.CanAfford(selected))
+            {
+                _inventory.SpendCoins(selected.GetShopPrice());
+                _inventory.AddItem(selected);
             }
         }
         #endregion

@@ -21,7 +21,7 @@ namespace Hypodoche{
 
         public override void ExecuteAfterAnimation(){
             base.ExecuteAfterAnimation();
-            Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getPunishmentMaxDistance()/2,LayerMask.GetMask("Player"));
+            Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getPunishmentMaxDistance(),LayerMask.GetMask("Player"));
             _player = player.Length == 0 ? null : player[0];
             if(_player == null){
                 _hit = false;
@@ -36,10 +36,10 @@ namespace Hypodoche{
             if(_hit){ //colpisco a fine aniamzione obv
                 //_player.GetComponent<Rigidbody>().AddForce(_halja.getDirection()*8f,ForceMode.Impulse);
             
-                _player.GetComponent<Rigidbody>().AddExplosionForce(26f,_halja.transform.position,3f,0f,ForceMode.Impulse);
+                _player.GetComponent<Rigidbody>().AddExplosionForce(26f,_halja.transform.position,7f,0f,ForceMode.Impulse);
 
 
-                _player.GetComponent<PlayerStatus>().TakeDamage(2f);
+                _player.GetComponent<PlayerStatus>().TakeDamage(10f);
                 _halja.setPunishmentClock(Time.time);
             }
              _stateMachine.ChangeState(_halja._moveState);

@@ -48,7 +48,7 @@ MonoBehaviour:
   _itemSprite: {fileID: -43721548549047654, guid: 7a21e29ab549d094db0ba51b4a06c846,
     type: 3}
   _itemName: Lucky Star
-  _ownedAmount: 0
+  _ownedAmount: 1
   _description: Once every 3 seconds, it can blocks a projectile.  Do you remember,
     child, the lucky star who saved you? Do you remember my Call? Do you remember
     our vision of a world full of good? Do you remeber the pain of the old times?
@@ -58,3 +58,4 @@ MonoBehaviour:
   _effectOneDescription: Cooldown 3 Sec
   _effectTwoSprite: {fileID: 0}
   _effectTwoDescription: 
+  _shopPrice: 2

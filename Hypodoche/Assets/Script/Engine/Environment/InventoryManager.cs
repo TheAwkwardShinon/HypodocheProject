@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Hypodoche
 {
@@ -8,7 +9,8 @@ namespace Hypodoche
     {
         [SerializeField] private TrapInventory _inventory;
         [SerializeField] GameObject  _inventoryGO;
-        [SerializeField] private List<TrapSlot> _slots; 
+        [SerializeField] private List<TrapSlot> _slots;
+        [SerializeField] private Text _coinText;
         private SortedDictionary<string, TrapItem> _items = new SortedDictionary<string, TrapItem>();
         
 
@@ -17,6 +19,7 @@ namespace Hypodoche
             _slots = new List<TrapSlot>(_inventoryGO.GetComponentsInChildren<TrapSlot>());
             _inventory.Setup();
             _items = _inventory.GetItems();
+            _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
         }
 
         private void Start()
@@ -24,13 +27,17 @@ namespace Hypodoche
             DisplayInventory();
         }
 
+        #region Items
         public void AddItem(TrapItem trapItem)
         {
-            TrapItem search = _items[trapItem.GetItemName()];
+            TrapItem search;
+            search = _items.TryGetValue(trapItem.GetItemName(), out search) ? search : null;
             if(search != null)
                 search.IncreaseOwnedCount();
             else
                 _items.Add(trapItem.GetItemName(), trapItem);
+            _inventory.SetItems(_items);
+            DisplayInventory();
         }
         private void DisplayInventory()
         {
@@ -42,6 +49,50 @@ namespace Hypodoche
                     i++;
                 }
             }
+            _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
         }
+
+        public void PlaceTrap(TrapItem trap)
+        {
+            TrapItem search;
+            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
+            if(search != null)
+                search.DecreaseOwnedCount();
+            DisplayInventory();
+        }
+
+        public void RetrieveTrap(TrapItem trap)
+        {
+            TrapItem search;
+            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
+            if(search != null)
+                search.IncreaseOwnedCount();
+            DisplayInventory();
+        }
+
+        public bool HasTrap(TrapItem trap)
+        {
+            TrapItem search;
+            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
+            return search != null && search.GetOwnedAmount() > 0;
+        }
+        #endregion
+
+        #region Coins
+        public void AddCoins(int coins)
+        {
+            _inventory.SetPlayerCoins(_inventory.GetPlayerCoins() + coins);
+        }
+
+        public void SpendCoins(int coins)
+        {
+            _inventory.SetPlayerCoins(_inventory.GetPlayerCoins() - coins);
+        }
+
+        public bool CanAfford(TrapItem item)
+        {
+            return _inventory.GetPlayerCoins() >= item.GetShopPrice();
+        }
+        #endregion
     }
 }

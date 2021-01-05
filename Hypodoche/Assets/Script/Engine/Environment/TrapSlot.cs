@@ -16,7 +16,8 @@ namespace Hypodoche
         [SerializeField] private Image _itemIcon;
         [SerializeField] private Image _ownedAmountIcon;
         [SerializeField] private Text _ownedAmountText;
-        private int _ownedAmount = 0;
+        private int _ownedAmount = -1;
+        private bool _isShopSlot = false;
         #endregion
 
         #region Getter and Setter
@@ -29,11 +30,16 @@ namespace Hypodoche
                 _ownedAmountText.enabled = true;
                 _itemIcon.sprite = _item.GetItemSprite();
                 _ownedAmount = _item.GetOwnedAmount();
-                _ownedAmountText.text = _ownedAmount.ToString();
+                if(_isShopSlot){
+                    _ownedAmountText.text = item.GetShopPrice().ToString();
+                }
+                else{
+                    _ownedAmountText.text = _ownedAmount.ToString();
+                }
             }
             else{
                 _itemIcon.enabled = false;
-                _ownedAmount = 0;
+                _ownedAmount = -1;
                 _ownedAmountIcon.enabled = false;
                 _ownedAmountText.enabled = false;
             }
@@ -41,6 +47,11 @@ namespace Hypodoche
         public TrapItem GetItem()
         {
             return _item;
+        }
+
+        public void SetIsShopSlot(bool state)
+        {
+            _isShopSlot = state;
         }
         #endregion
 
@@ -51,14 +62,18 @@ namespace Hypodoche
         }
         private void Update()
         {
-            if(_ownedAmount == 0 && _ownedAmountIcon.enabled == true){
+            if(_ownedAmount == -1 && _ownedAmountIcon.enabled == true){
                 _ownedAmountIcon.enabled = false;
                 _ownedAmountText.enabled = false;
             }   
-            else if(_ownedAmount != 0 && _ownedAmountIcon.enabled == false)
+            else if(_ownedAmount != -1 && _ownedAmountIcon.enabled == false)
             {
                 _ownedAmountIcon.enabled = true;
                 _ownedAmountText.enabled = true;
+                if(_isShopSlot)
+                    _ownedAmountText.text = _item.GetShopPrice().ToString();
+                else
+                    _ownedAmountText.text = _ownedAmount.ToString();
             }
         }
         #endregion

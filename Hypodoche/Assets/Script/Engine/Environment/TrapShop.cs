@@ -10,7 +10,6 @@ namespace Hypodoche
         #region Variables
         private SortedDictionary<string, TrapItem> _items;
         [SerializeField] private List<TrapItem> _itemList;
-        [SerializeField] private List<int> _itemCosts; 
         #endregion
 
         #region Getters and Setters
@@ -28,7 +27,7 @@ namespace Hypodoche
             foreach (TrapItem entry in _itemList)
             {
                 _items.Add(entry.GetItemName(), entry);
-                _items[entry.GetItemName()].SetOwnedCount(_itemCosts[index]);
+                _items[entry.GetItemName()].SetOwnedCount(1);
                 index++;
             }
         }

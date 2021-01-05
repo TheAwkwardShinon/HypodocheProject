@@ -20,7 +20,7 @@ MonoBehaviour:
   speedWhenDetect: 3
   speedWhenSlowed: 5
   speedWhenSlowedArea: 5
-  aggroRange: 6
+  aggroRange: 15
   whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256

@@ -48,7 +48,7 @@ MonoBehaviour:
   _itemSprite: {fileID: -4791922459018314206, guid: 7a21e29ab549d094db0ba51b4a06c846,
     type: 3}
   _itemName: The Horror From Below
-  _ownedAmount: 0
+  _ownedAmount: 1
   _description: 'A tentacle damages everything that passes over it  ..."And the humans
     where saved: evil was gone, only purity in their future. Now the world is full
     of perfection, as in His design. Perfect humans bless the Earth with their gifts
@@ -59,3 +59,4 @@ MonoBehaviour:
   _effectOneDescription: Deals damage over time on stay
   _effectTwoSprite: {fileID: 0}
   _effectTwoDescription: 
+  _shopPrice: 6

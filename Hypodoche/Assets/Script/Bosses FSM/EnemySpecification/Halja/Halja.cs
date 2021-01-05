@@ -97,6 +97,14 @@ namespace Hypodoche{
             _stateMachine.InitializeState(_idleState); //todo spawn state
         }
 
+        public void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(_throwChainPosition.position, _punishmentMaxDistance);
+            /*Gizmos.color = Color.red;
+            Gizmos.DrawSphere(_throwChainPosition.position, _whipLashestMaxDistance);*/
+        }
+
 
         public void DestroyBoss()
         {

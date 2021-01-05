@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 8171128715607359080, guid: d87c34dc85abf344a81f87d54f2f01a1, type: 3}
   - {fileID: 4179212710618498061, guid: ce1afd3268da3944bbbc1740d201c743, type: 3}
   - {fileID: 30153529342168766, guid: a3e82c92de369ff499cf7f8d13831fb6, type: 3}
-  - {fileID: 8393575377068156454, guid: 06963fe01e5bb8642927cbbdf5d2f4b4, type: 3}
   - {fileID: 3562300312759534004, guid: 036d479a5e9a0c647be19f10bf0c44bb, type: 3}
+  _playerCoins: 11

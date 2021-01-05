@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
-
 namespace Hypodoche
 {
     public class AnisKite : MonoBehaviour, Traps

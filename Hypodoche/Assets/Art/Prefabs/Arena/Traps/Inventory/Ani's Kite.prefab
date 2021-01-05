@@ -48,7 +48,7 @@ MonoBehaviour:
   _itemSprite: {fileID: -7400945933052267120, guid: 7a21e29ab549d094db0ba51b4a06c846,
     type: 3}
   _itemName: Ani's Kite
-  _ownedAmount: 0
+  _ownedAmount: 1
   _description: 'Kite that moves around the arena randomly, dealing damage.  "Swayed
     by the wind, tiny pieces of paper fly trough the sky, slowly. Li Yan is mesmerized:
     never has she seen something so beautiful before. She rushes to the crowded plaza,
@@ -64,3 +64,4 @@ MonoBehaviour:
   _effectOneDescription: Deals damage on contact
   _effectTwoSprite: {fileID: 0}
   _effectTwoDescription: 
+  _shopPrice: 1

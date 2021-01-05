@@ -23,7 +23,7 @@ namespace Hypodoche{
             _halja = halja;
             _entityData = data;
             _playerPosition = playerposition;
-            _lineDrawSpeed = 3f;
+            _lineDrawSpeed = 5f;
             _dist =  _halja.getChainOfDestinyMaxDistance();
             _throwChain = false;
         }
@@ -45,8 +45,8 @@ namespace Hypodoche{
             _throwChain = true;
             _halja.lr.enabled = true;
             _halja.lr.SetPosition(0,_halja.getThrowChainPosition().position); //TODO chainPosition
-            _halja.lr.startWidth = 1f;
-            _halja.lr.endWidth = 1f;
+            _halja.lr.startWidth = 0.3f;
+            _halja.lr.endWidth = 0.3f;
         }
 
 
@@ -68,29 +68,34 @@ namespace Hypodoche{
             base.Update();
             if(_throwChain){ //turned true when we are into the state in the animator! (update starts before enter)
                 RaycastHit Hit;
-                if(Physics.Raycast(_halja.transform.position,(_playerPosition - _halja.transform.position ).normalized, out Hit,
+                if(Physics.Raycast(_halja.getThrowChainPosition().position,(_playerPosition - _halja.getThrowChainPosition().position ).normalized, out Hit,
                         _dist,LayerMask.GetMask("Player"))){
 
-                    _dist =  Vector3.Distance(_halja.transform.position,Hit.point);
+                    Vector3 hitPoint = Hit.point;
+                    hitPoint.y = 1f;
                     if(_counter <= _dist){ //just a simple animation
-                        _counter += .1f / _lineDrawSpeed;
+                        _counter += .1f * _lineDrawSpeed;
                         float x = Mathf.Lerp(0,_dist,_counter);
-                        Vector3 pointA = _halja.transform.position;
-                        Vector3 pointB = Hit.point;
+                        Vector3 pointA = _halja.getThrowChainPosition().position;
+                        Vector3 pointB = hitPoint;
                         Vector3 pointAngleLine = x * Vector3.Normalize(pointB-pointA) + pointA;
                         _halja.lr.SetPosition(1,pointAngleLine);
-                    }
-                    Hit.collider.gameObject.transform.position = Vector3.MoveTowards(Hit.collider.gameObject.transform.position,_halja.transform.position,
+                        if(Physics.Raycast(_halja.getThrowChainPosition().position, (hitPoint - _halja.getThrowChainPosition().position).normalized, out Hit, 
+                        Vector3.Distance(pointAngleLine, _halja.getThrowChainPosition().position), LayerMask.GetMask("Player"))){
+                            _dist = Vector3.Distance(pointAngleLine, _halja.getThrowChainPosition().position);
+                            Hit.collider.gameObject.transform.position = Vector3.MoveTowards(Hit.collider.gameObject.transform.position,_halja.transform.position,
                                 10f * Time.deltaTime);
-                    if(Vector3.Distance(Hit.collider.gameObject.transform.position,_halja.transform.position) <=1f){
-                        _stateMachine.ChangeState(_halja._punishment);
+                            if(Vector3.Distance(Hit.collider.gameObject.transform.position,_halja.transform.position) <= _halja.getPunishmentMaxDistance()){
+                                _stateMachine.ChangeState(_halja._punishment);
+                            }
+                        }    
                     }
                 }
                 else{
                     if(_counter <= _dist){ //just a simple animation
                         _counter += .1f / _lineDrawSpeed;
                         float x = Mathf.Lerp(0,_dist,_counter);
-                        Vector3 pointA = _halja.transform.position;
+                        Vector3 pointA = _halja.getThrowChainPosition().position;
                         Vector3 pointB = _playerPosition;
                         Vector3 pointAngleLine = x * Vector3.Normalize(pointB-pointA) + pointA;
                         _halja.lr.SetPosition(1,pointAngleLine);

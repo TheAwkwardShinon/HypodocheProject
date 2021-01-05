@@ -8,13 +8,14 @@ public class TrapItem : MonoBehaviour
     [SerializeField] private GameObject _itemPrefab;
     [SerializeField] private Sprite _itemSprite;
     [SerializeField] private string _itemName;
-    [SerializeField] private int _ownedAmount = 0;
+    [SerializeField] private int _ownedAmount = 1;
     [SerializeField] private string _description;
     [SerializeField] private int _effectNum;
     [SerializeField] private Sprite _effectOneSprite;
     [SerializeField] private string _effectOneDescription;
     [SerializeField] private Sprite _effectTwoSprite;
     [SerializeField] private string _effectTwoDescription;
+    [SerializeField] private int _shopPrice;
     #endregion
 
     #region Getter and Setter
@@ -69,6 +70,15 @@ public class TrapItem : MonoBehaviour
         _ownedAmount = amount;
     }
     
+    public int GetShopPrice()
+    {
+        return _shopPrice;
+    }
+
+    public void SetShopPrice(int price)
+    {
+        _shopPrice = price;
+    }
     #endregion
 
     #region Methods

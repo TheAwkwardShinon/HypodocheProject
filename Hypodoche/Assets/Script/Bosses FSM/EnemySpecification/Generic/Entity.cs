@@ -20,13 +20,20 @@ namespace Hypodoche
         [SerializeField] public bool _minion;
         #endregion
 
+        #region Getters and Setters
+        public void SetIsFlipped(bool flip)
+        {
+            _flipped = flip;
+        }
+        #endregion
+
         #region
         public virtual void Start()
         {
             resetStates();
             _boss = gameObject;
             _rigidBodyBoss = _boss.GetComponent<Rigidbody>();
-            _animator = _boss.transform.GetChild(0).GetComponent<Animator>();
+            _animator = _boss.transform.GetComponentInChildren<Animator>();
             _stateMachine = new FiniteStateMachine();
             resetValues();
         }

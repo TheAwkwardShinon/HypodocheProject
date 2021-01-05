@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 3}
   _itemSprite: {fileID: 21300000, guid: 6551d5e2f345e5c4bab35e3d2490fcd8, type: 3}
   _itemName: Subzero Ray
-  _ownedAmount: 0
+  _ownedAmount: 1
   _description: 'Time is relative: sometimes I wonder if I even am under his domain.
     Artifacts like this, that creates things from nothing, are really comparable
     to the power of a God. Maybe, in the future, we will be able to achive such a
@@ -58,3 +58,4 @@ MonoBehaviour:
   _effectOneDescription: Stuns for 1.5 Sec
   _effectTwoSprite: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
   _effectTwoDescription: Cooldown 8 Sec
+  _shopPrice: 4

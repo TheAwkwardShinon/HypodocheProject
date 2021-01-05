@@ -12,6 +12,7 @@ namespace Hypodoche{
         [SerializeField] private ArenaTransferSO _arenaTransferSO;
         [SerializeField] private TrapSelectionManager _trapSelectionManager;
         [SerializeField] private SceneDirector _sceneDirector;
+        [SerializeField] private InventoryManager _inventory;
         private int _x = 0;
         private int _y = 0;
         private bool _isPlayerLeftHanded = false;
@@ -19,7 +20,6 @@ namespace Hypodoche{
         private TrapItem _movingTrap = null;
         private TrapItem _trapBeingMovedOn = null;
         private ArenaSlot _selectedSlot;
-        private int _builtCount = 0;
         private bool _activeInput = true;
 
         public void SetActiveInput(bool activeInput)
@@ -158,7 +158,7 @@ namespace Hypodoche{
                 _isMovingTrap = true;
                 _movingTrap = _selectedSlot.GetItem();
             }
-            else if(DoesNotExceedLimits())
+            else if(DoesNotExceedLimits(_trapSelectionManager.GetSelectedItem()))
             {
                 BuildTrap();
             }
@@ -167,14 +167,21 @@ namespace Hypodoche{
         private void BuildTrap()
         {
             if(_isMovingTrap){
+                if(_trapBeingMovedOn != null){
+                    _inventory.RetrieveTrap(_trapBeingMovedOn);
+                }
                 _isMovingTrap = false;
                 _movingTrap = null;
                 _trapBeingMovedOn = null;
             }
             else if (_selectedSlot.GetItem() == null) //Not Replacing an already existing trap
             {
-                //Aggiorna inventory count
-                _builtCount++;
+                _inventory.PlaceTrap(_trapSelectionManager.GetSelectedItem());
+            }
+            else 
+            {
+                _inventory.PlaceTrap(_trapSelectionManager.GetSelectedItem());
+                _inventory.RetrieveTrap(_selectedSlot.GetItem());
             }
             _selectedSlot.SetItem(_trapSelectionManager.GetSelectedItem());
         }
@@ -183,14 +190,14 @@ namespace Hypodoche{
         {
             if(_selectedSlot.GetItem() != null)
             {
+                _inventory.RetrieveTrap(_selectedSlot.GetItem());
                 _selectedSlot.SetItem(null);
-                _builtCount--;
             }
         }
 
-        private bool DoesNotExceedLimits()
-        {   Debug.Log(_builtCount);
-            return _builtCount < 5 || (_builtCount == 5 && _selectedSlot.GetItem() != null); //Allow replacing
+        private bool DoesNotExceedLimits(TrapItem item)
+        {   
+            return (_inventory.HasTrap(item) || _movingTrap == item);
         }
         #endregion
 

@@ -20,7 +20,6 @@ namespace Hypodoche
             _color = _image.color;
             _color.a = (100 - _pValue) / 255;
             _image.color = _color;
-            Debug.Log(_color.a);
         } 
         #endregion
     }
