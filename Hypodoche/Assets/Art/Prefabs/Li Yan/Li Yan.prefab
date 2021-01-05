@@ -4297,6 +4297,7 @@ GameObject:
   - component: {fileID: 6588421605705044739}
   - component: {fileID: 6588421605705044748}
   - component: {fileID: 6588421605705044749}
+  - component: {fileID: 6277880930541522696}
   m_Layer: 10
   m_Name: Li Yan
   m_TagString: Untagged
@@ -4333,8 +4334,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 116
+  m_CollisionDetection: 1
 --- !u!65 &6588421605705044748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4361,7 +4362,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthSlider: {fileID: 0}
+  _healthFill: {fileID: 0}
+--- !u!114 &6277880930541522696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588421605705044751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08e68a211555eb4ba3ec2a3cc042a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6588421605792699343
 GameObject:
   m_ObjectHideFlags: 0
