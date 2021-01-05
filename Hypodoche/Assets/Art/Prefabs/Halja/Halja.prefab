@@ -184,16 +184,16 @@ MonoBehaviour:
   _chainOfDestinyMinDistance: 5
   _punishmentMaxDistance: 1
   _punishmentMinDistance: 0.1
+  _whipLashestMaxDistance: 3
+  _whipLashesMinDistance: 0
   _punishmentCountdown: 5
   _chainOfDestinyCountdown: 5
-  _punishmentClock: 0
-  _chainOfDestinyClock: 0
+  _whipLashesCountdown: 7
   _idleData: {fileID: 11400000, guid: 82f50ec1a760ca7479bd2297961aff6c, type: 2}
   _iceCrow: {fileID: 0}
   _waterCrow: {fileID: 0}
-  unbreakableBondCountdown: 0
   lr: {fileID: 0}
-  timerUnbreakableBond: 0
+  _throwChainPosition: {fileID: 0}
 --- !u!120 &3052855990771076986
 LineRenderer:
   m_ObjectHideFlags: 0

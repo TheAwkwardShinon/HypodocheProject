@@ -26,9 +26,9 @@ namespace Hypodoche
                 _arrowBehaviour = _arrowPrefab.GetComponent<ArrowBehaviour>();
         }
 
-        public void SetArrowStats(Weapon weapon)
+        public void SetArrowStats(float dmg)
         {
-            _arrowBehaviour.SetDamage(weapon.GetLightDamage());
+            _arrowBehaviour.SetDamage(dmg);
         }
 
         public void Shoot()

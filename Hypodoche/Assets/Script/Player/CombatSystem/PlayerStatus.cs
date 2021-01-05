@@ -20,11 +20,16 @@ namespace Hypodoche
         private float _exhaustionPoint = 30f;
         private bool _isExhausted = false;
 
+        #region status-variables
         private bool _isStunned = false;
 
         private float _stunTime;
 
         private float _startStunClock;
+
+        private float _enhanceMultiplier = 0f;
+
+        #endregion
 
         [SerializeField] private Image _stamina;
         [SerializeField] private Image _health;
@@ -46,21 +51,11 @@ namespace Hypodoche
 
         private void Update()
         {
+            checkActiveStatuses(); //addStatusEffects
             if(_isStunned){
-               
                 if(Time.time >= _startStunClock + _stunTime)
                     _isStunned = false;
-            }
-            if(_status.Count > 0){
-                foreach(Effects e in _status){
-                    if(!e._stun.isEmpty){
-                        _isStunned = true;
-                        _stunTime = e._stun.time;
-                        _startStunClock = Time.time;
-                    }
-                }
-                _status.Clear();
-            }
+            }            
             if (_playerStamina < _maxStamina && Time.time > _staminaRegenStartTime)
             {
                 _playerStamina += _staminaRegenRate * Time.deltaTime;
@@ -135,10 +130,32 @@ namespace Hypodoche
         {
             _status.Remove(effect);
         }
+
+        public void checkActiveStatuses(){
+            if(_status.Count > 0){
+                foreach(Effects e in _status){
+                    if(!e._stun.isEmpty){
+                        _isStunned = true;
+                        _stunTime = e._stun.time;
+                        _startStunClock = Time.time;
+                    }
+                    if(!e._enhance.isEmpty){
+                        _enhanceMultiplier = e._enhance.value;
+                    }
+                }
+                _status.Clear();
+            }
+        }
+        public void RemoveEnanche(float value){
+            _enhanceMultiplier = _enhanceMultiplier-value <= 0 ? 0f : _enhanceMultiplier-value;
+        }
+
         #endregion
 
         #region getter
         
+
+        #region buff/debuff-getter
         public List<Effects> getDebuffList(){
             return _status;
         }
@@ -155,7 +172,34 @@ namespace Hypodoche
             return _startStunClock;
         }
 
+        public float getEnancheMultiplier(){
+            return _enhanceMultiplier;
+        }
+
         #endregion
+
+        #region stats-getter
+
+        public float getMaxStamina(){
+            return _maxStamina;
+        }
+
+        public float getCurrentStamina(){
+            return _playerStamina;
+        }
+
+        #endregion
+ 
+        #endregion
+
+
+        #region setter
+        public void setStamina(float value){
+            _playerStamina = _playerStamina + value >= _maxStamina ? _maxStamina : _playerStamina + value;
+            UpdateStaminaUIValue();
+        }
+        #endregion
+        
         #endregion
     }
 }
