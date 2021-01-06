@@ -38,5 +38,12 @@ namespace Hypodoche
             _healthFill.fillAmount = _health / _maxHealth;
         }
         #endregion
+
+
+        #region getter
+        public float getMaxHealth(){
+            return _maxHealth;
+        }
+        #endregion
     }
 }

@@ -93,7 +93,10 @@ namespace Hypodoche{
             _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
             _punishment = new Halja_Punishment(this,_stateMachine,"punishment",this);
             _whipLashes = new Halja_WhipLashes(this,_stateMachine,"whiplashes",this);
-
+            /*
+            Instantiate(_iceCrow);
+            Instantiate(_waterCrow);
+            */
             _stateMachine.InitializeState(_idleState); //todo spawn state
         }
 

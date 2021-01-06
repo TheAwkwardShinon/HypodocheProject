@@ -8,9 +8,10 @@ namespace Hypodoche{
     {
 
         #region variables
-        private bool _isIneluttable;
+        private bool _isIneluttable; //phase 2
+
+
         [SerializeField] private WaterCrow _waterCrow;
-        [SerializeField] public  GameObject _chain;
     
         [SerializeField] D_IdleState _idleData;
 
@@ -21,10 +22,10 @@ namespace Hypodoche{
         private Transform _playerPosition;
 
         private Halja _halja;
-        public  float _timer;
+        private  float _timer;
 
-        public float unbreakableBondDuration;
-        public float unbreakableBond; // ogni 20f fa unbreakablebond
+        [SerializeField] private float _unbreakableBondDuration;
+        [SerializeField] private float _unbreakableBondCountDown; // ogni 20f fa unbreakablebond
 
         #endregion
 
@@ -39,12 +40,9 @@ namespace Hypodoche{
         {
             base.Start();
             _timer = Time.time;
-            unbreakableBond = 15f;
-            unbreakableBondDuration = 6f;
-            _unbreakableBond = new Ice_UnbreakableBond(this, _stateMachine, "unbreakableBond",_waterCrow,this);
+            _unbreakableBond = new Ice_UnbreakableBond(this, _stateMachine, "unbreakableBond",this);
             _MoveState = new Ice_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Ice_idleState(this,_stateMachine,"idle",_idleData,this);
-            Debug.Log("i am about to enter in movestate");
             _stateMachine.InitializeState(_MoveState);
 
         }
@@ -54,9 +52,6 @@ namespace Hypodoche{
             base.Update();
         }
 
-        public void destroyChain(){
-            Destroy(_chain);
-        }
 
 
         #endregion
@@ -68,6 +63,22 @@ namespace Hypodoche{
 
         public Transform getPlayerPosition(){
             return _playerPosition == null ? null : _playerPosition;
+        }
+
+        public float getUnbreakableBondDuration(){
+            return _unbreakableBondDuration;
+        }
+
+        public float getUnBreakableBondCountDown(){
+            return _unbreakableBondCountDown;
+        }
+
+        public float getTimer(){
+            return _timer;
+        }
+
+        public WaterCrow GetWaterCrow(){
+            return _waterCrow;
         }
 
         #endregion
@@ -85,6 +96,10 @@ namespace Hypodoche{
         
         public void setPlayerPosition(Transform playerposition){
             _playerPosition = playerposition == null ? null : playerposition;
+        }
+
+        public void setTimer(float timer){
+            _timer = timer;
         }
      
 

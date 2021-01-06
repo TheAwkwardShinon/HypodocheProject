@@ -9,7 +9,6 @@ namespace Hypodoche{
         private bool _isIneluttable;
         [SerializeField]private IceCrow  _iceCrow;
         [SerializeField] D_IdleState _idleData;
-        public Water_UnbreakableBond _unbreakableBond {get; private set;}
         public Water_idleState _IdleState {get; private set;}
         public Water_MoveState _MoveState {get; private set;}
 
@@ -36,7 +35,6 @@ namespace Hypodoche{
             base.Start();
             _timer = Time.time;
             unbreakableBond = 20f;
-           // _unbreakableBond = new Water_UnbreakableBond(this, _stateMachine, "unbreakableBond",this,_iceCrow);
             _MoveState = new Water_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Water_idleState(this,_stateMachine,"idle",_idleData,this);
             _stateMachine.InitializeState(_MoveState);

@@ -17,9 +17,8 @@ namespace Hypodoche {
         private float _begin;
 
         private float _lineDrawSpeed;
-        public Ice_UnbreakableBond(Entity entity, FiniteStateMachine stateMachine, string animationName, WaterCrow waterCrow, IceCrow iceCrow) : base(entity, stateMachine, animationName)
+        public Ice_UnbreakableBond(Entity entity, FiniteStateMachine stateMachine, string animationName, IceCrow iceCrow) : base(entity, stateMachine, animationName)
         {
-            _waterCrow = waterCrow;
             _iceCrow = iceCrow;
             _lineRenderer = _iceCrow.gameObject.GetComponent<LineRenderer>();
             _lineDrawSpeed = 6f;
@@ -36,7 +35,7 @@ namespace Hypodoche {
             _lineRenderer.SetPosition(0,_iceCrow.transform.position);
             _lineRenderer.startWidth = 1f;
             _lineRenderer.endWidth = 1f;
-            
+            _waterCrow = _iceCrow.GetWaterCrow();
             _dist = Vector3.Distance(_iceCrow.transform.position, _waterCrow.transform.position);
 
         }
@@ -44,7 +43,7 @@ namespace Hypodoche {
         public override void Exit()
         {
             base.Exit();
-            _iceCrow._timer = Time.time;
+            _iceCrow.setTimer(Time.time);
             _lineRenderer.enabled = false;
         }
 
@@ -79,7 +78,7 @@ namespace Hypodoche {
             }
             _iceCrow.Move(_iceCrow._entityData.movementSpeed);
 
-            if(Time.time >=_begin + _iceCrow.unbreakableBondDuration){
+            if(Time.time >=_begin + _iceCrow.getUnbreakableBondDuration()){
                 _iceCrow._stateMachine.ChangeState(_iceCrow._MoveState);  
             }                     
         }
