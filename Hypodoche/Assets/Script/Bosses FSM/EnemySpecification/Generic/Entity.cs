@@ -61,6 +61,11 @@ namespace Hypodoche
             _direction = new Vector3(UnityEngine.Random.Range(-1.0f,1.0f),0,UnityEngine.Random.Range(-1.0f, 1.0f));    
         }
 
+
+        public virtual void setDirection(Vector3 dir){
+            _direction = dir;
+        }
+
         /*public virtual void FixedUpdate()
         {
             _rigidBodyBoss.velocity = Vector3.zero;

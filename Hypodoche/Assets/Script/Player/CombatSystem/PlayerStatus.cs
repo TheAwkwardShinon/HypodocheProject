@@ -13,6 +13,8 @@ namespace Hypodoche
         private float _playerStamina;
         [SerializeField] private float _staminaRegenRate = 15f;
         [SerializeField] private AnimatorHandler _animatorHandler;
+
+        [SerializeField] private GameObject _GrabZone; 
         private float _staminaRegenDelay = 0.5f;
         public float _maxHealth = 100f;
         private float _maxStamina = 100f;
@@ -169,6 +171,9 @@ namespace Hypodoche
 
         #region getter
         
+        public Transform getGrabZone(){
+            return _GrabZone.transform;
+        }
 
         #region buff/debuff-getter
         public List<Effects> getDebuffList(){
@@ -212,6 +217,12 @@ namespace Hypodoche
         public void setStamina(float value){
             _playerStamina = _playerStamina + value >= _maxStamina ? _maxStamina : _playerStamina + value;
             UpdateStaminaUIValue();
+        }
+
+        public void setStun(float time, bool value){
+            _isStunned = value;
+            _stunTime = time;
+            _startStunClock = Time.time;
         }
         #endregion
         

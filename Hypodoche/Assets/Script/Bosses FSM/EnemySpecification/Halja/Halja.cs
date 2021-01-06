@@ -99,10 +99,18 @@ namespace Hypodoche{
 
         public void OnDrawGizmos()
         {
+            Vector3 leftLine = Quaternion.Euler(0,45,0) *  (transform.forward*-1f);
+            Vector3 rightLine = Quaternion.Euler(0,-45,0) * (transform.forward*-1f);
+            Debug.DrawRay(this.transform.position, leftLine, Color.red);
+            Debug.DrawRay(this.transform.position, rightLine, Color.red);
+            Debug.DrawRay(this.transform.position, transform.forward*-1f, Color.green);
+            
+            /*
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(_throwChainPosition.position, _punishmentMaxDistance);
-            /*Gizmos.color = Color.red;
-            Gizmos.DrawSphere(_throwChainPosition.position, _whipLashestMaxDistance);*/
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(_throwChainPosition.position, _whipLashestMaxDistance);
+            */
         }
 
 

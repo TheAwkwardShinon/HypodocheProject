@@ -37,6 +37,7 @@ namespace Hypodoche{
             base.Update();
 
                 if(_isDetectingPlayer){
+                    _halja.setDirection((_playerPosition.position-_halja.transform.position).normalized);
                     
                     float dist = Vector3.Distance(_halja.transform.position,_playerPosition.position);
                     //Debug.Log("still detecting, DIST = "+ dist+ " and min = "+_halja.getPunishmentMinDistance()+" and max= "+_halja.getPunishmentMaxDistance() );
@@ -48,7 +49,10 @@ namespace Hypodoche{
                     if(_halja.getPunishmentMinDistance() <= dist && dist <= _halja.getPunishmentMaxDistance() &&
                             Time.time >= (_halja.getPunishmentClock()+ _halja.getPunishmentCountdown()))
                     {
-                        usableMoveSet.Add(_halja._punishment);
+                        Vector3 characterToCollider = (_playerPosition.position-_halja.transform.position).normalized;
+                        float dot = Vector3.Dot(characterToCollider, _halja.transform.forward*-1f);
+                        if(dot > 0.5)
+                            usableMoveSet.Add(_halja._punishment);
                     }
                     if(_halja.getWhipLashesMinDistance() <= dist && dist<= _halja.getWhiplashesMaxDistance() &&
                             Time.time >= (_halja.getWhipLashesClock() + _halja.getWhiplashesCountdown()))

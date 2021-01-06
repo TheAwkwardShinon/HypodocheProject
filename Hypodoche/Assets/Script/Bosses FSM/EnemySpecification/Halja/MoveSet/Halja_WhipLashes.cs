@@ -23,12 +23,12 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-             Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getWhiplashesMaxDistance()/2,LayerMask.GetMask("Player"));
+             Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getWhiplashesMaxDistance(),LayerMask.GetMask("Player"));
             _player = player.Length == 0 ? null : player[0];
             if(_player == null)
                 _stateMachine.ChangeState(_halja._moveState);
             else{
-                _player.GetComponent<PlayerStatus>().TakeDamage(10f);
+                _player.GetComponent<PlayerStatus>().TakeDamage(5f);
                 _halja.setWhipLashesClock(Time.time);
                 _stateMachine.ChangeState(_halja._moveState);
             }
@@ -45,6 +45,7 @@ namespace Hypodoche{
         public override void Exit()
         {
             base.Exit();
+            _halja.setWhipLashesClock(Time.time);
         }
 
         public override void Update()

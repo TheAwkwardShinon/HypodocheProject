@@ -21,26 +21,13 @@ namespace Hypodoche{
 
         public override void ExecuteAfterAnimation(){
             base.ExecuteAfterAnimation();
-            Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getPunishmentMaxDistance(),LayerMask.GetMask("Player"));
-            _player = player.Length == 0 ? null : player[0];
-            if(_player == null){
-                _hit = false;
-            }
-            else{
-                leftLine = Quaternion.Euler(0,45,0) * _halja.transform.forward;
-                rightLine = Quaternion.Euler(0,-45,0) * _halja.transform.forward;
-              //  Debug.Log("the angle is 90? : " + Vector3.Angle(rightLine, leftLine));
-               // Debug.Log("i've got the player: "+_player);
-               _hit = true;  
-            }
+         
             if(_hit){ //colpisco a fine aniamzione obv
                 //_player.GetComponent<Rigidbody>().AddForce(_halja.getDirection()*8f,ForceMode.Impulse);
-            
                 _player.GetComponent<Rigidbody>().AddExplosionForce(26f,_halja.transform.position,7f,0f,ForceMode.Impulse);
-
-
                 _player.GetComponent<PlayerStatus>().TakeDamage(10f);
                 _halja.setPunishmentClock(Time.time);
+                _halja.setChainOfDestinyClock(Time.time);
             }
              _stateMachine.ChangeState(_halja._moveState);
         }
@@ -49,6 +36,26 @@ namespace Hypodoche{
         {
             base.Enter();
             _hit = false;
+            Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getPunishmentMaxDistance(),LayerMask.GetMask("Player"));
+            _player = player.Length == 0 ? null : player[0];
+            if(_player == null){
+                _hit = false;
+            }
+            else{
+               // leftLine = Quaternion.Euler(0,45,0) * _halja.getDirection();;
+                //rightLine = Quaternion.Euler(0,-45,0) * _halja.getDirection();
+              //  Debug.Log("the angle is 90? : " + Vector3.Angle(rightLine, leftLine));
+               // Debug.Log("i've got the player: "+_player);
+ 
+                Vector3 characterToCollider = (_player.transform.position-_halja.transform.position).normalized;
+                float dot = Vector3.Dot(characterToCollider, _halja.transform.forward*-1f);
+                Debug.Log("DOT IS : "+ dot);
+                if(dot < 0.5)
+                    _hit = false;
+                if (dot >= Mathf.Cos(55))
+                        _hit = true; 
+                else _hit = false;
+            }
             _animWaiter.StartCoroutine(_animWaiter.waitSomeSeconds(this,0.4f)); //wait the end of teh aniamtion!   
         }
 

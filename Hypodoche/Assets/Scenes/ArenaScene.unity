@@ -50515,6 +50515,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4795991659011343822}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1083272879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083272880}
+  m_Layer: 9
+  m_Name: GrabZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1083272880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083272879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23, y: 1.488, z: 0.664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 822485434}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097803836
 GameObject:
   m_ObjectHideFlags: 0
@@ -81676,8 +81706,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.66, y: 3.01, z: 0.58}
-  m_Center: {x: 0, y: 0.94, z: 0.51}
+  m_Size: {x: 0.92323434, y: 2.4403894, z: 1.1007957}
+  m_Center: {x: -0.006036818, y: 1.2248052, z: 0.501009}
 --- !u!114 &1660936207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8735812885829953796, guid: 1d1fe2155416c5248a2a29a86c41670a,
@@ -109671,12 +109701,12 @@ PrefabInstance:
     - target: {fileID: 81833517414672143, guid: 931caf00e392686449592ee0f17edfb0,
         type: 3}
       propertyPath: _punishmentMaxDistance
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 81833517414672143, guid: 931caf00e392686449592ee0f17edfb0,
         type: 3}
       propertyPath: _chainOfDestinyMinDistance
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 81833518264591968, guid: 931caf00e392686449592ee0f17edfb0,
         type: 3}
@@ -110272,10 +110302,20 @@ PrefabInstance:
       propertyPath: _animatorHandler
       value: 
       objectReference: {fileID: 1660936207}
+    - target: {fileID: 8735812885829953799, guid: 1d1fe2155416c5248a2a29a86c41670a,
+        type: 3}
+      propertyPath: _GrabZone
+      value: 
+      objectReference: {fileID: 1083272879}
     - target: {fileID: 8735812885829953913, guid: 1d1fe2155416c5248a2a29a86c41670a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735812885829953915, guid: 1d1fe2155416c5248a2a29a86c41670a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 8735812885829953916, guid: 1d1fe2155416c5248a2a29a86c41670a,
         type: 3}
