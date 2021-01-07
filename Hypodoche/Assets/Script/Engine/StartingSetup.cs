@@ -10,6 +10,7 @@ namespace Hypodoche
         [SerializeField] private TrapInventory _playerInventory;
         [SerializeField] private TrapShop _shopInventory;
         [SerializeField] private int _startingPlayerCoins;
+        [SerializeField] private ArenaTransferSO _arenaTransferSO;
         #endregion
 
         #region Methods
@@ -19,6 +20,7 @@ namespace Hypodoche
             _playerInventory.GetItemList().Clear();
             _playerInventory.Setup();
             _shopInventory.Setup();
+            _arenaTransferSO.Reset();
         }
         #endregion
     }

@@ -16,8 +16,6 @@ namespace Hypodoche
         [SerializeField] private Text _trapDescription;
         [SerializeField] private Image _effectOneImage;
         [SerializeField] private Image _effectTwoImage;
-        [SerializeField] private Text _effectOneDescription;
-        [SerializeField] private Text _effectTwoDescription;
 
         private int _effectNum;
         private bool _isShopOpen = false;
@@ -54,20 +52,15 @@ namespace Hypodoche
 
         private void DisplayOneEffect()
         {
-            _effectOneDescription.enabled = true;
             _effectOneImage.enabled = true;
-            _effectOneDescription.text = _selected.GetEffectOneDescription();
             _effectOneImage.sprite = _selected.GetEffectOneSprite();
-            _effectTwoDescription.enabled = false;
             _effectTwoImage.enabled = false;
         }
 
         private void DisplayTwoEffects()
         {
             DisplayOneEffect();
-            _effectTwoDescription.enabled = true;
             _effectTwoImage.enabled = true;
-            _effectTwoDescription.text = _selected.GetEffectTwoDescription();
             _effectTwoImage.sprite = _selected.GetEffectTwoSprite();
         }
         #endregion

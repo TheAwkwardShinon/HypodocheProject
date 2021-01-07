@@ -21,6 +21,6 @@ MonoBehaviour:
   _heavyDamage: 40
   _lightAttackRate: 2
   _heavyAttackRate: 1
-  _lightAttackRadius: 0.5
-  _heavyAttackRadius: 1
+  _lightAttackRadius: 1
+  _heavyAttackRadius: 2
   _isRanged: 0

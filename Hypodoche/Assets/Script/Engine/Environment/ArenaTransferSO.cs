@@ -11,7 +11,9 @@ namespace Hypodoche
     {
         #region Variables
         [Header("Prefab Array")]
-        [SerializeField] public GameObject[] _slotArray = new GameObject[25];
+        [SerializeField] private GameObject[] _slotArray;
+        [SerializeField] private TrapItem[] _items;
+        [SerializeField] private GameObject _empty;
         #endregion
 
         #region  Getter and Setter
@@ -19,16 +21,43 @@ namespace Hypodoche
         {
                 return _slotArray;
         }
-        public void SetSlot(int i, int j, GameObject prefab)
+        public void SetSlot(int i, int j, TrapItem item)
         {
-            _slotArray[j + 5*i] = prefab;
+            if (item != null)
+                _slotArray[j + 5*i] = item.GetPrefab();
+            else
+                _slotArray[j + 5*i] = _empty;
+            _items[j + 5*i] = item;
+
+            //CheckConsistency();
+        }
+
+        public TrapItem GetItem(int i, int j)
+        {
+            return _items[j + 5*i];
         }
         #endregion 
 
         #region Methods 
-        public string SendJson(){
-            Debug.Log(JsonUtility.ToJson(_slotArray, true));
-            return JsonUtility.ToJson(_slotArray, true);
+        private void CheckConsistency()
+        {
+            int i;
+            for(i = 0; i<25;i++){
+                if(_items[i] == null)
+                    _slotArray[i] = _empty;
+                else
+                    _slotArray[i] = _items[i].GetPrefab();
+            }
+        }
+        public void Reset()
+        {
+            _slotArray = new GameObject[25];
+            _items = new TrapItem[25];
+            int i;
+            for(i = 0; i<25; i++){
+                _slotArray[i] = _empty;
+                _items[i] = null;
+            }
         }
         #endregion
     }
