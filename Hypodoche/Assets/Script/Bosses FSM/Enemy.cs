@@ -15,6 +15,13 @@ namespace Hypodoche
         [SerializeField] private Image _healthFill;
         #endregion
 
+        #region Getters and Setters
+        public void SetFill(Image fill)
+        {
+            _healthFill = fill;
+        }
+        #endregion
+
         #region Methods
         private void Start()
         {

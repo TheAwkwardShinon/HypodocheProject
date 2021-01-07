@@ -8,8 +8,7 @@ namespace Hypodoche
     public class InteractionDisplayBehaviour : MonoBehaviour
     {
         #region Variables
-        [SerializeField] private GameObject _displayElement;
-        [SerializeField] private string _textToDisplay;
+        [SerializeField] private CanvasGroup _displayElement;
         private Text _displayText;
         #endregion
 
@@ -20,8 +19,7 @@ namespace Hypodoche
         }
         private void OnTriggerEnter(Collider other)
         {
-            _displayText.text = _textToDisplay;
-            _displayElement.SetActive(true);
+            _displayElement.alpha = 1;
             PlayerHubInputManager input = other.GetComponent<PlayerHubInputManager>();
             if (input != null)
                 input.SetInteractingObject(gameObject);
@@ -29,7 +27,7 @@ namespace Hypodoche
 
         private void OnTriggerExit(Collider other)
         {
-            _displayElement.SetActive(false);
+            _displayElement.alpha = 0;
             PlayerHubInputManager input = other.GetComponent<PlayerHubInputManager>();
             if (input != null)
                 input.SetInteractingObject(null);

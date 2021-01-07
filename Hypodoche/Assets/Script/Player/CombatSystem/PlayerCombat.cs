@@ -63,6 +63,8 @@ namespace Hypodoche
 
                 _nextAttackTime = Time.time + 1f / _attackRate;
             }
+            Debug.Log("IsAiming: " + _isAiming);
+            Debug.Log("Equipped Weapon is: " + _playerInventory.GetMeleeWeapon().name + " and its stats are: " +  _playerInventory.GetMeleeWeapon().GetLightDamage().ToString() + ", " + _playerInventory.GetMeleeWeapon().GetLightAttackRadius().ToString());
         }
 
         public void InvokeHeavyAttack()
@@ -89,11 +91,10 @@ namespace Hypodoche
                 }
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
-                ///Enemy enemy  = hitObject.GetComponent<Enemy>();
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
 
                     enemy.TakeDamage(calculateDamage(weapon.GetLightDamage()));
-                    //alreadyHit.Add(hitParent);
+                    alreadyHit.Add(hitParent);
                 }
             }
 
@@ -106,7 +107,8 @@ namespace Hypodoche
 
         //TODO Remove
         public void OnDrawGizmos(){
-            if(_activeMeleePoint != null) Gizmos.DrawSphere(_activeMeleePoint.transform.position, _attackRadius);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(_activeMeleePoint.transform.position, _attackRadius);
         }
 
         public void HandleHeavyAttack(Weapon weapon)

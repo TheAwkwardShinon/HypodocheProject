@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 namespace Hypodoche{
     public class BuildManager : MonoBehaviour
     {
+        #region Variables
         [SerializeField] private List<ArenaSlot> _slots;
         [SerializeField] private GameObject _builderGO;
         [SerializeField] private ArenaTransferSO _arenaTransferSO;
@@ -21,7 +22,9 @@ namespace Hypodoche{
         private TrapItem _trapBeingMovedOn = null;
         private ArenaSlot _selectedSlot;
         private bool _activeInput = true;
+        #endregion
 
+        #region Methods
         public void SetActiveInput(bool activeInput)
         {
             if(isActiveAndEnabled)
@@ -40,7 +43,9 @@ namespace Hypodoche{
         private void Awake()
         {
             _slots = new List<ArenaSlot>(_builderGO.GetComponentsInChildren<ArenaSlot>());
+            LoadBuiltState();
             UpdateSelection(_x, _y, _x, _y);
+
         }
 
         private void Update(){
@@ -162,6 +167,7 @@ namespace Hypodoche{
             {
                 BuildTrap();
             }
+            LoadArena();
         }
 
         private void BuildTrap()
@@ -193,6 +199,7 @@ namespace Hypodoche{
                 _inventory.RetrieveTrap(_selectedSlot.GetItem());
                 _selectedSlot.SetItem(null);
             }
+            LoadArena();
         }
 
         private bool DoesNotExceedLimits(TrapItem item)
@@ -201,20 +208,27 @@ namespace Hypodoche{
         }
         #endregion
 
-        public void LoadArena()
+        public void LoadBuiltState()
         {
-            int i = 0;
-            int j = 0;
-            foreach (ArenaSlot slot in _slots){
-                TrapItem currentItem = slot.GetItem();
-                if(currentItem != null)
-                    _arenaTransferSO.SetSlot(i,j,currentItem.GetPrefab());
-                j++;
-                if(j == 5){
-                    i++;
-                    j=0;
+            int i,j;
+            for (i = 0; i<5; i++){
+                for(j=0; j<5; j++){
+                    TrapItem currentItem = _arenaTransferSO.GetItem(i,j);
+                    _slots[5 * i + j].SetItem(currentItem); 
                 }
             }
         }
+
+        public void LoadArena()
+        {
+            int i,j;
+            for (i = 0; i<5; i++){
+                for(j=0; j<5; j++){
+                    TrapItem currentItem = _slots[5*i+j].GetItem();
+                    _arenaTransferSO.SetSlot(i,j,currentItem);
+                }
+            }
+        }
+        #endregion
     }
 }

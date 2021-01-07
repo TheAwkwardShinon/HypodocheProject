@@ -12,9 +12,7 @@ public class TrapItem : MonoBehaviour
     [SerializeField] private string _description;
     [SerializeField] private int _effectNum;
     [SerializeField] private Sprite _effectOneSprite;
-    [SerializeField] private string _effectOneDescription;
     [SerializeField] private Sprite _effectTwoSprite;
-    [SerializeField] private string _effectTwoDescription;
     [SerializeField] private int _shopPrice;
     #endregion
 
@@ -51,14 +49,6 @@ public class TrapItem : MonoBehaviour
     public Sprite GetEffectOneSprite()
     {
         return _effectOneSprite;
-    }
-    public string GetEffectOneDescription()
-    {
-        return _effectOneDescription;
-    }
-    public string GetEffectTwoDescription()
-    {
-        return _effectTwoDescription;
     }
     public Sprite GetEffectTwoSprite()
     {

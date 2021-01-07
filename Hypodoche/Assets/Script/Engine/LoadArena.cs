@@ -1,24 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Hypodoche
 {
     public class LoadArena : MonoBehaviour
     {
+        #region Variables
         [SerializeField] private ArenaTransferSO _arenaTransfer;
         [SerializeField] private Transform _basePoint;
         [SerializeField] private float _horizontalOffset;
         [SerializeField] private float _verticalOffset;
+        [SerializeField] private List<GameObject> _bossList;
+        [SerializeField] private Transform _spawnBossPosition;
+        [SerializeField] private GameObject _debuffArea;
+        [SerializeField] private Image _healthFill;
+        [SerializeField] private Text _nameText;
+        #endregion
 
+        #region Methods
         void Awake()
         {
+            SpawnBoss();
             int i = 0, j = 0;
 
-
-            foreach (GameObject prefab in _arenaTransfer._slotArray){       
+            foreach (GameObject prefab in _arenaTransfer.GetSlotArray()){       
                 if (prefab != null){
-                    Debug.Log(prefab.name);
                     Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, 0, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
                 }
                 i++;
@@ -28,6 +36,21 @@ namespace Hypodoche
                 }
             }
         }
+
+        private void SpawnBoss()
+        {
+            int index = Random.Range(0, _bossList.Count);
+            GameObject boss = _bossList[index];
+            //BOSS SETUP
+            boss.GetComponent<Entity>()._ui = _debuffArea;
+            boss.GetComponent<Enemy>().SetFill(_healthFill);
+            if(boss.GetComponent<LiYan>() != null)
+                _nameText.text = "Li Yan";
+            if(boss.GetComponent<Halja>() != null)
+                _nameText.text = "Halja";
+            Instantiate(boss, _spawnBossPosition.position, Quaternion.identity);
+        }
+        #endregion
     }
 }
     

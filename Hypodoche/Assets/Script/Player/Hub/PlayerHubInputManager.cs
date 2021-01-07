@@ -71,7 +71,11 @@ namespace Hypodoche
                     gb.Interact();
                     return;
                 }
-
+                OracleBehaviour ob = _interactingObject.GetComponent<OracleBehaviour>();
+                if(ob != null){
+                    ob.Interact();
+                    return;
+                }
             }
         }
         #endregion

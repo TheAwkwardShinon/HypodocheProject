@@ -17,7 +17,6 @@ namespace Hypodoche
         private void Awake()
         {
             _slots = new List<TrapSlot>(_inventoryGO.GetComponentsInChildren<TrapSlot>());
-            _inventory.Setup();
             _items = _inventory.GetItems();
             _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
         }
