@@ -11,7 +11,7 @@ namespace Hypodoche
         [SerializeField] GameObject  _inventoryGO;
         [SerializeField] private List<TrapSlot> _slots;
         [SerializeField] private Text _coinText;
-        private SortedDictionary<string, TrapItem> _items = new SortedDictionary<string, TrapItem>();
+        private SortedDictionary<string, TrapItem> _items;
         
 
         private void Awake()
