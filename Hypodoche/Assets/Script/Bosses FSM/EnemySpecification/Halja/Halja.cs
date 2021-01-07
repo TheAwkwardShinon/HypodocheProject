@@ -43,6 +43,8 @@ namespace Hypodoche{
 
         [SerializeField] private  float _whipLashesCountdown;
 
+        private int _whipLashesCycles;
+
         #endregion
 
 
@@ -63,8 +65,11 @@ namespace Hypodoche{
         #endregion
 
         #region crows
-        [SerializeField] protected IceCrow _iceCrow;
-        [SerializeField] protected WaterCrow _waterCrow;
+        [SerializeField]protected IceCrow _iceCrow;
+        [SerializeField]protected WaterCrow _waterCrow;
+
+        private bool iceCrowDead = false;
+        private bool waterCrowDead = false;
 
         #endregion
 
@@ -74,6 +79,8 @@ namespace Hypodoche{
         public LineRenderer lr;
 
         [SerializeField] protected Transform _throwChainPosition;
+
+        [SerializeField] protected GameObject  _chainprojectile;
 
         #endregion
 
@@ -86,6 +93,12 @@ namespace Hypodoche{
             lr = GetComponent<LineRenderer>();
             _punishmentClock = Time.time;
             _chainOfDestinyClock = Time.time;
+            _iceCrow = Instantiate(_iceCrow,new Vector3(1f,1f,0f),Quaternion.identity);
+            _waterCrow = Instantiate(_waterCrow,new Vector3(0f,1f,1f),Quaternion.identity);
+            _iceCrow.setWaterCrow(_waterCrow);
+            _waterCrow.setIceCrow(_iceCrow);
+            _iceCrow.setHalja(this);
+            _waterCrow.setHalja(this);
             _moveState = new Halja_MoveState(this, _stateMachine, "run", _entityData, this);
             _idleState = new Halja_IdleState(this, _stateMachine, "idle", _idleData, this);
             _scareState = new Halja_ScaredState(this, _stateMachine, "scared", _entityData, this);
@@ -93,11 +106,27 @@ namespace Hypodoche{
             _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
             _punishment = new Halja_Punishment(this,_stateMachine,"punishment",this);
             _whipLashes = new Halja_WhipLashes(this,_stateMachine,"whiplashes",this);
-            /*
-            Instantiate(_iceCrow);
-            Instantiate(_waterCrow);
-            */
+            //crowSpawn(false);
+
+
             _stateMachine.InitializeState(_idleState); //todo spawn state
+        }
+
+
+        public void crowSpawn(bool secondPhase){
+
+            if(iceCrowDead){
+                _iceCrow = Instantiate(_iceCrow);
+                _waterCrow.setIceCrow(_iceCrow);
+                _iceCrow.setHalja(this);
+                _iceCrow.setVulnerability(true);
+            }
+            if(waterCrowDead){
+                _waterCrow = Instantiate(_waterCrow);
+                _iceCrow.setWaterCrow(_waterCrow);
+                _waterCrow.setHalja(this);
+                _waterCrow.setVulnerability(true);    
+            }
         }
 
         public void OnDrawGizmos()
@@ -122,6 +151,12 @@ namespace Hypodoche{
             Destroy(gameObject);
         }
 
+
+        public GameObject instantiateProjectileChain(){
+            GameObject go= Instantiate(_chainprojectile,_throwChainPosition.position,Quaternion.identity);
+            return go;
+        }
+
         public  void exitFromTrap()
         {
                 _entityData.slowOverArea = false;
@@ -141,6 +176,11 @@ namespace Hypodoche{
         public float getHealth()
         {
             return _entityData.health;
+        }
+
+
+        public GameObject getChainProjectile(){
+            return _chainprojectile;
         }
 
         #region crows-getter
@@ -194,6 +234,10 @@ namespace Hypodoche{
         public float getWhiplashesCountdown(){
             return _whipLashesCountdown;
         }
+
+        public int getWhiplashesCycles(){
+            return _whipLashesCycles;
+        }
         #endregion
 
 
@@ -230,6 +274,34 @@ namespace Hypodoche{
         public void setWhipLashesClock(float time){
             _wiphLashesClock = time;
         }
+
+        public void setIceCrowDead(bool value){
+            iceCrowDead = value;
+        }
+
+        public void setWaterCrowDead(bool value){
+            waterCrowDead = value;
+        }
+
+        public void setWhipLashesCountdown(float time){
+            _whipLashesCountdown = time;
+        }
+
+        public void setPunishmentCountdown(float time){
+            _punishmentCountdown = time;
+        }
+
+        public void setChainOfDestinyCountdown(float time){
+            _chainOfDestinyCountdown = time;
+        }
+
+        public void setWhipLashesCycles(int value){
+            _whipLashesCycles = value;
+        }
+
+     
+
+
 
 
         #endregion

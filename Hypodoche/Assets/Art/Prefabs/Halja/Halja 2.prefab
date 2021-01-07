@@ -1009,6 +1009,8 @@ MonoBehaviour:
     type: 3}
   lr: {fileID: 1645143855031480387}
   _throwChainPosition: {fileID: 461693911653492480}
+  _chainprojectile: {fileID: 349642882003058474, guid: 1b8725bbd655c4045b0327e5a8281c06,
+    type: 3}
 --- !u!120 &1645143855031480387
 LineRenderer:
   m_ObjectHideFlags: 0

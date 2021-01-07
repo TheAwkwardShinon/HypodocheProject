@@ -11,7 +11,7 @@ namespace Hypodoche{
         private bool _isIneluttable; //phase 2
 
 
-        [SerializeField] private WaterCrow _waterCrow;
+        private WaterCrow _waterCrow;
     
         [SerializeField] D_IdleState _idleData;
 
@@ -31,10 +31,6 @@ namespace Hypodoche{
 
         #region methods
 
-
-        public IceCrow(Halja halja){
-            _halja = halja;
-        }
 
         public override void Start()
         {
@@ -100,6 +96,10 @@ namespace Hypodoche{
 
         public void setTimer(float timer){
             _timer = timer;
+        }
+
+        public void setHalja(Halja halja){
+            _halja = halja;
         }
      
 

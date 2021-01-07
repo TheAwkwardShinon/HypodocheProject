@@ -7,16 +7,15 @@ namespace Hypodoche{
 
         #region variables
         private bool _isIneluttable;
-        [SerializeField]private IceCrow  _iceCrow;
+        private IceCrow  _iceCrow;
         [SerializeField] D_IdleState _idleData;
         public Water_idleState _IdleState {get; private set;}
         public Water_MoveState _MoveState {get; private set;}
 
         private Halja _halja;
     
-        public float _timer;
 
-        public float unbreakableBond;
+
 
         private Transform _playerPosition;
 
@@ -26,15 +25,9 @@ namespace Hypodoche{
         #region methods
 
 
-        public WaterCrow(Halja halja){
-            _halja = halja;
-        }
-
         public override void Start()
         {
             base.Start();
-            _timer = Time.time;
-            unbreakableBond = 20f;
             _MoveState = new Water_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Water_idleState(this,_stateMachine,"idle",_idleData,this);
             _stateMachine.InitializeState(_MoveState);
@@ -72,6 +65,10 @@ namespace Hypodoche{
             _playerPosition = playerposition == null ? null : playerposition;
         }
      
+
+        public void setHalja(Halja halja){
+            _halja = halja;
+        }
         #endregion
 
 

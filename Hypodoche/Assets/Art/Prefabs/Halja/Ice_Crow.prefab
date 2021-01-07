@@ -896,11 +896,9 @@ MonoBehaviour:
   _entityData: {fileID: 11400000, guid: 5fe372e26684e044d9b7f4c378ac337c, type: 2}
   _ui: {fileID: 6680971248117569515, guid: e8c56d6ac6965964d955f9a9629fd5d8, type: 3}
   _minion: 1
-  _waterCrow: {fileID: 6977009400896058692, guid: 80fe495132b9f8b44a0c4461a8d3d49c,
-    type: 3}
   _idleData: {fileID: 11400000, guid: 0676eb62ef7e85b47b28283811d7998c, type: 2}
   _unbreakableBondDuration: 7
-  _unbreakableBondCountDown: 10
+  _unbreakableBondCountDown: 7
 --- !u!95 &2687668409242485760
 Animator:
   serializedVersion: 3

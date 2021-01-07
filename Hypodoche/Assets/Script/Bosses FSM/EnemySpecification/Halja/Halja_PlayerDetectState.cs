@@ -56,9 +56,10 @@ namespace Hypodoche{
                     if(_halja.getPunishmentMinDistance() <= dist && dist <= _halja.getPunishmentMaxDistance() &&
                             Time.time >= (_halja.getPunishmentClock()+ _halja.getPunishmentCountdown()))
                     {
+                        /*
                         Vector3 characterToCollider = (_playerPosition.position-_halja.transform.position).normalized;
                         float dot = Vector3.Dot(characterToCollider, _halja.transform.forward*-1f);
-                        if(dot > 0.5)
+                        if(dot > 0.5)*/
                             usableMoveSet.Add(_halja._punishment);
                     }
                     if(_halja.getWhipLashesMinDistance() <= dist && dist<= _halja.getWhiplashesMaxDistance() &&
@@ -68,6 +69,12 @@ namespace Hypodoche{
                     }
 
                    if(usableMoveSet.Count > 0) _stateMachine.ChangeState(usableMoveSet[UnityEngine.Random.Range(0, usableMoveSet.Count)]);
+
+                   else{
+                       _entity.setDirection((_playerPosition.position- _entity.transform.position).normalized);
+                       if(Vector3.Distance(_halja.transform.position,_playerPosition.transform.position) >= 5f)
+                            _entity.Move(_entity._entityData.movementSpeed);
+                   }
                 }
                 else{
                     _playerPosition = _halja.GetIceCrow().getPlayerPosition();

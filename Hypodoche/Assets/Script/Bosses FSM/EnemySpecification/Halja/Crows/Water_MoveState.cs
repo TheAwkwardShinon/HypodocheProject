@@ -28,13 +28,10 @@ namespace Hypodoche{
         {
             base.Update();
             _crow.setPlayerPosition(_crow.isPlayerInAggroRange());
-            if(Time.time >=_crow._timer + _crow.unbreakableBond){
-               Debug.Log("[WaterCrow] change state moveState -> unbreakableBond"+Time.time);
-            }
+    
             if (_isDetectingWall)
             {
                 _crow._IdleState.setFlipAfterIdle(true);
-                Debug.Log("[WaterCrow] change state moveState -> idleState "+Time.time);
                 _stateMachine.ChangeState( _crow._IdleState);
             }
             else{

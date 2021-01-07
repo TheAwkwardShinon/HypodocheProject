@@ -23,6 +23,8 @@ namespace Hypodoche{
 
         private bool _caught = false;
 
+        private GameObject _projectile;
+
 
 
 
@@ -32,7 +34,7 @@ namespace Hypodoche{
             _halja = halja;
             _entityData = data;
             _playerPosition = playerposition;
-            _lineDrawSpeed = 9f;
+            _lineDrawSpeed = 2f;
             _dist =  _halja.getChainOfDestinyMaxDistance();
         }
 
@@ -56,16 +58,15 @@ namespace Hypodoche{
             _halja.lr.startWidth = 0.3f;
             _halja.lr.endWidth = 0.3f;
 
-
-
-
-
             Collider[] playerHit = Physics.OverlapSphere(_halja.transform.position,14f,LayerMask.GetMask("Player"));
             if(playerHit.Length > 0){
                 _grabPosition = playerHit[0].GetComponent<PlayerStatus>().getGrabZone().position;
                 _playerPosition = playerHit[0].transform.position;
+                _player = playerHit[0].gameObject;
+                _projectile = _halja.instantiateProjectileChain();
+                _projectile.GetComponent<ChainProjectile>().setTarget(_grabPosition);
             }
-            else _stateMachine.ChangeState(_halja._moveState);
+            else _stateMachine.ChangeState(_halja._playerDetectState);
         }
 
 
@@ -75,13 +76,15 @@ namespace Hypodoche{
         public override void Exit()
         {
             base.Exit();
+            _halja.lr.SetPosition(1,_halja.getThrowChainPosition().position);
             _halja.lr.enabled = false;
+            _halja.setChainOfDestinyCountdown(5f);
             _halja.setChainOfDestinyClock(Time.time);
             _caught = false;
 
 
         }
-
+/*
         public bool chainAnimation(Vector3 hitPoint){
             if(_counter <= _dist){ //just a simple animation
                 _counter += .1f * _lineDrawSpeed;
@@ -95,13 +98,31 @@ namespace Hypodoche{
             else {
                 return true;
             }
-        }
+        }*/
 
-        public override void Update()
-        {
+
+        public override void Update(){
             base.Update();
+
+            if(_projectile == null){
+                    
+                _stateMachine.ChangeState(_halja._whipLashes);
+            }
+            else{
+                _halja.lr.SetPosition(1,_projectile.transform.position);
+                if(Vector3.Distance(_player.transform.position,_halja.transform.position) 
+                    <= _halja.getPunishmentMaxDistance()){
+                    _stateMachine.ChangeState(_halja._punishment);
+                }
+            }
+        }
+/*
+        public  void Updatesa()
+        {
+            //base.Update();
                 RaycastHit Hit;
                 if(_caught){
+                    _player.GetComponent<PlayerStatus>().setStun(3f,true);
                     _player.transform.position = Vector3.MoveTowards(_player.transform.position,_halja.transform.position,
                                 10f * Time.deltaTime);
                      _halja.lr.SetPosition(1,_player.GetComponent<PlayerStatus>().getGrabZone().position);
@@ -118,7 +139,6 @@ namespace Hypodoche{
 
                     //Vector3 hitPoint = Hit.point;
                     _player = Hit.collider.gameObject;
-                    _player.GetComponent<PlayerStatus>().setStun(3f,true);
                     _dist = Vector3.Distance(_player.GetComponent<PlayerStatus>().getGrabZone().position,_halja.getThrowChainPosition().position);
                     Debug.Log("distance is : "+_dist);
 
@@ -140,6 +160,6 @@ namespace Hypodoche{
                 }
             
 
-        }
+        }*/
     }
 }

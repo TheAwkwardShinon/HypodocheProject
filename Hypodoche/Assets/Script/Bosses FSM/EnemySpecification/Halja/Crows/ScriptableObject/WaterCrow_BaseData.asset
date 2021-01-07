@@ -16,7 +16,7 @@ MonoBehaviour:
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
   wallCheckRange: 4
-  movementSpeed: 15
+  movementSpeed: 25
   speedWhenDetect: 12
   speedWhenSlowed: 5
   speedWhenSlowedArea: 5
