@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: Halja_BaseData
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 838.5255
   damageTakenOverTime: 0
-  damageTakenOverTimeArea: 0
+  damageTakenOverTimeArea: 0.08
   wallCheckRange: 5
   movementSpeed: 10
   speedWhenDetect: 3
@@ -41,6 +41,6 @@ MonoBehaviour:
     m_Bits: 0
   timeOfCharm: 0
   timeOfFear: 0
-  damageOverArea: 0
+  damageOverArea: 1
   slowOverArea: 0
   enhanceMultiplier: 0

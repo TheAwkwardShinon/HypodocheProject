@@ -6,7 +6,7 @@ namespace Hypodoche{
     {
 
         #region variables
-        private bool _isIneluttable;
+        private bool _isIneluttable = true;
         private IceCrow  _iceCrow;
         [SerializeField] D_IdleState _idleData;
         public Water_idleState _IdleState {get; private set;}
@@ -60,7 +60,10 @@ namespace Hypodoche{
         public override void Start()
         {
             base.Start();
+            _punishmentClock = Time.time;
+            _chainOfDestinyClock = Time.time;
             _enemy = gameObject.GetComponent<Enemy>();
+            lr = GetComponent<LineRenderer>();
             _MoveState = new Water_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Water_idleState(this,_stateMachine,"idle",_idleData,this);
             _playerDetect = new Water_PlayerDetectState(this,_stateMachine,"playerDetect",_entityData,this);
@@ -137,6 +140,10 @@ namespace Hypodoche{
         }
 
 
+        public Halja GetHalja(){
+            return _halja;
+        }
+
 
 
 
@@ -146,6 +153,7 @@ namespace Hypodoche{
 
         public void setVulnerability(bool vulnerable){
             _isIneluttable = vulnerable;
+            _enemy = GetComponent<Enemy>();
             _enemy.enabled = true;
             _crowHealthCanvas.SetActive(true);
         }

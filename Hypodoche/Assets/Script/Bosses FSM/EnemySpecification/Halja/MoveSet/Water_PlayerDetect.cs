@@ -34,6 +34,7 @@ namespace Hypodoche{
                 _stateMachine.ChangeState(_crow._death);
 
             base.Update();
+            
             if(_isDetectingPlayer){
                 _crow.setDirection((_playerPosition.position-_crow.transform.position).normalized);
                 
@@ -52,6 +53,7 @@ namespace Hypodoche{
                     Vector3 characterToCollider = (_playerPosition.position-_halja.transform.position).normalized;
                     float dot = Vector3.Dot(characterToCollider, _halja.transform.forward*-1f);
                     if(dot > 0.5)*/
+
                         usableMoveSet.Add(_crow._punishment);
                 } 
                 if(usableMoveSet.Count > 0) _stateMachine.ChangeState(usableMoveSet[UnityEngine.Random.Range(0, usableMoveSet.Count)]);

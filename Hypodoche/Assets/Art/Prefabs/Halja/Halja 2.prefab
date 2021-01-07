@@ -1004,7 +1004,7 @@ MonoBehaviour:
   _whipLashesCountdown: 5
   _idleData: {fileID: 11400000, guid: 82f50ec1a760ca7479bd2297961aff6c, type: 2}
   _iceCrow: {fileID: 322741456321990047, guid: 8a25cb7e754af3d4c9332f003a2c22cd, type: 3}
-  _waterCrow: {fileID: 8064555261441825812, guid: c2d986d990e185d40836903ddf029758,
+  _waterCrow: {fileID: 5743439378524580427, guid: c2d986d990e185d40836903ddf029758,
     type: 3}
   lr: {fileID: 1645143855031480387}
   _throwChainPosition: {fileID: 461693911653492480}

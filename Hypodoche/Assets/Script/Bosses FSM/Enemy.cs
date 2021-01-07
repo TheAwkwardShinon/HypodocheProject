@@ -25,7 +25,7 @@ namespace Hypodoche
         #region Methods
         private void Start()
         {
-            _maxHealth = gameObject.GetComponent<Boss>().getHealth();
+            _maxHealth = gameObject.GetComponent<Boss>() == null ? gameObject.GetComponent<Minion>().getHealth() : gameObject.GetComponent<Boss>().getHealth();
             _health = _maxHealth;
             _healthFill.fillAmount = 1f;
         }

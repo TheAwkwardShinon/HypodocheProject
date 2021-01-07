@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 namespace Hypodoche{
-    public class IceCrow : Entity
+    public class IceCrow : Entity,Minion
     {
 
         #region variables
@@ -19,6 +20,12 @@ namespace Hypodoche{
         public Ice_idleState _IdleState {get; private set;}
         public Ice_MoveState _MoveState {get; private set;}
 
+        public Ice_DeathState _death {get; private set;}
+
+        public IceWhipLashes _whiplashes {get; private set;}
+
+        public Ice_PlayerDetectState _PlayerDetect {get; private set;}
+
         private Transform _playerPosition;
 
         private Halja _halja;
@@ -26,6 +33,21 @@ namespace Hypodoche{
 
         [SerializeField] private float _unbreakableBondDuration;
         [SerializeField] private float _unbreakableBondCountDown; // ogni 20f fa unbreakablebond
+
+        [SerializeField] private float _whipLashestMaxDistance;
+
+        [SerializeField] private float _whipLashesMinDistance;
+        [SerializeField] private  float _whipLashesCountdown;
+
+        private float _whipLashesClock;
+
+        [SerializeField] protected Transform _throwChainPosition;
+
+        [SerializeField] private GameObject _crowHealthCanvas;
+
+        private Enemy _enemy;
+
+
 
         #endregion
 
@@ -35,10 +57,18 @@ namespace Hypodoche{
         public override void Start()
         {
             base.Start();
+            _enemy = gameObject.GetComponent<Enemy>();
             _timer = Time.time;
+            _whipLashesClock = Time.time;
             _unbreakableBond = new Ice_UnbreakableBond(this, _stateMachine, "unbreakableBond",this);
             _MoveState = new Ice_MoveState(this,_stateMachine,"run",_entityData,this);
             _IdleState = new Ice_idleState(this,_stateMachine,"idle",_idleData,this);
+            _death = new Ice_DeathState(this,_stateMachine,"death",this);
+            _PlayerDetect = new Ice_PlayerDetectState(this,_stateMachine,"playerDetect",_entityData,this);
+            _whiplashes = new IceWhipLashes(this,_stateMachine,"whiplashes",this);
+
+
+
             _stateMachine.InitializeState(_MoveState);
 
         }
@@ -73,8 +103,38 @@ namespace Hypodoche{
             return _timer;
         }
 
+         public float getWhiplashesMaxDistance(){
+            return _whipLashestMaxDistance;
+        }
+
+        public float getWhipLashesMinDistance(){
+            return _whipLashesMinDistance;
+        }
+
+          public float getWhiplashesCountdown(){
+            return _whipLashesCountdown;
+        }
+
+        public Transform getThrowChainPosition(){
+            return _throwChainPosition;
+        }
+
+        public float getWhipLashesClock(){
+            return _whipLashesClock;
+        }
+
+
         public WaterCrow GetWaterCrow(){
-            return _waterCrow;
+            try{
+                return _waterCrow;
+            }catch(NullReferenceException e){
+                Debug.Log("[getWaterCrow()]: "+e);
+                return null;
+            }
+        }
+
+        public Halja GetHalja(){
+            return _halja;
         }
 
         #endregion
@@ -84,6 +144,9 @@ namespace Hypodoche{
 
         public void setVulnerability(bool vulnerable){
             _isIneluttable = vulnerable;
+            _enemy = GetComponent<Enemy>();
+            _enemy.enabled = true;
+            _crowHealthCanvas.SetActive(true);
         }
 
         public void setWaterCrow(WaterCrow waterCrow){
@@ -101,9 +164,27 @@ namespace Hypodoche{
         public void setHalja(Halja halja){
             _halja = halja;
         }
-     
+        public void setWhipLashesCountdown(float time){
+            _whipLashesCountdown = time;
+        }
 
-        
+        public void setWhipLashesClock(float time){
+            _whipLashesClock = time;
+        }
+
+        public void DestroyMinion()
+        {
+            Destroy(gameObject);
+        }
+
+        public float getHealth()
+        {
+            return _entityData.health;
+        }
+
+
+
+
         #endregion
 
 

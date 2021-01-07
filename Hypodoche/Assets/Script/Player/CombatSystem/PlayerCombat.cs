@@ -82,13 +82,9 @@ namespace Hypodoche
             List<GameObject> alreadyHit = new List<GameObject>();
             
             Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, 
-                LayerMask.GetMask(LayerMask.LayerToName(_hitLayer),LayerMask.LayerToName(_secondHitLater)));
+                _hitLayer);
             foreach (Collider hitObject in hitObjects)
             {
-                if(hitObject.gameObject.layer == _secondHitLater.value){
-                    if(hitObject.GetComponent<Minion>().IsIneluttable())
-                        continue;
-                }
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
@@ -115,15 +111,9 @@ namespace Hypodoche
         {
             alreadyHit = new List<GameObject>();
 
-            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, 
-                LayerMask.GetMask(LayerMask.LayerToName(_hitLayer),LayerMask.LayerToName(_secondHitLater)));
+            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
             foreach (Collider hitObject in hitObjects)
             {
-                if(hitObject.gameObject.layer == _secondHitLater.value){
-                    if(hitObject.GetComponent<Minion>().IsIneluttable())
-                        continue;
-                }
-
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
 

@@ -25,6 +25,13 @@ namespace Hypodoche{
         {
             base.Update();
             _crow.setPlayerPosition(_crow.isPlayerInAggroRange());
+
+            if(!_crow.IsIneluttable()){
+                if(_isDetectingPlayer){
+                    _stateMachine.ChangeState(_crow._playerDetect);
+                }
+            }
+
             if(Time.time >=_crow.getTimer() + _crow.getUnBreakableBondCountDown()){
                 _stateMachine.ChangeState(_crow._unbreakableBond);
             }

@@ -71,6 +71,8 @@ namespace Hypodoche{
         private bool iceCrowDead = false;
         private bool waterCrowDead = false;
 
+    
+
         #endregion
 
 
@@ -93,10 +95,11 @@ namespace Hypodoche{
             lr = GetComponent<LineRenderer>();
             _punishmentClock = Time.time;
             _chainOfDestinyClock = Time.time;
-            _iceCrow = Instantiate(_iceCrow,new Vector3(1f,1f,0f),Quaternion.identity);
-            _waterCrow = Instantiate(_waterCrow,new Vector3(0f,1f,1f),Quaternion.identity);
+            _iceCrow = Instantiate(_iceCrow,new Vector3(0f,1f,0f),Quaternion.identity);
+            _waterCrow = Instantiate(_waterCrow,new Vector3(0f,1f,0f),Quaternion.identity);
             _iceCrow.setWaterCrow(_waterCrow);
             _waterCrow.setIceCrow(_iceCrow);
+            _waterCrow.setVulnerability(false);
             _iceCrow.setHalja(this);
             _waterCrow.setHalja(this);
             _moveState = new Halja_MoveState(this, _stateMachine, "run", _entityData, this);

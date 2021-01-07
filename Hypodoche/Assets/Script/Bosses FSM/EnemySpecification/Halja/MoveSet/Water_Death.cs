@@ -25,6 +25,7 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
+            _crow.GetHalja().setWaterCrowDead(true);
             _crow.DestroyMinion();
         }
         public override void Enter()
