@@ -23,6 +23,7 @@ namespace Hypodoche{
 
         public override void Update(){
             base.Update();
+            
             _crow.setPlayerPosition(_crow.isPlayerInAggroRange());
             if(Time.time >= _crow.getTimer()+ _crow.getUnBreakableBondCountDown()){
                 _stateMachine.ChangeState(_crow._unbreakableBond);

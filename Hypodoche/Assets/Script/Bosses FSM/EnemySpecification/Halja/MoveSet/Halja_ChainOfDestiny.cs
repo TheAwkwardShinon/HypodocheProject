@@ -64,7 +64,7 @@ namespace Hypodoche{
                 _playerPosition = playerHit[0].transform.position;
                 _player = playerHit[0].gameObject;
                 _projectile = _halja.instantiateProjectileChain();
-                _projectile.GetComponent<ChainProjectile>().setTarget(_grabPosition);
+                _projectile.GetComponent<ChainProjectile>().setTarget(_grabPosition,_halja.transform.position);
             }
             else _stateMachine.ChangeState(_halja._playerDetectState);
         }

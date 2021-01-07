@@ -19,6 +19,8 @@ namespace Hypodoche
         [SerializeField] private GameObject _shootingSpawnPoint;
         [SerializeField] private GameObject _activeMeleePoint;
         [SerializeField] private LayerMask _hitLayer;
+
+        [SerializeField] private LayerMask _secondHitLater;
         private float _attackRadius = 0.5f;
         private float _nextAttackTime = 0f;
         private float _attackRate;
@@ -76,10 +78,15 @@ namespace Hypodoche
         {
             _attackRadius = weapon.GetLightAttackRadius();
             List<GameObject> alreadyHit = new List<GameObject>();
-
-            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
+            
+            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, 
+                LayerMask.GetMask(LayerMask.LayerToName(_hitLayer),LayerMask.LayerToName(_secondHitLater)));
             foreach (Collider hitObject in hitObjects)
             {
+                if(hitObject.gameObject.layer == _secondHitLater.value){
+                    if(hitObject.GetComponent<Minion>().IsIneluttable())
+                        continue;
+                }
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
                 ///Enemy enemy  = hitObject.GetComponent<Enemy>();
@@ -106,9 +113,15 @@ namespace Hypodoche
         {
             alreadyHit = new List<GameObject>();
 
-            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, _hitLayer);
+            Collider[] hitObjects = Physics.OverlapSphere(_activeMeleePoint.transform.position, _attackRadius, 
+                LayerMask.GetMask(LayerMask.LayerToName(_hitLayer),LayerMask.LayerToName(_secondHitLater)));
             foreach (Collider hitObject in hitObjects)
             {
+                if(hitObject.gameObject.layer == _secondHitLater.value){
+                    if(hitObject.GetComponent<Minion>().IsIneluttable())
+                        continue;
+                }
+
                 GameObject hitParent = hitObject.transform.root.gameObject;
                 Enemy enemy = hitParent.GetComponent<Enemy>();
 

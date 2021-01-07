@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hypodoche{
-    public class Halja_Punishment : State
+    public class WaterPunishment : State
     {
-        private Halja _halja;
+        private WaterCrow _crow;
 
         public Vector3 leftLine;
         public Vector3 rightLine;
@@ -13,9 +13,9 @@ namespace Hypodoche{
         private Collider _player;
 
         private bool _hit;
-        public Halja_Punishment(Entity entity, FiniteStateMachine stateMachine, string animationName,Halja halja) : base(entity, stateMachine, animationName)
+        public WaterPunishment(Entity entity, FiniteStateMachine stateMachine, string animationName,WaterCrow crow) : base(entity, stateMachine, animationName)
         {
-            _halja = halja;
+            _crow = crow;
         }
 
 
@@ -24,24 +24,21 @@ namespace Hypodoche{
          
             if(_hit){ //colpisco a fine aniamzione obv
                 //_player.GetComponent<Rigidbody>().AddForce(_halja.getDirection()*8f,ForceMode.Impulse);
-                _player.GetComponent<Rigidbody>().AddExplosionForce(40f,_halja.transform.position,7f,0f,ForceMode.Impulse);
+                _player.GetComponent<Rigidbody>().AddExplosionForce(40f,_crow.transform.position,7f,0f,ForceMode.Impulse);
                 _player.GetComponent<PlayerStatus>().TakeDamage(10f);
             }
-            _halja.setPunishmentCountdown(5f);
-            _halja.setPunishmentClock(Time.time);
-            _halja.setChainOfDestinyClock(2.5f);
-            _halja.setChainOfDestinyClock(Time.time);
-            _halja.setWhipLashesCountdown(4f);
-            _halja.setWhipLashesClock(Time.time);
-            _stateMachine.ChangeState(_halja._moveState);
+            _crow.setPunishmentCountdown(5f);
+            _crow.setPunishmentClock(Time.time);
+            _crow.setChainOfDestinyClock(3f);
+            _crow.setChainOfDestinyClock(Time.time);
+            _stateMachine.ChangeState(_crow._MoveState);
         }
 
         public override void Enter()
         {
-            
             base.Enter();
             _hit = false;
-            Collider[] player = Physics.OverlapSphere(_halja.transform.position,_halja.getPunishmentMaxDistance(),LayerMask.GetMask("Player"));
+            Collider[] player = Physics.OverlapSphere(_crow.transform.position,_crow.getPunishmentMaxDistance(),LayerMask.GetMask("Player"));
             _player = player.Length == 0 ? null : player[0];
             if(_player == null){
                 _hit = false;

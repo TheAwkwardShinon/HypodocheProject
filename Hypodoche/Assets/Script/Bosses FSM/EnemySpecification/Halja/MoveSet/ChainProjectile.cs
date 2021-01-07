@@ -21,6 +21,8 @@ namespace Hypodoche{
 
         private bool _hit = false;
 
+        private Vector3 _haljaPosition;
+
         void Start()
         {
             //_rigidbody.velocity = _direction * _speed;
@@ -32,7 +34,7 @@ namespace Hypodoche{
                 Object.Destroy(gameObject);
 
             else if(_hit){
-                _player.transform.position = Vector3.MoveTowards(_player.transform.position,_startingPosition, 30f * Time.deltaTime);
+                _player.transform.position = Vector3.MoveTowards(_player.transform.position,_haljaPosition, 30f * Time.deltaTime);
                 if(Vector3.Distance(_startingPosition,transform.position)<=0.5f){
                      Object.Destroy(gameObject);
                 }
@@ -65,11 +67,12 @@ namespace Hypodoche{
         }
 
     
-        public void setTarget(Vector3 playerPosition){
+        public void setTarget(Vector3 playerPosition, Vector3 haljaPosition){
             _startingPosition = transform.position;
             _direction = (playerPosition - transform.position).normalized;
             _rigidbody = GetComponent<Rigidbody>();
             _rigidbody.velocity = _direction * _speed;
+            _haljaPosition = haljaPosition;
         }
 
         #region getters

@@ -76,7 +76,7 @@ namespace Hypodoche {
                     Hit.collider.gameObject.GetComponent<PlayerStatus>().AddStatus(new Effects(new SlowData(),st,new DamageOverTimeData(),
                         new DamageData(),new FearData(), false, new SlowOverAreaData(),new DamageOverAreaData(),new EnhanceData()));
             }
-            _iceCrow.Move(_iceCrow._entityData.movementSpeed);
+            //_iceCrow.Move(_iceCrow._entityData.movementSpeed);
 
             if(Time.time >=_begin + _iceCrow.getUnbreakableBondDuration()){
                 _iceCrow._stateMachine.ChangeState(_iceCrow._MoveState);  
