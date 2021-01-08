@@ -12,6 +12,8 @@ namespace Hypodoche
         [SerializeField] private Text _dialogueText;
         [SerializeField] private Text _nameText;
         [SerializeField] private Animator _animator;
+        [SerializeField] private CutsceneDirector _cutsceneDirector;
+        [SerializeField] private GameObject _displayInteraction;
         #endregion
 
         #region Methods
@@ -22,6 +24,8 @@ namespace Hypodoche
 
         public void StartDialogue(Dialogue dialogue)
         {
+            Debug.Log("Starting Dialogue");
+            _displayInteraction.SetActive(false);
             _animator.SetBool("isOpen", true);
             _nameText.text = dialogue.name;
 
@@ -51,14 +55,21 @@ namespace Hypodoche
             foreach(char c in sentence.ToCharArray())
             {
                 _dialogueText.text += c;
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             }
         }
 
         private void EndDialogue()
         {
+            Debug.Log("End Dialogue");
+            _displayInteraction.SetActive(true);
             _animator.SetBool("isOpen", false);
-            Debug.Log("End of conv");
+            _cutsceneDirector.Advance();
+        }
+
+        public void HideDialogue()
+        {
+            _animator.SetBool("isOpen", false);
         }
         #endregion
     }

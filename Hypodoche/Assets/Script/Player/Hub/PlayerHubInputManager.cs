@@ -16,12 +16,18 @@ namespace Hypodoche
         [SerializeField] private PlayerHubMovement _playerMovement;
         private bool _isSprinting = false;
         private GameObject _interactingObject;
+        [SerializeField] private bool _allowInput = true;
         #endregion
 
         #region Getters and Setters
         public void SetInteractingObject(GameObject obj)
         {
             _interactingObject = obj;
+        }
+
+        public void SetAllowInput(bool state)
+        {
+            _allowInput = state;
         }
         #endregion
 
@@ -32,8 +38,11 @@ namespace Hypodoche
         }
         private void Update()
         {
-            HandleMovementInput();
-            HandleInteractionInput();
+            if(_allowInput)
+            {
+                HandleMovementInput();
+                HandleInteractionInput();
+            }
         }
 
         private void HandleMovementInput()

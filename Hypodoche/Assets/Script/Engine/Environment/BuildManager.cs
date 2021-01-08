@@ -40,10 +40,11 @@ namespace Hypodoche{
             yield return new WaitForSeconds(0.1f); 
         }
 
-        private void Awake()
+        private void Start()
         {
             _slots = new List<ArenaSlot>(_builderGO.GetComponentsInChildren<ArenaSlot>());
             LoadBuiltState();
+            LoadArena();
             UpdateSelection(_x, _y, _x, _y);
 
         }
@@ -70,8 +71,6 @@ namespace Hypodoche{
                 MoveSelectionLeft();
             if(Input.GetKeyDown(KeyCode.RightArrow))
                 MoveSelectionRight();
-            if(Input.GetKeyDown(KeyCode.RightShift))
-                LoadArena();
         }
 
         private void RightHPlayerInput()
@@ -210,23 +209,19 @@ namespace Hypodoche{
 
         public void LoadBuiltState()
         {
-            int i,j;
-            for (i = 0; i<5; i++){
-                for(j=0; j<5; j++){
-                    TrapItem currentItem = _arenaTransferSO.GetItem(i,j);
-                    _slots[5 * i + j].SetItem(currentItem); 
-                }
+            int i;
+            for (i = 0; i<25; i++){
+                TrapItem currentItem = _arenaTransferSO.GetItem(i);
+                _slots[i].SetItem(currentItem); 
             }
         }
 
         public void LoadArena()
         {
-            int i,j;
-            for (i = 0; i<5; i++){
-                for(j=0; j<5; j++){
-                    TrapItem currentItem = _slots[5*i+j].GetItem();
-                    _arenaTransferSO.SetSlot(i,j,currentItem);
-                }
+            int i;
+            for(i=0; i<25;i++){
+                TrapItem currentItem = _slots[i].GetItem();
+                _arenaTransferSO.SetSlot(i,currentItem);
             }
         }
         #endregion

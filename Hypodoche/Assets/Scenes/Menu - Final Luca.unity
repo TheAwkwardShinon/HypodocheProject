@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.043735042, g: 0.027320892, b: 0.027320892, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -689,8 +689,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInventory: {fileID: 11400000, guid: 4de471ceaac12584aab94983f371ce64, type: 2}
   _shopInventory: {fileID: 11400000, guid: d93ddadbf9bd0b24ba87965b404103aa, type: 2}
-  _startingPlayerCoins: 5
+  _startingPlayerCoins: 99
   _arenaTransferSO: {fileID: 11400000, guid: 91d68d5a0e1a7f24581bd354f21a423b, type: 2}
+  _shopList:
+  - {fileID: 6149024284779722316, guid: e8c56d6ac6965964d955f9a9629fd5d8, type: 3}
+  - {fileID: 8171128715607359080, guid: d87c34dc85abf344a81f87d54f2f01a1, type: 3}
+  - {fileID: 4179212710618498061, guid: ce1afd3268da3944bbbc1740d201c743, type: 3}
+  - {fileID: 30153529342168766, guid: a3e82c92de369ff499cf7f8d13831fb6, type: 3}
+  - {fileID: 8393575377068156454, guid: 06963fe01e5bb8642927cbbdf5d2f4b4, type: 3}
+  - {fileID: 3562300312759534004, guid: 036d479a5e9a0c647be19f10bf0c44bb, type: 3}
+  _playerPosition: {fileID: 11400000, guid: 05e8daa65ecb6d64fa9e4ee944084278, type: 2}
+  _odp: {fileID: 11400000, guid: c71d07e411eaea645862906e93107268, type: 2}
 --- !u!1 &419837463
 GameObject:
   m_ObjectHideFlags: 0

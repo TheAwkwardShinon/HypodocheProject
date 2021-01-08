@@ -29,6 +29,17 @@ public class SceneDirector : MonoBehaviour
         StartCoroutine(LoadScene(sceneIndex));
     }
 
+    public void Quit()
+    {
+        StartCoroutine(QuitGame());
+    }
+    private IEnumerator QuitGame()
+    {
+        _transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2);
+        Application.Quit();
+    }
+
     private IEnumerator LoadScene(int sceneIndex)
     {
         _transition.SetTrigger("Start");

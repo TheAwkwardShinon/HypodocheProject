@@ -11,7 +11,6 @@ namespace Hypodoche
         [SerializeField] private List<TrapSlot> _slots;
         [SerializeField] private TrapShop _trapShop;
         [SerializeField] private InventoryManager _inventory;
-        private SortedDictionary<string, TrapItem> _items;
         private int _x = 0;
         private int _y = 0;
         private TrapSlot _selectedSlot;
@@ -46,11 +45,9 @@ namespace Hypodoche
         #region Methods
         private void Start()
         {
-            _trapShop.Setup();
             _slots = new List<TrapSlot>(GetComponentsInChildren<TrapSlot>());
             foreach (TrapSlot s in _slots)
                 s.SetIsShopSlot(true);
-            _items = _trapShop.GetItems();
             DisplayShop();
             _selectedSlot = _slots[0];
             UpdateSelection(_x,_y,_x,_y);
@@ -71,10 +68,10 @@ namespace Hypodoche
         private void DisplayShop()
         {
             int i = 0;
-            foreach (KeyValuePair<string, TrapItem> entry in _items)
+            foreach (TrapItem item in _trapShop.GetItemList())
             {
                 if(i < _slots.Count){
-                    _slots[i].SetItem(entry.Value);
+                    _slots[i].SetItem(item);
                     i++;
                 }
             }
