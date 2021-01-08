@@ -13,7 +13,6 @@ namespace Hypodoche{
 
         public override void Enter()
         {
-
             base.Enter();
         }
 
@@ -25,6 +24,10 @@ namespace Hypodoche{
         public override void Update()
         {
             base.Update();
+
+            if(Time.time >= (_caputmallei.getFatefulRetributionClock()+ _caputmallei.getFatefulRetributionCountdown()))
+                    _stateMachine.ChangeState(_caputmallei._fateFulRetribution);
+                    
             if (_isIdleTimeElapsed)
             {
                 _stateMachine.ChangeState(_caputmallei._moveState);

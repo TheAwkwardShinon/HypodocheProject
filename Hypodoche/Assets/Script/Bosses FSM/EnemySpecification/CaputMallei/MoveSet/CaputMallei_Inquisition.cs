@@ -17,6 +17,7 @@ namespace Hypodoche{
         public override void Enter()
         {
             base.Enter();
+            _animWaiter.StartCoroutine(_animWaiter.waitSomeSeconds(this,0.4f));
 
         }
 
@@ -28,10 +29,14 @@ namespace Hypodoche{
             Collider[] player = Physics.OverlapSphere(_caputmallei.transform.position,_caputmallei.getInquisitionMaxDistance(),LayerMask.GetMask("Player"));
             _player = player.Length == 0 ? null : player[0].gameObject;
             if(_player == null){
+                _caputmallei.SetInquisitionClock(Time.time);
+                _caputmallei.setFatefulRetributionClock(Time.time);
                 _stateMachine.ChangeState(_caputmallei._moveState);
             }
             else{
                 _player.GetComponent<PlayerStatus>().TakeDamage(_caputmallei.getInquisitionDamage());
+                _caputmallei.SetInquisitionClock(Time.time);
+                _caputmallei.setFatefulRetributionClock(Time.time);
                 _stateMachine.ChangeState(_caputmallei._moveState);
             }
         }

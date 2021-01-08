@@ -39,8 +39,7 @@ namespace Hypodoche{
                 _caputmallei.setDirection((_playerPosition.position- _caputmallei.transform.position).normalized);
                 float dist = Vector3.Distance(_caputmallei.transform.position,_playerPosition.position);
                 
-                if(_caputmallei.getSundayMorningMinDistance() <= dist && dist <= _caputmallei.getSundayMorningMaxDistance() && //TODO CHANGE to not dynamic state
-                            Time.time >= (_caputmallei.getSundayMorningClock() + _caputmallei.getSundayMorningCountdown())) 
+                if(Time.time >= (_caputmallei.getSundayMorningClock() + _caputmallei.getSundayMorningCountdown())) 
                 {
                     usableMoveSet.Add(_caputmallei._sundayMorning);
                 }
@@ -58,11 +57,12 @@ namespace Hypodoche{
                 if(usableMoveSet.Count > 0) _stateMachine.ChangeState(usableMoveSet[0]);
                 else { 
                     _entity.setDirection((_playerPosition.position - _entity.transform.position).normalized); 
-                    if (Vector3.Distance(_caputmallei.transform.position, _playerPosition.transform.position) >= 8f)
+                    if (Vector3.Distance(_caputmallei.transform.position, _playerPosition.transform.position) >= 4f)
                         _entity.Move(_entity._entityData.movementSpeed); 
                 }
             }
-
+            else _stateMachine.ChangeState(_caputmallei._moveState);
+/*
             else {
 
                 if (_playerPosition != null)
@@ -73,7 +73,7 @@ namespace Hypodoche{
                 {
                     _stateMachine.ChangeState(_caputmallei._moveState);
                 }
-            }
+            }*/
         } 
     }
 }

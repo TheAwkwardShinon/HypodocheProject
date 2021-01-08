@@ -72,6 +72,10 @@ namespace Hypodoche
                 boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setCanvas(_firstMinionCanvas);
                 boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<WaterCrow>().setCanvas(_secondMinionCanvas);
             }
+            if(boss.GetComponent<Caputmallei>() != null){
+                _nameText.text = "Caput Mallei";
+            }
+
             Instantiate(boss, _spawnBossPosition.position, Quaternion.identity);
         }
         #endregion

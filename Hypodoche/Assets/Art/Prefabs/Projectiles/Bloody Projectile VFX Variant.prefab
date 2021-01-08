@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _damage: 5
-  _maxDistance: 40
-  _timeOfStun: 3
+  _damage: 2
+  _maxDistance: 80
+  _timeOfStun: 2
   _hitMask:
     serializedVersion: 2
     m_Bits: 512

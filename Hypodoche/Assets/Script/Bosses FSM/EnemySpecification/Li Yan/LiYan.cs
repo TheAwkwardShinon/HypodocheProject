@@ -79,8 +79,9 @@ namespace Hypodoche
 
         public void setHealth(float value)
         {
-            _entityData.health = value;
+            _entityData.health -= value;
         }
+        
 
         #endregion
     }

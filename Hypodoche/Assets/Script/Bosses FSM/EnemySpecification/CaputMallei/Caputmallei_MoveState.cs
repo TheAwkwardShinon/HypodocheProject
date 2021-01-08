@@ -35,6 +35,10 @@ namespace Hypodoche{
 
             if (_entityData.isStun)
                 return;
+
+            if(Time.time >= (_caputmallei.getFatefulRetributionClock()+ _caputmallei.getFatefulRetributionCountdown()))
+                    _stateMachine.ChangeState(_caputmallei._fateFulRetribution);
+                
                 
             if (_isDetectingWall)
             {

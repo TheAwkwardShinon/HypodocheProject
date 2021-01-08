@@ -35,12 +35,12 @@ namespace Hypodoche
             
             if(gameObject.GetComponent<Boss>()!= null){
                 _health -= damage;
-                gameObject.GetComponent<Boss>().setHealth(_health);
+                gameObject.GetComponent<Boss>().setHealth(damage);
             }
             else {
                 if(!gameObject.GetComponent<Minion>().IsIneluttable()){
                     _health -= damage;
-                    gameObject.GetComponent<Minion>().setHealth(_health);
+                    gameObject.GetComponent<Minion>().setHealth(damage);
                 }
             }
             UpdateHealthUI();

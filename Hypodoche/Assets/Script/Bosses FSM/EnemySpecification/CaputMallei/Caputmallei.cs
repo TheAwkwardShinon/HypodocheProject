@@ -11,8 +11,7 @@ namespace Hypodoche
         public Caputmallei_IdleState _idleState { get; private set; }
         public Caputmallei_MoveState _moveState { get; private set; }
         public Caputmallei_SufferTheEffectState _sufferEffectState { get; private set; }
-        //public Caputmallei_ScaredState _scareState { get; private set; }
-        //public Caputmallei_DropBombState _DropBombState { get; private set; }
+
         public Caputmallei_DeathState _deathState { get; private set; }
 
         public Caputmallei_PlayerDetectState _playerDetect { get; private set; }
@@ -29,19 +28,19 @@ namespace Hypodoche
 
 
 
-
+/*
         [SerializeField] private float _sundayMorningMinDistance;
         [SerializeField] private float _sundayMorningMaxDistance;
-
+*/
         [SerializeField] private float _sundayMorningCountDown;
-        [SerializeField] private float _sundayMorningClock;
+        private float _sundayMorningClock;
         
         [SerializeField] private float _sundayMorningDrurationOfCharge;
 
         [SerializeField] private float _sundayMorningDamage;
 
 
-        [SerializeField] private float _fateFullRetributionClock;
+         private float _fateFullRetributionClock;
 
         [SerializeField] private float _fateFullRetributionCountdown;
 
@@ -50,7 +49,7 @@ namespace Hypodoche
         [SerializeField] private float _inquisitionMaxDistance;
 
         
-        [SerializeField] private float _inquisitionClock;
+         private float _inquisitionClock;
 
         [SerializeField] private float _inquisitionCountdown;
 
@@ -71,7 +70,6 @@ namespace Hypodoche
         //bombs
         [SerializeField] private GameObject BloodyProjectile;
         [SerializeField] private D_IdleState _idleData;
-        public float timerBomb;
 
         #endregion
 
@@ -79,12 +77,11 @@ namespace Hypodoche
         public override void Start()
         {
             base.Start();
-            timerBomb = Time.time;
             _snapshotHealth = _entityData.health;
+            _bloodPoolCounter = 0;
             _moveState = new Caputmallei_MoveState(this, _stateMachine, "run", _entityData, this);
             _idleState = new Caputmallei_IdleState(this, _stateMachine, "idle", _idleData, this);
             _playerDetect = new Caputmallei_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
-            //_DropBombState = new Caputmallei_DropBombState(this, _stateMachine, "placeBomb", this);
             _deathState = new Caputmallei_DeathState(this, _stateMachine, "death", this);
             _fateFulRetribution = new CaputMallei_FatefulRetribution(this, _stateMachine, "fateFulRetribution", this);
             _sundayMorning = new CaputMallei_SundayMorning(this, _stateMachine, "sundayMorning", this);
@@ -94,13 +91,19 @@ namespace Hypodoche
             _stateMachine.InitializeState(_idleState); //todo spawn state
         }
 
-        public void Update(){
+        public override void Update(){
+            base.Update();
+            Debug.Log("sono nella update, la mia vita è : "+ _entityData.health+ " lo snapshot è : "+ _snapshotHealth);
+
             if (_entityData.health <= 0)
                 _stateMachine.ChangeState(_deathState);
 
-            if(_snapshotHealth > _entityData.health)
+            if(_snapshotHealth > _entityData.health){
+                Debug.Log("ho perso vita! : "+ _entityData.health+ " (snapshot was : "+_snapshotHealth+")");
                 instantiateBloodPool();
-            _snapshotHealth = _entityData.health;
+                Debug.Log("istantaited?");
+                _snapshotHealth = _entityData.health;
+            }
 
         }
 
@@ -158,11 +161,12 @@ namespace Hypodoche
             Instantiate(BloodyProjectile, transform.position, rotation);
             rotation *= Quaternion.Euler(0,30,0);
             Instantiate(BloodyProjectile, transform.position, rotation);
-
         }
 
         public void instantiateBloodPool(){
+            Debug.Log("whithin instantiate bloodPool, counter : "+ _bloodPoolCounter);
             if(_bloodPoolCounter <= _maxBloodPool){
+                Debug.Log("sono dentro l'ifffffffffff");
                 Vector3  randomPos = (Vector3) Random.insideUnitCircle * _bloodPoolSpawnRdius;
                 randomPos.z = randomPos.y;
                 randomPos.y = 0f;
@@ -181,7 +185,7 @@ namespace Hypodoche
         {
             return _entityData.health;
         }
-
+/*
         public float getSundayMorningMinDistance(){
             return _sundayMorningMinDistance;
         }
@@ -189,7 +193,7 @@ namespace Hypodoche
         public float getSundayMorningMaxDistance(){
             return _sundayMorningMaxDistance;
         }
-
+*/
         public float getSundayMorningClock(){
             return _sundayMorningClock;
         }
@@ -261,6 +265,10 @@ namespace Hypodoche
 
         public void setHealth(float value)
         {
+            _entityData.health -= value;
+        }
+
+        public void addHealth(float value){
             _entityData.health += value;
         }
 

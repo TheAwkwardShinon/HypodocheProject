@@ -31,7 +31,7 @@ namespace Hypodoche{
 
         public void OnTriggerEnter(Collider col){
             if(col.CompareTag("boss")){
-                _caputMallei.setHealth(_healthBonus);
+                _caputMallei.addHealth(_healthBonus);
                 _caputMallei.setBloodPoolCounter(_caputMallei.getBloodPoolCounter()-1);
                 Destroy(gameObject);
             }
