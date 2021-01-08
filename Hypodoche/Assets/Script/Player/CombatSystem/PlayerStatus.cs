@@ -31,6 +31,10 @@ namespace Hypodoche
 
         private float _enhanceMultiplier = 0f;
 
+        private float _layerChangedTime = 0f;
+
+        private float _layerChangedClock;
+
         #endregion
 
         [SerializeField] private Image _stamina;
@@ -72,7 +76,11 @@ namespace Hypodoche
             if(_isStunned){
                 if(Time.time >= _startStunClock + _stunTime)
                     _isStunned = false;
-            }            
+            }
+            if(_layerChangedTime > 0f){
+                if(Time.time >= _layerChangedClock + _layerChangedTime)
+                    changeLayerToPlayer();
+            }          
             if (_playerStamina < _maxStamina && Time.time > _staminaRegenStartTime)
             {
                 _playerStamina += _staminaRegenRate * Time.deltaTime;
@@ -163,6 +171,17 @@ namespace Hypodoche
                 _status.Clear();
             }
         }
+
+        public void changeLayerToDefault(float time){
+            gameObject.layer = LayerMask.NameToLayer("Default");
+            _layerChangedTime = time;
+            _layerChangedClock = Time.time;
+        }
+
+        public void changeLayerToPlayer(){
+            gameObject.layer = LayerMask.NameToLayer("Player");
+        }
+
         public void RemoveEnanche(float value){
             _enhanceMultiplier = _enhanceMultiplier-value <= 0 ? 0f : _enhanceMultiplier-value;
         }

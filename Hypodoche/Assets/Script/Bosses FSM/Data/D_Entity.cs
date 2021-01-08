@@ -17,6 +17,8 @@ namespace Hypodoche
         public float speedWhenDetect = 30f;
         public float speedWhenSlowed = 5f;
         public float speedWhenSlowedArea = 5f;
+
+        public float startDmgOverTime = 0f;
         public float aggroRange;
         public LayerMask whatIsPerimeter;
         public LayerMask whatIsPlayer;

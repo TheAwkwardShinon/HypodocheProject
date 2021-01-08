@@ -139,9 +139,11 @@ namespace Hypodoche
                     }
                     else
                     {
-                        _entity._entityData.health -= (_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
-                        Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
-                        enemy.TakeDamage(_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
+                        if(Time.time >= _entity._entityData.startDmgOverTime + 1f){
+                            _entity._entityData.health -= (_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
+                            Enemy enemy = _entity.gameObject.GetComponent<Enemy>();
+                            enemy.TakeDamage(_entity._entityData.damageTakenOverTime + (_entity._entityData.damageTakenOverTime * _entity._entityData.enhanceMultiplier));
+                        }
                     }
                 }
             }

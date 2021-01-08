@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
-  m_Name: IceCrow_BaseData
+  m_Name: CaputMallei_Basic_Data
   m_EditorClassIdentifier: 
-  health: 300
+  health: 972.3141
   damageTakenOverTime: 0
-  damageTakenOverTimeArea: 0
-  wallCheckRange: 4
-  movementSpeed: 20
-  speedWhenDetect: 12
-  speedWhenSlowed: 5
-  speedWhenSlowedArea: 5
+  damageTakenOverTimeArea: 0.08
+  wallCheckRange: 10
+  movementSpeed: 15
+  speedWhenDetect: 0
+  speedWhenSlowed: 0
+  speedWhenSlowedArea: 1
   startDmgOverTime: 0
-  aggroRange: 2
+  aggroRange: 5
   whatIsPerimeter:
     serializedVersion: 2
     m_Bits: 256
@@ -42,6 +42,6 @@ MonoBehaviour:
     m_Bits: 0
   timeOfCharm: 0
   timeOfFear: 0
-  damageOverArea: 0
+  damageOverArea: 1
   slowOverArea: 0
   enhanceMultiplier: 0

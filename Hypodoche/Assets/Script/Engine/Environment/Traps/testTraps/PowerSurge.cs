@@ -6,8 +6,8 @@ using UnityEngine;
 public class PowerSurge : MonoBehaviour
 {
     #region Variables
-    protected float _recover = 50f;
-    protected float _max_time = 50f;
+    [SerializeField] protected float _recover = 30f;
+    [SerializeField] protected float _max_time = 30f;
     protected  float _countdown;
     private bool _isActive;
     private Animator _animator;

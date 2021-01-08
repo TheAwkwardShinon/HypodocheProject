@@ -144,6 +144,7 @@ namespace Hypodoche
             Debug.Log("dmgOverTime");
             if (_entityData.gotDamageOverTime == false && _entityData.damageOverArea == false) _icons.AddDmgOverTime();
             _entityData.timeOfDamage = time + Time.time;
+            _entityData.startDmgOverTime = Time.time;
             _entityData.damageTakenOverTime = dmg;
         }
 
