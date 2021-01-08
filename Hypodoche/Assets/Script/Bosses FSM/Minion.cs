@@ -11,6 +11,8 @@ namespace Hypodoche
 
         float getHealth();
 
+        void setHealth(float value);
+
         bool IsIneluttable();
     }
 }

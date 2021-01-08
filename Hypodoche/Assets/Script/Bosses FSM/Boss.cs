@@ -11,6 +11,8 @@ namespace Hypodoche
         void stepOnTrap(Effects effect);
         float getHealth();
 
+        void setHealth(float value);
+
         void exitFromTrap();
     }
 }

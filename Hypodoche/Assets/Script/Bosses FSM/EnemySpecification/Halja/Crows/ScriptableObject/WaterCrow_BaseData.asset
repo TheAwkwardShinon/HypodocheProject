@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: WaterCrow_BaseData
   m_EditorClassIdentifier: 
-  health: 100
+  health: 0
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0
   wallCheckRange: 4

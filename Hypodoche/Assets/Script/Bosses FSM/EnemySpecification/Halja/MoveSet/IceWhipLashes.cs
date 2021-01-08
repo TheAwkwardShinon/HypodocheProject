@@ -31,7 +31,7 @@ namespace Hypodoche{
             }
             else{
                 _player.GetComponent<PlayerStatus>().TakeDamage(2f);
-                _stateMachine.ChangeState(_crow._whiplashes);
+                _stateMachine.ChangeState(_crow._MoveState);
             }
         }
 

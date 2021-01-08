@@ -9,7 +9,7 @@ namespace Hypodoche{
     {
 
         #region variables
-        private bool _isIneluttable; //phase 2
+        private bool _isIneluttable = true; //phase 2
 
 
         private WaterCrow _waterCrow;
@@ -57,6 +57,7 @@ namespace Hypodoche{
         public override void Start()
         {
             base.Start();
+            _entityData.health = 300f;
             _enemy = gameObject.GetComponent<Enemy>();
             _timer = Time.time;
             _whipLashesClock = Time.time;
@@ -76,6 +77,8 @@ namespace Hypodoche{
         public override void Update()
         {
             base.Update();
+            if (_entityData.health <= 0)
+                _stateMachine.ChangeState(_death);
         }
 
 
@@ -172,6 +175,10 @@ namespace Hypodoche{
             _whipLashesClock = time;
         }
 
+        public void setCanvas(GameObject canvas){
+            _crowHealthCanvas = canvas;
+        }
+
         public void DestroyMinion()
         {
             Destroy(gameObject);
@@ -180,6 +187,11 @@ namespace Hypodoche{
         public float getHealth()
         {
             return _entityData.health;
+        }
+
+          public void setHealth(float value)
+        {
+            _entityData.health = value;
         }
 
 

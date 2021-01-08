@@ -17,6 +17,21 @@ namespace Hypodoche
         [SerializeField] private GameObject _debuffArea;
         [SerializeField] private Image _healthFill;
         [SerializeField] private Text _nameText;
+
+        [SerializeField] private Image _firstMinionFill;
+        [SerializeField] private Image _secondMinionFill;
+
+        [SerializeField] private GameObject _firstMinionCanvas;
+        [SerializeField] private GameObject _secondMinionCanvas;
+
+        [SerializeField] private IceCrow _firstMinion;
+        [SerializeField] private WaterCrow _secondMinion;
+
+
+
+
+
+
         #endregion
 
         #region Methods
@@ -46,8 +61,17 @@ namespace Hypodoche
             boss.GetComponent<Enemy>().SetFill(_healthFill);
             if(boss.GetComponent<LiYan>() != null)
                 _nameText.text = "Li Yan";
-            if(boss.GetComponent<Halja>() != null)
+            if(boss.GetComponent<Halja>() != null){
                 _nameText.text = "Halja";
+                /*boss.GetComponent<Halja>().setIceCrow(_firstMinion);
+                boss.GetComponent<Halja>().setWaterCrow(_secondMinion);*/
+                //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<WaterCrow>().setIceCrow(_firstMinion);
+                //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setWaterCrow(_secondMinion);
+                boss.GetComponent<Halja>().GetIceCrow().gameObject.GetComponent<Enemy>().SetFill(_firstMinionFill);
+                boss.GetComponent<Halja>().GetWaterCrow().gameObject.GetComponent<Enemy>().SetFill(_secondMinionFill);
+                boss.GetComponent<Halja>().GetIceCrow().setCanvas(_firstMinionCanvas);
+                boss.GetComponent<Halja>().GetWaterCrow().setCanvas(_secondMinionCanvas);
+            }
             Instantiate(boss, _spawnBossPosition.position, Quaternion.identity);
         }
         #endregion

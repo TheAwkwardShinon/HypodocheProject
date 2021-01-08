@@ -32,12 +32,22 @@ namespace Hypodoche
 
         public void TakeDamage(float damage)
         {
-            _health -= damage;
+            
+            if(gameObject.GetComponent<Boss>()!= null){
+                _health -= damage;
+                gameObject.GetComponent<Boss>().setHealth(_health);
+            }
+            else {
+                if(!gameObject.GetComponent<Minion>().IsIneluttable()){
+                    _health -= damage;
+                    gameObject.GetComponent<Minion>().setHealth(_health);
+                }
+            }
             UpdateHealthUI();
-            if (_health <= 0){
+            /*if (_health <= 0){
                 SceneManager.LoadScene(3);//Victory
                 Destroy(gameObject);
-            }
+            }*/
         }
 
         private void UpdateHealthUI()

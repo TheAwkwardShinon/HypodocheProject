@@ -23,6 +23,7 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
+            Debug.Log("[WHIPLASHES]: "+ _halja.getWhiplashesCycles());
             if(_halja.getWhiplashesCycles() <= 0){
                 _halja.setWhipLashesClock(Time.time);
                 _halja.setWhipLashesCountdown(6f);

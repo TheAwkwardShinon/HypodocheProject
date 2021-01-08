@@ -104,13 +104,16 @@ MonoBehaviour:
   _punishmentCountdown: 5
   _chainOfDestinyCountdown: 5
   _whipLashesCountdown: 5
+  _crowSpawnCountdown: 0
   _idleData: {fileID: 11400000, guid: 82f50ec1a760ca7479bd2297961aff6c, type: 2}
-  _iceCrow: {fileID: 1824037787883785418, guid: 90b30be9aea4ee8478b940b4d82f82a8,
+  _IceCrowGO: {fileID: 4155127591806207973, guid: 90b30be9aea4ee8478b940b4d82f82a8,
     type: 3}
-  _waterCrow: {fileID: 6977009400896058692, guid: 80fe495132b9f8b44a0c4461a8d3d49c,
+  _WaterCrowGO: {fileID: 106765969620781716, guid: 318a7986371fafb4d9ff1537f3f34646,
     type: 3}
   lr: {fileID: 338082126897735378}
   _throwChainPosition: {fileID: 1445064299648496017}
+  _chainprojectile: {fileID: 349642882003058474, guid: 1b8725bbd655c4045b0327e5a8281c06,
+    type: 3}
 --- !u!120 &338082126897735378
 LineRenderer:
   m_ObjectHideFlags: 0

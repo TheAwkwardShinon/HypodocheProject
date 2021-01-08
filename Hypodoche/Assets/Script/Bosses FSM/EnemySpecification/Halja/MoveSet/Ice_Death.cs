@@ -25,13 +25,14 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-            _crow.GetHalja().setIceCrowDead(true);
-            _crow.DestroyMinion();
+
         }
         public override void Enter()
         {
             base.Enter();
-            _animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
+             _crow.GetHalja().setIceCrowDead(true);
+            _crow.DestroyMinion();
+            //_animWaiter.StartCoroutine(_animWaiter.waitTillTheAnimationEnds(_entity._animator,this));
         }
 
         public override void Exit()

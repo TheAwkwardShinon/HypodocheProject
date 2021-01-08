@@ -34,6 +34,7 @@ namespace Hypodoche
         {
             base.Start();
             timerBomb = Time.time;
+            _entityData.health = 1000f;
             _moveState = new LiYan_MoveState(this, _stateMachine, "run", _entityData, this);
             _idleState = new LiYan_IdleState(this, _stateMachine, "idle", _idleData, this);
             _scareState = new LiYan_ScaredState(this, _stateMachine, "run", _entityData, this);
@@ -74,6 +75,11 @@ namespace Hypodoche
         public float getHealth()
         {
             return _entityData.health;
+        }
+
+        public void setHealth(float value)
+        {
+            _entityData.health = value;
         }
 
         #endregion

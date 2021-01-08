@@ -31,7 +31,7 @@ namespace Hypodoche{
 
             if(!_crow.IsIneluttable()){
                 if(_isDetectingPlayer){
-                    _stateMachine.ChangeState(_crow._playerDetect);
+                    _stateMachine.ChangeState(_crow._PlayerDetect);
                 }
             }
 

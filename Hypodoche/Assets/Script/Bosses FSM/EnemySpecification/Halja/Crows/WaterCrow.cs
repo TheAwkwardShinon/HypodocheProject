@@ -51,6 +51,8 @@ namespace Hypodoche{
 
         [SerializeField] private GameObject _crowHealthCanvas;
 
+        private GameObject iceCrowGO;
+
 
         #endregion
 
@@ -60,6 +62,7 @@ namespace Hypodoche{
         public override void Start()
         {
             base.Start();
+            _entityData.health = 300f;
             _punishmentClock = Time.time;
             _chainOfDestinyClock = Time.time;
             _enemy = gameObject.GetComponent<Enemy>();
@@ -68,7 +71,7 @@ namespace Hypodoche{
             _IdleState = new Water_idleState(this,_stateMachine,"idle",_idleData,this);
             _playerDetect = new Water_PlayerDetectState(this,_stateMachine,"playerDetect",_entityData,this);
             _punishment = new WaterPunishment(this,_stateMachine,"punishment",this);
-            _death = new Water_DeathState(this,_stateMachine,"seath",this);
+            _death = new Water_DeathState(this,_stateMachine,"death",this);
             //_chainOfDestiny = new Water_ChainOfDestiny(this,_stateMachine,"idle",_idleData,this);
 
 
@@ -189,6 +192,10 @@ namespace Hypodoche{
             _chainOfDestinyCountdown = time;
         }
 
+        public void setCanvas(GameObject canvas){
+            _crowHealthCanvas = canvas;
+        }
+
         public void DestroyMinion()
         {
             Destroy(gameObject);
@@ -199,6 +206,17 @@ namespace Hypodoche{
             return _entityData.health;
         }
 
+        public void setHealth(float value)
+        {
+            _entityData.health = value;
+        }
+
+/*
+        public void setIceCrowGO(GameObject iceCrow){
+            iceCrowGO = iceCrow;
+            _iceCrow = iceCrow.GetComponent<IceCrow>();
+        }
+*/
 
 
         #endregion

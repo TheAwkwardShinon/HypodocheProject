@@ -20,6 +20,7 @@ namespace Hypodoche{
         public Halja_Punishment _punishment { get; private set; }
 
         public Halja_WhipLashes _whipLashes { get; private set; }
+        public Halja_SpawnCrow _spawnCrow { get; private set; }
 
         #endregion
 
@@ -43,6 +44,10 @@ namespace Hypodoche{
 
         [SerializeField] private  float _whipLashesCountdown;
 
+         [SerializeField] private  float _crowSpawnCountdown;
+
+
+
         private int _whipLashesCycles;
 
         #endregion
@@ -53,6 +58,8 @@ namespace Hypodoche{
         private  float _punishmentClock;
         private float _chainOfDestinyClock;
         private float _wiphLashesClock;
+
+        private float _crowSpawnClock;
 
         #endregion
 
@@ -65,12 +72,19 @@ namespace Hypodoche{
         #endregion
 
         #region crows
-        [SerializeField]protected IceCrow _iceCrow;
-        [SerializeField]protected WaterCrow _waterCrow;
+        protected IceCrow _iceCrow;
+        protected WaterCrow _waterCrow;
+
+        [SerializeField]protected GameObject _IceCrowGO;
+        [SerializeField]protected GameObject _WaterCrowGO;
+
+
 
         private bool iceCrowDead = false;
         private bool waterCrowDead = false;
 
+
+        private bool _secondPhase = false;
     
 
         #endregion
@@ -84,6 +98,11 @@ namespace Hypodoche{
 
         [SerializeField] protected GameObject  _chainprojectile;
 
+        private GameObject _waterClone;
+        private GameObject _iceClone;
+
+
+
         #endregion
 
         #endregion
@@ -93,13 +112,17 @@ namespace Hypodoche{
         {
             base.Start();
             lr = GetComponent<LineRenderer>();
+            _entityData.health = 1000f;
+            _iceCrow = _IceCrowGO.GetComponent<IceCrow>();
+            _waterCrow = _WaterCrowGO.GetComponent<WaterCrow>();
             _punishmentClock = Time.time;
             _chainOfDestinyClock = Time.time;
             _iceCrow = Instantiate(_iceCrow,new Vector3(0f,1f,0f),Quaternion.identity);
             _waterCrow = Instantiate(_waterCrow,new Vector3(0f,1f,0f),Quaternion.identity);
             _iceCrow.setWaterCrow(_waterCrow);
             _waterCrow.setIceCrow(_iceCrow);
-            _waterCrow.setVulnerability(false);
+            //_waterCrow.setVulnerability(false);
+            //_iceCrow.setVulnerability(false);
             _iceCrow.setHalja(this);
             _waterCrow.setHalja(this);
             _moveState = new Halja_MoveState(this, _stateMachine, "run", _entityData, this);
@@ -109,27 +132,72 @@ namespace Hypodoche{
             _playerDetectState = new Halja_PlayerDetectState(this, _stateMachine, "playerDetect", _entityData, this);
             _punishment = new Halja_Punishment(this,_stateMachine,"punishment",this);
             _whipLashes = new Halja_WhipLashes(this,_stateMachine,"whiplashes",this);
+            _spawnCrow = new Halja_SpawnCrow(this,_stateMachine,"spawnCrow",this);
             //crowSpawn(false);
 
 
             _stateMachine.InitializeState(_idleState); //todo spawn state
         }
 
+        public override void Update()
+        {
+            base.Update();
+            if(getHealth() < (50f * this.GetComponent<Enemy>().getMaxHealth())/100f && !_secondPhase){
+                Debug.Log("half life");
+                _secondPhase = true;
+                _iceCrow.setVulnerability(false);
+                _waterCrow.setVulnerability(false);
+                //_waterCrow.DestroyMinion();
+                //_iceCrow.DestroyMinion();
+                //waterCrowDead = true;
+                //iceCrowDead = true;
+                //setSpawnCrowClock(Time.time);
+                //_stateMachine.ChangeState(_spawnCrow);
+            }
+            else if(_secondPhase && Time.time > (_crowSpawnClock + _crowSpawnCountdown)){
+                if(waterCrowDead || iceCrowDead){
+                    Debug.Log("time to spawn");
+                    setSpawnCrowClock(Time.time);
+                    _stateMachine.ChangeState(_spawnCrow);
+                }
+            }
+            else{
+                Debug.Log("nothingHappened and life is : "+ getHealth());
+            }
 
-        public void crowSpawn(bool secondPhase){
+        }
 
-            if(iceCrowDead){
-                _iceCrow = Instantiate(_iceCrow);
+        public void crowSpawn(){
+            if(iceCrowDead && waterCrowDead){
+                 _iceClone = Instantiate(_IceCrowGO,new Vector3(0f,1f,0f),Quaternion.identity);
+                 _waterClone = Instantiate(_WaterCrowGO);
+                 _iceCrow = _iceClone.GetComponent<IceCrow>();
+                 _waterCrow = _waterClone.GetComponent<WaterCrow>();
+                 _iceCrow.setHalja(this);
+                 _waterCrow.setHalja(this);
+                 _waterCrow.setIceCrow(_iceCrow);
+                 _iceCrow.setWaterCrow(_waterCrow);
+                 _iceCrow.setVulnerability(true);
+                _waterCrow.setVulnerability(false); 
+            }
+            else if(iceCrowDead){
+                _iceClone = Instantiate(_IceCrowGO,new Vector3(0f,1f,0f),Quaternion.identity);
+                _iceCrow = _iceClone.GetComponent<IceCrow>();
                 _waterCrow.setIceCrow(_iceCrow);
-                _iceCrow.setHalja(this);
-                _iceCrow.setVulnerability(true);
-            }
-            if(waterCrowDead){
-                _waterCrow = Instantiate(_waterCrow);
                 _iceCrow.setWaterCrow(_waterCrow);
-                _waterCrow.setHalja(this);
-                _waterCrow.setVulnerability(true);    
+                _iceCrow.setHalja(this);
+                _iceCrow.setVulnerability(false);
             }
+            else if(waterCrowDead){
+                _waterClone = Instantiate(_WaterCrowGO);
+                _waterCrow = _waterClone.GetComponent<WaterCrow>();
+                _iceCrow.setWaterCrow(_waterCrow);
+                _waterCrow.setIceCrow(_iceCrow);
+                _waterCrow.setHalja(this);
+                _waterCrow.setVulnerability(false);    
+            }
+            waterCrowDead = false;
+            iceCrowDead = false;
         }
 
         public void OnDrawGizmos()
@@ -181,6 +249,14 @@ namespace Hypodoche{
             return _entityData.health;
         }
 
+        public bool isWaterCrowDead(){
+            return waterCrowDead;
+        }
+
+        public bool isIceCrowDead(){
+            return iceCrowDead;
+        }
+
 
         public GameObject getChainProjectile(){
             return _chainprojectile;
@@ -193,6 +269,14 @@ namespace Hypodoche{
 
          public IceCrow GetIceCrow(){
             return _iceCrow;
+        }
+
+        public GameObject GetWaterCrowGO(){
+            return _WaterCrowGO;
+        }
+
+         public GameObject GetIceCrowGO(){
+            return _IceCrowGO;
         }
 
         #endregion
@@ -238,6 +322,11 @@ namespace Hypodoche{
             return _whipLashesCountdown;
         }
 
+
+        public float getSpawnCrowCountdown(){
+            return _crowSpawnCountdown;
+        }
+
         public int getWhiplashesCycles(){
             return _whipLashesCycles;
         }
@@ -259,6 +348,11 @@ namespace Hypodoche{
 
         public float getWhipLashesClock(){
             return _wiphLashesClock;
+        }
+
+
+        public float getSpawnCrowClock(){
+            return _crowSpawnClock;
         }
         #endregion
 
@@ -302,12 +396,30 @@ namespace Hypodoche{
             _whipLashesCycles = value;
         }
 
-     
+
+        public void setSpawnCrowClock(float time){
+            _crowSpawnClock = time;
+        }
+
+        public void setHealth(float value)
+        {
+            _entityData.health = value;
+        }
+
+        public void setIceCrow(IceCrow crow){
+            _iceCrow = crow;
+        }
+
+         public void setWaterCrow(WaterCrow crow){
+            _waterCrow = crow;
+        }
+
+
 
 
 
 
         #endregion
- 
+
     }
 }
