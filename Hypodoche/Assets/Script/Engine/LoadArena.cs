@@ -67,10 +67,10 @@ namespace Hypodoche
                 boss.GetComponent<Halja>().setWaterCrow(_secondMinion);*/
                 //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<WaterCrow>().setIceCrow(_firstMinion);
                 //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setWaterCrow(_secondMinion);
-                boss.GetComponent<Halja>().GetIceCrow().gameObject.GetComponent<Enemy>().SetFill(_firstMinionFill);
-                boss.GetComponent<Halja>().GetWaterCrow().gameObject.GetComponent<Enemy>().SetFill(_secondMinionFill);
-                boss.GetComponent<Halja>().GetIceCrow().setCanvas(_firstMinionCanvas);
-                boss.GetComponent<Halja>().GetWaterCrow().setCanvas(_secondMinionCanvas);
+                boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<Enemy>().SetFill(_firstMinionFill);
+                boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<Enemy>().SetFill(_secondMinionFill);
+                boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setCanvas(_firstMinionCanvas);
+                boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<WaterCrow>().setCanvas(_secondMinionCanvas);
             }
             Instantiate(boss, _spawnBossPosition.position, Quaternion.identity);
         }

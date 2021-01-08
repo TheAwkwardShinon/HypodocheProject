@@ -35,14 +35,14 @@ namespace Hypodoche{
             if (_entityData.health <= 0)
                 _stateMachine.ChangeState(_halja._deathState);
             base.Update();
-            if(_halja.getHealth() < (50f * _halja.GetComponent<Enemy>().getMaxHealth())/100f){ //se ha meno della metà della vita
+      // if(_halja.getHealth() < (50f * _halja.GetComponent<Enemy>().getMaxHealth())/100f){ //se ha meno della metà della vita
                 /*
                 if()
                 _halja.GetIceCrow().setVulnerability(true);
                 _halja.GetWaterCrow().setVulnerability(true);
                 */
-            }
-            else{
+        //    }
+           // else{
                 if(_isDetectingPlayer){
                     _halja.setDirection((_playerPosition.position-_halja.transform.position).normalized);
                     
@@ -89,7 +89,7 @@ namespace Hypodoche{
                         _stateMachine.ChangeState(_halja._moveState);
                     }
                 }
-            }
+            //}
                 //else _stateMachine.ChangeState(_halja._moveState);
             //}
             

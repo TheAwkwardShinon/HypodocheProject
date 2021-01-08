@@ -104,7 +104,7 @@ MonoBehaviour:
   _punishmentCountdown: 5
   _chainOfDestinyCountdown: 5
   _whipLashesCountdown: 5
-  _crowSpawnCountdown: 0
+  _crowSpawnCountdown: 20
   _idleData: {fileID: 11400000, guid: 82f50ec1a760ca7479bd2297961aff6c, type: 2}
   _IceCrowGO: {fileID: 4155127591806207973, guid: 90b30be9aea4ee8478b940b4d82f82a8,
     type: 3}
