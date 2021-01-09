@@ -9,6 +9,7 @@ namespace Hypodoche
     {
         #region Variables
         [SerializeField] private CanvasGroup _displayElement;
+        [SerializeField] private GameObject _dialogue;
         private Text _displayText;
         #endregion
 
@@ -19,6 +20,8 @@ namespace Hypodoche
         }
         private void OnTriggerEnter(Collider other)
         {
+            _dialogue.SetActive(true);
+            _displayElement.gameObject.SetActive(true);
             _displayElement.alpha = 1;
             PlayerHubInputManager input = other.GetComponent<PlayerHubInputManager>();
             if (input != null)
@@ -27,6 +30,7 @@ namespace Hypodoche
 
         private void OnTriggerExit(Collider other)
         {
+            _dialogue.SetActive(false);
             _displayElement.alpha = 0;
             PlayerHubInputManager input = other.GetComponent<PlayerHubInputManager>();
             if (input != null)

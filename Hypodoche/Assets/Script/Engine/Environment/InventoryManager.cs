@@ -11,13 +11,11 @@ namespace Hypodoche
         [SerializeField] GameObject  _inventoryGO;
         [SerializeField] private List<TrapSlot> _slots;
         [SerializeField] private Text _coinText;
-        private SortedDictionary<string, TrapItem> _items;
         
 
         private void Awake()
         {
             _slots = new List<TrapSlot>(_inventoryGO.GetComponentsInChildren<TrapSlot>());
-            _items = _inventory.GetItems();
             _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
         }
 
@@ -29,22 +27,25 @@ namespace Hypodoche
         #region Items
         public void AddItem(TrapItem trapItem)
         {
-            TrapItem search;
-            search = _items.TryGetValue(trapItem.GetItemName(), out search) ? search : null;
-            if(search != null)
-                search.IncreaseOwnedCount();
+            int index = _inventory.GetItemList().IndexOf(trapItem);
+            if(index != -1)
+                _inventory.GetItemList()[index].IncreaseOwnedCount();
             else
-                _items.Add(trapItem.GetItemName(), trapItem);
-            _inventory.SetItems(_items);
+            {
+                trapItem.SetOwnedCount(1);
+                _inventory.GetItemList().Add(trapItem);
+            }
+            _inventory.Order();
             DisplayInventory();
         }
+
         private void DisplayInventory()
         {
             int i = 0;
-            foreach (KeyValuePair<string, TrapItem> entry in _items)
+            foreach (TrapItem entry in _inventory.GetItemList())
             {
                 if(i < _slots.Count){
-                    _slots[i].SetItem(entry.Value);
+                    _slots[i].SetItem(entry);
                     i++;
                 }
             }
@@ -53,27 +54,24 @@ namespace Hypodoche
 
         public void PlaceTrap(TrapItem trap)
         {
-            TrapItem search;
-            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
-            if(search != null)
-                search.DecreaseOwnedCount();
+            int index = _inventory.GetItemList().IndexOf(trap);
+            if(index != -1)
+                _inventory.GetItemList()[index].DecreaseOwnedCount();
             DisplayInventory();
         }
 
         public void RetrieveTrap(TrapItem trap)
         {
-            TrapItem search;
-            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
-            if(search != null)
-                search.IncreaseOwnedCount();
+            int index = _inventory.GetItemList().IndexOf(trap);
+            if(index != -1)
+                _inventory.GetItemList()[index].IncreaseOwnedCount();
             DisplayInventory();
         }
 
         public bool HasTrap(TrapItem trap)
         {
-            TrapItem search;
-            search = _items.TryGetValue(trap.GetItemName(), out search) ? search : null;
-            return search != null && search.GetOwnedAmount() > 0;
+            int index = _inventory.GetItemList().IndexOf(trap);
+            return index != -1 && _inventory.GetItemList()[index].GetOwnedAmount() > 0;
         }
         #endregion
 

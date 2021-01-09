@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Trap Inventory
   m_EditorClassIdentifier: 
   _itemList:
-  - {fileID: 8393575377068156454, guid: 06963fe01e5bb8642927cbbdf5d2f4b4, type: 3}
+  - {fileID: 6149024284779722316, guid: e8c56d6ac6965964d955f9a9629fd5d8, type: 3}
   - {fileID: 3562300312759534004, guid: 036d479a5e9a0c647be19f10bf0c44bb, type: 3}
   _playerCoins: 3

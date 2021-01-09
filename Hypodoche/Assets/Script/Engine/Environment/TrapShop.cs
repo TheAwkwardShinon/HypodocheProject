@@ -8,27 +8,30 @@ namespace Hypodoche
     public class TrapShop : ScriptableObject
     {
         #region Variables
-        private SortedDictionary<string, TrapItem> _items;
         [SerializeField] private List<TrapItem> _itemList;
         #endregion
 
         #region Getters and Setters
-        public SortedDictionary<string,TrapItem> GetItems()
+        public List<TrapItem> GetItemList()
         {
-            return _items;
+            return _itemList;
         }
         #endregion
 
         #region Methods
+        public void Reset(List<TrapItem> shopList)
+        {
+            Debug.Log("Reset Shop");
+            if(_itemList != null)
+                _itemList.Clear();
+            _itemList = shopList;
+        }
         public void Setup()
         {
-            int index = 0;
-            _items = new SortedDictionary<string, TrapItem>();
+            Debug.Log("Shop list contains " + _itemList.Count + " elements");
             foreach (TrapItem entry in _itemList)
             {
-                _items.Add(entry.GetItemName(), entry);
-                _items[entry.GetItemName()].SetOwnedCount(1);
-                index++;
+                entry.SetOwnedCount(1);
             }
         }
         #endregion  

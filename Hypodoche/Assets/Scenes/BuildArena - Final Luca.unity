@@ -5850,6 +5850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3d19a88c025554198fb5404389f0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _item: {fileID: 0}
   _itemIcon: {fileID: 1279035278}
 --- !u!1 &657282655
 GameObject:
@@ -6672,7 +6673,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 341411153}
   m_HandleRect: {fileID: 341411152}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1
   m_Size: 0.5620086
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -9825,6 +9826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3d19a88c025554198fb5404389f0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _item: {fileID: 0}
   _itemIcon: {fileID: 923506082}
 --- !u!1 &1343358449
 GameObject:
@@ -13174,6 +13176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3d19a88c025554198fb5404389f0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _item: {fileID: 0}
   _itemIcon: {fileID: 1953069682}
 --- !u!1001 &1803335111
 PrefabInstance:
@@ -14505,17 +14508,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1758420794}
-        m_MethodName: LoadArena
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

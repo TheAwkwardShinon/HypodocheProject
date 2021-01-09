@@ -11,9 +11,9 @@ namespace Hypodoche
     {
         #region Variables
         [Header("Prefab Array")]
-        [SerializeField] private GameObject[] _slotArray;
-        [SerializeField] private TrapItem[] _items;
-        [SerializeField] private GameObject _empty;
+        [SerializeField] private static GameObject[] _slotArray;
+        [SerializeField] private static TrapItem[] _items;
+        [SerializeField] private static GameObject _empty;
         #endregion
 
         #region  Getter and Setter
@@ -21,36 +21,25 @@ namespace Hypodoche
         {
                 return _slotArray;
         }
-        public void SetSlot(int i, int j, TrapItem item)
+        public void SetSlot(int i, TrapItem item)
         {
             if (item != null)
-                _slotArray[j + 5*i] = item.GetPrefab();
+                _slotArray[i] = item.GetPrefab();
             else
-                _slotArray[j + 5*i] = _empty;
-            _items[j + 5*i] = item;
-
-            //CheckConsistency();
+                _slotArray[i] = _empty;
+            _items[i] = item;
         }
 
-        public TrapItem GetItem(int i, int j)
+        public TrapItem GetItem(int i)
         {
-            return _items[j + 5*i];
+            return _items[i];
         }
         #endregion 
 
         #region Methods 
-        private void CheckConsistency()
-        {
-            int i;
-            for(i = 0; i<25;i++){
-                if(_items[i] == null)
-                    _slotArray[i] = _empty;
-                else
-                    _slotArray[i] = _items[i].GetPrefab();
-            }
-        }
         public void Reset()
         {
+            Debug.Log("Reset ArenaSO");
             _slotArray = new GameObject[25];
             _items = new TrapItem[25];
             int i;

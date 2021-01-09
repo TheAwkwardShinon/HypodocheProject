@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfbb5ce9f247164f98018c73bf811b3, type: 3}
+  m_Name: Oracle Dialogue Progression
+  m_EditorClassIdentifier: 
+  _index: 3
+  _dialogues:
+  - sentences:
+    - Owl...
+    - Owl...
+    - Owl, wake up!
+    - 'Good morning, Owl.
+
+      You were really tired yesterday. That soul really
+      liked to hit you hard.'
+    - "What? Where are we? Oh my, you really hit your head hard yesterday!\r\nLet
+      me help you remember\u2026\r"
+    name: The Oracle
+  - sentences: []
+    name: The Oracle
+  - sentences:
+    - Now, my dear, go touch the board in the center of the room, and plan the Arena
+      for the next soul
+    - If you want to know more about it, come and talk to me
+    name: The Oracle
+  - sentences: []
+    name: The Oracle
+  - sentences:
+    - Hello, Owl. How may I help you on this lucky morning?
+    name: The Oracle
+  - sentences:
+    - This is the profecy...
+    name: The Oracle
+  - sentences:
+    - Then, lie here...
+    name: The Oracle
+  - sentences:
+    - May your day be full of joy, Owl
+    name: The Oracle
+  - sentences: []
+    name: The Oracle

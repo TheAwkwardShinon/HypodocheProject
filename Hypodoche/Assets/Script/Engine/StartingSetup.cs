@@ -11,16 +11,22 @@ namespace Hypodoche
         [SerializeField] private TrapShop _shopInventory;
         [SerializeField] private int _startingPlayerCoins;
         [SerializeField] private ArenaTransferSO _arenaTransferSO;
+        [SerializeField] private List<TrapItem> _shopList;
+        [SerializeField] private PlayerInstantiateSO _playerPosition;
+        [SerializeField] private OracleDialogueProgression _odp;
         #endregion
 
         #region Methods
-        private void Awake()
+        void Start()
         {
+            _playerPosition.SetPosition(new Vector3(0, 0.01f, -13));
+            _playerInventory.Reset();
+            _shopInventory.Reset(_shopList);
+            _arenaTransferSO.Reset();
             _playerInventory.SetPlayerCoins(_startingPlayerCoins);
-            _playerInventory.GetItemList().Clear();
             _playerInventory.Setup();
             _shopInventory.Setup();
-            _arenaTransferSO.Reset();
+            _odp.ResetIndex();
         }
         #endregion
     }
