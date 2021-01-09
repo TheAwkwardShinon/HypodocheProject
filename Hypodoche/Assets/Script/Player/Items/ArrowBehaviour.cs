@@ -15,6 +15,7 @@ namespace Hypodoche
         [SerializeField] private float _damage = 10;
         [SerializeField] private float _maxDistance = 20f;
         [SerializeField] private LayerMask _mouseMask;
+        [SerializeField] private GameObject _impactPrefab;
         private Rigidbody _rigidbody;
         private Vector3 _startingPosition;
         #endregion
@@ -63,6 +64,7 @@ namespace Hypodoche
                 if (enemy != null)
                 {
                     enemy.TakeDamage(_damage);
+                    Instantiate(_impactPrefab, gameObject.transform.position + new Vector3(0, 1, -1), Quaternion.identity);
                 }
                 Destroy(gameObject);
             }

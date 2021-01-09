@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 040387b171858a64da83b4f761df0ac8
 ScriptedImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6693878443456024159
+    second: Halja_0
   externalObjects: {}
   serializedVersion: 2
   userData: 

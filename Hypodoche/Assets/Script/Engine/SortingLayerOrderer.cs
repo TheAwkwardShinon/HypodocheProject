@@ -9,7 +9,7 @@ public class SortingLayerOrderer : MonoBehaviour
     private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _initialOrder = _spriteRenderer.sortingOrder;
+            _initialOrder = _spriteRenderer.sortingOrder + 4000;
         }
     void Update()
     {

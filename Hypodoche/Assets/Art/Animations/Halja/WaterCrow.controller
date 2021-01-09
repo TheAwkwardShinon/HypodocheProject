@@ -332,9 +332,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 5901633560856229972}
     m_Position: {x: -130, y: 1750, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 1704807616874752630}
-    m_Position: {x: -95, y: 1815, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -6650806889690898434}
@@ -429,32 +426,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &1704807616874752630
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterCrow_Death
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3b4b727d62ba1c64590aa5bb91a8a196, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1101 &2638707005513456526
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -525,7 +496,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6e2b3073dc12f13478ef1e9a5cfc1640, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3b4b727d62ba1c64590aa5bb91a8a196, type: 2}
   m_Tag: death
   m_SpeedParameter: 
   m_MirrorParameter: 

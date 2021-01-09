@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3572090411763139117}
   - component: {fileID: 6017106477482923804}
-  - component: {fileID: 3697411752596643272}
+  - component: {fileID: 5012494189040272516}
   m_Layer: 11
   m_Name: kite_1
   m_TagString: Untagged
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3697411752596643272
+--- !u!114 &5012494189040272516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,6 +188,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6650053241654115743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33dd84147aa7bf4293e9cb4521eedc6, type: 3}
+  m_Script: {fileID: 11500000, guid: aaa29fb488b025c409cdff1365666c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

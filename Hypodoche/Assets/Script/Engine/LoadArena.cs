@@ -39,15 +39,17 @@ namespace Hypodoche
         {
             SpawnBoss();
             int i = 0, j = 0;
-
-            foreach (GameObject prefab in _arenaTransfer.GetSlotArray()){       
-                if (prefab != null){
-                    Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, 0, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
-                }
-                i++;
-                if(i == 5) {
-                    i = 0;
-                    j++;
+            if(_arenaTransfer != null && _arenaTransfer.GetSlotArray() != null)
+            {
+                foreach (GameObject prefab in _arenaTransfer.GetSlotArray()){       
+                    if (prefab != null){
+                        Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, 0, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
+                    }
+                    i++;
+                    if(i == 5) {
+                        i = 0;
+                        j++;
+                    }
                 }
             }
         }

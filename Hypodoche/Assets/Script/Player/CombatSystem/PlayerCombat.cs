@@ -19,9 +19,8 @@ namespace Hypodoche
         [SerializeField] private GameObject _shootingSpawnPoint;
         [SerializeField] private GameObject _activeMeleePoint;
         [SerializeField] private LayerMask _hitLayer;
-
-        [SerializeField] private LayerMask _secondHitLater;
         [SerializeField] private GameObject _impactPrefab;
+        [SerializeField] private Transform _impactPosition;
         private float _attackRadius = 0.5f;
         private float _nextAttackTime = 0f;
         private float _attackRate;
@@ -92,7 +91,7 @@ namespace Hypodoche
 
                     enemy.TakeDamage(calculateDamage(weapon.GetLightDamage()));
                     alreadyHit.Add(hitParent);
-                    Instantiate(_impactPrefab, hitObject.ClosestPointOnBounds(_activeMeleePoint.transform.position), Quaternion.identity);
+                    Instantiate(_impactPrefab, _impactPosition.position, Quaternion.identity);
                 }
             }
 
@@ -122,6 +121,7 @@ namespace Hypodoche
                 if (enemy != null && !alreadyHit.Contains(hitParent)){
                     enemy.TakeDamage(calculateDamage(weapon.GetHeavyDamage()));
                     alreadyHit.Add(hitParent);
+                    Instantiate(_impactPrefab, _impactPosition.position, Quaternion.identity);
                 }
             }
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890153791672005433}
   - component: {fileID: 7211083598987741688}
+  - component: {fileID: 3679276419826075796}
   m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
@@ -81,6 +82,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3679276419826075796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2518556980286368032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa29fb488b025c409cdff1365666c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6242139189455388539
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6242139189455388538}
   - component: {fileID: 6242139189455388532}
+  - component: {fileID: 8016989848461698311}
   m_Layer: 0
   m_Name: Power Surge
   m_TagString: Untagged
@@ -163,6 +177,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8016989848461698311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242139189455388539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa29fb488b025c409cdff1365666c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6242139189534044489
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26813d9ab1560d140b0f0f6994881d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _recover: 30
+  _max_time: 30
 --- !u!65 &6242139189534044488
 BoxCollider:
   m_ObjectHideFlags: 0

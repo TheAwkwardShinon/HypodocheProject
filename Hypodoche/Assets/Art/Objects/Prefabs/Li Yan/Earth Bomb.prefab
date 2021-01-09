@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5092451615934816289}
   - component: {fileID: 5092451615934816300}
-  - component: {fileID: 5092451615934816291}
   - component: {fileID: 5092451615934816290}
+  - component: {fileID: 7530758755362585739}
   m_Layer: 0
   m_Name: Bomb Sprite
   m_TagString: Untagged
@@ -83,18 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5092451615934816291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5092451615934816288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33dd84147aa7bf4293e9cb4521eedc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &5092451615934816290
 Animator:
   serializedVersion: 3
@@ -114,6 +102,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7530758755362585739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092451615934816288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa29fb488b025c409cdff1365666c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5092451616406293842
 GameObject:
   m_ObjectHideFlags: 0

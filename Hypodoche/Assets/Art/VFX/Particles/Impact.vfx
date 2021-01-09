@@ -16,10 +16,10 @@ MonoBehaviour:
   - title: Flash
     position:
       serializedVersion: 2
-      x: 728
-      y: -189
-      width: 659
-      height: 1710
+      x: 773
+      y: -190
+      width: 614
+      height: 1749
     contents:
     - model: {fileID: 8926484042661614558}
       id: 0
@@ -68,10 +68,10 @@ MonoBehaviour:
   - title: Particles
     position:
       serializedVersion: 2
-      x: 3161
+      x: 3201
       y: -286
-      width: 659
-      height: 2102
+      width: 619
+      height: 2140
     contents:
     - model: {fileID: 8926484042661614687}
       id: 0
@@ -93,10 +93,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 728
-    y: -293
-    width: 3092
-    height: 2129
+    x: 773
+    y: -290
+    width: 3047
+    height: 2145
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,7 +156,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":1.1764706373214722,"g":0.5647059082984924,"b":0.21176470816135407,"a":1.0}'
+      m_SerializableObject: '{"r":1.4965920448303223,"g":0.211622953414917,"b":0.14824731647968293,"a":1.0}'
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -318,7 +318,7 @@ VisualEffectResource:
   - compute: 0
     name: '[System 1]Output Particle Quad'
     source: "Shader \"Hidden/VFX/Impact/System 1/Output Particle Quad\"\n{\r\n\tSubShader\r\n\t{\t\r\n\t\tCull
-      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Transparent\" \"IgnoreProjector\"=\"True\"
+      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Overlay+1\" \"IgnoreProjector\"=\"True\"
       \"RenderType\"=\"Transparent\" }\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tBlend
       SrcAlpha One\n\t\tZTest LEqual\n\t\tZWrite Off\n\t\tCull Off\n\t\t\n\t\n\t\t\t\n\t\tHLSLINCLUDE\n\t\t\n\t\t#define
       NB_THREADS_PER_GROUP 64\n\t\t#define HAS_ATTRIBUTES 1\n\t\t#define VFX_PASSDEPTH_ACTUAL
@@ -938,7 +938,7 @@ VisualEffectResource:
   - compute: 0
     name: '[System 2]Output Particle Quad'
     source: "Shader \"Hidden/VFX/Impact/System 2/Output Particle Quad\"\n{\r\n\tSubShader\r\n\t{\t\r\n\t\tCull
-      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Transparent\" \"IgnoreProjector\"=\"True\"
+      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Overlay+1\" \"IgnoreProjector\"=\"True\"
       \"RenderType\"=\"Transparent\" }\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tBlend
       SrcAlpha One\n\t\tZTest LEqual\n\t\tZWrite Off\n\t\tCull Off\n\t\t\n\t\n\t\t\t\n\t\tHLSLINCLUDE\n\t\t\n\t\t#define
       NB_THREADS_PER_GROUP 64\n\t\t#define HAS_ATTRIBUTES 1\n\t\t#define VFX_PASSDEPTH_ACTUAL
@@ -1611,7 +1611,7 @@ VisualEffectResource:
   - compute: 0
     name: '[System 3]Output Particle Quad'
     source: "Shader \"Hidden/VFX/Impact/System 3/Output Particle Quad\"\n{\r\n\tSubShader\r\n\t{\t\r\n\t\tCull
-      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Transparent\" \"IgnoreProjector\"=\"True\"
+      Off\r\n\t\t\r\n\t\tTags { \"Queue\"=\"Overlay+1\" \"IgnoreProjector\"=\"True\"
       \"RenderType\"=\"Transparent\" }\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tBlend
       SrcAlpha One\n\t\tZTest LEqual\n\t\tZWrite Off\n\t\tCull Off\n\t\t\n\t\n\t\t\t\n\t\tHLSLINCLUDE\n\t\t\n\t\t#define
       NB_THREADS_PER_GROUP 64\n\t\t#define HAS_ATTRIBUTES 1\n\t\t#define VFX_PASSDEPTH_ACTUAL
@@ -2968,7 +2968,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 8
           m_Value: {x: 0, y: 0.1882353, z: 1.8745098, w: 0}
         - m_ExpressionIndex: 10
-          m_Value: {x: 1.1764706, y: 0.5647059, z: 0.21176471, w: 1}
+          m_Value: {x: 1.496592, y: 0.21162295, z: 0.14824732, w: 1}
       m_Uint:
         m_Array: []
       m_Int:
@@ -4309,7 +4309,7 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
-  - {fileID: 8926484042661614756}
+  - {fileID: 8926484042661614761}
   - {fileID: 8926484042661614586}
   m_OutputSlots: []
   m_Label: 
@@ -4328,6 +4328,7 @@ MonoBehaviour:
   cullMode: 0
   zWriteMode: 0
   zTestMode: 0
+  customRenderQueue: Overlay+1
   colorMapping: 0
   uvMode: 0
   useSoftParticle: 1
@@ -4749,7 +4750,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614601}
       inputSlot: {fileID: 8926484042661614599}
-    position: {x: 808, y: 1084}
+    position: {x: 813, y: 1124}
     expandedSlots: []
     expanded: 0
   - m_Id: 1
@@ -4834,7 +4835,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614617}
       inputSlot: {fileID: 8926484042661614623}
-    position: {x: 753, y: 1242}
+    position: {x: 798, y: 1321}
     expandedSlots: []
     expanded: 0
   - m_Id: 2
@@ -4872,7 +4873,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":1.1764706373214722,"g":0.5647059082984924,"b":0.21176470816135407,"a":1.0}'
+      m_SerializableObject: '{"r":1.4965920448303223,"g":0.211622953414917,"b":0.14824731647968293,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: o
@@ -5782,7 +5783,7 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
-  - {fileID: 8926484042661614757}
+  - {fileID: 8926484042661614762}
   - {fileID: 8926484042661614648}
   m_OutputSlots: []
   m_Label: 
@@ -5800,6 +5801,7 @@ MonoBehaviour:
   cullMode: 0
   zWriteMode: 0
   zTestMode: 0
+  customRenderQueue: Overlay+1
   colorMapping: 0
   uvMode: 0
   useSoftParticle: 1
@@ -7715,7 +7717,7 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
-  - {fileID: 8926484042661614758}
+  - {fileID: 8926484042661614763}
   - {fileID: 8926484042661614708}
   m_OutputSlots: []
   m_Label: 
@@ -7733,6 +7735,7 @@ MonoBehaviour:
   cullMode: 0
   zWriteMode: 0
   zTestMode: 0
+  customRenderQueue: Overlay+1
   colorMapping: 0
   uvMode: 0
   useSoftParticle: 1
@@ -9153,7 +9156,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614751}
       inputSlot: {fileID: 8926484042661614716}
-    position: {x: 3189, y: 1409}
+    position: {x: 3226, y: 1615}
     expandedSlots: []
     expanded: 0
 --- !u!114 &8926484042661614751
@@ -9327,7 +9330,7 @@ MonoBehaviour:
     attributes: []
   m_Direction: 1
   m_LinkedSlots: []
---- !u!114 &8926484042661614756
+--- !u!114 &8926484042661614761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9344,7 +9347,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614756}
+  m_MasterSlot: {fileID: 8926484042661614761}
   m_MasterData:
     m_Owner: {fileID: 8926484042661614585}
     m_Value:
@@ -9367,7 +9370,7 @@ MonoBehaviour:
       m_RegexMaxLength: 0
   m_Direction: 0
   m_LinkedSlots: []
---- !u!114 &8926484042661614757
+--- !u!114 &8926484042661614762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9384,7 +9387,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614757}
+  m_MasterSlot: {fileID: 8926484042661614762}
   m_MasterData:
     m_Owner: {fileID: 8926484042661614647}
     m_Value:
@@ -9407,7 +9410,7 @@ MonoBehaviour:
       m_RegexMaxLength: 0
   m_Direction: 0
   m_LinkedSlots: []
---- !u!114 &8926484042661614758
+--- !u!114 &8926484042661614763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9424,7 +9427,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614758}
+  m_MasterSlot: {fileID: 8926484042661614763}
   m_MasterData:
     m_Owner: {fileID: 8926484042661614707}
     m_Value:

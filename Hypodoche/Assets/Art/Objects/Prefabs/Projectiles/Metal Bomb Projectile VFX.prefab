@@ -221,7 +221,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+      minColor: {r: 0.16820934, g: 0.6250922, b: 0.7924528, a: 1}
       maxColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -1304,7 +1304,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key1: {r: 1, g: 1, b: 1, a: 0.5882353}
         key2: {r: 1, g: 1, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4730,7 +4730,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_RenderMode: 4
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5061,7 +5061,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
+      minColor: {r: 0.28261837, g: 0.33644998, b: 0.6886792, a: 1}
       maxColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -9570,7 +9570,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9664,7 +9664,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
@@ -9695,7 +9695,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 0.78431374}
+      key0: {r: 0.10933607, g: 0.16418132, b: 0.8584906, a: 0.78431374}
       key1: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

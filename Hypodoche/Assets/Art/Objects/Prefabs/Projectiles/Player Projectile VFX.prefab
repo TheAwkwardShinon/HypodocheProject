@@ -4730,7 +4730,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_RenderMode: 4
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9484,7 +9484,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9578,7 +9578,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
@@ -9729,3 +9729,5 @@ MonoBehaviour:
   _mouseMask:
     serializedVersion: 2
     m_Bits: 7681
+  _impactPrefab: {fileID: 2660240973232295656, guid: b956e445c10ef5043a4c813557ea5a6a,
+    type: 3}
