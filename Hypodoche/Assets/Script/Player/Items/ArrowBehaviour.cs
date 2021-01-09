@@ -14,6 +14,7 @@ namespace Hypodoche
         [SerializeField] private float _speed = 10f;
         [SerializeField] private float _damage = 10;
         [SerializeField] private float _maxDistance = 20f;
+        [SerializeField] private LayerMask _mouseMask;
         private Rigidbody _rigidbody;
         private Vector3 _startingPosition;
         #endregion
@@ -33,7 +34,7 @@ namespace Hypodoche
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100))
+            if (Physics.Raycast(ray, out hit, 100, _mouseMask))
             {
                 Vector3 target = new Vector3(hit.point.x, transform.position.y, hit.point.z);
                 transform.LookAt(target);

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: Caput Library
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Bell
+    m_Hash: -754364487
+    m_CategoryList:
+    - m_Name: Normal
+      m_Hash: 640249298
+      m_Sprite: {fileID: -7852415244086665768, guid: ba5005bbfc96e2a4a81ec9df801ec5e7,
+        type: 3}
+    - m_Name: Blood
+      m_Hash: 2127620795
+      m_Sprite: {fileID: -8891445701934052543, guid: ecd891a895e560a44b6d27a1dbfa5685,
+        type: 3}

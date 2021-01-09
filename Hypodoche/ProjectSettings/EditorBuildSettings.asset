@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: cc4e2c4f424d27e48a6aa4750cbde020
+    path: Assets/Scenes/Menu - Final Luca.unity
+    guid: d92308c28b6acb04c89658c83b9d5632
   - enabled: 1
-    path: Assets/Scenes/Hub.unity
-    guid: f1eab7b0070c15c43be9dda5db25a708
+    path: Assets/Scenes/Hub - Final Luca.unity
+    guid: 4a6df68bec4456c4f99f692564561dd3
   - enabled: 1
-    path: Assets/Scenes/BuildArenaScene.unity
-    guid: b19942c6ce1539a478a332fbe63c94d9
+    path: Assets/Scenes/BuildArena - Final Luca.unity
+    guid: 7c193c126f696cb439aa1bd65bc00a51
   - enabled: 1
-    path: Assets/Scenes/ArenaScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Arena - Final.unity
+    guid: 4ca3e33eda1aaa9489d2765fa8072b76
   - enabled: 1
     path: Assets/Scenes/VictoryScene.unity
     guid: baa02b3541e8606429aeafbd9d64c9ba

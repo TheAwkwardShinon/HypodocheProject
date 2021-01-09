@@ -21,6 +21,7 @@ namespace Hypodoche
         [SerializeField] private LayerMask _hitLayer;
 
         [SerializeField] private LayerMask _secondHitLater;
+        [SerializeField] private GameObject _impactPrefab;
         private float _attackRadius = 0.5f;
         private float _nextAttackTime = 0f;
         private float _attackRate;
@@ -91,6 +92,7 @@ namespace Hypodoche
 
                     enemy.TakeDamage(calculateDamage(weapon.GetLightDamage()));
                     alreadyHit.Add(hitParent);
+                    Instantiate(_impactPrefab, hitObject.ClosestPointOnBounds(_activeMeleePoint.transform.position), Quaternion.identity);
                 }
             }
 
@@ -130,29 +132,13 @@ namespace Hypodoche
 
         public void HandleShooting(Weapon weapon)
         {
-            Debug.Log("the dmag should be : "+ weapon.GetLightDamage()
+            Debug.Log("the dmg should be : "+ weapon.GetLightDamage()
             + " the multiplier is : "+_playerStatus.getEnancheMultiplier()
             +"%  so the dmg became : "+ calculateDamage(weapon.GetLightDamage()));
             _shootingHandler.SetArrowStats(calculateDamage(weapon.GetLightDamage()));
             _shootingHandler.Shoot();
             _attackRate = weapon.GetLightAttackRate();
         }
-
-        /*public void FlipShootingSpawnPoint(bool facesLeft)
-        {
-            if (facesLeft)
-                _shootingHandler.SetActiveShootingPoint(_leftShootingSpawnPoint.transform);
-            else
-                _shootingHandler.SetActiveShootingPoint(_rightShootingSpawnPoint.transform);
-        }
-
-        public void FlipMeleePoint(bool facesLeft)
-        {
-            if (facesLeft)
-                _activeMeleePoint = _leftMeleePoint;
-            else
-                _activeMeleePoint = _rightMeleePoint;
-        }*/
         #endregion
     }
 }
