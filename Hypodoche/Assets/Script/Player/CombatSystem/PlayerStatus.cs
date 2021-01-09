@@ -31,6 +31,8 @@ namespace Hypodoche
 
         private float _enhanceMultiplier = 0f;
 
+        private float _permanentEnancheMultiplier = 0f;
+
         private float _layerChangedTime = 0f;
 
         private float _layerChangedClock;
@@ -215,6 +217,10 @@ namespace Hypodoche
             return _enhanceMultiplier;
         }
 
+        public float getPermanentEnanche(){
+            return _permanentEnancheMultiplier;
+        }
+
         #endregion
 
         #region stats-getter
@@ -242,6 +248,10 @@ namespace Hypodoche
             _isStunned = value;
             _stunTime = time;
             _startStunClock = Time.time;
+        }
+
+        public void AddPermanentEnanche(int value){
+            _permanentEnancheMultiplier = value;
         }
         #endregion
         

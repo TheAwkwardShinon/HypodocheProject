@@ -27,7 +27,12 @@ namespace Hypodoche{
 
             if(Time.time >= (_caputmallei.getFatefulRetributionClock()+ _caputmallei.getFatefulRetributionCountdown()))
                     _stateMachine.ChangeState(_caputmallei._fateFulRetribution);
-                    
+
+            if(Time.time >= (_caputmallei.getSundayMorningClock() + _caputmallei.getSundayMorningCountdown())) 
+            {
+                    _stateMachine.ChangeState(_caputmallei._sundayMorning);
+            }
+
             if (_isIdleTimeElapsed)
             {
                 _stateMachine.ChangeState(_caputmallei._moveState);

@@ -31,7 +31,6 @@ namespace Hypodoche {
             _iceCrow = iceCrow;
             _lineRenderer = _iceCrow.gameObject.GetComponent<LineRenderer>();
             _lineDrawSpeed = 6f;
-            //_spawner = new ChainSpawner();
         }
 
         public override void Enter()
@@ -63,7 +62,6 @@ namespace Hypodoche {
                     _secondLr.endWidth = 0.3f;
                 }
             }catch(NullReferenceException e){
-                Debug.Log("whatisnuulllll??? baby don't hurt me, no more: "+e);
                 if(_waterCrow == null){
                     Debug.Log("yep, watercrow is null");
                 }

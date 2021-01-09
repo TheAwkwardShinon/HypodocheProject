@@ -45,7 +45,7 @@ namespace Hypodoche
         }
 
         public float calculateDamage(float dmg){ //in percentuale
-            float multiplier = _playerStatus.getEnancheMultiplier();
+            float multiplier = _playerStatus.getEnancheMultiplier()+_playerStatus.getPermanentEnanche();
             if(multiplier == 0f) return dmg;
             else return dmg + ((dmg * multiplier)/100);
         }
