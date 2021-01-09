@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -25.851002}
+        value: {x: 0, y: 0, z: 25.897001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -28,7 +28,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: -0.21000001}
+        value: {x: 0, y: 0, z: -39.488003}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -37,7 +37,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -25.851002}
+        value: {x: 0, y: 0, z: 25.897001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -47,13 +47,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_3
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -29.223001}
+        value: {x: 0, y: 0, z: -18.038}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -62,7 +62,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: -17.509}
+        value: {x: 0, y: 0, z: -24.538002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -71,7 +71,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -29.223001}
+        value: {x: 0, y: 0, z: -18.038}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -81,13 +81,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 150.093}
+        value: {x: 0, y: 0, z: 92.94601}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -96,7 +96,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 122.90101}
+        value: {x: 0, y: 0, z: 159.746}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -105,7 +105,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 150.093}
+        value: {x: 0, y: 0, z: 92.94601}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -115,13 +115,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_5
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 38.125}
+        value: {x: 0, y: 0, z: 15.939001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -130,7 +130,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: 14.765}
+        value: {x: 0, y: 0, z: 19.85}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -139,7 +139,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: 38.125}
+        value: {x: 0, y: 0, z: 15.939001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -149,13 +149,13 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -75.588005}
+        value: {x: 0, y: 0, z: -31.129002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -164,7 +164,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 0, y: 0, z: -62.134003}
+        value: {x: 0, y: 0, z: -65.388}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -173,7 +173,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0, y: 0, z: -75.588005}
+        value: {x: 0, y: 0, z: -31.129002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -183,14 +183,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_2
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 2.6313725, y: 27.398506, z: 0.0000014305115}
+        value: {x: 2.4957619, y: 26.241323, z: 0.0000030994415}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -199,7 +199,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 2.6138668, y: 26.745417, z: 0.000004053116}
+        value: {x: 2.8045855, y: 27.092924, z: 0.00000500679}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -208,7 +208,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 2.6313725, y: 27.398506, z: 0.0000014305115}
+        value: {x: 2.4957619, y: 26.241323, z: 0.0000030994415}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -218,11 +218,11 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Halja_Crows/bone_1
+    path: Halja_IceCrow/bone_1
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 48
+  m_SampleRate: 16
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -230,42 +230,42 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1393508751
+      path: 110519189
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 207816191
+      path: 2775374003
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 621448629
+      path: 3123862551
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3842023626
+      path: 1276083590
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 225174814
+      path: 2454926524
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2070164841
+      path: 3530287141
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -327,7 +327,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -364,7 +364,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -372,7 +372,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -25.851002
+        value: 25.897001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -381,7 +381,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: -0.21000001
+        value: -39.488003
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -390,7 +390,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -25.851002
+        value: 25.897001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -401,7 +401,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -438,7 +438,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -475,7 +475,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -483,7 +483,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -29.223001
+        value: -18.038
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -492,7 +492,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: -17.509
+        value: -24.538002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -501,7 +501,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -29.223001
+        value: -18.038
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -512,7 +512,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -549,7 +549,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -586,7 +586,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -594,7 +594,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 150.093
+        value: 92.94601
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -603,7 +603,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 122.90101
+        value: 159.746
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -612,7 +612,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 150.093
+        value: 92.94601
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -623,7 +623,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -660,7 +660,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -697,7 +697,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -705,7 +705,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 38.125
+        value: 15.939001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -714,7 +714,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 14.765
+        value: 19.85
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -723,7 +723,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 38.125
+        value: 15.939001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -734,7 +734,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -742,7 +742,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 2.6313725
+        value: 2.4957619
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -751,7 +751,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 2.6138668
+        value: 2.8045855
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -760,7 +760,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 2.6313725
+        value: 2.4957619
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -771,7 +771,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Halja_Crows/bone_1
+    path: Halja_IceCrow/bone_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -779,7 +779,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 27.398506
+        value: 26.241323
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -788,7 +788,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 26.745417
+        value: 27.092924
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -797,7 +797,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 27.398506
+        value: 26.241323
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -808,7 +808,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Halja_Crows/bone_1
+    path: Halja_IceCrow/bone_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -816,7 +816,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0000014305115
+        value: 0.0000030994415
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -825,7 +825,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 0.000004053116
+        value: 0.00000500679
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -834,7 +834,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 0.0000014305115
+        value: 0.0000030994415
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -845,7 +845,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Halja_Crows/bone_1
+    path: Halja_IceCrow/bone_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -882,7 +882,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -919,7 +919,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -927,7 +927,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -75.588005
+        value: -31.129002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -936,7 +936,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: -62.134003
+        value: -65.388
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -945,7 +945,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -75.588005
+        value: -31.129002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -956,7 +956,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -967,7 +967,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -977,7 +977,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -987,7 +987,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Halja_Crows/bone_1/bone_3/bone_4
+    path: Halja_IceCrow/bone_1/bone_2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -997,7 +997,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1007,7 +1007,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1017,7 +1017,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Halja_Crows/bone_1/bone_5
+    path: Halja_IceCrow/bone_1/bone_3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1027,7 +1027,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1037,7 +1037,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1047,7 +1047,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Halja_Crows/bone_1/bone_3
+    path: Halja_IceCrow/bone_1/bone_5
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1057,7 +1057,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1067,7 +1067,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1077,7 +1077,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Halja_Crows/bone_1/bone_2
+    path: Halja_IceCrow/bone_1/bone_3/bone_4
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1087,7 +1087,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1097,7 +1097,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1107,7 +1107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Halja_Crows/bone_1/bone_5/bone_6
+    path: Halja_IceCrow/bone_1/bone_5/bone_6
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

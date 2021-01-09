@@ -18,6 +18,7 @@ namespace Hypodoche
         [SerializeField] [Range(1.5f, 50f)] private float _backstepMultiplier = 1.5f;
         [SerializeField] [Range(1.5f, 10f)] private float _sprintMultiplier = 10f;
         [SerializeField] private GameObject _sprite;
+        [SerializeField] private LayerMask _mouseMask;
 
         private Rigidbody _rigidbody;
         private PlayerCombat _playerCombat;
@@ -122,8 +123,9 @@ namespace Hypodoche
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
+            if (Physics.Raycast(ray, out hit, 100f, _mouseMask))
             {
+                Debug.Log("Hit: " + hit.point);
                 if (hit.point.x > transform.position.x && _facesLeft ||
                     hit.point.x < transform.position.x && !_facesLeft)
                     Flip();

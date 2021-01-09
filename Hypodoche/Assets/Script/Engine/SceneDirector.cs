@@ -29,6 +29,18 @@ public class SceneDirector : MonoBehaviour
         StartCoroutine(LoadScene(sceneIndex));
     }
 
+    public void LoadSceneByName(string sceneName)
+    {
+        StartCoroutine(LoadScene(sceneName));
+    }
+
+    IEnumerator LoadScene(string sceneName)
+    {
+        _transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void Quit()
     {
         StartCoroutine(QuitGame());

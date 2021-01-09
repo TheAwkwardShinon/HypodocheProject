@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,14 +39,11 @@ namespace Hypodoche
         {
             SpawnBoss();
             int i = 0, j = 0;
-            try{
+            if(_arenaTransfer != null && _arenaTransfer.GetSlotArray() != null)
+            {
                 foreach (GameObject prefab in _arenaTransfer.GetSlotArray()){       
                     if (prefab != null){
-                        Debug.Log("the prefab["+i+"] is not null: "+prefab.name);
                         Instantiate(prefab, new Vector3(_basePoint.position.x + i * _horizontalOffset, 0, _basePoint.position.z - j * _verticalOffset), Quaternion.identity);
-                    }
-                    else{
-                        Debug.Log("the prefab["+i+"] is null");
                     }
                     i++;
                     if(i == 5) {
@@ -55,19 +51,12 @@ namespace Hypodoche
                         j++;
                     }
                 }
-            }catch(NullReferenceException e){
-                if(_arenaTransfer.GetSlotArray() == null){
-                    Debug.Log("yep, is null getSlotArray()");
-                }else{
-                    Debug.Log("somthing went wrong, but the array is not null");
-                }
-                return;
             }
         }
 
         private void SpawnBoss()
         {
-            int index = UnityEngine.Random.Range(0, _bossList.Count);
+            int index = Random.Range(0, _bossList.Count);
             GameObject boss = _bossList[index];
             //BOSS SETUP
             boss.GetComponent<Entity>()._ui = _debuffArea;
