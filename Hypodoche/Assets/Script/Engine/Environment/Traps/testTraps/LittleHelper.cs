@@ -14,6 +14,7 @@ namespace Hypodoche{
 
 
         private bool _active = true;
+        private Animator _animator;
 
         #endregion
     
@@ -22,13 +23,16 @@ namespace Hypodoche{
 
         public void Start(){
             _active = true;
+            _animator = GetComponent<Animator>();
+            _animator.SetBool("isActive",true);
             _startTime = Time.time;
         }
 
         public void Update(){
             if (!_active && Time.time >= _startTime + _deadTime) { 
                 _active = true;
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                _animator.SetBool("isActive",true);
+                //gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
             }
         }
 
@@ -46,8 +50,9 @@ namespace Hypodoche{
                 if(currentStamina <= maxStamina/4) col.gameObject.GetComponent<PlayerStatus>().setStamina(_recover *2f);
                 else if(currentStamina <= maxStamina/2) col.gameObject.GetComponent<PlayerStatus>().setStamina(_recover *1.5f);
                 else col.gameObject.GetComponent<PlayerStatus>().setStamina(_recover);
+                _animator.SetBool("isActive",false);
                 _active = false;
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                //gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
                 _startTime = Time.time;
             }
         }

@@ -16,10 +16,10 @@ namespace Hypodoche
 
         [SerializeField] private GameObject _GrabZone; 
         private float _staminaRegenDelay = 0.5f;
-        public float _maxHealth = 100f;
-        private float _maxStamina = 100f;
+        public float _maxHealth = 120f;
+        private float _maxStamina = 180f;
         private float _staminaRegenStartTime = 0f;
-        private float _exhaustionPoint = 30f;
+        private float _exhaustionPoint = 60f;
         private bool _isExhausted = false;
 
         #region status-variables
@@ -55,6 +55,7 @@ namespace Hypodoche
         public void SetPlayerHealth(float health)
         {
             _playerHealth = health;
+            UpdateHealthUIValue();
         }
 
         public float GetMaxHealth()

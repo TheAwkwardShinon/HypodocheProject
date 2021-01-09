@@ -16,6 +16,7 @@ namespace Hypodoche{
         [SerializeField] private float _multiplier = 40f;
 
         protected float _cooldown;
+        private Animator _animator;
 
         protected bool _active;
         protected bool _poweredUp;
@@ -29,9 +30,10 @@ namespace Hypodoche{
         public void Start()
         {
             _active = false;
+
             _cooldown = Time.time + _deadTime;
-
-
+            _animator = GetComponent<Animator>();
+            _animator.SetBool("isActive",false);
             StunData s = new StunData();
             s.isEmpty = true;
             DamageOverTimeData d = new DamageOverTimeData();
@@ -56,13 +58,15 @@ namespace Hypodoche{
         {
             if (!_active && Time.time >= _cooldown) { 
                 _active = true;
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                _animator.SetBool("isActive",true);
+                //gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
                 _cooldown = Time.time + _aliveTime; 
             }
             if (_active && Time.time >= _cooldown)
             {
                 _active = false;
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                _animator.SetBool("isActive",false);
+                //gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
                 _cooldown = Time.time + _deadTime;
             }
 

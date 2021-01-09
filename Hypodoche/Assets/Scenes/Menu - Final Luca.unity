@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1363177406}
+      - m_Target: {fileID: 1362932853}
         m_MethodName: setVol
         m_Mode: 0
         m_Arguments:
@@ -2249,6 +2249,7 @@ GameObject:
   - component: {fileID: 1362932851}
   - component: {fileID: 1362932850}
   - component: {fileID: 1362932852}
+  - component: {fileID: 1362932853}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2333,6 +2334,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1362932853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362932847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771f2c1325105f54499aa8f03ea455e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 176c4020033ad194c9c470abf52f59e7, type: 2}
+  _settings: {fileID: 11400000, guid: 767330daba6268f4ab4c453432e9c8c3, type: 2}
+  _slider: {fileID: 825714110}
 --- !u!1 &1363177404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,6 +2399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 176c4020033ad194c9c470abf52f59e7, type: 2}
+  _settings: {fileID: 11400000, guid: 767330daba6268f4ab4c453432e9c8c3, type: 2}
+  _slider: {fileID: 825714110}
 --- !u!1 &1440987624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,6 +3034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8659b62261a864ca8b9cb03ea585e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _DataCurrentResoluton: {fileID: 11400000, guid: 767330daba6268f4ab4c453432e9c8c3,
+    type: 2}
 --- !u!1 &1669219543
 GameObject:
   m_ObjectHideFlags: 0
