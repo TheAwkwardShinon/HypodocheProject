@@ -32,6 +32,7 @@ namespace Hypodoche
         {
             base.ExecuteAfterAnimation();
             _startTime = Time.time;
+            Debug.Log("i am herreeeeee babe");
             if (_typeOfCollision.Equals("trap")) {
                
                 //_effects = _col.gameObject.GetComponent<Traps>().SendDataTrap();

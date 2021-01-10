@@ -103,7 +103,7 @@ MonoBehaviour:
   _inquisitionMaxDistance: 5
   _inquisitionCountdown: 5
   _inquisitionDamage: 4
-  _bloodPool: {fileID: 4320469974318419951, guid: 39fc44bbecbd2bf4cb1e2dff4ca5f059,
+  _bloodPool: {fileID: 7402237198880395262, guid: 962cec53e49630d4594eb623fb4979f1,
     type: 3}
   _bloodPoolSpawnRdius: 5
   _maxBloodPool: 10

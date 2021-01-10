@@ -68,6 +68,7 @@ namespace Hypodoche
 
         public void stepOnTrap(Effects effect)
         {
+            Debug.Log("sto per entrare in suffere The Effect");
             _stateMachine.ChangeState(new LiYan_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, effect, "trap", this));
         }
 
@@ -81,7 +82,7 @@ namespace Hypodoche
         {
             _entityData.health -= value;
         }
-        
+
 
         #endregion
     }

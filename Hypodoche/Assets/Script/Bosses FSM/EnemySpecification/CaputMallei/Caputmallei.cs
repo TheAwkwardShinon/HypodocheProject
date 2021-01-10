@@ -131,6 +131,7 @@ namespace Hypodoche
 
         public void stepOnTrap(Effects effect)
         {
+            Debug.Log("step on trap");
             _stateMachine.ChangeState(new Caputmallei_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, effect, "trap", this));
         }
 

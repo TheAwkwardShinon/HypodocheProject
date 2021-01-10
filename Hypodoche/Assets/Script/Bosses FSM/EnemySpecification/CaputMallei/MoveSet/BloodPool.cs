@@ -37,6 +37,7 @@ namespace Hypodoche{
             }
             else if(col.CompareTag("Player")){
                 col.gameObject.GetComponent<PlayerStatus>().TakeDamage(_playerDamage);
+                Destroy(gameObject);
             }
         }
 

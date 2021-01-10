@@ -14,6 +14,8 @@ namespace Hypodoche{
 
         private float _deadTime = 0f;
 
+        private Animator _anim;
+
         [SerializeField] private float _lifesteal = 15f;
 
         [SerializeField] private int _minRandomEnancheMultiplier = 15;
@@ -33,6 +35,8 @@ namespace Hypodoche{
             if(Time.time > (_deadTime + _cooldown) && !_isActive)
             {
                 _isActive = true;
+                _anim.SetBool("isActive",true);
+
             }
         }
 
@@ -46,12 +50,15 @@ namespace Hypodoche{
                     col.gameObject.GetComponent<PlayerStatus>().AddPermanentEnanche(_enanche);
                     _deadTime = Time.time;
                     _isActive = false;
+                    _anim.SetBool("isActive",false);
+
                 }
                 else if (col.gameObject.CompareTag("boss"))
                 {
                     col.transform.root.GetComponent<Enemy>().TakeDamage(_lifesteal);
                     _deadTime = Time.time;
                     _isActive = false;
+                    _anim.SetBool("isActive",false);
                 }
             }
         }
@@ -63,6 +70,9 @@ namespace Hypodoche{
 
         public void Start()
         {
+            _isActive = true;
+            _anim = GetComponent<Animator>();
+            _anim.SetBool("isActive",true);
         }
 
 

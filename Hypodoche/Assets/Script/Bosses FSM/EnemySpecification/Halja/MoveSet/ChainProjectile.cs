@@ -51,7 +51,7 @@ namespace Hypodoche{
                 if (status != null)
                 {
                     status.TakeDamage(_damage);
-                    status.setStun(3f,true);
+                    status.setStun(2f,true);
                     _direction = (_startingPosition - transform.position).normalized;
                     _rigidbody.velocity = _direction * _speed;
                     _hit= true;

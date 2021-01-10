@@ -10,6 +10,8 @@ namespace Hypodoche
         private  float countdown = 0f;
         [SerializeField]private float _activeTime = 8f;
         [SerializeField]private float _deadTime = 5f;
+
+        private Animator _anim;
         
         private bool _active = false;
 
@@ -30,6 +32,8 @@ namespace Hypodoche
             _myCollider = gameObject.GetComponent<Collider>();
             _sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
             _colorValue = Color.white;
+            _anim = GetComponent<Animator>();
+            _anim.SetBool("isActive", false);
         }
         
 
@@ -37,22 +41,26 @@ namespace Hypodoche
         {
             if(!_active){ 
                 {
-                _colorValue.a = _colorValue.a - 0.05f <= 0f ? 0f : _colorValue.a - 0.05f;
-                _sprite.color = _colorValue;
+                //_colorValue.a = _colorValue.a - 0.05f <= 0f ? 0f : _colorValue.a - 0.05f;
+                //_sprite.color = _colorValue;
                 }
             }
             else{
-                _colorValue.a = _colorValue.a + 0.05f >= 1f ? 1f : _colorValue.a + 0.05f;
-                _sprite.color = _colorValue;
+               // _colorValue.a = _colorValue.a + 0.05f >= 1f ? 1f : _colorValue.a + 0.05f;
+                //_sprite.color = _colorValue;
             }
 
             if (!_active && Time.time >= countdown) { 
                 _active = true;
+                _anim.SetBool("isActive", true);
+
                 countdown = Time.time + _activeTime; 
             }
             if (_active && Time.time >= countdown)
             {
                 _active = false;
+                _anim.SetBool("isActive", false);
+
                 countdown = Time.time + _deadTime;
             }
 

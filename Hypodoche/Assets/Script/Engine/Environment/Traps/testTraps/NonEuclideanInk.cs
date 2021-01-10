@@ -5,7 +5,7 @@ using System;
 
 namespace Hypodoche
 {
-    public class PurifyingWater : MonoBehaviour,Traps
+    public class NonEuclideanInk : MonoBehaviour,Traps
     {
         #region variables
         protected float _time = 2f;
@@ -14,7 +14,7 @@ namespace Hypodoche
         #endregion
 
         #region methods
-        public PurifyingWater() {}
+
 
         public void Start(){
             StunData s = new StunData();
@@ -53,9 +53,13 @@ namespace Hypodoche
 
         public void OnTriggerEnter(Collider col)
         {
+
+            Debug.Log("sono dentro il trigger");
             if (col.gameObject.CompareTag("boss"))
             {
+                Debug.Log("sono il boss e sono entrato");
                 col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
+                Debug.Log("chiamato con insuccesso");
                 if (_dmg > 1)
                 {
                     _dmg = _dmg / 2;
@@ -72,13 +76,6 @@ namespace Hypodoche
             }
         }
 
-        public void OnTriggerExit(Collider col)
-        {
-            if (col.gameObject.CompareTag("boss"))
-            {
-                col.transform.root.GetComponent<Boss>().exitFromTrap();
-            }
-        }
         #endregion
     }
 }

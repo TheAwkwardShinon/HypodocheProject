@@ -127,7 +127,7 @@ namespace Hypodoche {
                     Vector3.Distance(_spitPosition,_waterCrow.getThrowChainPosition().position),LayerMask.GetMask("Player"))){
                         StunData st = new StunData();
                         st.isEmpty = false;
-                        st.time = 5f;
+                        st.time = 3f;
                         Hit.collider.gameObject.GetComponent<PlayerStatus>().AddStatus(new Effects(new SlowData(),st,new DamageOverTimeData(),
                             new DamageData(),new FearData(), false, new SlowOverAreaData(),new DamageOverAreaData(),new EnhanceData()));
                 }
@@ -137,7 +137,7 @@ namespace Hypodoche {
                     Vector3.Distance(_spitPosition,_iceCrow.GetHalja().getThrowChainPosition().position),LayerMask.GetMask("Player"))){
                         StunData st = new StunData();
                         st.isEmpty = false;
-                        st.time = 5f;
+                        st.time = 3f;
                         Hit.collider.gameObject.GetComponent<PlayerStatus>().AddStatus(new Effects(new SlowData(),st,new DamageOverTimeData(),
                             new DamageData(),new FearData(), false, new SlowOverAreaData(),new DamageOverAreaData(),new EnhanceData()));
                     }

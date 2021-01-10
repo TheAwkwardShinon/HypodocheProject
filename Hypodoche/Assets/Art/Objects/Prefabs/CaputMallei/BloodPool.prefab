@@ -58,9 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e684e30c1dfa114fafb773f1efa2984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _duration: 10
-  _healthBonus: 8
-  _playerDamage: 5
+  _duration: 12
+  _healthBonus: 15
+  _playerDamage: 6
 --- !u!1 &4320469975321846073
 GameObject:
   m_ObjectHideFlags: 0
