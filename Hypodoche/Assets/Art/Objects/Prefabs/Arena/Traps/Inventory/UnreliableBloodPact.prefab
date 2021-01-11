@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6113711760104733348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6113711760104733350}
+  - component: {fileID: 6113711760104733349}
+  m_Layer: 11
+  m_Name: UnreliableBloodPact
+  m_TagString: trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6113711760104733350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113711760104733348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6113711760104733349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113711760104733348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 8793659005912825939, guid: c49259ff61f48f644b154e635966b8ae,
+    type: 3}
+  _itemSprite: {fileID: 21300000, guid: d646df18968c2a84eb48f1be0e578958, type: 3}
+  _itemName: Unreliable Blood Pact
+  _ownedAmount: 1
+  _description: "Sacrifice health to gain a random amount of permanent power. Has
+    a cooldown of 26 seconds. If any enemy gets too close, they get damaged.  -Caputmallei
+    Story- \u201CTo those who listen, Caputmallei preaches dark tales, but no matter
+    how much he tries, often ignorance prevails:  he saw in his dreams what others
+    can not, the far away land where the battles are fought.  In this concealed place,
+    long lost in the stars, an injured owl rests, mending his scars.  \u2018He\u2019s
+    the one who we should pray!\u2019 Caputmallei screams as loud as he may.  But
+    nobody listens, and that is ok, because at the end of the day nobody would care
+    either way.\u201D "
+  _effectNum: 1
+  _effectOneSprite: {fileID: 21300000, guid: 43252b2c6240495419319f2966337554, type: 3}
+  _effectTwoSprite: {fileID: 0}
+  _shopPrice: 5

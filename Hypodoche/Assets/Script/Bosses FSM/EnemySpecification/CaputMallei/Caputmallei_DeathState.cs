@@ -26,7 +26,8 @@ namespace Hypodoche
          public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-             SceneManager.LoadScene("victoryScene");
+            CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
+            cpm.Advance(false);
             _caputmallei.DestroyBoss();
         }
         public override void Enter()

@@ -14,11 +14,13 @@ namespace Hypodoche
         [SerializeField] private List<TrapItem> _shopList;
         [SerializeField] private PlayerInstantiateSO _playerPosition;
         [SerializeField] private OracleDialogueProgression _odp;
+        [SerializeField] private CampaignProgressionManager _cpm;
         #endregion
 
         #region Methods
         void Start()
         {
+            _cpm.Setup();
             _playerPosition.SetPosition(new Vector3(0, 0.01f, -13));
             _playerInventory.Reset();
             _shopInventory.Reset(_shopList);
@@ -27,6 +29,7 @@ namespace Hypodoche
             _playerInventory.Setup();
             _shopInventory.Setup();
             _odp.ResetIndex();
+            _cpm.Advance(true);
         }
         #endregion
     }

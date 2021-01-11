@@ -8,7 +8,7 @@ namespace Hypodoche
     public class TrapShop : ScriptableObject
     {
         #region Variables
-        [SerializeField] private List<TrapItem> _itemList;
+         private static List<TrapItem> _itemList;
         #endregion
 
         #region Getters and Setters
@@ -24,7 +24,12 @@ namespace Hypodoche
             Debug.Log("Reset Shop");
             if(_itemList != null)
                 _itemList.Clear();
-            _itemList = shopList;
+            else{
+                _itemList = new List<TrapItem>();
+            }
+            foreach(TrapItem item in shopList){
+                _itemList.Add(item);
+            }
         }
         public void Setup()
         {

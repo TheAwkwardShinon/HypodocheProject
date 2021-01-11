@@ -14,8 +14,7 @@ public class ShadowTree : MonoBehaviour,Traps
 
         [SerializeField] protected float _duration = 7f;
 
-        private bool _active = true;
-
+    
  
 
         #endregion
@@ -34,7 +33,7 @@ public class ShadowTree : MonoBehaviour,Traps
         public void Update()
         {
             if (Time.time >= _maxTime + _cooldown){
-                 _animator.ResetTrigger("inactive");
+                // _animator.ResetTrigger("inactive");
                 _animator.SetTrigger("isActive");
             }
 
@@ -46,7 +45,7 @@ public class ShadowTree : MonoBehaviour,Traps
             {
                 if (Time.time >= _maxTime + _cooldown){
                     col.gameObject.GetComponent<PlayerStatus>().changeLayerToDefault(_duration);
-                    _animator.ResetTrigger("isActive");
+                    //_animator.ResetTrigger("isActive");
                     _animator.SetTrigger("inactive");
                     _cooldown = Time.time;
                    // _maxTime = 42f;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8200b8829712e84f81c5795d74c8c86, type: 3}
   m_Name: LiYan_Basic_Data
   m_EditorClassIdentifier: 
-  health: 972.3141
+  health: 1000
   damageTakenOverTime: 0
   damageTakenOverTimeArea: 0.08
   wallCheckRange: 10
@@ -20,6 +20,7 @@ MonoBehaviour:
   speedWhenDetect: 0
   speedWhenSlowed: 0
   speedWhenSlowedArea: 1
+  startDmgOverTime: 0
   aggroRange: 5
   whatIsPerimeter:
     serializedVersion: 2
@@ -41,6 +42,6 @@ MonoBehaviour:
     m_Bits: 0
   timeOfCharm: 0
   timeOfFear: 0
-  damageOverArea: 1
+  damageOverArea: 0
   slowOverArea: 0
   enhanceMultiplier: 0

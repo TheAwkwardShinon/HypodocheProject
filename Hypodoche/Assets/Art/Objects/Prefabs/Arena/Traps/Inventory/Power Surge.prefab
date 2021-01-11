@@ -49,15 +49,14 @@ MonoBehaviour:
     type: 3}
   _itemName: Power Surge
   _ownedAmount: 1
-  _description: 'I once found a lost soul, a memory of dust in the warm universe,
-    that was crawling towards a star. They were lost, and I with them. I existed
-    just as a thought: I was, and am, just a soundless voice with no sight. But I
-    saw the soul, and I played with them. I noticed they were sad: their differences
-    hurt; so I sliced them, and the sould was thankfull.  Now they can be a soul
-    and be two souls, and that is good.'
+  _description: "Once every 30 seconds, this floating crystal can heal the player
+    if near.  -Demiurge\u2019s tale- \u201CI once found a lost soul, a memory of
+    dust in the warm universe, that was crawling towards a star. They were lost,
+    and I with them. I existed just as a thought: I was, and am, just a soundless
+    voice with no sight. But I saw the soul, and I played with them. I noticed they
+    were sad: their differences hurt; so I sliced them, and the soul was thankful.
+    Now they can be a soul and be two souls, and that is good.\u201D "
   _effectNum: 2
   _effectOneSprite: {fileID: 21300000, guid: 3c880c04b9ab0b34482402b282a0192b, type: 3}
-  _effectOneDescription: Heals the Player
   _effectTwoSprite: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
-  _effectTwoDescription: Cooldown 50 Sec
   _shopPrice: 3

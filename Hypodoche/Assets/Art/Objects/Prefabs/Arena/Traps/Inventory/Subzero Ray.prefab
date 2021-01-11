@@ -48,14 +48,13 @@ MonoBehaviour:
   _itemSprite: {fileID: 21300000, guid: 6551d5e2f345e5c4bab35e3d2490fcd8, type: 3}
   _itemName: Subzero Ray
   _ownedAmount: 1
-  _description: 'Time is relative: sometimes I wonder if I even am under his domain.
-    Artifacts like this, that creates things from nothing, are really comparable
-    to the power of a God. Maybe, in the future, we will be able to achive such a
-    power under the Demiurge guidance. Or.. does it come from the future?  Is the
-    future now?'
+  _description: 'Laser gun that shoots a projectile every 8 seconds that freezes
+    on place for 1.5 seconds.  Time is relative: sometimes I wonder if I even am
+    under his domain. Artifacts like this, that creates things from nothing, are
+    really comparable to the power of a God. Maybe, in the future, we will be able
+    to achieve such a power under the Demiurge guidance. Or... does it come from
+    the future? Is the future... now? '
   _effectNum: 2
   _effectOneSprite: {fileID: 21300000, guid: c75d73617aaa5044daa01cf075b6a373, type: 3}
-  _effectOneDescription: Stuns for 1.5 Sec
   _effectTwoSprite: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
-  _effectTwoDescription: Cooldown 8 Sec
-  _shopPrice: 4
+  _shopPrice: 1

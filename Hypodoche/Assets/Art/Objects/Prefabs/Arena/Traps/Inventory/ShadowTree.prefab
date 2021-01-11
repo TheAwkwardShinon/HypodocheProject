@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5495797412699052705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8438045138591126997}
+  - component: {fileID: 2861407572465639491}
+  m_Layer: 0
+  m_Name: ShadowTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8438045138591126997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495797412699052705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2861407572465639491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495797412699052705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 2066052013314961014, guid: 394fb2d3cd5012f478c336fa1e456d08,
+    type: 3}
+  _itemSprite: {fileID: -5558395319678681889, guid: 578853bf6481bdf4381dbb1208d7cd7a,
+    type: 3}
+  _itemName: Shadow Tree
+  _ownedAmount: 1
+  _description: 'Conceals the player for 7 seconds. Has a cooldown of 42 seconds. 
+    Sometimes I fall asleep under the Oracle: a soothing music, played by the gentle
+    breeze passing through the leafs, cuddles me to sleep. But the sleep is empty,
+    no dreams to be found. So, at times, when I really need to feel something, I
+    search for the Shadow Tree. Under the pitch black sky, I lay on the dead leafs,
+    looking at the aurora: my mind gets blurry, and I slip in an unrequited sleep.
+    In there I dream the life of those out there, in the utopia without sin: will
+    I ever see it in person? I wonder if my job is really mattering. '
+  _effectNum: 1
+  _effectOneSprite: {fileID: 21300000, guid: 43252b2c6240495419319f2966337554, type: 3}
+  _effectTwoSprite: {fileID: 0}
+  _shopPrice: 5

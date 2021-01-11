@@ -16,7 +16,7 @@ namespace Hypodoche
         private void Awake()
         {
             _slots = new List<TrapSlot>(_inventoryGO.GetComponentsInChildren<TrapSlot>());
-            _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
+            _coinText.text = "Ethereal Lymph: " + _inventory.GetPlayerCoins().ToString()+" ml";
         }
 
         private void Start()
@@ -49,7 +49,7 @@ namespace Hypodoche
                     i++;
                 }
             }
-            _coinText.text = "Coins: " + _inventory.GetPlayerCoins().ToString();
+            _coinText.text = "Ethereal Lymph: " + _inventory.GetPlayerCoins().ToString()+" ml";
         }
 
         public void PlaceTrap(TrapItem trap)

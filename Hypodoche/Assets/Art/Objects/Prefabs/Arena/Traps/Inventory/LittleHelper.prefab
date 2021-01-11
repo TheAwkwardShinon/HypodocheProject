@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9055452414607162554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7233288551101740023}
+  - component: {fileID: 3509404027541011422}
+  m_Layer: 0
+  m_Name: LittleHelper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7233288551101740023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055452414607162554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3509404027541011422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055452414607162554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 7103664637357388985, guid: e2d0cee1f43a43b4894b839a2785a5b9,
+    type: 3}
+  _itemSprite: {fileID: 7659873076384769766, guid: 0d2551ed075d2b749b858a4ed59d72a1,
+    type: 3}
+  _itemName: Little Helper
+  _ownedAmount: 1
+  _description: "Little doll that recovers your stamina. Has a cooldown of 16 seconds. 
+    -Halja story- \u201CLife is what happens between a smile\u2026 and the next one.
+    Halja always thought about smiling as the core experience of life: even trough
+    tough days, she pushes forward with a smile on her face. Determined to be the
+    strength of everyone around her, she consults her patients to help cure any illness
+    that may afflict them. Days like today, tough, throw a wrench into her plans:
+    even in the relative heaven that\u2019s Earth, mortal diseases still exists.
+    And when cuddling the little kid that is dying little by little right in front
+    of her, she can\u2019t do anything else than face the fact that even if nobody
+    should deserve to die in such a terrible way, since no evil is present in the
+    human nature\u2026 some still do. And it is not fair. She stands up, takes a
+    little doll from near the bed and puts it into the tiny arms of the child. Concealing
+    a tear, she leaves the room\u2026 and smiles: but to Halja, her life isn\u2019t
+    a utopia.\u201D "
+  _effectNum: 1
+  _effectOneSprite: {fileID: 21300000, guid: 3c880c04b9ab0b34482402b282a0192b, type: 3}
+  _effectTwoSprite: {fileID: 0}
+  _shopPrice: 1

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6731372967135875988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6694500850864681939}
+  - component: {fileID: 293996841936199220}
+  m_Layer: 11
+  m_Name: Banshee
+  m_TagString: trap
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6694500850864681939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731372967135875988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293996841936199220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731372967135875988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 2650514368326963482, guid: eb9a11ec958b8b142ac023374cd46d07,
+    type: 3}
+  _itemSprite: {fileID: 1856464521420893164, guid: 7a21e29ab549d094db0ba51b4a06c846,
+    type: 3}
+  _itemName: Banshee's Statue
+  _ownedAmount: 1
+  _description: "If hit by any projectile, the Banshee Statue stores inside \xBC
+    of its power. If the player or any enemy enters the area surrounding the Banshee
+    Statue, they get damaged for sum of the damages received. After dealing damages,
+    it deactivates until the next instance of damage is received.  Strange statue
+    of a screaming woman: if there is complete silence sometimes I hear it quietly
+    scream, almost as if it was in pain. I don't know the story about this memorabilia,
+    but it reminds me of the old world. In a way, i feel like the pain it depicts
+    is similar to the one I feel every day, here, but also it reminds me how hard
+    was my life before. Do I even miss it? I don't remember the old world well anymore,
+    it melted from my memory as snow in the sun... "
+  _effectNum: 1
+  _effectOneSprite: {fileID: 21300000, guid: c12712d7c71a23a418648fade9c75f08, type: 3}
+  _effectTwoSprite: {fileID: 0}
+  _shopPrice: 6

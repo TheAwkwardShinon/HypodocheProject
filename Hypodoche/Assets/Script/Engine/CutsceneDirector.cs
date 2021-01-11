@@ -19,6 +19,8 @@ namespace Hypodoche
         [SerializeField] private GameObject _buttons;
         [SerializeField] private GameObject _continue;
         private PlayerHubInputManager _playerInput;
+
+        [SerializeField] private SceneDirector _sd;
         #endregion
 
         #region Methods
@@ -65,7 +67,8 @@ namespace Hypodoche
                     _dialogueTrigger.TriggerDialogue();
                     break;
                 case 5: //Prediction
-                    _dialogueTrigger.TriggerDialogue();
+                    //_dialogueTrigger.TriggerDialogue();
+                    _sd.LoadSceneAtIndex(7);
                     _continue.SetActive(false);
                     break;
                 case 6: //Quit game

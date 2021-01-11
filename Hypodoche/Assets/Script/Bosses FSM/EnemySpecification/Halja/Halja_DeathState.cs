@@ -10,7 +10,6 @@ namespace Hypodoche{
         private Halja _halja;
 
 
-
         public Halja_DeathState(Entity entity, FiniteStateMachine stateMachine, string animationName, Halja halja)
             : base(entity, stateMachine, animationName)
         {
@@ -25,7 +24,8 @@ namespace Hypodoche{
         public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-             SceneManager.LoadScene("victoryScene");
+            CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
+            cpm.Advance(false);
             _halja.DestroyBoss();
         }
         public override void Enter()

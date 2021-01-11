@@ -49,19 +49,18 @@ MonoBehaviour:
     type: 3}
   _itemName: Ani's Kite
   _ownedAmount: 1
-  _description: 'Kite that moves around the arena randomly, dealing damage.  "Swayed
-    by the wind, tiny pieces of paper fly trough the sky, slowly. Li Yan is mesmerized:
-    never has she seen something so beautiful before. She rushes to the crowded plaza,
-    looking at the other kids that were playing with their kites. Everyone seems
-    to have a lot of fun. Everyone except... one of them, a little girl. She is crying
-    over her toy, broken: Li Yan quickly rushes to help her fix it, even if she doesn''t
-    know how. It''s just an instict. Her hands move on their own, and the toy is
-    fixed in no time. The smile her new friend has on her face is something she will
-    never forget:  Li Yan smiles back, and deep down knows that this is what she,
-    from now on, will do for the rest of her life." - Li Yan'
+  _description: 'Kite that moves around the arena randomly, dealing damage on contact
+    to enemies.  -Li Yan story- "Swayed by the wind, tiny pieces of paper fly trough
+    the sky, slowly. Li Yan is mesmerized: never has she seen something so beautiful
+    before. She rushes to the crowded plaza, looking at the other kids that were
+    playing with their kites. Everyone seems to have a lot of fun. Everyone except...
+    one of them, a little girl. She is crying over her toy, broken: Li Yan quickly
+    rushes to help her fix it, even if she doesn''t know how. It''s just an instinct.
+    Her hands move on their own, and the toy is fixed in no time. The smile her new
+    friend has on her face is something she will never forget: Li Yan smiles back,
+    and deep down knows that this is what she, from now on, will do for the rest
+    of her life." '
   _effectNum: 1
   _effectOneSprite: {fileID: 21300000, guid: c12712d7c71a23a418648fade9c75f08, type: 3}
-  _effectOneDescription: Deals damage on contact
   _effectTwoSprite: {fileID: 0}
-  _effectTwoDescription: 
-  _shopPrice: 1
+  _shopPrice: 4

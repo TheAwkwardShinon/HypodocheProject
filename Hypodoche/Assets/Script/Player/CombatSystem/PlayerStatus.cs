@@ -205,8 +205,8 @@ namespace Hypodoche
                 _health.color = Color.black;
                 _stamina.color = Color.black;
                 _collider.enabled = false;
-                gameObject.layer = default;
-                gameObject.tag = default;
+                //gameObject.layer = default;
+//                gameObject.tag = default;
                 _animatorHandler.UpdateParameter("resetAnimator", true);
                 Defeat();
             }

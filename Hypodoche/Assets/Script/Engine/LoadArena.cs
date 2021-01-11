@@ -17,6 +17,7 @@ namespace Hypodoche
         [SerializeField] private GameObject _debuffArea;
         [SerializeField] private Image _healthFill;
         [SerializeField] private Text _nameText;
+        [SerializeField] private CampaignProgression _cp;
 
         [SerializeField] private Image _firstMinionFill;
         [SerializeField] private Image _secondMinionFill;
@@ -26,6 +27,15 @@ namespace Hypodoche
 
         [SerializeField] private IceCrow _firstMinion;
         [SerializeField] private WaterCrow _secondMinion;
+
+        [SerializeField] private AudioClip _HaljaMusic;
+        [SerializeField] private AudioClip _CaputMalleiMusic;
+
+        [SerializeField] private AudioClip _LiyanMusic;
+
+        [SerializeField] private AudioSource _as;
+
+
 
 
 
@@ -56,28 +66,33 @@ namespace Hypodoche
 
         private void SpawnBoss()
         {
-            int index = Random.Range(0, _bossList.Count);
-            GameObject boss = _bossList[index];
+            GameObject boss;
+            switch(_cp.GetBossName()){
+                case "Halja":
+                    boss = _bossList[0];
+                    _nameText.text = "Halja";
+                    _as.clip = _HaljaMusic;
+                    boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<Enemy>().SetFill(_firstMinionFill);
+                    boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<Enemy>().SetFill(_secondMinionFill);
+                    boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setCanvas(_firstMinionCanvas);
+                    boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<WaterCrow>().setCanvas(_secondMinionCanvas);
+                    break;
+                case "Li Yan":
+                    _as.clip = _LiyanMusic;
+                    boss = _bossList[1];
+                    _nameText.text = "Li Yan";
+                    break;
+                case "Caputmallei": default:
+                    _as.clip = _CaputMalleiMusic;
+                    boss = _bossList[2];
+                    _nameText.text = "Caputmallei";
+                    break;
+            }
+
             //BOSS SETUP
             boss.GetComponent<Entity>()._ui = _debuffArea;
             boss.GetComponent<Enemy>().SetFill(_healthFill);
-            if(boss.GetComponent<LiYan>() != null)
-                _nameText.text = "Li Yan";
-            if(boss.GetComponent<Halja>() != null){
-                _nameText.text = "Halja";
-                /*boss.GetComponent<Halja>().setIceCrow(_firstMinion);
-                boss.GetComponent<Halja>().setWaterCrow(_secondMinion);*/
-                //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<WaterCrow>().setIceCrow(_firstMinion);
-                //boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setWaterCrow(_secondMinion);
-                boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<Enemy>().SetFill(_firstMinionFill);
-                boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<Enemy>().SetFill(_secondMinionFill);
-                boss.GetComponent<Halja>().GetIceCrowGO().GetComponent<IceCrow>().setCanvas(_firstMinionCanvas);
-                boss.GetComponent<Halja>().GetWaterCrowGO().GetComponent<WaterCrow>().setCanvas(_secondMinionCanvas);
-            }
-            if(boss.GetComponent<Caputmallei>() != null){
-                _nameText.text = "Caputmallei";
-            }
-
+            _as.Play();
             Instantiate(boss, _spawnBossPosition.position, Quaternion.identity);
         }
         #endregion

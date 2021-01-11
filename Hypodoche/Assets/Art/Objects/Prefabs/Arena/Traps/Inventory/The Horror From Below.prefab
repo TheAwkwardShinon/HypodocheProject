@@ -49,14 +49,15 @@ MonoBehaviour:
     type: 3}
   _itemName: The Horror From Below
   _ownedAmount: 1
-  _description: 'A tentacle damages everything that passes over it  ..."And the humans
-    where saved: evil was gone, only purity in their future. Now the world is full
-    of perfection, as in His design. Perfect humans bless the Earth with their gifts
-    and talents, each one of them in their unique way... but the horror was still
-    present, just elsewere. Someone, somewhere, was fighting it."'
+  _description: "Hands come out of the ground, damaging enemies that walk over the
+    unholy terrain.  -Demiurge\u2019s tale- \"And the humans where saved: evil was
+    gone, only purity in their future. Now the world is full of perfection, as in
+    His design. Perfect humans bless the Earth with their gifts and talents, each
+    one of them in their unique way\u2026 but the horror was still present, just
+    elsewhere. Somewhere a dimension of ethereal lymph exists: it gathers all the
+    darkness in itself, and here lost souls get together to be the beacon of light
+    He uses to purify it.\" "
   _effectNum: 1
   _effectOneSprite: {fileID: 21300000, guid: 368f6c53a727d70439ccc77af8538b67, type: 3}
-  _effectOneDescription: Deals damage over time on stay
   _effectTwoSprite: {fileID: 0}
-  _effectTwoDescription: 
-  _shopPrice: 6
+  _shopPrice: 1

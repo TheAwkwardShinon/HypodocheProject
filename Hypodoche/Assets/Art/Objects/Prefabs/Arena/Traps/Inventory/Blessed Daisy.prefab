@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2390561508885675151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8851192321203633262}
+  - component: {fileID: 482953486427926974}
+  m_Layer: 0
+  m_Name: Blessed Daisy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8851192321203633262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390561508885675151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482953486427926974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390561508885675151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 2447504035011450969, guid: 1c68934bbce5a29479c39a201a2aa88a,
+    type: 3}
+  _itemSprite: {fileID: 21300000, guid: 7697798c8d592224a9c55cc7c30bd68c, type: 3}
+  _itemName: Blessed Daisy
+  _ownedAmount: 1
+  _description: "Blessed flower that grows each 14 seconds and stays active for 7:
+    when fully blossomed, the damage of the player is +40% if inside the blessed
+    area for as long as it is active.  This little flower that keeps blossoming and
+    dying is a gift from the Oracle, a \u201Cmemento mori\u201D that helps me to
+    be focused even in my tougher days. It smells kinda funny, fresh\u2026 but also
+    acre: when I smell it, I feel a little dizzy. I can\u2019t tell if it reminds
+    me of something of my past\u2026  maybe It just reminds me of long lost times
+    of joy, when I used to play on the white beaches of Zakynthos as a child. The
+    sun was warm and the gentle breeze cuddled me. The sea was the only liquid that
+    touched my skin. Now plenty scars cover it, symbol of the long battle I fight
+    every day. "
+  _effectNum: 1
+  _effectOneSprite: {fileID: 21300000, guid: 43252b2c6240495419319f2966337554, type: 3}
+  _effectTwoSprite: {fileID: 0}
+  _shopPrice: 3

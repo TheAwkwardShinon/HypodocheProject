@@ -43,19 +43,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemPrefab: {fileID: 1483917683576291768, guid: 43b59d9ce1667b844a02fb36a3953df1,
+  _itemPrefab: {fileID: 1879298606486352818, guid: 7e58d0b71d1c3fb45863bd9fbfc97869,
     type: 3}
-  _itemSprite: {fileID: -43721548549047654, guid: 7a21e29ab549d094db0ba51b4a06c846,
-    type: 3}
+  _itemSprite: {fileID: 21300000, guid: ba6bdb88792464548bbfc92144ddd2c5, type: 3}
   _itemName: Lucky Star
   _ownedAmount: 1
-  _description: Once every 3 seconds, it can blocks a projectile.  Do you remember,
-    child, the lucky star who saved you? Do you remember my Call? Do you remember
-    our vision of a world full of good? Do you remeber the pain of the old times?
-    Do you remember how humanity was lost, and now it is no more? Do you remember?
+  _description: "It blocks any projectile for 8 seconds, then it deactivates and
+    disappears, only to reappear 4 seconds later.  -Demiurge\u2019s tale- \u201CDo
+    you remember, child, the lucky star who saved you? Do you remember my Call? Do
+    you remember our vision of a world full of good? Do you remember the pain of
+    the old times? Do you remember how humanity was lost, and now it is no more?
+    Do you remember?  You were like a white flame whimpering in the wind, tending
+    your hands to the sky: I accepted your plead, Child, on that fated day. Now you\u2019re
+    my seed, planted in the fresh soil: one day you will burn again, stronger than
+    ever. Until that day, mind only growing.\u201D "
   _effectNum: 1
   _effectOneSprite: {fileID: 21300000, guid: fce7154fcb80a854b9cd26a5535e6e1b, type: 3}
-  _effectOneDescription: Cooldown 3 Sec
   _effectTwoSprite: {fileID: 0}
-  _effectTwoDescription: 
-  _shopPrice: 2
+  _shopPrice: 1

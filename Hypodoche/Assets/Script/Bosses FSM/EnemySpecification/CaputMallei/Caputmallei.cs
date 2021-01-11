@@ -184,6 +184,7 @@ namespace Hypodoche
         
         public float getHealth()
         {
+            Debug.Log("start health : "+ _entityData.health);
             return _entityData.health;
         }
 /*
@@ -271,6 +272,7 @@ namespace Hypodoche
 
         public void addHealth(float value){
             _entityData.health += value;
+            gameObject.GetComponent<Enemy>().setHealth(); ///update UI
         }
 
         public void setFatefulRetributionClock(float value){
