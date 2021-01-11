@@ -125,7 +125,7 @@ namespace Hypodoche
         }
 
         public void AddPermanentEnanche(int value){
-            _permanentEnancheMultiplier = value;
+            _permanentEnancheMultiplier += value;
         }
         #endregion
         #endregion

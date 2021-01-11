@@ -19,6 +19,7 @@ public class PowerSurge : MonoBehaviour
     public void Start()
     {
         _animator = GetComponent<Animator>();
+        _isActive = true;
     }
         
 
@@ -43,6 +44,7 @@ public class PowerSurge : MonoBehaviour
                 else
                     col.gameObject.GetComponent<PlayerStatus>().SetPlayerHealth(currentHealth + _recover);
                 _countdown = Time.time + _max_time;
+                _isActive = false;
                 _animator.SetBool("isActive", false);
             }
         }
