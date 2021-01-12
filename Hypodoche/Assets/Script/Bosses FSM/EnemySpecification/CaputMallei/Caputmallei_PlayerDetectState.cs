@@ -57,8 +57,11 @@ namespace Hypodoche{
                 if(usableMoveSet.Count > 0) _stateMachine.ChangeState(usableMoveSet[0]);
                 else { 
                     _entity.setDirection((_playerPosition.position - _entity.transform.position).normalized); 
-                    if (Vector3.Distance(_caputmallei.transform.position, _playerPosition.transform.position) >= 4f)
-                        _entity.Move(_entity._entityData.movementSpeed); 
+                    if (Vector3.Distance(_caputmallei.transform.position, _playerPosition.transform.position) >= 4f){
+                         if(_entity._entityData.isSlowed)
+                                _entity.Move(_entity._entityData.speedWhenSlowedArea);
+                         else _entity.Move(_entity._entityData.movementSpeed);
+                    }
                 }
             }
             else _stateMachine.ChangeState(_caputmallei._moveState);

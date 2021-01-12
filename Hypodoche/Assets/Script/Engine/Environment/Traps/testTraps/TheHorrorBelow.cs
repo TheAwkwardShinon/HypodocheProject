@@ -13,7 +13,6 @@ namespace Hypodoche
         #endregion
 
         #region methods
-        public TheHorrorBelow() {}
 
         public void Start(){
             StunData s = new StunData();
@@ -36,6 +35,7 @@ namespace Hypodoche
             myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,en);
 
             _animator = GetComponent<Animator>();
+            _animator.SetBool("isActive", false);
         }
         
 
@@ -58,8 +58,11 @@ namespace Hypodoche
 
         public void OnTriggerEnter(Collider col)
         {
-            if (col.gameObject.CompareTag("boss"))
+            Debug.Log("yes babe i am : "+ col.tag);
+
+            if (col.transform.root.gameObject.CompareTag("boss"))
             {
+                Debug.Log("yes babe i am the boss");
                 _animator.SetBool("isActive", true);
                 col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
             }
@@ -67,8 +70,10 @@ namespace Hypodoche
 
         public void OnTriggerExit(Collider col)
         {
-            if (col.gameObject.CompareTag("boss"))
+            Debug.Log("someone exit from trap");
+            if (col.gameObject.transform.root.CompareTag("boss"))
             {
+                Debug.Log("yes babe i was the boss");
                 _animator.SetBool("isActive", false);
                 col.transform.root.GetComponent<Boss>().exitFromTrap();
             }

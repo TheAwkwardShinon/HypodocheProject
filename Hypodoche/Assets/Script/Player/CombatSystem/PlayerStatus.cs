@@ -64,6 +64,10 @@ namespace Hypodoche
             return _maxHealth;
         }
 
+        public LayerMask GetPlayerLayer(){
+            return gameObject.layer;
+        }
+
                #region getter
         
         public Transform getGrabZone(){

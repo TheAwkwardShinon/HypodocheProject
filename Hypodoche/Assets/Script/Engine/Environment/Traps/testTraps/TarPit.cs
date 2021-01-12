@@ -57,8 +57,8 @@ namespace Hypodoche
         public void OnTriggerEnter(Collider col)
         {
             Debug.Log("yep");
-            Debug.Log(col.gameObject.tag);
-            if (col.gameObject.CompareTag("boss"))
+            //Debug.Log(col.transform.root.gameObject.tag);
+            if (col.transform.root.gameObject.CompareTag("boss"))
             {
                 Debug.Log("superYep");
                 col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
@@ -67,7 +67,7 @@ namespace Hypodoche
 
         public void OnTriggerExit(Collider col)
         {
-            if (col.gameObject.CompareTag("boss"))
+            if (col.transform.root.gameObject.CompareTag("boss"))
             {
                 col.transform.root.GetComponent<Boss>().exitFromTrap();
             }

@@ -53,6 +53,7 @@ namespace Hypodoche
             _entityData.slowOverArea = false;
             _entityData.damageOverArea = false;
             _entityData.enhanceMultiplier = 0f;
+            _entityData.damageTakenOverTime = 0f;
             _entityData.health = 1000f;
         }
 

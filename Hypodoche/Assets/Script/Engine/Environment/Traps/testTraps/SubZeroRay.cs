@@ -20,6 +20,8 @@ namespace Hypodoche
         public void Start()
         {
             _animator = GetComponent<Animator>();
+            if(gameObject.transform.position.x > 0)
+                gameObject.transform.rotation = Quaternion.Euler(-45,180, gameObject.transform.rotation.z);
             StartCoroutine(Shoot());
         }
 

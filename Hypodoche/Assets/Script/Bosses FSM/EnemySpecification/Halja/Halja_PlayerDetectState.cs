@@ -72,8 +72,11 @@ namespace Hypodoche{
 
                    else{
                        _entity.setDirection((_playerPosition.position- _entity.transform.position).normalized);
-                       if(Vector3.Distance(_halja.transform.position,_playerPosition.transform.position) >= 5f)
-                            _entity.Move(_entity._entityData.movementSpeed);
+                       if(Vector3.Distance(_halja.transform.position,_playerPosition.transform.position) >= 5f){
+                            if(_entity._entityData.isSlowed)
+                                _entity.Move(_entity._entityData.speedWhenSlowedArea);
+                            else _entity.Move(_entity._entityData.movementSpeed);
+                       }
                    }
                 }
                 else{

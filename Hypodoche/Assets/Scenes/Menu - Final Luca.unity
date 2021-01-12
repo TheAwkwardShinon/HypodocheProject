@@ -725,7 +725,7 @@ MonoBehaviour:
   _liYianSprite: {fileID: 21300000, guid: 11893b0c4474a904e8b53d86b1a4ec17, type: 3}
   _caputmalleiSprite: {fileID: 21300000, guid: dbe5d7b52e6f58d40af97e894deb4040, type: 3}
   _sd: {fileID: 6538044173764191706}
-  _ti: {fileID: 0}
+  _ti: {fileID: 11400000, guid: 4de471ceaac12584aab94983f371ce64, type: 2}
 --- !u!1 &419837463
 GameObject:
   m_ObjectHideFlags: 0

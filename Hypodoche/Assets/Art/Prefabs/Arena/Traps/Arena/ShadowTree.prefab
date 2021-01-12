@@ -59,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2052b11cf07164e936e45a7ef43db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxTime: 8
-  _duration: 7
+  _maxTime: 36
+  _duration: 9
 --- !u!95 &2066052013314961019
 Animator:
   serializedVersion: 3
@@ -160,12 +160,12 @@ PrefabInstance:
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.59000003
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}
@@ -175,12 +175,12 @@ PrefabInstance:
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5969935199471905804, guid: 578853bf6481bdf4381dbb1208d7cd7a,
         type: 3}

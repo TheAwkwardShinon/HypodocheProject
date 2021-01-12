@@ -61,4 +61,4 @@ MonoBehaviour:
   _effectNum: 1
   _effectOneSprite: {fileID: 21300000, guid: 368f6c53a727d70439ccc77af8538b67, type: 3}
   _effectTwoSprite: {fileID: 0}
-  _shopPrice: 100
+  _shopPrice: 5

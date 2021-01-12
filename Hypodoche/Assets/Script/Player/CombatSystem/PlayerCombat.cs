@@ -135,6 +135,7 @@ namespace Hypodoche
             Debug.Log("the dmg should be : "+ weapon.GetLightDamage()
             + " the multiplier is : "+_playerStatus.getEnancheMultiplier()
             +"%  so the dmg became : "+ calculateDamage(weapon.GetLightDamage()));
+            _playerStatus.SpendStamina(12f);
             _shootingHandler.SetArrowStats(calculateDamage(weapon.GetLightDamage()));
             _shootingHandler.Shoot();
             _attackRate = weapon.GetLightAttackRate();

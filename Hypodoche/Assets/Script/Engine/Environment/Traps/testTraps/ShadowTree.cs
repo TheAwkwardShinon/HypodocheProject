@@ -10,9 +10,11 @@ public class ShadowTree : MonoBehaviour,Traps
 
         private Animator _animator;
         protected float _cooldown = 0f;
-        [SerializeField]protected float _maxTime = 42f;
+        [SerializeField]protected float _maxTime;
 
-        [SerializeField] protected float _duration = 7f;
+        [SerializeField] protected float _duration;
+
+        private bool _isActive;
 
     
  
@@ -23,18 +25,22 @@ public class ShadowTree : MonoBehaviour,Traps
 
         public void Start()
         {
-            _cooldown = 0f;
-            _maxTime = 0f;
+            _cooldown = Time.time;
             _animator = GetComponent<Animator>();
-            _animator.SetTrigger("isActive");
+            _animator.SetBool("isActive",true);
+            _animator.SetBool("inactive",false);
+            _isActive = true;
 
         }
 
         public void Update()
         {
-            if (Time.time >= _maxTime + _cooldown){
+            if (!_isActive && Time.time >= _maxTime + _cooldown){
                 // _animator.ResetTrigger("inactive");
-                _animator.SetTrigger("isActive");
+                _isActive = true;
+                _animator.SetBool("isActive",true);
+                _animator.SetBool("inactive",false);
+
             }
 
         }
@@ -43,10 +49,13 @@ public class ShadowTree : MonoBehaviour,Traps
         {
             if (col.gameObject.CompareTag("Player"))
             {
-                if (Time.time >= _maxTime + _cooldown){
+                if (_isActive){
                     col.gameObject.GetComponent<PlayerStatus>().changeLayerToDefault(_duration);
                     //_animator.ResetTrigger("isActive");
-                    _animator.SetTrigger("inactive");
+                    Debug.Log("TRIGGER SET");
+                    _isActive = false;
+                    _animator.SetBool("isActive",false);
+                    _animator.SetBool("inactive",true);
                     _cooldown = Time.time;
                    // _maxTime = 42f;
                 }

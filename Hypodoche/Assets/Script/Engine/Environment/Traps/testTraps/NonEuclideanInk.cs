@@ -9,7 +9,7 @@ namespace Hypodoche
     {
         #region variables
         protected float _time = 2f;
-        protected float _dmg = 16f;
+        protected float _dmg = 0.4f;
         Effects myEffect;
         #endregion
 
@@ -35,7 +35,7 @@ namespace Hypodoche
             dma.isEmpty = true;
             EnhanceData en = new EnhanceData();
             en.isEmpty = true;
-            myEffect = new Effects(sl, s, d, dm,sc,true,sla,dma,en);
+            myEffect = new Effects(sl, s, d, dm,sc,false,sla,dma,en);
         }
         
 
@@ -55,22 +55,22 @@ namespace Hypodoche
         {
 
             Debug.Log("sono dentro il trigger");
-            if (col.gameObject.CompareTag("boss"))
+            if (col.transform.root.gameObject.CompareTag("boss"))
             {
                 Debug.Log("sono il boss e sono entrato");
                 col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
                 Debug.Log("chiamato con insuccesso");
-                if (_dmg > 1)
+                if (_dmg > 0.05f)
                 {
                     _dmg = _dmg / 2;
                     myEffect._damageOverTime.damage = _dmg;
                 }
             }
-            if (col.gameObject.CompareTag("Player"))
+            if (col.transform.root.gameObject.CompareTag("Player"))
             {
-                if (_dmg < 16)
+                if (_dmg < 0.4f)
                 {
-                    _dmg = _dmg + 2;
+                    _dmg = _dmg + 0.05f;
                     myEffect._damageOverTime.damage = _dmg;
                 }
             }

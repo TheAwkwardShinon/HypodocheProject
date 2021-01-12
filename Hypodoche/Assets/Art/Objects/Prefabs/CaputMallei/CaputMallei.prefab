@@ -105,8 +105,8 @@ MonoBehaviour:
   _inquisitionDamage: 4
   _bloodPool: {fileID: 7402237198880395262, guid: 962cec53e49630d4594eb623fb4979f1,
     type: 3}
-  _bloodPoolSpawnRdius: 5
-  _maxBloodPool: 10
+  _bloodPoolSpawnRdius: 20
+  _maxBloodPool: 50
   BloodyProjectile: {fileID: 2305164998192153264, guid: 35ef70be64fdf9942b7242885913e1d5,
     type: 3}
   _idleData: {fileID: 11400000, guid: 23f6ebb2b71703d40901fd140071f577, type: 2}
@@ -2002,7 +2002,38 @@ VisualEffect:
     m_AnimationCurve:
       m_Array: []
     m_Gradient:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          key0: {r: 8.371432, g: 0.67129415, b: 0.7384131, a: 1}
+          key1: {r: 0.7529412, g: 1, b: 0, a: 1}
+          key2: {r: 0.9309517, g: 0.12694795, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 33773
+          ctime2: 65535
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 3
+          m_NumAlphaKeys: 2
+        m_Name: Trail Gradient 1
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:

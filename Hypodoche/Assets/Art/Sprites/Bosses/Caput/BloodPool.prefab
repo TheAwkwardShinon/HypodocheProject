@@ -153,5 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 12
-  _healthBonus: 15
-  _playerDamage: 6
+  _healthBonus: 13
+  _playerDamage: 4

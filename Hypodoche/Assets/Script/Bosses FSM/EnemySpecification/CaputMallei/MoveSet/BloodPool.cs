@@ -36,6 +36,8 @@ namespace Hypodoche{
                 Destroy(gameObject);
             }
             else if(col.CompareTag("Player")){
+                if(LayerMask.LayerToName(col.GetComponent<PlayerStatus>().GetPlayerLayer()).Equals("Default"))
+                    return;
                 col.gameObject.GetComponent<PlayerStatus>().TakeDamage(_playerDamage);
                 Destroy(gameObject);
             }

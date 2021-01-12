@@ -41,6 +41,9 @@ namespace Hypodoche
             EnhanceData enhance = new EnhanceData();
             enhance.isEmpty = true;
             myEffect = new Effects(sl, s, d, dm, fear, false, slowArea, dmgArea, enhance);
+
+            if(gameObject.transform.position.x > 0)
+                direction.x *= -1f;
         }
      
 
@@ -58,9 +61,9 @@ namespace Hypodoche
 
         public void OnTriggerEnter(Collider col)
         {
-            if (col.gameObject.CompareTag("boss") || col.gameObject.CompareTag("Perimeter"))
+            if (col.transform.root.gameObject.CompareTag("boss") || col.gameObject.CompareTag("Perimeter"))
             {
-                col.transform.root.GetComponent<LiYan>().stepOnTrap(myEffect);
+                col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
                 Destroy(gameObject);
             }
         }

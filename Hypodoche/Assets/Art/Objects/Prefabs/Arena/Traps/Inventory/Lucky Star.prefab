@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8eef51fcb1ce949850d23756a79aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemPrefab: {fileID: 1879298606486352818, guid: 7e58d0b71d1c3fb45863bd9fbfc97869,
+  _itemPrefab: {fileID: 979146189381563419, guid: 54808f6af25457541bad225b5af99671,
     type: 3}
   _itemSprite: {fileID: 21300000, guid: ba6bdb88792464548bbfc92144ddd2c5, type: 3}
   _itemName: Lucky Star
