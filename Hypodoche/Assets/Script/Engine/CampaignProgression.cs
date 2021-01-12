@@ -110,14 +110,27 @@ namespace Hypodoche
                 shuffle[randomIndex] = temp;
             }
             _bosses = shuffle;
+            Debug.Log("Boss list index is: " + _index);
         }
 
         public string ExtractBoss()
         {
-            if(_index < _bosses.Count)
-                return _bosses[_index];
+            string extract;
+            if(_index < _bosses.Count){
+                extract = _bosses[_index];
+                IncreaseIndex();
+                return extract;
+            }
             else
                 return null;
+        }
+
+        private void IncreaseIndex()
+        {
+            if(_index < _bosses.Count)
+                Debug.Log("Boss at index " + _index + " is " + _bosses[_index]);
+            _index++;
+            Debug.Log("Aumento indice a " + _index);
         }
         #endregion
     }

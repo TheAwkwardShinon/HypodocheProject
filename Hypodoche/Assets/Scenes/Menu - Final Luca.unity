@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInventory: {fileID: 11400000, guid: 4de471ceaac12584aab94983f371ce64, type: 2}
   _shopInventory: {fileID: 11400000, guid: d93ddadbf9bd0b24ba87965b404103aa, type: 2}
-  _startingPlayerCoins: 99
+  _startingPlayerCoins: 25
   _arenaTransferSO: {fileID: 11400000, guid: 91d68d5a0e1a7f24581bd354f21a423b, type: 2}
   _shopList:
   - {fileID: 6149024284779722316, guid: e8c56d6ac6965964d955f9a9629fd5d8, type: 3}
@@ -708,6 +708,9 @@ MonoBehaviour:
   _playerPosition: {fileID: 11400000, guid: 05e8daa65ecb6d64fa9e4ee944084278, type: 2}
   _odp: {fileID: 11400000, guid: c71d07e411eaea645862906e93107268, type: 2}
   _cpm: {fileID: 345577594}
+  _haljaEntity: {fileID: 11400000, guid: 8803d1c726fed2a4b94d547c245a16d6, type: 2}
+  _liYianEntity: {fileID: 11400000, guid: a47a51f1176a1cd4b94d34d3b15b2161, type: 2}
+  _caputEntity: {fileID: 11400000, guid: 6edba54be6e4fb34b8d47545afbc8b0d, type: 2}
 --- !u!114 &345577594
 MonoBehaviour:
   m_ObjectHideFlags: 0

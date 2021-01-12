@@ -11,6 +11,7 @@ namespace Hypodoche
     {
         #region Variables
         private Caputmallei _caputmallei;
+        private bool _isDead = false;
 
 
 
@@ -26,8 +27,12 @@ namespace Hypodoche
          public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-            CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
-            cpm.Advance(false);
+            Debug.Log("Caput è morto, avanziamo");
+            if(!_isDead){
+                _isDead = true;
+                CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
+                cpm.Advance(false);
+            }
             _caputmallei.DestroyBoss();
         }
         public override void Enter()

@@ -24,7 +24,8 @@ namespace Hypodoche
         }
         public void Advance(bool first)
         {
-            switch(_cp.ExtractBoss()){
+            string extraction = _cp.ExtractBoss();
+            switch(extraction){
                 case "Li Yan":
                     Debug.Log("Liyian");
                     SetupLiYian();
@@ -49,13 +50,16 @@ namespace Hypodoche
                         _sd.LoadSceneAtIndex(1);
                         _ti.SetPlayerCoins(_ti.GetPlayerCoins()+17);
                     }
-
                     SetupCaput();
                     //EditorUtility.SetDirty(_cp);
                     break;
-                case null: default:
+                case null: 
                     Debug.Log("Win");
                     _sd.LoadSceneAtIndex(4);
+                    break;
+                default:
+                    Debug.Log(extraction);
+                    _sd.LoadSceneAtIndex(0);
                     break;
 
             }

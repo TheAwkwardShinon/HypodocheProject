@@ -8,6 +8,7 @@ namespace Hypodoche{
     {
          #region Variables
         private Halja _halja;
+        private bool _isDead = false;
 
 
         public Halja_DeathState(Entity entity, FiniteStateMachine stateMachine, string animationName, Halja halja)
@@ -23,9 +24,13 @@ namespace Hypodoche{
 
         public override void ExecuteAfterAnimation()
         {
+            Debug.Log("Halja è morta, avanziamo");
             base.ExecuteAfterAnimation();
-            CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
-            cpm.Advance(false);
+            if(!_isDead){
+                _isDead = true;
+                CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
+                cpm.Advance(false);
+            }
             _halja.DestroyBoss();
         }
         public override void Enter()
