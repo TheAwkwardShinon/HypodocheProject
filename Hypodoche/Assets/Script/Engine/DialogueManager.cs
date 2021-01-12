@@ -14,6 +14,9 @@ namespace Hypodoche
         [SerializeField] private Animator _animator;
         [SerializeField] private CutsceneDirector _cutsceneDirector;
         [SerializeField] private GameObject _displayInteraction;
+
+        private bool _currentlyTyping;
+        private string _completeText;
         #endregion
 
         #region Methods
@@ -40,23 +43,40 @@ namespace Hypodoche
 
         public void DisplayNextSentence()
         {
-            if(_sentences.Count == 0){
+            if (_currentlyTyping)
+            {
+                CompleteText();
+                StopAllCoroutines();
+                _currentlyTyping = false;                  
+                return;
+            }
+
+            if (_sentences.Count == 0){
                 EndDialogue();
                 return;
             }
+
             string sentence = _sentences.Dequeue();
+            _completeText = sentence;
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
         }
 
         IEnumerator TypeSentence(string sentence)
         {
+            _currentlyTyping = true;
             _dialogueText.text = "";
             foreach(char c in sentence.ToCharArray())
             {
                 _dialogueText.text += c;
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.07f);
             }
+            _currentlyTyping = false;
+        }
+
+        private void CompleteText()
+        {
+            _dialogueText.text = _completeText;
         }
 
         private void EndDialogue()
