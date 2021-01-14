@@ -72,9 +72,9 @@ MonoBehaviour:
   uiBounds:
     serializedVersion: 2
     x: 1128
-    y: -4528
+    y: -4532
     width: 2698
-    height: 2126
+    height: 2129
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 8
+      m_SerializableObject: 2
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.5
     min: -Infinity
     max: Infinity
     descendantCount: 0
@@ -1885,7 +1885,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 1
           m_Value: 0.01
         - m_ExpressionIndex: 2
-          m_Value: 1
+          m_Value: 0.5
         - m_ExpressionIndex: 7
           m_Value: 0.5
         - m_ExpressionIndex: 12
@@ -1893,7 +1893,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 13
           m_Value: 30
         - m_ExpressionIndex: 14
-          m_Value: 8
+          m_Value: 2
         - m_ExpressionIndex: 17
           m_Value: 2.07
         - m_ExpressionIndex: 20
@@ -6276,7 +6276,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 8
+      m_SerializableObject: 2
     m_Space: 2147483647
   m_Property:
     name: o
@@ -7101,7 +7101,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.5
     m_Space: 2147483647
   m_Property:
     name: o

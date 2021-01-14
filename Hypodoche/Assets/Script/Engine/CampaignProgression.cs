@@ -8,7 +8,7 @@ namespace Hypodoche
     public class CampaignProgression : ScriptableObject
     {
         #region Variables
-        private static Queue<string> _bosses;
+        private static List<string> _bosses;
         private static string _bossName;
         private static string _bossSubtitle;
         private static string _bossDescription;
@@ -16,6 +16,7 @@ namespace Hypodoche
         private static string _bossSuggestions;
         private static string _bossLore;
         private static Sprite _bossSprite;
+        private static int _index;
         #endregion
 
         #region  Getters and Setters
@@ -93,6 +94,7 @@ namespace Hypodoche
         #region Methods
         public void LoadBossList()
         {
+            _index = 0;
             _bossTrapSuggestions = new string[3];
             string halja = "Halja";
             string liYian = "Li Yan";
@@ -107,19 +109,28 @@ namespace Hypodoche
                 shuffle[i] = shuffle[randomIndex];
                 shuffle[randomIndex] = temp;
             }
-            _bosses = new Queue<string>();
-            foreach(string s in shuffle)
-            {
-                _bosses.Enqueue(s);
-            }
+            _bosses = shuffle;
+            Debug.Log("Boss list index is: " + _index);
         }
 
         public string ExtractBoss()
         {
-            if(_bosses.Count != 0)
-                return _bosses.Dequeue();
+            string extract;
+            if(_index < _bosses.Count){
+                extract = _bosses[_index];
+                IncreaseIndex();
+                return extract;
+            }
             else
                 return null;
+        }
+
+        private void IncreaseIndex()
+        {
+            if(_index < _bosses.Count)
+                Debug.Log("Boss at index " + _index + " is " + _bosses[_index]);
+            _index++;
+            Debug.Log("Aumento indice a " + _index);
         }
         #endregion
     }

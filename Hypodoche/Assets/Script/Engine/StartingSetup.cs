@@ -15,6 +15,9 @@ namespace Hypodoche
         [SerializeField] private PlayerInstantiateSO _playerPosition;
         [SerializeField] private OracleDialogueProgression _odp;
         [SerializeField] private CampaignProgressionManager _cpm;
+        [SerializeField] private D_Entity _haljaEntity;
+        [SerializeField] private D_Entity _liYianEntity;
+        [SerializeField] private D_Entity _caputEntity;
         #endregion
 
         #region Methods
@@ -30,6 +33,9 @@ namespace Hypodoche
             _shopInventory.Setup();
             _odp.ResetIndex();
             _cpm.Advance(true);
+            _haljaEntity.health = 1000;
+            _liYianEntity.health = 1000;
+            _caputEntity.health = 1000;
         }
         #endregion
     }

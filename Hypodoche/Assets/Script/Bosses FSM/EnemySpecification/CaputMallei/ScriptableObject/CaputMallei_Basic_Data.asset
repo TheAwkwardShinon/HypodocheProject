@@ -20,7 +20,7 @@ MonoBehaviour:
   speedWhenDetect: 7
   speedWhenSlowed: 0
   speedWhenSlowedArea: 0
-  startDmgOverTime: 2.6610928
+  startDmgOverTime: 30.906487
   aggroRange: 7
   whatIsPerimeter:
     serializedVersion: 2

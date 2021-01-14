@@ -11,6 +11,7 @@ namespace Hypodoche
     {
         #region Variables
         private LiYan _liYan;
+        private bool _isDead = false;
 
 
 
@@ -26,9 +27,13 @@ namespace Hypodoche
          public override void ExecuteAfterAnimation()
         {
             base.ExecuteAfterAnimation();
-            CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
-            cpm.Advance(false);
             _liYan.DestroyBoss();
+            Debug.Log("Li Yan è morta, avanziamo");
+            if(!_isDead){
+                _isDead = true;
+                CampaignProgressionManager cpm = GameObject.FindObjectOfType<CampaignProgressionManager>();
+                cpm.Advance(false);
+            }
         }
         public override void Enter()
         {
@@ -39,7 +44,6 @@ namespace Hypodoche
         public override void Exit()
         {
             base.Exit();
-
         }
 
 

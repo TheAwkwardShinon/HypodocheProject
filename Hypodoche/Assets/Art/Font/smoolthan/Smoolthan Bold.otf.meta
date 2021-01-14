@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: efd56008d9772464ba2d4df5b5af765b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Smoolthan
+  fontNames:
+  - Smoolthan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a59c03f2a511d8948a4c41fac00cc5d3, type: 3}
+  - {fileID: 12800000, guid: 78c30df2685302e41aa4cc53223ccfc3, type: 3}
+  - {fileID: 12800000, guid: e04089d3a76f7984eb9460c9d4ca36f3, type: 3}
+  - {fileID: 12800000, guid: 30c0486418fd21e4fb50aac879856a57, type: 3}
+  - {fileID: 12800000, guid: 97aff76ab61366a4a90f1979bb86156d, type: 3}
+  - {fileID: 12800000, guid: 5c00054c58a034d4f9ee542fa013b94e, type: 3}
+  - {fileID: 12800000, guid: f2d301cc678d0314588bf3de60516429, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

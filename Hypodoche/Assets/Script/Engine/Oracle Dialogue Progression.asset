@@ -18,12 +18,10 @@ MonoBehaviour:
     - Owl...
     - Owl...
     - Owl, wake up!
-    - 'Good morning, Owl.
-
-      You were really tired yesterday. That soul really
-      liked to hit you hard.'
-    - "What? Where are we? Oh my, you really hit your head hard yesterday!\r\nLet
-      me help you remember\u2026\r"
+    - Good morning, Owl.
+    - "You were really tired yesterday. \nThat soul really hit you hard."
+    - "What? Where are we? \nOh my, you really hit your head hard yesterday!\r"
+    - "Let me help you remember\u2026\r"
     name: The Oracle
   - sentences: []
     name: The Oracle
