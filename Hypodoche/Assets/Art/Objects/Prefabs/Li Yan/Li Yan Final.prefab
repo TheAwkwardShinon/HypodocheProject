@@ -5320,7 +5320,8 @@ MonoBehaviour:
   _minion: 0
   metalBomb: {fileID: 5328067710088910532, guid: d7877b40d54fce849bdd474dd2a9aa40,
     type: 3}
-  fireBomb: {fileID: 82109593841762582, guid: 857d072c4445d3748a31f1bb8eb97ad3, type: 3}
+  fireBomb: {fileID: 8215811053124500115, guid: 857d072c4445d3748a31f1bb8eb97ad3,
+    type: 3}
   woodBomb: {fileID: 1567189886306004825, guid: ba303fc54d1a3954a8c4b3165630af75,
     type: 3}
   waterBomb: {fileID: 8820676593747906521, guid: 870cd1902c6a46e4c9f1d1984e44e154,

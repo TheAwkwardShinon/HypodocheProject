@@ -100,9 +100,9 @@ namespace Hypodoche
             string liYian = "Li Yan";
             string caput = "Caputmallei";
             List<string> shuffle = new List<string>();
-            //shuffle.Add(halja);
+            shuffle.Add(halja);
             shuffle.Add(liYian);
-            //shuffle.Add(caput);
+            shuffle.Add(caput);
             for (int i = 0; i < shuffle.Count; i++) {
                 string temp = shuffle[i];
                 int randomIndex = Random.Range(i, shuffle.Count);
