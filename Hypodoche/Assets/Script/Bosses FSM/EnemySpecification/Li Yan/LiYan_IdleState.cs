@@ -35,14 +35,8 @@ namespace Hypodoche
         public override void Update()
         {
             base.Update();
-            if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
-            {
-                Debug.Log("cambio stato : idle -> dropBomb " + Time.time);
-                _stateMachine.ChangeState(_liYan._DropBombState);
-            }
             if (_isIdleTimeElapsed)
             {
-                Debug.Log("cambio stato : idle -> move " + Time.time);
                 _stateMachine.ChangeState(_liYan._moveState);
             }
         }

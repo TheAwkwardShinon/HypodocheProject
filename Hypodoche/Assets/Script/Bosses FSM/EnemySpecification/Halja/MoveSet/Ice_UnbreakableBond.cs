@@ -8,7 +8,7 @@ namespace Hypodoche {
     {
         private IceCrow _iceCrow;
         private WaterCrow _waterCrow;
-        private ChainSpawner _spawner;
+      
 
         private LineRenderer _lineRenderer;
         private float _dist;
@@ -62,10 +62,9 @@ namespace Hypodoche {
                     _secondLr.endWidth = 0.3f;
                 }
             }catch(NullReferenceException e){
-                if(_waterCrow == null){
-                    Debug.Log("yep, watercrow is null");
-                }
-                else Debug.Log("wtf");
+                _stateMachine.ChangeState(_iceCrow._MoveState);
+            }catch(MissingReferenceException m){
+                _stateMachine.ChangeState(_iceCrow._MoveState);
             }
 
         }

@@ -93,15 +93,11 @@ namespace Hypodoche
 
         public override void Update(){
             base.Update();
-            Debug.Log("sono nella update, la mia vita è : "+ _entityData.health+ " lo snapshot è : "+ _snapshotHealth);
-
             if (_entityData.health <= 0)
                 _stateMachine.ChangeState(_deathState);
 
             if(_snapshotHealth > _entityData.health){
-                Debug.Log("ho perso vita! : "+ _entityData.health+ " (snapshot was : "+_snapshotHealth+")");
                 instantiateBloodPool();
-                Debug.Log("istantaited?");
                 _snapshotHealth = _entityData.health;
             }
 
@@ -131,7 +127,6 @@ namespace Hypodoche
 
         public void stepOnTrap(Effects effect)
         {
-            Debug.Log("step on trap");
             _stateMachine.ChangeState(new Caputmallei_SufferTheEffectState(this, _stateMachine, "takeDamage", _entityData, effect, "trap", this));
         }
 
@@ -165,9 +160,7 @@ namespace Hypodoche
         }
 
         public void instantiateBloodPool(){
-            Debug.Log("whithin instantiate bloodPool, counter : "+ _bloodPoolCounter);
             if(_bloodPoolCounter <= _maxBloodPool){
-                Debug.Log("sono dentro l'ifffffffffff");
                 Vector3  randomPos = (Vector3) Random.insideUnitCircle * _bloodPoolSpawnRdius;
                 randomPos.z = randomPos.y;
                 randomPos.y = 0f;

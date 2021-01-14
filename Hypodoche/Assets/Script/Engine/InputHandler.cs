@@ -31,6 +31,7 @@ namespace Hypodoche
         private float _dashStaminaCost = 30f;
         private float _sprintStaminaCost = 5f;
         private float _heavyAttackStaminaCost = 10f;
+        private float _shootAttackStaminaCost = 12f;
         private bool _disableDash = false;
         #endregion
 
@@ -145,6 +146,8 @@ namespace Hypodoche
             #region Light Attack
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                if(_isAiming && !_playerStatus.HasStamina(_shootAttackStaminaCost))
+                    return;
                 _playerCombat.InvokeLightAttack();
                 _movement = Vector3.zero;
                 _playerMovement.SetMovement(_movement);

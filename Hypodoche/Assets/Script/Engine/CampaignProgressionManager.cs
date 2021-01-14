@@ -31,7 +31,7 @@ namespace Hypodoche
                     //EditorUtility.SetDirty(_cp);
                     if(!first){
                         _sd.LoadSceneAtIndex(1);
-                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+15);
+                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+9);
                     }
                     break;
                 case "Halja":
@@ -40,14 +40,14 @@ namespace Hypodoche
                     //EditorUtility.SetDirty(_cp);
                     if(!first){
                         _sd.LoadSceneAtIndex(1);
-                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+21);
+                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+9);
                     }
                     break;
                 case "Caputmallei":
                     Debug.Log("Caput");
                     if(!first){
                         _sd.LoadSceneAtIndex(1);
-                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+17);
+                        _ti.SetPlayerCoins(_ti.GetPlayerCoins()+9);
                     }
 
                     SetupCaput();

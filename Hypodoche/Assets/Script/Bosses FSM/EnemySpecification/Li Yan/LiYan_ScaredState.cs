@@ -33,8 +33,7 @@ namespace Hypodoche
         public override void Update()
         {
             base.Update();
-            if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
-                _stateMachine.ChangeState(_liYan._DropBombState);
+
             if (Time.time >= _startTime + _scaredTime)
             {
                 _isScaredTimeElapsed = true;

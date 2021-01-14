@@ -21,7 +21,7 @@ namespace Hypodoche
         }
 
         public void Start()
-        {
+        {/*
             StunData s = new StunData();
             s.isEmpty = true;
             DamageOverTimeData d = new DamageOverTimeData();
@@ -40,7 +40,7 @@ namespace Hypodoche
             EnhanceData en = new EnhanceData();
             en.isEmpty = true;
             direction = new Vector3(0, 0, 0);
-            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);
+            myEffect = new Effects(sl, s, d, dm, sc, false, sla, dma, en);*/
             //Simplified AI
             InvokeRepeating("ChangeDirection", 0f, 3f);
             _rigidbody = gameObject.GetComponent<Rigidbody>();
@@ -60,9 +60,9 @@ namespace Hypodoche
                 direction = -1 * direction;
                 transform.Rotate(0, 180f, 0, Space.Self);
             }
-            else if(col.gameObject.CompareTag("boss"))
+            else if(col.transform.root.gameObject.CompareTag("boss"))
             {
-                col.transform.root.GetComponent<Boss>().stepOnTrap(myEffect);
+                col.transform.root.GetComponent<Enemy>().TakeDamage(50f);
             }
         }
 

@@ -95,14 +95,14 @@ MonoBehaviour:
   _entityData: {fileID: 11400000, guid: 6edba54be6e4fb34b8d47545afbc8b0d, type: 2}
   _ui: {fileID: 0}
   _minion: 0
-  _sundayMorningCountDown: 12
-  _sundayMorningDrurationOfCharge: 4
-  _sundayMorningDamage: 25
+  _sundayMorningCountDown: 14
+  _sundayMorningDrurationOfCharge: 3.5
+  _sundayMorningDamage: 28
   _fateFullRetributionCountdown: 3
   _inquisitionMinDistance: 0
   _inquisitionMaxDistance: 5
   _inquisitionCountdown: 5
-  _inquisitionDamage: 4
+  _inquisitionDamage: 5
   _bloodPool: {fileID: 7402237198880395262, guid: 962cec53e49630d4594eb623fb4979f1,
     type: 3}
   _bloodPoolSpawnRdius: 20
@@ -1979,7 +1979,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6650417335910148083}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 379e27193dd85774e82a755ca1c0d56a, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 68bc3f9bcdb12af4e8d18d1023676c33, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0

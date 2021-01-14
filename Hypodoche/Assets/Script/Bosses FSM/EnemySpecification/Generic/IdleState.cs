@@ -26,7 +26,7 @@ namespace Hypodoche
         public override void Enter()
         {
             base.Enter();
-            _entity.setDirection();
+            _entity.setDirection(_entity.getDirection() *-1f);
             _isIdleTimeElapsed = false;
             _isDetectingPlayer = _entity.isPlayerInAggroRange();
             setRandomIdleTime();

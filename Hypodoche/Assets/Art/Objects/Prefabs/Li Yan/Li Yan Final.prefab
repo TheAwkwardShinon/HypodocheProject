@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 348180980867345420}
   - component: {fileID: 348180980867345423}
   m_Layer: 10
-  m_Name: Li Yan 1
+  m_Name: Li Yan Final
   m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5323,11 +5323,16 @@ MonoBehaviour:
   fireBomb: {fileID: 82109593841762582, guid: 857d072c4445d3748a31f1bb8eb97ad3, type: 3}
   woodBomb: {fileID: 1567189886306004825, guid: ba303fc54d1a3954a8c4b3165630af75,
     type: 3}
+  waterBomb: {fileID: 8820676593747906521, guid: 870cd1902c6a46e4c9f1d1984e44e154,
+    type: 3}
+  earthBomb: {fileID: 7907004254093217268, guid: fcad596d45b2ff748a6e756694795c8a,
+    type: 3}
   _idleData: {fileID: 11400000, guid: 6b6fb6d08cdcc14438810bbfccf658c1, type: 2}
-  changeSpeedToFast: 2.5
-  changeSpeedToSlow: 5
+  changeSpeedToFast: 20
+  changeSpeedToSlow: 15
   dropBombTimeRate: 0.75
-  timerBomb: 0
+  _slowSpeed: 15
+  _fastSpeed: 20
 --- !u!195 &348180980867345423
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ namespace Hypodoche{
         public override void Enter()
         {
             base.Enter();
-            _animWaiter.StartCoroutine(_animWaiter.waitSomeSeconds(this,0.4f));
+            _animWaiter.StartCoroutine(_animWaiter.waitSomeSeconds(this,0.625f));
 
         }
 

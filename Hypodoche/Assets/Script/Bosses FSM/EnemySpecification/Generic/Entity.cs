@@ -28,14 +28,18 @@ namespace Hypodoche
         #endregion
 
         #region
-        public virtual void Start()
-        {
+
+        public void Awake(){
             resetStates();
+            resetValues();
+        }
+
+        public virtual void Start()
+        { 
             _boss = gameObject;
             _rigidBodyBoss = _boss.GetComponent<Rigidbody>();
             _animator = _boss.transform.GetComponentInChildren<Animator>();
             _stateMachine = new FiniteStateMachine();
-            resetValues();
         }
 
         public virtual void Update()
@@ -74,7 +78,6 @@ namespace Hypodoche
         
         public virtual void Move(float speed)
         {
-            //Debug.Log("wow i am right there bithc: "+ gameObject);
             _rigidBodyBoss.MovePosition(_rigidBodyBoss.position + _direction * speed * Time.deltaTime);
         }
 

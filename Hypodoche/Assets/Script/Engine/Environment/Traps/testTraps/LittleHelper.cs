@@ -8,8 +8,8 @@ namespace Hypodoche{
     public class LittleHelper : MonoBehaviour,Traps
     {
         #region Variables
-        protected float _recover = 20f;
-        protected float _deadTime = 16f;
+        [SerializeField]protected float _recover = 24f;
+        [SerializeField]protected float _deadTime = 16f;
         protected  float _startTime;
 
 

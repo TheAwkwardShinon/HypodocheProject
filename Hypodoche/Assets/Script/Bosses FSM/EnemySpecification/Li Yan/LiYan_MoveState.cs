@@ -30,7 +30,7 @@ namespace Hypodoche
             if (_entityData.health <= 0)
                 _stateMachine.ChangeState(_liYan._deathState);
             _isFast = false;
-            _startTimeFast = _startTime + _liYan.changeSpeedToFast;
+            _startTimeFast = _startTime + _liYan.getFastClock();
 
         }
 
@@ -42,18 +42,13 @@ namespace Hypodoche
 
         public void checkTime()
         {
-            if (Time.time >= _liYan.timerBomb + _liYan.dropBombTimeRate)
-            {
-                Debug.Log("cambio stato : move -> dropBomb " + Time.time);
-                setFromSufferEffect(false);
-                _stateMachine.ChangeState(_liYan._DropBombState);
-            }
+            
             if (_isFast)
             {
                 if (Time.time >= _startTimeFast)
                 {
                     _isSlow = true;
-                    _startTimeSlow = _startTime + _liYan.changeSpeedToSlow;
+                    _startTimeSlow = _startTime + _liYan.getSlowClock();
                 }
             }
             else
@@ -61,7 +56,7 @@ namespace Hypodoche
                 if (Time.time >= _startTimeSlow)
                 {
                     _isFast = true;
-                    _startTimeFast = _startTime + _liYan.changeSpeedToFast;
+                    _startTimeFast = _startTime + _liYan.getFastClock();
                 }
             }
         }
@@ -76,7 +71,6 @@ namespace Hypodoche
                 return;
             if (_isDetectingWall)
             {
-                Debug.Log("cambio stato : move -> idle " + Time.time);
                 _liYan._idleState.setFlipAfterIdle(true);
                 setFromSufferEffect(false);
                 _stateMachine.ChangeState(_liYan._idleState);
@@ -94,8 +88,8 @@ namespace Hypodoche
                     else if (_entityData.isStun)
                         return;
                     else if (_isSlow)
-                        _liYan.Move(_entityData.movementSpeed / 2); //move 50% speed less
-                    else _liYan.Move(_entityData.movementSpeed);
+                        _liYan.Move(_liYan.getSlowSpeed()); //move 50% speed less
+                    else _liYan.Move(_liYan.getFastSpeed());
                 }
             }
         }
