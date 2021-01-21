@@ -159,7 +159,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _bombDamage: 15
-  _chargeTime: 70
+  _chargeTime: 30
   _explosionDelay: 2
   _explosion: {fileID: 1631701254194006259}
   _explosionRadius: 4
